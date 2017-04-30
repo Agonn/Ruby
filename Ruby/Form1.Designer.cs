@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.lblDataSot = new System.Windows.Forms.Label();
             this.txtHyrje = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnPdf = new System.Windows.Forms.Button();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.File = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
@@ -43,6 +44,7 @@
             // dateTimePicker
             // 
             this.dateTimePicker.AllowDrop = true;
+            this.dateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker.CalendarFont = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateTimePicker.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,7 +82,8 @@
             // 
             // btnPdf
             // 
-            this.btnPdf.Location = new System.Drawing.Point(821, 455);
+            this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPdf.Location = new System.Drawing.Point(821, 438);
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(75, 23);
             this.btnPdf.TabIndex = 4;
@@ -90,21 +93,22 @@
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quitToolStripMenuItem});
+            this.File});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
+            this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip.Size = new System.Drawing.Size(908, 24);
             this.menuStrip.TabIndex = 5;
             this.menuStrip.Text = "menuStrip";
             // 
-            // quitToolStripMenuItem
+            // File
             // 
-            this.quitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logOutToolStripMenuItem,
             this.closeToolStripMenuItem});
-            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.quitToolStripMenuItem.Text = "File";
+            this.File.Name = "File";
+            this.File.Size = new System.Drawing.Size(37, 20);
+            this.File.Text = "File";
             // 
             // logOutToolStripMenuItem
             // 
@@ -131,8 +135,10 @@
             this.Controls.Add(this.lblDataSot);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ruby";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip.ResumeLayout(false);
@@ -150,7 +156,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnPdf;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem File;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
     }
