@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Ruby.Properties
 {
-    public partial class Login : Form
+    public partial class Login : System.Windows.Forms.Form
     {
         public Login()
         {
@@ -24,7 +24,7 @@ namespace Ruby.Properties
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Form1 objforma1 = new Form1();
+            Form objforma1 = new Form();
 
            
             //E mshef formen e login-it
