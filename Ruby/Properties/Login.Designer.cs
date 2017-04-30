@@ -39,7 +39,7 @@
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(256, 201);
+            this.lblPassword.Location = new System.Drawing.Point(342, 203);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(158, 29);
             this.lblPassword.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(259, 233);
+            this.txtPassword.Location = new System.Drawing.Point(345, 235);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(140, 20);
             this.txtPassword.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             this.lblError.BackColor = System.Drawing.Color.Transparent;
             this.lblError.Font = new System.Drawing.Font("Courier New", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.Location = new System.Drawing.Point(261, 260);
+            this.lblError.Location = new System.Drawing.Point(347, 262);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(138, 23);
             this.lblError.TabIndex = 2;
@@ -68,7 +68,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(704, 329);
+            this.ClientSize = new System.Drawing.Size(854, 331);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
