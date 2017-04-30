@@ -19,7 +19,18 @@ namespace Ruby.Properties
 
         private void lblPassword_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Form1 objforma1 = new Form1();
+
+           
+            //E mshef formen e login-it
+            this.Hide();
+            //E Hap formen Kryesore
+            objforma1.Show();
         }
     }
 }
