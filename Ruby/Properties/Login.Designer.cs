@@ -33,6 +33,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.lblPasswordError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblPassword
@@ -75,6 +76,17 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // lblPasswordError
+            // 
+            this.lblPasswordError.AutoSize = true;
+            this.lblPasswordError.BackColor = System.Drawing.Color.Transparent;
+            this.lblPasswordError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordError.ForeColor = System.Drawing.Color.Transparent;
+            this.lblPasswordError.Location = new System.Drawing.Point(343, 287);
+            this.lblPasswordError.Name = "lblPasswordError";
+            this.lblPasswordError.Size = new System.Drawing.Size(0, 20);
+            this.lblPasswordError.TabIndex = 4;
+            // 
             // Login
             // 
             this.AcceptButton = this.btnLogin;
@@ -82,6 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(854, 331);
+            this.Controls.Add(this.lblPasswordError);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtPassword);
@@ -102,5 +115,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblPasswordError;
     }
 }

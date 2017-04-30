@@ -35,9 +35,10 @@ namespace Ruby.Properties
                 else
                 {
                     MessageBox.Show("Passwordi gabim.",
-                        "Password",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning); //basic password wrong error
+                                    "Password",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning); //basic password wrong error
+                    lblPasswordError.Text = "Passwordi gabim"; //Ose kjo pa annoying popups? I hate popups
                 }
             }
             catch (Exception)
