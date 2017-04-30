@@ -26,10 +26,10 @@ namespace Ruby.Properties
         {
             Form1 objforma1 = new Form1();
 
-            Login objL = new Login();
-
+           
+            //E mshef formen e login-it
             this.Hide();
-
+            //E Hap formen Kryesore
             objforma1.Show();
         }
     }
