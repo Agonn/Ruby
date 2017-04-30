@@ -58,7 +58,7 @@
             // 
             this.lblDataSot.AutoSize = true;
             this.lblDataSot.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataSot.Location = new System.Drawing.Point(12, 58);
+            this.lblDataSot.Location = new System.Drawing.Point(12, 35);
             this.lblDataSot.Name = "lblDataSot";
             this.lblDataSot.Size = new System.Drawing.Size(88, 23);
             this.lblDataSot.TabIndex = 1;
@@ -66,14 +66,14 @@
             // 
             // txtHyrje
             // 
-            this.txtHyrje.Location = new System.Drawing.Point(96, 60);
+            this.txtHyrje.Location = new System.Drawing.Point(96, 37);
             this.txtHyrje.Name = "txtHyrje";
             this.txtHyrje.Size = new System.Drawing.Size(100, 20);
             this.txtHyrje.TabIndex = 2;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(202, 58);
+            this.btnAdd.Location = new System.Drawing.Point(202, 35);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 3;
