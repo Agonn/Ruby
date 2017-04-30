@@ -24,13 +24,32 @@ namespace Ruby.Properties
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Form objforma1 = new Form();
+            
 
-           
-            //E mshef formen e login-it
-            this.Hide();
-            //E Hap formen Kryesore
-            objforma1.Show();
+            string password = txtPassword.Text;
+
+            try
+            {
+                if (password == "lol") //vetem test
+                {
+                    Form objforma1 = new Form();
+                    //E mshef formen e login-it
+                    this.Hide();
+                    //E Hap formen Kryesore
+                    objforma1.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Passwordi gabim.",
+                        "Password",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning); //basic password wrong error
+                }
+            }
+            catch (Exception)
+            {
+                //Qetu shto ti diqka Yll :)
+            }
         }
     }
 }
