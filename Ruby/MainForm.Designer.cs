@@ -46,11 +46,14 @@
             this.cmbMalli.FormattingEnabled = true;
             this.cmbMalli.ItemHeight = 23;
             this.cmbMalli.Items.AddRange(new object[] {
-            "Unaze",
+            "Unazë",
             "Hallhalle",
-            "LLanec",
-            "Riparim"});
-            this.cmbMalli.Location = new System.Drawing.Point(84, 113);
+            "Qafore",
+            "Riparim",
+            "Gurrë",
+            "Shërbim",
+            "Tjetër"});
+            this.cmbMalli.Location = new System.Drawing.Point(87, 81);
             this.cmbMalli.Name = "cmbMalli";
             this.cmbMalli.Size = new System.Drawing.Size(121, 29);
             this.cmbMalli.TabIndex = 9;
@@ -71,7 +74,7 @@
             this.txtCmimi.CustomButton.UseSelectable = true;
             this.txtCmimi.CustomButton.Visible = false;
             this.txtCmimi.Lines = new string[0];
-            this.txtCmimi.Location = new System.Drawing.Point(84, 159);
+            this.txtCmimi.Location = new System.Drawing.Point(87, 123);
             this.txtCmimi.MaxLength = 32767;
             this.txtCmimi.Name = "txtCmimi";
             this.txtCmimi.PasswordChar = '\0';
@@ -88,7 +91,9 @@
             // 
             // btnShto
             // 
-            this.btnShto.Location = new System.Drawing.Point(84, 199);
+            this.btnShto.DisplayFocus = true;
+            this.btnShto.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnShto.Location = new System.Drawing.Point(87, 167);
             this.btnShto.Name = "btnShto";
             this.btnShto.Size = new System.Drawing.Size(121, 23);
             this.btnShto.TabIndex = 11;
@@ -98,7 +103,7 @@
             // btnPdf
             // 
             this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPdf.Location = new System.Drawing.Point(843, 429);
+            this.btnPdf.Location = new System.Drawing.Point(832, 389);
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(77, 23);
             this.btnPdf.TabIndex = 11;
@@ -108,7 +113,7 @@
             // dtpData
             // 
             this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpData.Location = new System.Drawing.Point(720, 76);
+            this.dtpData.Location = new System.Drawing.Point(712, 81);
             this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 29);
@@ -117,18 +122,20 @@
             // Malli
             // 
             this.Malli.AutoSize = true;
-            this.Malli.Location = new System.Drawing.Point(27, 113);
+            this.Malli.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.Malli.Location = new System.Drawing.Point(25, 81);
             this.Malli.Name = "Malli";
-            this.Malli.Size = new System.Drawing.Size(40, 19);
+            this.Malli.Size = new System.Drawing.Size(38, 19);
             this.Malli.TabIndex = 13;
-            this.Malli.Text = "Malli:";
+            this.Malli.Text = "Tipi:";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(27, 159);
+            this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel2.Location = new System.Drawing.Point(25, 123);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(56, 19);
             this.metroLabel2.TabIndex = 13;
             this.metroLabel2.Text = "Cmimi:";
             // 
