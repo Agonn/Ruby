@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Ruby
 {
@@ -45,6 +47,33 @@ namespace Ruby
         {
 
             Application.Exit();
+        }
+
+        private void btnShto_Click(object sender, EventArgs e)
+        {
+            string Konektimi = Parametrat._KonektimiDB;
+            SqlConnection objKonektimi = new SqlConnection(Konektimi);
+            string query = "INSERT INTO tblMalli(Emri_Mallit,Cmimi_Mallit,Data_Shitjes) VALUES(" + txtMalli.Text+ "," + Convert.ToInt32(txtCmimi.ToString()) + ",'" + dtpData.Value.ToShortDateString() + "');";
+
+            SqlCommand objKomanda = new SqlCommand(query, objKonektimi);
+
+            try
+            {
+                objKonektimi.Open();
+                objKomanda.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                
+            }
+            finally
+            {
+                objKonektimi.Close();
+            }
+
+
         }
     }
 }
