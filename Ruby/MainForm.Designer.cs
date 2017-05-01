@@ -37,8 +37,8 @@
             this.dtpData = new MetroFramework.Controls.MetroDateTime();
             this.Malli = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
+            this.metroStyle = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -98,7 +98,7 @@
             // btnPdf
             // 
             this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPdf.Location = new System.Drawing.Point(819, 426);
+            this.btnPdf.Location = new System.Drawing.Point(843, 429);
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(77, 23);
             this.btnPdf.TabIndex = 11;
@@ -108,7 +108,7 @@
             // dtpData
             // 
             this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpData.Location = new System.Drawing.Point(696, 76);
+            this.dtpData.Location = new System.Drawing.Point(720, 76);
             this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 29);
@@ -132,17 +132,17 @@
             this.metroLabel2.TabIndex = 13;
             this.metroLabel2.Text = "Cmimi:";
             // 
-            // metroStyleManager1
+            // metroStyle
             // 
-            this.metroStyleManager1.Owner = this;
-            this.metroStyleManager1.Style = MetroFramework.MetroColorStyle.Red;
+            this.metroStyle.Owner = this;
+            this.metroStyle.Style = MetroFramework.MetroColorStyle.Red;
             // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(908, 490);
+            this.ClientSize = new System.Drawing.Size(932, 493);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.Malli);
             this.Controls.Add(this.dtpData);
@@ -156,7 +156,7 @@
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Ruby";
             this.Load += new System.EventHandler(this.Form_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,7 +170,7 @@
         private MetroFramework.Controls.MetroDateTime dtpData;
         private MetroFramework.Controls.MetroLabel Malli;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
+        private MetroFramework.Components.MetroStyleManager metroStyle;
     }
 }
 
