@@ -9,7 +9,7 @@ namespace Ruby
     {
         public Form()
         {
-            
+
             InitializeComponent();
         }
         private void ImportStatusForm_Resize(object sender, EventArgs e) //Nese showintaskbar false
@@ -22,9 +22,13 @@ namespace Ruby
             }
         }
 
- 
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'menaxhimiDBDataSet12.tblMalli' table. You can move, or remove it, as needed.
+            this.tblMalliTableAdapter.Fill(this.menaxhimiDBDataSet12.tblMalli);
+            // TODO: This line of code loads data into the 'menaxhimiDBDataSet12.tblMalli' table. You can move, or remove it, as needed.
+            this.tblMalliTableAdapter.Fill(this.menaxhimiDBDataSet12.tblMalli);
 
         }
 
@@ -53,7 +57,11 @@ namespace Ruby
         {
             string Konektimi = Parametrat._KonektimiDB;
             SqlConnection objKonektimi = new SqlConnection(Konektimi);
-            string query = "INSERT INTO tblMalli(Emri_Mallit,Cmimi_Mallit,Data_Shitjes) VALUES(" + txtMalli.Text+ "," + Convert.ToInt32(txtCmimi.ToString()) + ",'" + dtpData.Value.ToShortDateString() + "');";
+            string query = "INSERT INTO [dbo].[tblMalli] ( Emri_Mallit, Cmimi_Mallit, Data_Shitjes) VALUES (" + cmbMalli.GetItemText(cmbMalli.SelectedItem)+","+ txtCmimi.Text +",'"+dtpData.Value.ToShortDateString()+"')";
+
+
+
+
 
             SqlCommand objKomanda = new SqlCommand(query, objKonektimi);
 
@@ -66,10 +74,12 @@ namespace Ruby
             {
 
                 MessageBox.Show(ex.Message);
-                
+
             }
             finally
             {
+
+
                 objKonektimi.Close();
             }
 
