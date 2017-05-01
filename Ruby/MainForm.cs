@@ -35,5 +35,16 @@ namespace Ruby
         {
             this.WindowState = FormWindowState.Maximized; //click to maximize from notification icon
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            Application.Exit();
+        }
     }
 }

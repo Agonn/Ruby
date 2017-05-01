@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.lblDataSot = new System.Windows.Forms.Label();
-            this.txtHyrje = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnPdf = new System.Windows.Forms.Button();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
@@ -40,7 +39,16 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.historikuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historiaePergjithshmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statistikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gbShitja = new System.Windows.Forms.GroupBox();
             this.menuStrip.SuspendLayout();
+            this.gbShitja.SuspendLayout();
             this.SuspendLayout();
             // 
             // dateTimePicker
@@ -51,31 +59,24 @@
             this.dateTimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dateTimePicker.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker.Location = new System.Drawing.Point(729, 27);
+            this.dateTimePicker.Location = new System.Drawing.Point(718, 27);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(167, 31);
+            this.dateTimePicker.Size = new System.Drawing.Size(178, 31);
             this.dateTimePicker.TabIndex = 0;
             // 
             // lblDataSot
             // 
             this.lblDataSot.AutoSize = true;
             this.lblDataSot.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataSot.Location = new System.Drawing.Point(12, 35);
+            this.lblDataSot.Location = new System.Drawing.Point(27, 39);
             this.lblDataSot.Name = "lblDataSot";
-            this.lblDataSot.Size = new System.Drawing.Size(88, 23);
+            this.lblDataSot.Size = new System.Drawing.Size(101, 23);
             this.lblDataSot.TabIndex = 1;
-            this.lblDataSot.Text = "Hyrje:";
-            // 
-            // txtHyrje
-            // 
-            this.txtHyrje.Location = new System.Drawing.Point(96, 37);
-            this.txtHyrje.Name = "txtHyrje";
-            this.txtHyrje.Size = new System.Drawing.Size(100, 20);
-            this.txtHyrje.TabIndex = 2;
+            this.lblDataSot.Text = "Malli :";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(202, 35);
+            this.btnAdd.Location = new System.Drawing.Point(286, 39);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 3;
@@ -95,7 +96,9 @@
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.File});
+            this.File,
+            this.historikuToolStripMenuItem,
+            this.kameraToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -115,13 +118,13 @@
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.logOutToolStripMenuItem.Text = "Log out";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.closeToolStripMenuItem.Text = "Close ";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
@@ -132,16 +135,81 @@
             this.notifyIcon.Visible = true;
             this.notifyIcon.Click += new System.EventHandler(this.notifyIcon_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(134, 65);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(122, 20);
+            this.textBox1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 23);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Cmimi :";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(135, 40);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // historikuToolStripMenuItem
+            // 
+            this.historikuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.historiaePergjithshmeToolStripMenuItem,
+            this.statistikaToolStripMenuItem});
+            this.historikuToolStripMenuItem.Name = "historikuToolStripMenuItem";
+            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.historikuToolStripMenuItem.Text = "Historiku";
+            // 
+            // historiaePergjithshmeToolStripMenuItem
+            // 
+            this.historiaePergjithshmeToolStripMenuItem.Name = "historiaePergjithshmeToolStripMenuItem";
+            this.historiaePergjithshmeToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.historiaePergjithshmeToolStripMenuItem.Text = "Historia e Pergjithshme";
+            // 
+            // statistikaToolStripMenuItem
+            // 
+            this.statistikaToolStripMenuItem.Name = "statistikaToolStripMenuItem";
+            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.statistikaToolStripMenuItem.Text = "Statistika";
+            // 
+            // kameraToolStripMenuItem
+            // 
+            this.kameraToolStripMenuItem.Name = "kameraToolStripMenuItem";
+            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.kameraToolStripMenuItem.Text = "Kamera";
+            // 
+            // gbShitja
+            // 
+            this.gbShitja.Controls.Add(this.comboBox1);
+            this.gbShitja.Controls.Add(this.textBox1);
+            this.gbShitja.Controls.Add(this.label1);
+            this.gbShitja.Controls.Add(this.btnAdd);
+            this.gbShitja.Controls.Add(this.lblDataSot);
+            this.gbShitja.Location = new System.Drawing.Point(12, 37);
+            this.gbShitja.Name = "gbShitja";
+            this.gbShitja.Size = new System.Drawing.Size(379, 120);
+            this.gbShitja.TabIndex = 9;
+            this.gbShitja.TabStop = false;
+            this.gbShitja.Text = "Shitja";
+            this.gbShitja.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(908, 490);
+            this.Controls.Add(this.gbShitja);
             this.Controls.Add(this.btnPdf);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtHyrje);
-            this.Controls.Add(this.lblDataSot);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -149,9 +217,12 @@
             this.Name = "Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ruby";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.gbShitja.ResumeLayout(false);
+            this.gbShitja.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,7 +232,6 @@
 
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.Label lblDataSot;
-        private System.Windows.Forms.TextBox txtHyrje;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnPdf;
         private System.Windows.Forms.MenuStrip menuStrip;
@@ -169,6 +239,14 @@
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.ToolStripMenuItem historikuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historiaePergjithshmeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem statistikaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kameraToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox gbShitja;
     }
 }
 

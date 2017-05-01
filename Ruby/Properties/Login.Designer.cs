@@ -67,6 +67,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.Location = new System.Drawing.Point(345, 261);
             this.btnLogin.Name = "btnLogin";
@@ -78,13 +79,12 @@
             // 
             // lblPasswordError
             // 
-            this.lblPasswordError.AutoSize = true;
             this.lblPasswordError.BackColor = System.Drawing.Color.Transparent;
-            this.lblPasswordError.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordError.ForeColor = System.Drawing.Color.Transparent;
+            this.lblPasswordError.Font = new System.Drawing.Font("Courier New", 10.5F, System.Drawing.FontStyle.Bold);
+            this.lblPasswordError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.lblPasswordError.Location = new System.Drawing.Point(343, 287);
             this.lblPasswordError.Name = "lblPasswordError";
-            this.lblPasswordError.Size = new System.Drawing.Size(0, 20);
+            this.lblPasswordError.Size = new System.Drawing.Size(142, 35);
             this.lblPasswordError.TabIndex = 4;
             // 
             // Login
