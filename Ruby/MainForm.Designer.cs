@@ -209,7 +209,6 @@
             this.gbShitja.TabIndex = 9;
             this.gbShitja.TabStop = false;
             this.gbShitja.Text = "Shitja";
-            this.gbShitja.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Form
             // 

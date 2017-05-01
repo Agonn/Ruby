@@ -25,8 +25,7 @@ namespace Ruby
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'menaxhimiDBDataSet12.tblMalli' table. You can move, or remove it, as needed.
-            // TODO: This line of code loads data into the 'menaxhimiDBDataSet12.tblMalli' table. You can move, or remove it, as needed.
+
 
         }
 
@@ -40,11 +39,6 @@ namespace Ruby
             this.WindowState = FormWindowState.Maximized; //click to maximize from notification icon
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form_FormClosed(object sender, FormClosedEventArgs e)
         {
 
@@ -54,33 +48,7 @@ namespace Ruby
         private void btnShto_Click(object sender, EventArgs e)
         {
             
-            string Konektimi = Parametrat._KonektimiDB;
-            SqlConnection objKonektimi = new SqlConnection(Konektimi);
-            string query = "INSERT INTO [dbo].[tblMalli] ( Emri_Mallit, Cmimi_Mallit, Data_Shitjes) VALUES (" + cmbMalli.GetItemText(cmbMalli.SelectedItem)+","+ txtCmimi.Text +",'"+dtpData.Value.ToShortDateString()+"')";
-
-
-
-
-
-            SqlCommand objKomanda = new SqlCommand(query, objKonektimi);
-
-            try
-            {
-                objKonektimi.Open();
-                objKomanda.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-
-            }
-            finally
-            {
-
-
-                objKonektimi.Close();
-            }
+         
 
 
         }
