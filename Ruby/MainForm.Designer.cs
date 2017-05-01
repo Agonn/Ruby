@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.cmbMalli = new MetroFramework.Controls.MetroComboBox();
             this.txtCmimi = new MetroFramework.Controls.MetroTextBox();
@@ -36,6 +37,8 @@
             this.dtpData = new MetroFramework.Controls.MetroDateTime();
             this.Malli = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -129,6 +132,11 @@
             this.metroLabel2.TabIndex = 13;
             this.metroLabel2.Text = "Cmimi:";
             // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = this;
+            this.metroStyleManager1.Style = MetroFramework.MetroColorStyle.Red;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -145,7 +153,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Style = MetroFramework.MetroColorStyle.Red;
+            this.Text = "Ruby";
             this.Load += new System.EventHandler(this.Form_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,6 +170,7 @@
         private MetroFramework.Controls.MetroDateTime dtpData;
         private MetroFramework.Controls.MetroLabel Malli;
         private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
     }
 }
 
