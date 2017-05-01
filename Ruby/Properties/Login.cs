@@ -24,7 +24,7 @@ namespace Ruby.Properties
 
             try
             {
-                if (password == "lol") //vetem test
+                if (password == "lol") //vetem test.
                 {
                     Form objforma1 = new Form();
                     //E mshef formen e login-it
@@ -45,6 +45,16 @@ namespace Ruby.Properties
             {
                 //Qetu shto ti diqka Yll :)
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_MouseDoubleClick(object sender, MouseEventArgs e) //Double click to form mbasi e kom hek border(ma bukur)
+        {
+            this.Close(); 
         }
     }
 }
