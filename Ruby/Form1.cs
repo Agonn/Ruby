@@ -10,7 +10,7 @@ namespace Ruby
             
             InitializeComponent();
         }
-        private void ImportStatusForm_Resize(object sender, EventArgs e)
+        private void ImportStatusForm_Resize(object sender, EventArgs e) //Nese showintaskbar false
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
@@ -20,13 +20,7 @@ namespace Ruby
             }
         }
 
-        private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            this.ShowInTaskbar = true;
-            notifyIcon.Visible = false;
-        }
-
+ 
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -35,6 +29,11 @@ namespace Ruby
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit(); //Mbylli te gjitha threads.
+        }
+
+        private void notifyIcon_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized; //click to maximize from notification icon
         }
     }
 }
