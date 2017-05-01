@@ -38,7 +38,12 @@
             this.Malli = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroStyle = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroContextMenu = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.historiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statistikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
+            this.metroContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -103,7 +108,7 @@
             // btnPdf
             // 
             this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPdf.Location = new System.Drawing.Point(832, 389);
+            this.btnPdf.Location = new System.Drawing.Point(835, 447);
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(77, 23);
             this.btnPdf.TabIndex = 11;
@@ -144,12 +149,42 @@
             this.metroStyle.Owner = this;
             this.metroStyle.Style = MetroFramework.MetroColorStyle.Red;
             // 
+            // metroContextMenu
+            // 
+            this.metroContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.historiaToolStripMenuItem,
+            this.statistikaToolStripMenuItem,
+            this.kameraToolStripMenuItem});
+            this.metroContextMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.metroContextMenu.Name = "metroContextMenu";
+            this.metroContextMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.metroContextMenu.Size = new System.Drawing.Size(122, 70);
+            // 
+            // historiaToolStripMenuItem
+            // 
+            this.historiaToolStripMenuItem.Name = "historiaToolStripMenuItem";
+            this.historiaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.historiaToolStripMenuItem.Text = "Historia";
+            // 
+            // statistikaToolStripMenuItem
+            // 
+            this.statistikaToolStripMenuItem.Name = "statistikaToolStripMenuItem";
+            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.statistikaToolStripMenuItem.Text = "Statistika";
+            // 
+            // kameraToolStripMenuItem
+            // 
+            this.kameraToolStripMenuItem.Name = "kameraToolStripMenuItem";
+            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.kameraToolStripMenuItem.Text = "Kamera";
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(932, 493);
+            this.ContextMenuStrip = this.metroContextMenu;
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.Malli);
             this.Controls.Add(this.dtpData);
@@ -164,6 +199,7 @@
             this.Text = "Ruby";
             this.Load += new System.EventHandler(this.Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).EndInit();
+            this.metroContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,6 +214,10 @@
         private MetroFramework.Controls.MetroLabel Malli;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Components.MetroStyleManager metroStyle;
+        private MetroFramework.Controls.MetroContextMenu metroContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem historiaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem statistikaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kameraToolStripMenuItem;
     }
 }
 
