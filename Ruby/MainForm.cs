@@ -55,6 +55,7 @@ namespace Ruby
 
         private void btnShto_Click(object sender, EventArgs e)
         {
+            
             string Konektimi = Parametrat._KonektimiDB;
             SqlConnection objKonektimi = new SqlConnection(Konektimi);
             string query = "INSERT INTO [dbo].[tblMalli] ( Emri_Mallit, Cmimi_Mallit, Data_Shitjes) VALUES (" + cmbMalli.GetItemText(cmbMalli.SelectedItem)+","+ txtCmimi.Text +",'"+dtpData.Value.ToShortDateString()+"')";
