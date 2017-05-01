@@ -26,9 +26,7 @@ namespace Ruby
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'menaxhimiDBDataSet12.tblMalli' table. You can move, or remove it, as needed.
-            this.tblMalliTableAdapter.Fill(this.menaxhimiDBDataSet12.tblMalli);
             // TODO: This line of code loads data into the 'menaxhimiDBDataSet12.tblMalli' table. You can move, or remove it, as needed.
-            this.tblMalliTableAdapter.Fill(this.menaxhimiDBDataSet12.tblMalli);
 
         }
 

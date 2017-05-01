@@ -47,21 +47,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbMalli = new System.Windows.Forms.ComboBox();
             this.gbShitja = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tblMalliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menaxhimiDBDataSet12 = new Ruby.MenaxhimiDBDataSet12();
-            this.menaxhimiDBDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tblMalliTableAdapter = new Ruby.MenaxhimiDBDataSet12TableAdapters.tblMalliTableAdapter();
-            this.mIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emriMallitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmimiMallitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataShitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip.SuspendLayout();
             this.gbShitja.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblMalliBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDBDataSet12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDBDataSetBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpData
@@ -224,78 +211,12 @@
             this.gbShitja.Text = "Shitja";
             this.gbShitja.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mIDDataGridViewTextBoxColumn,
-            this.emriMallitDataGridViewTextBoxColumn,
-            this.cmimiMallitDataGridViewTextBoxColumn,
-            this.dataShitjesDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblMalliBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 194);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(395, 150);
-            this.dataGridView1.TabIndex = 10;
-            // 
-            // tblMalliBindingSource
-            // 
-            this.tblMalliBindingSource.DataMember = "tblMalli";
-            this.tblMalliBindingSource.DataSource = this.menaxhimiDBDataSet12;
-            // 
-            // menaxhimiDBDataSet12
-            // 
-            this.menaxhimiDBDataSet12.DataSetName = "MenaxhimiDBDataSet12";
-            this.menaxhimiDBDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // menaxhimiDBDataSetBindingSource1
-            // 
-            this.menaxhimiDBDataSetBindingSource1.DataSource = typeof(Ruby.MenaxhimiDBDataSet);
-            this.menaxhimiDBDataSetBindingSource1.Position = 0;
-            // 
-            // tblMalliTableAdapter
-            // 
-            this.tblMalliTableAdapter.ClearBeforeFill = true;
-            // 
-            // mIDDataGridViewTextBoxColumn
-            // 
-            this.mIDDataGridViewTextBoxColumn.DataPropertyName = "mID";
-            this.mIDDataGridViewTextBoxColumn.HeaderText = "mID";
-            this.mIDDataGridViewTextBoxColumn.Name = "mIDDataGridViewTextBoxColumn";
-            this.mIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.mIDDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // emriMallitDataGridViewTextBoxColumn
-            // 
-            this.emriMallitDataGridViewTextBoxColumn.DataPropertyName = "Emri_Mallit";
-            this.emriMallitDataGridViewTextBoxColumn.HeaderText = "Emri_Mallit";
-            this.emriMallitDataGridViewTextBoxColumn.Name = "emriMallitDataGridViewTextBoxColumn";
-            this.emriMallitDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cmimiMallitDataGridViewTextBoxColumn
-            // 
-            this.cmimiMallitDataGridViewTextBoxColumn.DataPropertyName = "Cmimi_Mallit";
-            this.cmimiMallitDataGridViewTextBoxColumn.HeaderText = "Cmimi_Mallit";
-            this.cmimiMallitDataGridViewTextBoxColumn.Name = "cmimiMallitDataGridViewTextBoxColumn";
-            this.cmimiMallitDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataShitjesDataGridViewTextBoxColumn
-            // 
-            this.dataShitjesDataGridViewTextBoxColumn.DataPropertyName = "Data_Shitjes";
-            this.dataShitjesDataGridViewTextBoxColumn.HeaderText = "Data_Shitjes";
-            this.dataShitjesDataGridViewTextBoxColumn.Name = "dataShitjesDataGridViewTextBoxColumn";
-            this.dataShitjesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(908, 490);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gbShitja);
             this.Controls.Add(this.btnPdf);
             this.Controls.Add(this.dtpData);
@@ -311,10 +232,6 @@
             this.menuStrip.PerformLayout();
             this.gbShitja.ResumeLayout(false);
             this.gbShitja.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblMalliBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDBDataSet12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDBDataSetBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,15 +256,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbMalli;
         private System.Windows.Forms.GroupBox gbShitja;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource tblMalliBindingSource;
-        private MenaxhimiDBDataSet12 menaxhimiDBDataSet12;
-        private System.Windows.Forms.BindingSource menaxhimiDBDataSetBindingSource1;
-        private MenaxhimiDBDataSet12TableAdapters.tblMalliTableAdapter tblMalliTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emriMallitDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmimiMallitDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn;
     }
 }
 

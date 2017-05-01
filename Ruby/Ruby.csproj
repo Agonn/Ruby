@@ -67,16 +67,6 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenaxhimiDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MenaxhimiDBDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MenaxhimiDBDataSet12.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MenaxhimiDBDataSet12.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Parametrat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,28 +91,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="MenaxhimiDBDataSet.xsc">
-      <DependentUpon>MenaxhimiDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MenaxhimiDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MenaxhimiDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MenaxhimiDBDataSet.xss">
-      <DependentUpon>MenaxhimiDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MenaxhimiDBDataSet12.xsc">
-      <DependentUpon>MenaxhimiDBDataSet12.xsd</DependentUpon>
-    </None>
-    <None Include="MenaxhimiDBDataSet12.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MenaxhimiDBDataSet12.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MenaxhimiDBDataSet12.xss">
-      <DependentUpon>MenaxhimiDBDataSet12.xsd</DependentUpon>
-    </None>
     <None Include="Properties\DataSources\MenaxhimiDBDataSet.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -148,15 +116,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="MenaxhimiDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="MenaxhimiDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>MenaxhimiDB.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
