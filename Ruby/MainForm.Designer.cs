@@ -38,12 +38,23 @@
             this.Malli = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroStyle = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.metroContextMenu = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.historiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CxtMenu = new MaterialSkin.Controls.MaterialContextMenuStrip();
+            this.historikuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statistikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.metroTab = new MetroFramework.Controls.MetroTabControl();
+            this.tbShitja = new MetroFramework.Controls.MetroTabPage();
+            this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
+            this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
+            this.lblSot = new MetroFramework.Controls.MetroLabel();
+            this.dgvShitja = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
-            this.metroContextMenu.SuspendLayout();
+            this.CxtMenu.SuspendLayout();
+            this.metroTab.SuspendLayout();
+            this.tbShitja.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -58,7 +69,7 @@
             "Gurrë",
             "Shërbim",
             "Tjetër"});
-            this.cmbMalli.Location = new System.Drawing.Point(87, 81);
+            this.cmbMalli.Location = new System.Drawing.Point(64, 26);
             this.cmbMalli.Name = "cmbMalli";
             this.cmbMalli.Size = new System.Drawing.Size(121, 29);
             this.cmbMalli.TabIndex = 9;
@@ -79,7 +90,7 @@
             this.txtCmimi.CustomButton.UseSelectable = true;
             this.txtCmimi.CustomButton.Visible = false;
             this.txtCmimi.Lines = new string[0];
-            this.txtCmimi.Location = new System.Drawing.Point(87, 123);
+            this.txtCmimi.Location = new System.Drawing.Point(64, 68);
             this.txtCmimi.MaxLength = 32767;
             this.txtCmimi.Name = "txtCmimi";
             this.txtCmimi.PasswordChar = '\0';
@@ -98,7 +109,7 @@
             // 
             this.btnShto.DisplayFocus = true;
             this.btnShto.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnShto.Location = new System.Drawing.Point(87, 167);
+            this.btnShto.Location = new System.Drawing.Point(64, 112);
             this.btnShto.Name = "btnShto";
             this.btnShto.Size = new System.Drawing.Size(121, 23);
             this.btnShto.TabIndex = 11;
@@ -128,7 +139,7 @@
             // 
             this.Malli.AutoSize = true;
             this.Malli.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.Malli.Location = new System.Drawing.Point(25, 81);
+            this.Malli.Location = new System.Drawing.Point(2, 26);
             this.Malli.Name = "Malli";
             this.Malli.Size = new System.Drawing.Size(38, 19);
             this.Malli.TabIndex = 13;
@@ -138,7 +149,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(25, 123);
+            this.metroLabel2.Location = new System.Drawing.Point(2, 68);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(56, 19);
             this.metroLabel2.TabIndex = 13;
@@ -149,34 +160,131 @@
             this.metroStyle.Owner = this;
             this.metroStyle.Style = MetroFramework.MetroColorStyle.Red;
             // 
-            // metroContextMenu
+            // CxtMenu
             // 
-            this.metroContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.historiaToolStripMenuItem,
+            this.CxtMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CxtMenu.Depth = 0;
+            this.CxtMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.historikuToolStripMenuItem,
             this.statistikaToolStripMenuItem,
-            this.kameraToolStripMenuItem});
-            this.metroContextMenu.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.metroContextMenu.Name = "metroContextMenu";
-            this.metroContextMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.metroContextMenu.Size = new System.Drawing.Size(122, 70);
+            this.kameraToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.logOutToolStripMenuItem});
+            this.CxtMenu.MouseState = MaterialSkin.MouseState.HOVER;
+            this.CxtMenu.Name = "CxtMenu";
+            this.CxtMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CxtMenu.Size = new System.Drawing.Size(153, 120);
             // 
-            // historiaToolStripMenuItem
+            // historikuToolStripMenuItem
             // 
-            this.historiaToolStripMenuItem.Name = "historiaToolStripMenuItem";
-            this.historiaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.historiaToolStripMenuItem.Text = "Historia";
+            this.historikuToolStripMenuItem.Name = "historikuToolStripMenuItem";
+            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.historikuToolStripMenuItem.Text = "Historia";
             // 
             // statistikaToolStripMenuItem
             // 
             this.statistikaToolStripMenuItem.Name = "statistikaToolStripMenuItem";
-            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.statistikaToolStripMenuItem.Text = "Statistika";
             // 
             // kameraToolStripMenuItem
             // 
             this.kameraToolStripMenuItem.Name = "kameraToolStripMenuItem";
-            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.kameraToolStripMenuItem.Text = "Kamera";
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logOutToolStripMenuItem.Text = "Mbylle";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // metroTab
+            // 
+            this.metroTab.Controls.Add(this.tbShitja);
+            this.metroTab.Controls.Add(this.tbHistoria);
+            this.metroTab.Controls.Add(this.tbStatistika);
+            this.metroTab.Location = new System.Drawing.Point(23, 63);
+            this.metroTab.Name = "metroTab";
+            this.metroTab.SelectedIndex = 0;
+            this.metroTab.Size = new System.Drawing.Size(683, 407);
+            this.metroTab.TabIndex = 14;
+            this.metroTab.UseSelectable = true;
+            // 
+            // tbShitja
+            // 
+            this.tbShitja.Controls.Add(this.dgvShitja);
+            this.tbShitja.Controls.Add(this.metroLabel2);
+            this.tbShitja.Controls.Add(this.cmbMalli);
+            this.tbShitja.Controls.Add(this.lblSot);
+            this.tbShitja.Controls.Add(this.Malli);
+            this.tbShitja.Controls.Add(this.txtCmimi);
+            this.tbShitja.Controls.Add(this.btnShto);
+            this.tbShitja.HorizontalScrollbarBarColor = true;
+            this.tbShitja.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbShitja.HorizontalScrollbarSize = 10;
+            this.tbShitja.Location = new System.Drawing.Point(4, 38);
+            this.tbShitja.Name = "tbShitja";
+            this.tbShitja.Size = new System.Drawing.Size(675, 365);
+            this.tbShitja.TabIndex = 0;
+            this.tbShitja.Text = "Shitje";
+            this.tbShitja.VerticalScrollbarBarColor = true;
+            this.tbShitja.VerticalScrollbarHighlightOnWheel = false;
+            this.tbShitja.VerticalScrollbarSize = 10;
+            // 
+            // tbHistoria
+            // 
+            this.tbHistoria.HorizontalScrollbarBarColor = true;
+            this.tbHistoria.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbHistoria.HorizontalScrollbarSize = 10;
+            this.tbHistoria.Location = new System.Drawing.Point(4, 38);
+            this.tbHistoria.Name = "tbHistoria";
+            this.tbHistoria.Size = new System.Drawing.Size(675, 365);
+            this.tbHistoria.TabIndex = 1;
+            this.tbHistoria.Text = "Historia";
+            this.tbHistoria.VerticalScrollbarBarColor = true;
+            this.tbHistoria.VerticalScrollbarHighlightOnWheel = false;
+            this.tbHistoria.VerticalScrollbarSize = 10;
+            // 
+            // tbStatistika
+            // 
+            this.tbStatistika.HorizontalScrollbarBarColor = true;
+            this.tbStatistika.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbStatistika.HorizontalScrollbarSize = 10;
+            this.tbStatistika.Location = new System.Drawing.Point(4, 38);
+            this.tbStatistika.Name = "tbStatistika";
+            this.tbStatistika.Size = new System.Drawing.Size(675, 365);
+            this.tbStatistika.TabIndex = 2;
+            this.tbStatistika.Text = "Statistika";
+            this.tbStatistika.VerticalScrollbarBarColor = true;
+            this.tbStatistika.VerticalScrollbarHighlightOnWheel = false;
+            this.tbStatistika.VerticalScrollbarSize = 10;
+            // 
+            // lblSot
+            // 
+            this.lblSot.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblSot.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblSot.Location = new System.Drawing.Point(270, 0);
+            this.lblSot.Name = "lblSot";
+            this.lblSot.Size = new System.Drawing.Size(54, 33);
+            this.lblSot.TabIndex = 13;
+            this.lblSot.Text = "Sot:";
+            // 
+            // dgvShitja
+            // 
+            this.dgvShitja.BackgroundColor = System.Drawing.Color.Maroon;
+            this.dgvShitja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShitja.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgvShitja.Location = new System.Drawing.Point(330, 0);
+            this.dgvShitja.Name = "dgvShitja";
+            this.dgvShitja.Size = new System.Drawing.Size(345, 365);
+            this.dgvShitja.TabIndex = 14;
             // 
             // Form
             // 
@@ -184,14 +292,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(932, 493);
-            this.ContextMenuStrip = this.metroContextMenu;
-            this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.Malli);
+            this.ContextMenuStrip = this.CxtMenu;
             this.Controls.Add(this.dtpData);
+            this.Controls.Add(this.metroTab);
             this.Controls.Add(this.btnPdf);
-            this.Controls.Add(this.btnShto);
-            this.Controls.Add(this.txtCmimi);
-            this.Controls.Add(this.cmbMalli);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -199,9 +303,12 @@
             this.Text = "Ruby";
             this.Load += new System.EventHandler(this.Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).EndInit();
-            this.metroContextMenu.ResumeLayout(false);
+            this.CxtMenu.ResumeLayout(false);
+            this.metroTab.ResumeLayout(false);
+            this.tbShitja.ResumeLayout(false);
+            this.tbShitja.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -214,10 +321,18 @@
         private MetroFramework.Controls.MetroLabel Malli;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Components.MetroStyleManager metroStyle;
-        private MetroFramework.Controls.MetroContextMenu metroContextMenu;
-        private System.Windows.Forms.ToolStripMenuItem historiaToolStripMenuItem;
+        private MaterialSkin.Controls.MaterialContextMenuStrip CxtMenu;
+        private System.Windows.Forms.ToolStripMenuItem historikuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statistikaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kameraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private MetroFramework.Controls.MetroTabControl metroTab;
+        private MetroFramework.Controls.MetroTabPage tbShitja;
+        private MetroFramework.Controls.MetroTabPage tbHistoria;
+        private MetroFramework.Controls.MetroTabPage tbStatistika;
+        private MetroFramework.Controls.MetroLabel lblSot;
+        private System.Windows.Forms.DataGridView dgvShitja;
     }
 }
 
