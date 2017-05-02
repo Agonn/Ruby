@@ -42,19 +42,26 @@
             this.historikuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statistikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
             this.tbShitja = new MetroFramework.Controls.MetroTabPage();
+            this.dgvShitja = new System.Windows.Forms.DataGridView();
+            this.lblSot = new MetroFramework.Controls.MetroLabel();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
             this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
-            this.lblSot = new MetroFramework.Controls.MetroLabel();
-            this.dgvShitja = new System.Windows.Forms.DataGridView();
+            this.lblDataSot = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.lblShitje = new MetroFramework.Controls.MetroLabel();
+            this.lblShpenzime = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
             this.tbShitja.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
+            this.tbHistoria.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -134,6 +141,7 @@
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 29);
             this.dtpData.TabIndex = 12;
+            this.dtpData.ValueChanged += new System.EventHandler(this.dtpData_ValueChanged);
             // 
             // Malli
             // 
@@ -173,37 +181,37 @@
             this.CxtMenu.MouseState = MaterialSkin.MouseState.HOVER;
             this.CxtMenu.Name = "CxtMenu";
             this.CxtMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CxtMenu.Size = new System.Drawing.Size(153, 120);
+            this.CxtMenu.Size = new System.Drawing.Size(122, 98);
             // 
             // historikuToolStripMenuItem
             // 
             this.historikuToolStripMenuItem.Name = "historikuToolStripMenuItem";
-            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.historikuToolStripMenuItem.Text = "Historia";
             // 
             // statistikaToolStripMenuItem
             // 
             this.statistikaToolStripMenuItem.Name = "statistikaToolStripMenuItem";
-            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.statistikaToolStripMenuItem.Text = "Statistika";
             // 
             // kameraToolStripMenuItem
             // 
             this.kameraToolStripMenuItem.Name = "kameraToolStripMenuItem";
-            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.kameraToolStripMenuItem.Text = "Kamera";
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.logOutToolStripMenuItem.Text = "Mbylle";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(118, 6);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.logOutToolStripMenuItem.Text = "Mbylle";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // metroTab
             // 
@@ -212,7 +220,7 @@
             this.metroTab.Controls.Add(this.tbStatistika);
             this.metroTab.Location = new System.Drawing.Point(23, 63);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 0;
+            this.metroTab.SelectedIndex = 1;
             this.metroTab.Size = new System.Drawing.Size(683, 407);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -238,8 +246,34 @@
             this.tbShitja.VerticalScrollbarHighlightOnWheel = false;
             this.tbShitja.VerticalScrollbarSize = 10;
             // 
+            // dgvShitja
+            // 
+            this.dgvShitja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dgvShitja.BackgroundColor = System.Drawing.Color.Maroon;
+            this.dgvShitja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShitja.Location = new System.Drawing.Point(330, 0);
+            this.dgvShitja.Name = "dgvShitja";
+            this.dgvShitja.Size = new System.Drawing.Size(345, 369);
+            this.dgvShitja.TabIndex = 14;
+            // 
+            // lblSot
+            // 
+            this.lblSot.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblSot.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblSot.Location = new System.Drawing.Point(270, 0);
+            this.lblSot.Name = "lblSot";
+            this.lblSot.Size = new System.Drawing.Size(54, 33);
+            this.lblSot.TabIndex = 13;
+            this.lblSot.Text = "Sot:";
+            // 
             // tbHistoria
             // 
+            this.tbHistoria.Controls.Add(this.lblShpenzime);
+            this.tbHistoria.Controls.Add(this.metroLabel4);
+            this.tbHistoria.Controls.Add(this.lblShitje);
+            this.tbHistoria.Controls.Add(this.metroLabel3);
+            this.tbHistoria.Controls.Add(this.metroLabel1);
+            this.tbHistoria.Controls.Add(this.lblDataSot);
             this.tbHistoria.HorizontalScrollbarBarColor = true;
             this.tbHistoria.HorizontalScrollbarHighlightOnWheel = false;
             this.tbHistoria.HorizontalScrollbarSize = 10;
@@ -266,25 +300,62 @@
             this.tbStatistika.VerticalScrollbarHighlightOnWheel = false;
             this.tbStatistika.VerticalScrollbarSize = 10;
             // 
-            // lblSot
+            // lblDataSot
             // 
-            this.lblSot.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblSot.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblSot.Location = new System.Drawing.Point(270, 0);
-            this.lblSot.Name = "lblSot";
-            this.lblSot.Size = new System.Drawing.Size(54, 33);
-            this.lblSot.TabIndex = 13;
-            this.lblSot.Text = "Sot:";
+            this.lblDataSot.AutoSize = true;
+            this.lblDataSot.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblDataSot.Location = new System.Drawing.Point(48, 38);
+            this.lblDataSot.Name = "lblDataSot";
+            this.lblDataSot.Size = new System.Drawing.Size(0, 0);
+            this.lblDataSot.TabIndex = 2;
             // 
-            // dgvShitja
+            // metroLabel1
             // 
-            this.dgvShitja.BackgroundColor = System.Drawing.Color.Maroon;
-            this.dgvShitja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvShitja.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvShitja.Location = new System.Drawing.Point(330, 0);
-            this.dgvShitja.Name = "dgvShitja";
-            this.dgvShitja.Size = new System.Drawing.Size(345, 365);
-            this.dgvShitja.TabIndex = 14;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(3, 38);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Data:";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel3.Location = new System.Drawing.Point(3, 71);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel3.TabIndex = 2;
+            this.metroLabel3.Text = "Shitje:";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel4.Location = new System.Drawing.Point(3, 104);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(86, 19);
+            this.metroLabel4.TabIndex = 2;
+            this.metroLabel4.Text = "Shpenzime:";
+            // 
+            // lblShitje
+            // 
+            this.lblShitje.AutoSize = true;
+            this.lblShitje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblShitje.Location = new System.Drawing.Point(59, 71);
+            this.lblShitje.Name = "lblShitje";
+            this.lblShitje.Size = new System.Drawing.Size(0, 0);
+            this.lblShitje.TabIndex = 2;
+            // 
+            // lblShpenzime
+            // 
+            this.lblShpenzime.AutoSize = true;
+            this.lblShpenzime.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblShpenzime.Location = new System.Drawing.Point(95, 104);
+            this.lblShpenzime.Name = "lblShpenzime";
+            this.lblShpenzime.Size = new System.Drawing.Size(0, 0);
+            this.lblShpenzime.TabIndex = 2;
             // 
             // Form
             // 
@@ -308,6 +379,8 @@
             this.tbShitja.ResumeLayout(false);
             this.tbShitja.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).EndInit();
+            this.tbHistoria.ResumeLayout(false);
+            this.tbHistoria.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -333,6 +406,12 @@
         private MetroFramework.Controls.MetroTabPage tbStatistika;
         private MetroFramework.Controls.MetroLabel lblSot;
         private System.Windows.Forms.DataGridView dgvShitja;
+        private MetroFramework.Controls.MetroLabel lblDataSot;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblShpenzime;
+        private MetroFramework.Controls.MetroLabel lblShitje;
     }
 }
 

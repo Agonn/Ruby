@@ -34,5 +34,13 @@ namespace Ruby
         {
           //  Application.Exit();
         }
+
+        private void dtpData_ValueChanged(object sender, EventArgs e)
+        {
+            string theDate = dtpData.Value.ToShortDateString();
+
+            lblDataSot.Text = theDate.ToString();
+
+        }
     }
 }
