@@ -27,6 +27,8 @@ namespace Ruby
 
         private void Form_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'menaxhimiDataSet.Malli' table. You can move, or remove it, as needed.
+            this.malliTableAdapter.Fill(this.menaxhimiDataSet.Malli);
 
         }
 
