@@ -269,7 +269,7 @@
             // 
             this.lblSot.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblSot.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblSot.Location = new System.Drawing.Point(214, 0);
+            this.lblSot.Location = new System.Drawing.Point(392, 0);
             this.lblSot.Name = "lblSot";
             this.lblSot.Size = new System.Drawing.Size(54, 33);
             this.lblSot.TabIndex = 13;
