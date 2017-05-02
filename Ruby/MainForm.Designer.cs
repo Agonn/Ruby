@@ -48,8 +48,6 @@
             this.tbShitja = new MetroFramework.Controls.MetroTabPage();
             this.dgvShitja = new System.Windows.Forms.DataGridView();
             this.lblSot = new MetroFramework.Controls.MetroLabel();
-            this.txtPershkrimi = new MetroFramework.Controls.MetroTextBox();
-            this.txtMalli = new MetroFramework.Controls.MetroTextBox();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
             this.lblShpenzime = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -124,7 +122,6 @@
             this.btnShto.TabIndex = 11;
             this.btnShto.Text = "Shto";
             this.btnShto.UseSelectable = true;
-            this.btnShto.Click += new System.EventHandler(this.btnShto_Click_1);
             // 
             // btnPdf
             // 
@@ -235,8 +232,6 @@
             this.tbShitja.Controls.Add(this.cmbMalli);
             this.tbShitja.Controls.Add(this.lblSot);
             this.tbShitja.Controls.Add(this.Malli);
-            this.tbShitja.Controls.Add(this.txtPershkrimi);
-            this.tbShitja.Controls.Add(this.txtMalli);
             this.tbShitja.Controls.Add(this.txtCmimi);
             this.tbShitja.Controls.Add(this.btnShto);
             this.tbShitja.HorizontalScrollbarBarColor = true;
@@ -274,66 +269,6 @@
             this.lblSot.Size = new System.Drawing.Size(54, 33);
             this.lblSot.TabIndex = 13;
             this.lblSot.Text = "Sot:";
-            // 
-            // txtPershkrimi
-            // 
-            // 
-            // 
-            // 
-            this.txtPershkrimi.CustomButton.Image = null;
-            this.txtPershkrimi.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.txtPershkrimi.CustomButton.Name = "";
-            this.txtPershkrimi.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtPershkrimi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtPershkrimi.CustomButton.TabIndex = 1;
-            this.txtPershkrimi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtPershkrimi.CustomButton.UseSelectable = true;
-            this.txtPershkrimi.CustomButton.Visible = false;
-            this.txtPershkrimi.Lines = new string[0];
-            this.txtPershkrimi.Location = new System.Drawing.Point(64, 197);
-            this.txtPershkrimi.MaxLength = 32767;
-            this.txtPershkrimi.Name = "txtPershkrimi";
-            this.txtPershkrimi.PasswordChar = '\0';
-            this.txtPershkrimi.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtPershkrimi.SelectedText = "";
-            this.txtPershkrimi.SelectionLength = 0;
-            this.txtPershkrimi.SelectionStart = 0;
-            this.txtPershkrimi.ShortcutsEnabled = true;
-            this.txtPershkrimi.Size = new System.Drawing.Size(121, 23);
-            this.txtPershkrimi.TabIndex = 10;
-            this.txtPershkrimi.UseSelectable = true;
-            this.txtPershkrimi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtPershkrimi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtMalli
-            // 
-            // 
-            // 
-            // 
-            this.txtMalli.CustomButton.Image = null;
-            this.txtMalli.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.txtMalli.CustomButton.Name = "";
-            this.txtMalli.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtMalli.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtMalli.CustomButton.TabIndex = 1;
-            this.txtMalli.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtMalli.CustomButton.UseSelectable = true;
-            this.txtMalli.CustomButton.Visible = false;
-            this.txtMalli.Lines = new string[0];
-            this.txtMalli.Location = new System.Drawing.Point(64, 159);
-            this.txtMalli.MaxLength = 32767;
-            this.txtMalli.Name = "txtMalli";
-            this.txtMalli.PasswordChar = '\0';
-            this.txtMalli.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtMalli.SelectedText = "";
-            this.txtMalli.SelectionLength = 0;
-            this.txtMalli.SelectionStart = 0;
-            this.txtMalli.ShortcutsEnabled = true;
-            this.txtMalli.Size = new System.Drawing.Size(121, 23);
-            this.txtMalli.TabIndex = 10;
-            this.txtMalli.UseSelectable = true;
-            this.txtMalli.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtMalli.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // tbHistoria
             // 
@@ -488,8 +423,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mallicmimiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datashitjesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn;
-        private MetroFramework.Controls.MetroTextBox txtMalli;
-        private MetroFramework.Controls.MetroTextBox txtPershkrimi;
     }
 }
 

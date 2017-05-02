@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Data.SqlClient;
 using System.Windows.Forms;
-using System.Configuration;
-using MaterialSkin.Controls;
 using MetroFramework.Forms;
 
 namespace Ruby
@@ -16,10 +13,6 @@ namespace Ruby
 
         }
 
-
-
-
-
         private void btnShto_Click(object sender, EventArgs e)
         {
 
@@ -32,7 +25,7 @@ namespace Ruby
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //  Application.Exit();
+              Application.Exit();
         }
 
         private void dtpData_ValueChanged(object sender, EventArgs e)
@@ -43,15 +36,5 @@ namespace Ruby
 
         }
 
-        //Data Source =.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\Menaxhimi.mdf;Integrated Security = True; User Instance = True
-
-        private void btnShto_Click_1(object sender, EventArgs e)
-        {
-
-
-
-
-
-        }
     }
 }
