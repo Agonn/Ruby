@@ -56,22 +56,21 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblDataSot = new MetroFramework.Controls.MetroLabel();
             this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
-            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menaxhimiDataSet = new Ruby.MenaxhimiDataSet();
+            this.menaxhimiDataSet1 = new Ruby.MenaxhimiDataSet1();
             this.malliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.malliTableAdapter = new Ruby.MenaxhimiDataSetTableAdapters.MalliTableAdapter();
-            this.malliBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.malliTableAdapter = new Ruby.MenaxhimiDataSet1TableAdapters.MalliTableAdapter();
+            this.malliemriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mallicmimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datashitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
             this.tbShitja.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
             this.tbHistoria.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -265,16 +264,17 @@
             this.dgvShitja.BackgroundColor = System.Drawing.Color.Maroon;
             this.dgvShitja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvShitja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.emriDataGridViewTextBoxColumn,
-            this.cmimiDataGridViewTextBoxColumn,
-            this.dataDataGridViewTextBoxColumn});
-            this.dgvShitja.DataSource = this.malliBindingSource1;
-            this.dgvShitja.Location = new System.Drawing.Point(333, 0);
+            this.malliemriDataGridViewTextBoxColumn,
+            this.mallicmimiDataGridViewTextBoxColumn,
+            this.datashitjesDataGridViewTextBoxColumn,
+            this.pershkrimiDataGridViewTextBoxColumn});
+            this.dgvShitja.DataSource = this.malliBindingSource;
+            this.dgvShitja.Location = new System.Drawing.Point(257, 0);
             this.dgvShitja.Name = "dgvShitja";
             this.dgvShitja.ReadOnly = true;
             this.dgvShitja.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvShitja.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvShitja.Size = new System.Drawing.Size(342, 369);
+            this.dgvShitja.Size = new System.Drawing.Size(418, 369);
             this.dgvShitja.TabIndex = 14;
             // 
             // lblSot
@@ -378,49 +378,47 @@
             this.tbStatistika.VerticalScrollbarHighlightOnWheel = false;
             this.tbStatistika.VerticalScrollbarSize = 10;
             // 
-            // dataDataGridViewTextBoxColumn
+            // menaxhimiDataSet1
             // 
-            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
-            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
-            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
-            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cmimiDataGridViewTextBoxColumn
-            // 
-            this.cmimiDataGridViewTextBoxColumn.DataPropertyName = "Cmimi";
-            this.cmimiDataGridViewTextBoxColumn.HeaderText = "Cmimi";
-            this.cmimiDataGridViewTextBoxColumn.Name = "cmimiDataGridViewTextBoxColumn";
-            this.cmimiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emriDataGridViewTextBoxColumn
-            // 
-            this.emriDataGridViewTextBoxColumn.DataPropertyName = "Emri";
-            this.emriDataGridViewTextBoxColumn.HeaderText = "Emri";
-            this.emriDataGridViewTextBoxColumn.Name = "emriDataGridViewTextBoxColumn";
-            this.emriDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // menaxhimiDataSet
-            // 
-            this.menaxhimiDataSet.DataSetName = "MenaxhimiDataSet";
-            this.menaxhimiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.menaxhimiDataSet1.DataSetName = "MenaxhimiDataSet1";
+            this.menaxhimiDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // malliBindingSource
             // 
             this.malliBindingSource.DataMember = "Malli";
-            this.malliBindingSource.DataSource = this.menaxhimiDataSet;
+            this.malliBindingSource.DataSource = this.menaxhimiDataSet1;
             // 
             // malliTableAdapter
             // 
             this.malliTableAdapter.ClearBeforeFill = true;
             // 
-            // menaxhimiDataSet1
+            // malliemriDataGridViewTextBoxColumn
             // 
-            // malliBindingSource1
+            this.malliemriDataGridViewTextBoxColumn.DataPropertyName = "Malli_emri";
+            this.malliemriDataGridViewTextBoxColumn.HeaderText = "Malli_emri";
+            this.malliemriDataGridViewTextBoxColumn.Name = "malliemriDataGridViewTextBoxColumn";
+            this.malliemriDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            this.malliBindingSource1.DataMember = "Malli";
+            // mallicmimiDataGridViewTextBoxColumn
             // 
-            // malliTableAdapter1
+            this.mallicmimiDataGridViewTextBoxColumn.DataPropertyName = "Malli_cmimi";
+            this.mallicmimiDataGridViewTextBoxColumn.HeaderText = "Malli_cmimi";
+            this.mallicmimiDataGridViewTextBoxColumn.Name = "mallicmimiDataGridViewTextBoxColumn";
+            this.mallicmimiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // datashitjesDataGridViewTextBoxColumn
+            // 
+            this.datashitjesDataGridViewTextBoxColumn.DataPropertyName = "Data_shitjes";
+            this.datashitjesDataGridViewTextBoxColumn.HeaderText = "Data_shitjes";
+            this.datashitjesDataGridViewTextBoxColumn.Name = "datashitjesDataGridViewTextBoxColumn";
+            this.datashitjesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pershkrimiDataGridViewTextBoxColumn
+            // 
+            this.pershkrimiDataGridViewTextBoxColumn.DataPropertyName = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.HeaderText = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.Name = "pershkrimiDataGridViewTextBoxColumn";
+            this.pershkrimiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form
             // 
@@ -446,9 +444,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).EndInit();
             this.tbHistoria.ResumeLayout(false);
             this.tbHistoria.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,10 +480,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmimiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
-        private MenaxhimiDataSet menaxhimiDataSet;
+        private MenaxhimiDataSet1 menaxhimiDataSet1;
         private System.Windows.Forms.BindingSource malliBindingSource;
-        private MenaxhimiDataSetTableAdapters.MalliTableAdapter malliTableAdapter;
-        private System.Windows.Forms.BindingSource malliBindingSource1;
+        private MenaxhimiDataSet1TableAdapters.MalliTableAdapter malliTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malliemriDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mallicmimiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datashitjesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn;
     }
 }
 

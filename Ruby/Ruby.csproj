@@ -83,6 +83,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MenaxhimiDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MenaxhimiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MenaxhimiDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
@@ -116,6 +121,17 @@
     </None>
     <None Include="MenaxhimiDataSet.xss">
       <DependentUpon>MenaxhimiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MenaxhimiDataSet1.xsc">
+      <DependentUpon>MenaxhimiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MenaxhimiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MenaxhimiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MenaxhimiDataSet1.xss">
+      <DependentUpon>MenaxhimiDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
