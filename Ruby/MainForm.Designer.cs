@@ -139,8 +139,8 @@
             // 
             // dtpData
             // 
-            this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpData.Location = new System.Drawing.Point(712, 81);
+            this.dtpData.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dtpData.Location = new System.Drawing.Point(712, 60);
             this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 29);
@@ -222,10 +222,11 @@
             this.metroTab.Controls.Add(this.tbShitja);
             this.metroTab.Controls.Add(this.tbHistoria);
             this.metroTab.Controls.Add(this.tbStatistika);
-            this.metroTab.Location = new System.Drawing.Point(23, 63);
+            this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 2;
-            this.metroTab.Size = new System.Drawing.Size(683, 407);
+            this.metroTab.SelectedIndex = 0;
+            this.metroTab.Size = new System.Drawing.Size(892, 413);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
             // 
@@ -243,7 +244,7 @@
             this.tbShitja.HorizontalScrollbarSize = 10;
             this.tbShitja.Location = new System.Drawing.Point(4, 38);
             this.tbShitja.Name = "tbShitja";
-            this.tbShitja.Size = new System.Drawing.Size(675, 365);
+            this.tbShitja.Size = new System.Drawing.Size(884, 371);
             this.tbShitja.TabIndex = 0;
             this.tbShitja.Text = "Shitje";
             this.tbShitja.VerticalScrollbarBarColor = true;
@@ -255,12 +256,13 @@
             this.dgvShitja.AllowUserToDeleteRows = false;
             this.dgvShitja.BackgroundColor = System.Drawing.Color.Maroon;
             this.dgvShitja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvShitja.Location = new System.Drawing.Point(257, 0);
+            this.dgvShitja.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgvShitja.Location = new System.Drawing.Point(452, 0);
             this.dgvShitja.Name = "dgvShitja";
             this.dgvShitja.ReadOnly = true;
             this.dgvShitja.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvShitja.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvShitja.Size = new System.Drawing.Size(418, 369);
+            this.dgvShitja.Size = new System.Drawing.Size(432, 371);
             this.dgvShitja.TabIndex = 14;
             // 
             // lblSot
@@ -286,7 +288,7 @@
             this.tbHistoria.HorizontalScrollbarSize = 10;
             this.tbHistoria.Location = new System.Drawing.Point(4, 38);
             this.tbHistoria.Name = "tbHistoria";
-            this.tbHistoria.Size = new System.Drawing.Size(675, 365);
+            this.tbHistoria.Size = new System.Drawing.Size(884, 371);
             this.tbHistoria.TabIndex = 1;
             this.tbHistoria.Text = "Historia";
             this.tbHistoria.VerticalScrollbarBarColor = true;
@@ -352,15 +354,15 @@
             // 
             // tbStatistika
             // 
+            this.tbStatistika.Controls.Add(this.cmbStatistika);
             this.tbStatistika.Controls.Add(this.metroLabel5);
             this.tbStatistika.Controls.Add(this.lblHyrje);
-            this.tbStatistika.Controls.Add(this.cmbStatistika);
             this.tbStatistika.HorizontalScrollbarBarColor = true;
             this.tbStatistika.HorizontalScrollbarHighlightOnWheel = false;
             this.tbStatistika.HorizontalScrollbarSize = 10;
             this.tbStatistika.Location = new System.Drawing.Point(4, 38);
             this.tbStatistika.Name = "tbStatistika";
-            this.tbStatistika.Size = new System.Drawing.Size(675, 365);
+            this.tbStatistika.Size = new System.Drawing.Size(884, 371);
             this.tbStatistika.TabIndex = 2;
             this.tbStatistika.Text = "Statistika";
             this.tbStatistika.VerticalScrollbarBarColor = true;
@@ -377,9 +379,9 @@
             "Java ",
             "Muaji",
             "Viti"});
-            this.cmbStatistika.Location = new System.Drawing.Point(551, 12);
+            this.cmbStatistika.Location = new System.Drawing.Point(688, 26);
             this.cmbStatistika.Name = "cmbStatistika";
-            this.cmbStatistika.Size = new System.Drawing.Size(121, 29);
+            this.cmbStatistika.Size = new System.Drawing.Size(73, 29);
             this.cmbStatistika.TabIndex = 10;
             this.cmbStatistika.UseSelectable = true;
             // 
