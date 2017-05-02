@@ -47,7 +47,6 @@
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
             this.tbShitja = new MetroFramework.Controls.MetroTabPage();
             this.dgvShitja = new System.Windows.Forms.DataGridView();
-            this.lblSot = new MetroFramework.Controls.MetroLabel();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
             this.lblShpenzime = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -235,7 +234,6 @@
             this.tbShitja.Controls.Add(this.dgvShitja);
             this.tbShitja.Controls.Add(this.metroLabel2);
             this.tbShitja.Controls.Add(this.cmbMalli);
-            this.tbShitja.Controls.Add(this.lblSot);
             this.tbShitja.Controls.Add(this.Malli);
             this.tbShitja.Controls.Add(this.txtCmimi);
             this.tbShitja.Controls.Add(this.btnShto);
@@ -264,16 +262,6 @@
             this.dgvShitja.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvShitja.Size = new System.Drawing.Size(432, 371);
             this.dgvShitja.TabIndex = 14;
-            // 
-            // lblSot
-            // 
-            this.lblSot.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblSot.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblSot.Location = new System.Drawing.Point(392, 0);
-            this.lblSot.Name = "lblSot";
-            this.lblSot.Size = new System.Drawing.Size(54, 33);
-            this.lblSot.TabIndex = 13;
-            this.lblSot.Text = "Sot:";
             // 
             // tbHistoria
             // 
@@ -454,7 +442,6 @@
         private MetroFramework.Controls.MetroTabPage tbShitja;
         private MetroFramework.Controls.MetroTabPage tbHistoria;
         private MetroFramework.Controls.MetroTabPage tbStatistika;
-        private MetroFramework.Controls.MetroLabel lblSot;
         private System.Windows.Forms.DataGridView dgvShitja;
         private MetroFramework.Controls.MetroLabel lblDataSot;
         private MetroFramework.Controls.MetroLabel metroLabel4;
