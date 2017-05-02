@@ -52,7 +52,6 @@
             this.datashitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.malliBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.menaxhimiDataSet1 = new Ruby.MenaxhimiDataSet1();
             this.lblSot = new MetroFramework.Controls.MetroLabel();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
             this.lblShpenzime = new MetroFramework.Controls.MetroLabel();
@@ -62,7 +61,6 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblDataSot = new MetroFramework.Controls.MetroLabel();
             this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
-            this.malliTableAdapter = new Ruby.MenaxhimiDataSet1TableAdapters.MalliTableAdapter();
             this.txtMalli = new MetroFramework.Controls.MetroTextBox();
             this.txtPershkrimi = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
@@ -71,7 +69,6 @@
             this.tbShitja.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet1)).BeginInit();
             this.tbHistoria.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -312,12 +309,9 @@
             // malliBindingSource
             // 
             this.malliBindingSource.DataMember = "Malli";
-            this.malliBindingSource.DataSource = this.menaxhimiDataSet1;
             // 
             // menaxhimiDataSet1
             // 
-            this.menaxhimiDataSet1.DataSetName = "MenaxhimiDataSet1";
-            this.menaxhimiDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblSot
             // 
@@ -422,7 +416,6 @@
             // 
             // malliTableAdapter
             // 
-            this.malliTableAdapter.ClearBeforeFill = true;
             // 
             // txtMalli
             // 
@@ -507,7 +500,6 @@
             this.tbShitja.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet1)).EndInit();
             this.tbHistoria.ResumeLayout(false);
             this.tbHistoria.PerformLayout();
             this.ResumeLayout(false);
@@ -544,9 +536,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmimiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
-        private MenaxhimiDataSet1 menaxhimiDataSet1;
         private System.Windows.Forms.BindingSource malliBindingSource;
-        private MenaxhimiDataSet1TableAdapters.MalliTableAdapter malliTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn malliemriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mallicmimiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datashitjesDataGridViewTextBoxColumn;

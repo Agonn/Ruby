@@ -79,16 +79,6 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenaxhimiDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MenaxhimiDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="MenaxhimiDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MenaxhimiDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Parametrat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,28 +103,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="MenaxhimiDataSet.xsc">
-      <DependentUpon>MenaxhimiDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MenaxhimiDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MenaxhimiDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MenaxhimiDataSet.xss">
-      <DependentUpon>MenaxhimiDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="MenaxhimiDataSet1.xsc">
-      <DependentUpon>MenaxhimiDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="MenaxhimiDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MenaxhimiDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MenaxhimiDataSet1.xss">
-      <DependentUpon>MenaxhimiDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -160,12 +128,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Menaxhimi.mdf" />
-    <Content Include="Menaxhimi_log.ldf">
-      <DependentUpon>Menaxhimi.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
