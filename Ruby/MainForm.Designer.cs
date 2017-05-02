@@ -39,6 +39,9 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroStyle = new MetroFramework.Components.MetroStyleManager(this.components);
             this.CxtMenu = new MaterialSkin.Controls.MaterialContextMenuStrip();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.historikuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statistikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +49,10 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
             this.tbShitja = new MetroFramework.Controls.MetroTabPage();
+            this.pnlShpenzime = new System.Windows.Forms.Panel();
+            this.btnShpenzime = new MetroFramework.Controls.MetroButton();
+            this.txtShpenzime = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.dgvShitja = new System.Windows.Forms.DataGridView();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
             this.lblShpenzime = new MetroFramework.Controls.MetroLabel();
@@ -56,12 +63,13 @@
             this.lblDataSot = new MetroFramework.Controls.MetroLabel();
             this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
             this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
-            this.lblHyrje = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.lblHyrje = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
             this.tbShitja.SuspendLayout();
+            this.pnlShpenzime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
             this.tbHistoria.SuspendLayout();
             this.tbStatistika.SuspendLayout();
@@ -176,6 +184,9 @@
             this.CxtMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CxtMenu.Depth = 0;
             this.CxtMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.toolStripSeparator2,
             this.historikuToolStripMenuItem,
             this.statistikaToolStripMenuItem,
             this.kameraToolStripMenuItem,
@@ -184,35 +195,53 @@
             this.CxtMenu.MouseState = MaterialSkin.MouseState.HOVER;
             this.CxtMenu.Name = "CxtMenu";
             this.CxtMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CxtMenu.Size = new System.Drawing.Size(122, 98);
+            this.CxtMenu.Size = new System.Drawing.Size(158, 148);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
+            this.toolStripMenuItem1.Text = "Shpenzimet";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(157, 22);
+            this.toolStripMenuItem2.Text = "Hiq shpenzimet";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(154, 6);
             // 
             // historikuToolStripMenuItem
             // 
             this.historikuToolStripMenuItem.Name = "historikuToolStripMenuItem";
-            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.historikuToolStripMenuItem.Text = "Historia";
             // 
             // statistikaToolStripMenuItem
             // 
             this.statistikaToolStripMenuItem.Name = "statistikaToolStripMenuItem";
-            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.statistikaToolStripMenuItem.Text = "Statistika";
             // 
             // kameraToolStripMenuItem
             // 
             this.kameraToolStripMenuItem.Name = "kameraToolStripMenuItem";
-            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.kameraToolStripMenuItem.Text = "Kamera";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(118, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(154, 6);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.logOutToolStripMenuItem.Text = "Mbylle";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -231,6 +260,7 @@
             // 
             // tbShitja
             // 
+            this.tbShitja.Controls.Add(this.pnlShpenzime);
             this.tbShitja.Controls.Add(this.dgvShitja);
             this.tbShitja.Controls.Add(this.metroLabel2);
             this.tbShitja.Controls.Add(this.cmbMalli);
@@ -248,6 +278,70 @@
             this.tbShitja.VerticalScrollbarBarColor = true;
             this.tbShitja.VerticalScrollbarHighlightOnWheel = false;
             this.tbShitja.VerticalScrollbarSize = 10;
+            // 
+            // pnlShpenzime
+            // 
+            this.pnlShpenzime.BackColor = System.Drawing.Color.Transparent;
+            this.pnlShpenzime.Controls.Add(this.btnShpenzime);
+            this.pnlShpenzime.Controls.Add(this.txtShpenzime);
+            this.pnlShpenzime.Controls.Add(this.metroLabel6);
+            this.pnlShpenzime.Location = new System.Drawing.Point(0, 320);
+            this.pnlShpenzime.Name = "pnlShpenzime";
+            this.pnlShpenzime.Size = new System.Drawing.Size(446, 34);
+            this.pnlShpenzime.TabIndex = 16;
+            this.pnlShpenzime.Visible = false;
+            // 
+            // btnShpenzime
+            // 
+            this.btnShpenzime.DisplayFocus = true;
+            this.btnShpenzime.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnShpenzime.Location = new System.Drawing.Point(222, 8);
+            this.btnShpenzime.Name = "btnShpenzime";
+            this.btnShpenzime.Size = new System.Drawing.Size(122, 23);
+            this.btnShpenzime.TabIndex = 11;
+            this.btnShpenzime.Text = "Shto";
+            this.btnShpenzime.UseSelectable = true;
+            this.btnShpenzime.Click += new System.EventHandler(this.btnShpenzime_Click);
+            // 
+            // txtShpenzime
+            // 
+            // 
+            // 
+            // 
+            this.txtShpenzime.CustomButton.Image = null;
+            this.txtShpenzime.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.txtShpenzime.CustomButton.Name = "";
+            this.txtShpenzime.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtShpenzime.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtShpenzime.CustomButton.TabIndex = 1;
+            this.txtShpenzime.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtShpenzime.CustomButton.UseSelectable = true;
+            this.txtShpenzime.CustomButton.Visible = false;
+            this.txtShpenzime.Lines = new string[0];
+            this.txtShpenzime.Location = new System.Drawing.Point(95, 8);
+            this.txtShpenzime.MaxLength = 32767;
+            this.txtShpenzime.Name = "txtShpenzime";
+            this.txtShpenzime.PasswordChar = '\0';
+            this.txtShpenzime.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtShpenzime.SelectedText = "";
+            this.txtShpenzime.SelectionLength = 0;
+            this.txtShpenzime.SelectionStart = 0;
+            this.txtShpenzime.ShortcutsEnabled = true;
+            this.txtShpenzime.Size = new System.Drawing.Size(121, 23);
+            this.txtShpenzime.TabIndex = 10;
+            this.txtShpenzime.UseSelectable = true;
+            this.txtShpenzime.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtShpenzime.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel6.Location = new System.Drawing.Point(3, 8);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(86, 19);
+            this.metroLabel6.TabIndex = 13;
+            this.metroLabel6.Text = "Shpenzime:";
             // 
             // dgvShitja
             // 
@@ -335,7 +429,7 @@
             // 
             this.lblDataSot.AutoSize = true;
             this.lblDataSot.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblDataSot.Location = new System.Drawing.Point(48, 38);
+            this.lblDataSot.Location = new System.Drawing.Point(95, 26);
             this.lblDataSot.Name = "lblDataSot";
             this.lblDataSot.Size = new System.Drawing.Size(0, 0);
             this.lblDataSot.TabIndex = 2;
@@ -373,16 +467,6 @@
             this.cmbStatistika.TabIndex = 10;
             this.cmbStatistika.UseSelectable = true;
             // 
-            // lblHyrje
-            // 
-            this.lblHyrje.AutoSize = true;
-            this.lblHyrje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblHyrje.Location = new System.Drawing.Point(2, 26);
-            this.lblHyrje.Name = "lblHyrje";
-            this.lblHyrje.Size = new System.Drawing.Size(50, 19);
-            this.lblHyrje.TabIndex = 14;
-            this.lblHyrje.Text = "Hyrje:";
-            // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
@@ -392,6 +476,16 @@
             this.metroLabel5.Size = new System.Drawing.Size(86, 19);
             this.metroLabel5.TabIndex = 14;
             this.metroLabel5.Text = "Shpenzime:";
+            // 
+            // lblHyrje
+            // 
+            this.lblHyrje.AutoSize = true;
+            this.lblHyrje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblHyrje.Location = new System.Drawing.Point(2, 26);
+            this.lblHyrje.Name = "lblHyrje";
+            this.lblHyrje.Size = new System.Drawing.Size(50, 19);
+            this.lblHyrje.TabIndex = 14;
+            this.lblHyrje.Text = "Hyrje:";
             // 
             // Form
             // 
@@ -414,6 +508,8 @@
             this.metroTab.ResumeLayout(false);
             this.tbShitja.ResumeLayout(false);
             this.tbShitja.PerformLayout();
+            this.pnlShpenzime.ResumeLayout(false);
+            this.pnlShpenzime.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).EndInit();
             this.tbHistoria.ResumeLayout(false);
             this.tbHistoria.PerformLayout();
@@ -452,6 +548,13 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel lblHyrje;
         private MetroFramework.Controls.MetroComboBox cmbStatistika;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroTextBox txtShpenzime;
+        private MetroFramework.Controls.MetroButton btnShpenzime;
+        private System.Windows.Forms.Panel pnlShpenzime;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 
