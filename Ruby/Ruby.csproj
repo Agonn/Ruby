@@ -89,6 +89,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MenaxhimiDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Parametrat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
