@@ -15,7 +15,7 @@ namespace Ruby
 
         private void btnShto_Click(object sender, EventArgs e)
         {
-
+            //sql
         }
 
         private void Form_Load(object sender, EventArgs e)
