@@ -195,53 +195,54 @@
             this.CxtMenu.MouseState = MaterialSkin.MouseState.HOVER;
             this.CxtMenu.Name = "CxtMenu";
             this.CxtMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CxtMenu.Size = new System.Drawing.Size(158, 148);
+            this.CxtMenu.Size = new System.Drawing.Size(173, 148);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
-            this.toolStripMenuItem1.Text = "Shpenzimet";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
+            this.toolStripMenuItem1.Text = "Shto Shpenzim";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(157, 22);
-            this.toolStripMenuItem2.Text = "Hiq shpenzimet";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(172, 22);
+            this.toolStripMenuItem2.Text = "Mshef Shpenzimet";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click_1);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(154, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(169, 6);
             // 
             // historikuToolStripMenuItem
             // 
             this.historikuToolStripMenuItem.Name = "historikuToolStripMenuItem";
-            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.historikuToolStripMenuItem.Text = "Historia";
             // 
             // statistikaToolStripMenuItem
             // 
             this.statistikaToolStripMenuItem.Name = "statistikaToolStripMenuItem";
-            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.statistikaToolStripMenuItem.Text = "Statistika";
             // 
             // kameraToolStripMenuItem
             // 
             this.kameraToolStripMenuItem.Name = "kameraToolStripMenuItem";
-            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.kameraToolStripMenuItem.Text = "Kamera";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(154, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.logOutToolStripMenuItem.Text = "Mbylle";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 

@@ -51,7 +51,7 @@ namespace Ruby
             pnlShpenzime.Visible = true;
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
         {
             pnlShpenzime.Visible = false;
         }
