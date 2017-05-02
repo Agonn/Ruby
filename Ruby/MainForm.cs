@@ -50,22 +50,26 @@ namespace Ruby
         private void btnShto_Click_1(object sender, EventArgs e)
         {
 
-            string connetionString = null;
-            string sql = null;
-            connetionString = "Data Source =.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\Menaxhimi.mdf;Integrated Security = True; User Instance = True";
-            using (SqlConnection cnn = new SqlConnection(connetionString))
+            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+            //Formati DataTime DATETIME values in 'YYYY-MM-DD HH:MM:SS' 
+            string Query = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('unaze','33.5','2017-05-02','eh')";
+            SqlCommand objKomanda = new SqlCommand(Query, objKonektimi);
+
+            try
             {
-                sql = "INSERT INTO [dbo].[Malli] ([Emri], [Cmimi], [Data]) VALUES (@Emri,@Cmimi,@Data)";
-                cnn.Open();
-                using (SqlCommand cmd = new SqlCommand(sql, cnn))
-                {
-                    cmd.Parameters.AddWithValue("@Emri", Convert.ToString(cmbMalli.SelectedValue));
-                    cmd.Parameters.AddWithValue("@Cmimi",  Convert.ToInt32(txtCmimi.Text));
-                    cmd.Parameters.AddWithValue("@Data", dtpData.Value.ToShortDateString());
-                    
-                    MessageBox.Show("Row inserted !! ");
-                    cmd.ExecuteNonQuery();
-                }
+                objKonektimi.Open();
+                objKomanda.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                objKonektimi.Close();
+                // objKonektimi.Close();
             }
 
 
