@@ -260,7 +260,6 @@
             // 
             // tbShitja
             // 
-            this.tbShitja.Controls.Add(this.pnlShpenzime);
             this.tbShitja.Controls.Add(this.dgvShitja);
             this.tbShitja.Controls.Add(this.metroLabel2);
             this.tbShitja.Controls.Add(this.cmbMalli);
@@ -285,7 +284,7 @@
             this.pnlShpenzime.Controls.Add(this.btnShpenzime);
             this.pnlShpenzime.Controls.Add(this.txtShpenzime);
             this.pnlShpenzime.Controls.Add(this.metroLabel6);
-            this.pnlShpenzime.Location = new System.Drawing.Point(0, 320);
+            this.pnlShpenzime.Location = new System.Drawing.Point(20, 436);
             this.pnlShpenzime.Name = "pnlShpenzime";
             this.pnlShpenzime.Size = new System.Drawing.Size(446, 34);
             this.pnlShpenzime.TabIndex = 16;
@@ -495,6 +494,7 @@
             this.ClientSize = new System.Drawing.Size(932, 493);
             this.ContextMenuStrip = this.CxtMenu;
             this.Controls.Add(this.dtpData);
+            this.Controls.Add(this.pnlShpenzime);
             this.Controls.Add(this.metroTab);
             this.Controls.Add(this.btnPdf);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
