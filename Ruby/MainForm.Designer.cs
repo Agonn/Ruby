@@ -47,7 +47,6 @@
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
             this.tbShitja = new MetroFramework.Controls.MetroTabPage();
             this.dgvShitja = new System.Windows.Forms.DataGridView();
-            this.malliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblSot = new MetroFramework.Controls.MetroLabel();
             this.txtPershkrimi = new MetroFramework.Controls.MetroTextBox();
             this.txtMalli = new MetroFramework.Controls.MetroTextBox();
@@ -64,7 +63,6 @@
             this.metroTab.SuspendLayout();
             this.tbShitja.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource)).BeginInit();
             this.tbHistoria.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -267,10 +265,6 @@
             this.dgvShitja.Size = new System.Drawing.Size(418, 369);
             this.dgvShitja.TabIndex = 14;
             // 
-            // malliBindingSource
-            // 
-            this.malliBindingSource.DataMember = "Malli";
-            // 
             // lblSot
             // 
             this.lblSot.FontSize = MetroFramework.MetroLabelSize.Tall;
@@ -454,7 +448,6 @@
             this.tbShitja.ResumeLayout(false);
             this.tbShitja.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource)).EndInit();
             this.tbHistoria.ResumeLayout(false);
             this.tbHistoria.PerformLayout();
             this.ResumeLayout(false);
@@ -491,7 +484,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cmimiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource malliBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn malliemriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mallicmimiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datashitjesDataGridViewTextBoxColumn;
