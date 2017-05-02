@@ -27,9 +27,6 @@ namespace Ruby
 
         private void Form_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'menaxhimiDataSet1.Malli' table. You can move, or remove it, as needed.
-            // TODO: This line of code loads data into the 'menaxhimiDataSet1.Malli' table. You can move, or remove it, as needed.
-            // TODO: This line of code loads data into the 'menaxhimiDataSet.Malli' table. You can move, or remove it, as needed.
 
         }
 
@@ -45,6 +42,7 @@ namespace Ruby
             lblDataSot.Text = theDate.ToString();
 
         }
+
         //Data Source =.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\Menaxhimi.mdf;Integrated Security = True; User Instance = True
 
         private void btnShto_Click_1(object sender, EventArgs e)
