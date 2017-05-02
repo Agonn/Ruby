@@ -47,6 +47,12 @@
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
             this.tbShitja = new MetroFramework.Controls.MetroTabPage();
             this.dgvShitja = new System.Windows.Forms.DataGridView();
+            this.malliemriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mallicmimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datashitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menaxhimiDataSet1 = new Ruby.MenaxhimiDataSet1();
             this.lblSot = new MetroFramework.Controls.MetroLabel();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
             this.lblShpenzime = new MetroFramework.Controls.MetroLabel();
@@ -56,21 +62,17 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblDataSot = new MetroFramework.Controls.MetroLabel();
             this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
-            this.menaxhimiDataSet1 = new Ruby.MenaxhimiDataSet1();
-            this.malliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.malliTableAdapter = new Ruby.MenaxhimiDataSet1TableAdapters.MalliTableAdapter();
-            this.malliemriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mallicmimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datashitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtMalli = new MetroFramework.Controls.MetroTextBox();
+            this.txtPershkrimi = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
             this.tbShitja.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
-            this.tbHistoria.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet1)).BeginInit();
+            this.tbHistoria.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -242,6 +244,8 @@
             this.tbShitja.Controls.Add(this.cmbMalli);
             this.tbShitja.Controls.Add(this.lblSot);
             this.tbShitja.Controls.Add(this.Malli);
+            this.tbShitja.Controls.Add(this.txtPershkrimi);
+            this.tbShitja.Controls.Add(this.txtMalli);
             this.tbShitja.Controls.Add(this.txtCmimi);
             this.tbShitja.Controls.Add(this.btnShto);
             this.tbShitja.HorizontalScrollbarBarColor = true;
@@ -276,6 +280,44 @@
             this.dgvShitja.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvShitja.Size = new System.Drawing.Size(418, 369);
             this.dgvShitja.TabIndex = 14;
+            // 
+            // malliemriDataGridViewTextBoxColumn
+            // 
+            this.malliemriDataGridViewTextBoxColumn.DataPropertyName = "Malli_emri";
+            this.malliemriDataGridViewTextBoxColumn.HeaderText = "Malli_emri";
+            this.malliemriDataGridViewTextBoxColumn.Name = "malliemriDataGridViewTextBoxColumn";
+            this.malliemriDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // mallicmimiDataGridViewTextBoxColumn
+            // 
+            this.mallicmimiDataGridViewTextBoxColumn.DataPropertyName = "Malli_cmimi";
+            this.mallicmimiDataGridViewTextBoxColumn.HeaderText = "Malli_cmimi";
+            this.mallicmimiDataGridViewTextBoxColumn.Name = "mallicmimiDataGridViewTextBoxColumn";
+            this.mallicmimiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datashitjesDataGridViewTextBoxColumn
+            // 
+            this.datashitjesDataGridViewTextBoxColumn.DataPropertyName = "Data_shitjes";
+            this.datashitjesDataGridViewTextBoxColumn.HeaderText = "Data_shitjes";
+            this.datashitjesDataGridViewTextBoxColumn.Name = "datashitjesDataGridViewTextBoxColumn";
+            this.datashitjesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pershkrimiDataGridViewTextBoxColumn
+            // 
+            this.pershkrimiDataGridViewTextBoxColumn.DataPropertyName = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.HeaderText = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.Name = "pershkrimiDataGridViewTextBoxColumn";
+            this.pershkrimiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // malliBindingSource
+            // 
+            this.malliBindingSource.DataMember = "Malli";
+            this.malliBindingSource.DataSource = this.menaxhimiDataSet1;
+            // 
+            // menaxhimiDataSet1
+            // 
+            this.menaxhimiDataSet1.DataSetName = "MenaxhimiDataSet1";
+            this.menaxhimiDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblSot
             // 
@@ -378,47 +420,69 @@
             this.tbStatistika.VerticalScrollbarHighlightOnWheel = false;
             this.tbStatistika.VerticalScrollbarSize = 10;
             // 
-            // menaxhimiDataSet1
-            // 
-            this.menaxhimiDataSet1.DataSetName = "MenaxhimiDataSet1";
-            this.menaxhimiDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // malliBindingSource
-            // 
-            this.malliBindingSource.DataMember = "Malli";
-            this.malliBindingSource.DataSource = this.menaxhimiDataSet1;
-            // 
             // malliTableAdapter
             // 
             this.malliTableAdapter.ClearBeforeFill = true;
             // 
-            // malliemriDataGridViewTextBoxColumn
+            // txtMalli
             // 
-            this.malliemriDataGridViewTextBoxColumn.DataPropertyName = "Malli_emri";
-            this.malliemriDataGridViewTextBoxColumn.HeaderText = "Malli_emri";
-            this.malliemriDataGridViewTextBoxColumn.Name = "malliemriDataGridViewTextBoxColumn";
-            this.malliemriDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // mallicmimiDataGridViewTextBoxColumn
             // 
-            this.mallicmimiDataGridViewTextBoxColumn.DataPropertyName = "Malli_cmimi";
-            this.mallicmimiDataGridViewTextBoxColumn.HeaderText = "Malli_cmimi";
-            this.mallicmimiDataGridViewTextBoxColumn.Name = "mallicmimiDataGridViewTextBoxColumn";
-            this.mallicmimiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // datashitjesDataGridViewTextBoxColumn
+            this.txtMalli.CustomButton.Image = null;
+            this.txtMalli.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.txtMalli.CustomButton.Name = "";
+            this.txtMalli.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtMalli.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtMalli.CustomButton.TabIndex = 1;
+            this.txtMalli.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtMalli.CustomButton.UseSelectable = true;
+            this.txtMalli.CustomButton.Visible = false;
+            this.txtMalli.Lines = new string[0];
+            this.txtMalli.Location = new System.Drawing.Point(64, 159);
+            this.txtMalli.MaxLength = 32767;
+            this.txtMalli.Name = "txtMalli";
+            this.txtMalli.PasswordChar = '\0';
+            this.txtMalli.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtMalli.SelectedText = "";
+            this.txtMalli.SelectionLength = 0;
+            this.txtMalli.SelectionStart = 0;
+            this.txtMalli.ShortcutsEnabled = true;
+            this.txtMalli.Size = new System.Drawing.Size(121, 23);
+            this.txtMalli.TabIndex = 10;
+            this.txtMalli.UseSelectable = true;
+            this.txtMalli.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtMalli.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            this.datashitjesDataGridViewTextBoxColumn.DataPropertyName = "Data_shitjes";
-            this.datashitjesDataGridViewTextBoxColumn.HeaderText = "Data_shitjes";
-            this.datashitjesDataGridViewTextBoxColumn.Name = "datashitjesDataGridViewTextBoxColumn";
-            this.datashitjesDataGridViewTextBoxColumn.ReadOnly = true;
+            // txtPershkrimi
             // 
-            // pershkrimiDataGridViewTextBoxColumn
             // 
-            this.pershkrimiDataGridViewTextBoxColumn.DataPropertyName = "Pershkrimi";
-            this.pershkrimiDataGridViewTextBoxColumn.HeaderText = "Pershkrimi";
-            this.pershkrimiDataGridViewTextBoxColumn.Name = "pershkrimiDataGridViewTextBoxColumn";
-            this.pershkrimiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // 
+            this.txtPershkrimi.CustomButton.Image = null;
+            this.txtPershkrimi.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.txtPershkrimi.CustomButton.Name = "";
+            this.txtPershkrimi.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPershkrimi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtPershkrimi.CustomButton.TabIndex = 1;
+            this.txtPershkrimi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtPershkrimi.CustomButton.UseSelectable = true;
+            this.txtPershkrimi.CustomButton.Visible = false;
+            this.txtPershkrimi.Lines = new string[0];
+            this.txtPershkrimi.Location = new System.Drawing.Point(64, 197);
+            this.txtPershkrimi.MaxLength = 32767;
+            this.txtPershkrimi.Name = "txtPershkrimi";
+            this.txtPershkrimi.PasswordChar = '\0';
+            this.txtPershkrimi.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtPershkrimi.SelectedText = "";
+            this.txtPershkrimi.SelectionLength = 0;
+            this.txtPershkrimi.SelectionStart = 0;
+            this.txtPershkrimi.ShortcutsEnabled = true;
+            this.txtPershkrimi.Size = new System.Drawing.Size(121, 23);
+            this.txtPershkrimi.TabIndex = 10;
+            this.txtPershkrimi.UseSelectable = true;
+            this.txtPershkrimi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtPershkrimi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Form
             // 
@@ -442,10 +506,10 @@
             this.tbShitja.ResumeLayout(false);
             this.tbShitja.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet1)).EndInit();
             this.tbHistoria.ResumeLayout(false);
             this.tbHistoria.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,6 +551,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mallicmimiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datashitjesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroTextBox txtMalli;
+        private MetroFramework.Controls.MetroTextBox txtPershkrimi;
     }
 }
 

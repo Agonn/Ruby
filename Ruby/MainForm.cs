@@ -46,32 +46,11 @@ namespace Ruby
 
         }
         //Data Source =.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\Menaxhimi.mdf;Integrated Security = True; User Instance = True
+
         private void btnShto_Click_1(object sender, EventArgs e)
         {
 
-            SqlConnection objKonektimi = new SqlConnection();
-            objKonektimi.ConnectionString = "Data Source =.\\SQLEXPRESS;AttachDbFilename=|DataDirectory|\\Menaxhimi.mdf;Integrated Security = True; User Instance = True";
 
-            //Formati DataTime DATETIME values in 'YYYY-MM-DD HH:MM:SS' 
-            string Query = "insert into dbo.Malli(Malli_emri,Malli_cmimi,Data_shitjes,Pershkrimi) values('unaze','33.5','02/05/2017','eh')";
-            SqlCommand objKomanda = new SqlCommand(Query, objKonektimi);
-
-            try
-            {
-                objKonektimi.Open();
-                objKomanda.ExecuteNonQuery();
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                objKonektimi.Close();
-                // objKonektimi.Close();
-            }
 
 
 
