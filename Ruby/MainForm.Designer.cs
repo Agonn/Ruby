@@ -224,7 +224,7 @@
             this.metroTab.Controls.Add(this.tbStatistika);
             this.metroTab.Location = new System.Drawing.Point(23, 63);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 1;
+            this.metroTab.SelectedIndex = 2;
             this.metroTab.Size = new System.Drawing.Size(683, 407);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -369,6 +369,7 @@
             // 
             // cmbStatistika
             // 
+            this.cmbStatistika.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbStatistika.FormattingEnabled = true;
             this.cmbStatistika.ItemHeight = 23;
             this.cmbStatistika.Items.AddRange(new object[] {
