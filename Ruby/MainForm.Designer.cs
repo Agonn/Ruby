@@ -56,12 +56,16 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblDataSot = new MetroFramework.Controls.MetroLabel();
             this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
+            this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
+            this.lblHyrje = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
             this.tbShitja.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
             this.tbHistoria.SuspendLayout();
+            this.tbStatistika.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -220,7 +224,7 @@
             this.metroTab.Controls.Add(this.tbStatistika);
             this.metroTab.Location = new System.Drawing.Point(23, 63);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 0;
+            this.metroTab.SelectedIndex = 1;
             this.metroTab.Size = new System.Drawing.Size(683, 407);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -249,7 +253,6 @@
             // dgvShitja
             // 
             this.dgvShitja.AllowUserToDeleteRows = false;
-            this.dgvShitja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dgvShitja.BackgroundColor = System.Drawing.Color.Maroon;
             this.dgvShitja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvShitja.Location = new System.Drawing.Point(257, 0);
@@ -322,7 +325,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(3, 71);
+            this.metroLabel3.Location = new System.Drawing.Point(2, 68);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(50, 19);
             this.metroLabel3.TabIndex = 2;
@@ -332,7 +335,7 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(3, 38);
+            this.metroLabel1.Location = new System.Drawing.Point(2, 26);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(44, 19);
             this.metroLabel1.TabIndex = 2;
@@ -349,6 +352,9 @@
             // 
             // tbStatistika
             // 
+            this.tbStatistika.Controls.Add(this.metroLabel5);
+            this.tbStatistika.Controls.Add(this.lblHyrje);
+            this.tbStatistika.Controls.Add(this.cmbStatistika);
             this.tbStatistika.HorizontalScrollbarBarColor = true;
             this.tbStatistika.HorizontalScrollbarHighlightOnWheel = false;
             this.tbStatistika.HorizontalScrollbarSize = 10;
@@ -360,6 +366,41 @@
             this.tbStatistika.VerticalScrollbarBarColor = true;
             this.tbStatistika.VerticalScrollbarHighlightOnWheel = false;
             this.tbStatistika.VerticalScrollbarSize = 10;
+            // 
+            // cmbStatistika
+            // 
+            this.cmbStatistika.FormattingEnabled = true;
+            this.cmbStatistika.ItemHeight = 23;
+            this.cmbStatistika.Items.AddRange(new object[] {
+            "Sot",
+            "Java ",
+            "Muaji",
+            "Viti"});
+            this.cmbStatistika.Location = new System.Drawing.Point(551, 12);
+            this.cmbStatistika.Name = "cmbStatistika";
+            this.cmbStatistika.Size = new System.Drawing.Size(121, 29);
+            this.cmbStatistika.TabIndex = 10;
+            this.cmbStatistika.UseSelectable = true;
+            // 
+            // lblHyrje
+            // 
+            this.lblHyrje.AutoSize = true;
+            this.lblHyrje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblHyrje.Location = new System.Drawing.Point(2, 26);
+            this.lblHyrje.Name = "lblHyrje";
+            this.lblHyrje.Size = new System.Drawing.Size(50, 19);
+            this.lblHyrje.TabIndex = 14;
+            this.lblHyrje.Text = "Hyrje:";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel5.Location = new System.Drawing.Point(2, 68);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(86, 19);
+            this.metroLabel5.TabIndex = 14;
+            this.metroLabel5.Text = "Shpenzime:";
             // 
             // Form
             // 
@@ -385,6 +426,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).EndInit();
             this.tbHistoria.ResumeLayout(false);
             this.tbHistoria.PerformLayout();
+            this.tbStatistika.ResumeLayout(false);
+            this.tbStatistika.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -416,13 +459,9 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lblShpenzime;
         private MetroFramework.Controls.MetroLabel lblShitje;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emriDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cmimiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn malliemriDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mallicmimiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datashitjesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel lblHyrje;
+        private MetroFramework.Controls.MetroComboBox cmbStatistika;
     }
 }
 

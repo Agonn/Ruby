@@ -10,12 +10,14 @@ namespace Ruby
         public Form()
         {
             InitializeComponent();
+            cmbStatistika.SelectedIndex = 0; //Statistika data te jete SOT.
 
         }
 
         private void btnShto_Click(object sender, EventArgs e)
         {
-            //sql
+            //VETEM PUNO ,MBARO DATABASE E KRJET QA KI
+
         }
 
         private void Form_Load(object sender, EventArgs e)
