@@ -62,9 +62,7 @@
             this.menaxhimiDataSet = new Ruby.MenaxhimiDataSet();
             this.malliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.malliTableAdapter = new Ruby.MenaxhimiDataSetTableAdapters.MalliTableAdapter();
-            this.menaxhimiDataSet1 = new Ruby.MenaxhimiDataSet1();
             this.malliBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.malliTableAdapter1 = new Ruby.MenaxhimiDataSet1TableAdapters.MalliTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -73,7 +71,6 @@
             this.tbHistoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -418,17 +415,12 @@
             // 
             // menaxhimiDataSet1
             // 
-            this.menaxhimiDataSet1.DataSetName = "MenaxhimiDataSet1";
-            this.menaxhimiDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // malliBindingSource1
             // 
             this.malliBindingSource1.DataMember = "Malli";
-            this.malliBindingSource1.DataSource = this.menaxhimiDataSet1;
             // 
             // malliTableAdapter1
             // 
-            this.malliTableAdapter1.ClearBeforeFill = true;
             // 
             // Form
             // 
@@ -456,7 +448,6 @@
             this.tbHistoria.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menaxhimiDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.malliBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -495,9 +486,7 @@
         private MenaxhimiDataSet menaxhimiDataSet;
         private System.Windows.Forms.BindingSource malliBindingSource;
         private MenaxhimiDataSetTableAdapters.MalliTableAdapter malliTableAdapter;
-        private MenaxhimiDataSet1 menaxhimiDataSet1;
         private System.Windows.Forms.BindingSource malliBindingSource1;
-        private MenaxhimiDataSet1TableAdapters.MalliTableAdapter malliTableAdapter1;
     }
 }
 
