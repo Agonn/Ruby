@@ -49,11 +49,13 @@ namespace Ruby
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             pnlShpenzime.Visible = true;
+            metroTab.SelectedIndex = 0; ; //Switch te tab shitja 
         }
 
         private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
         {
             pnlShpenzime.Visible = false;
+            metroTab.SelectedIndex = 0; ; //Switch te tab shitja 
         }
     }
 }

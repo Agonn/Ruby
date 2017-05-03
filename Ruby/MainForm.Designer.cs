@@ -90,7 +90,7 @@
             this.cmbMalli.Location = new System.Drawing.Point(64, 26);
             this.cmbMalli.Name = "cmbMalli";
             this.cmbMalli.Size = new System.Drawing.Size(121, 29);
-            this.cmbMalli.TabIndex = 9;
+            this.cmbMalli.TabIndex = 0;
             this.cmbMalli.UseSelectable = true;
             // 
             // txtCmimi
@@ -118,7 +118,7 @@
             this.txtCmimi.SelectionStart = 0;
             this.txtCmimi.ShortcutsEnabled = true;
             this.txtCmimi.Size = new System.Drawing.Size(121, 23);
-            this.txtCmimi.TabIndex = 10;
+            this.txtCmimi.TabIndex = 1;
             this.txtCmimi.UseSelectable = true;
             this.txtCmimi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCmimi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -151,7 +151,7 @@
             this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 29);
-            this.dtpData.TabIndex = 12;
+            this.dtpData.TabIndex = 1;
             this.dtpData.ValueChanged += new System.EventHandler(this.dtpData_ValueChanged);
             // 
             // Malli
@@ -287,7 +287,7 @@
             this.pnlShpenzime.Controls.Add(this.btnShpenzime);
             this.pnlShpenzime.Controls.Add(this.txtShpenzime);
             this.pnlShpenzime.Controls.Add(this.metroLabel6);
-            this.pnlShpenzime.Location = new System.Drawing.Point(2, 337);
+            this.pnlShpenzime.Location = new System.Drawing.Point(2, 307);
             this.pnlShpenzime.Name = "pnlShpenzime";
             this.pnlShpenzime.Size = new System.Drawing.Size(446, 34);
             this.pnlShpenzime.TabIndex = 16;
@@ -330,7 +330,7 @@
             this.txtShpenzime.SelectionStart = 0;
             this.txtShpenzime.ShortcutsEnabled = true;
             this.txtShpenzime.Size = new System.Drawing.Size(121, 23);
-            this.txtShpenzime.TabIndex = 10;
+            this.txtShpenzime.TabIndex = 0;
             this.txtShpenzime.UseSelectable = true;
             this.txtShpenzime.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtShpenzime.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -357,7 +357,7 @@
             this.dgvShitja.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvShitja.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvShitja.Size = new System.Drawing.Size(432, 371);
-            this.dgvShitja.TabIndex = 14;
+            this.dgvShitja.TabIndex = 5;
             // 
             // tbHistoria
             // 
@@ -491,6 +491,7 @@
             // 
             // Form
             // 
+            this.AcceptButton = this.btnShto;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -536,7 +537,6 @@
         private System.Windows.Forms.ToolStripMenuItem kameraToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
-        private MetroFramework.Controls.MetroTabControl metroTab;
         private MetroFramework.Controls.MetroTabPage tbShitja;
         private MetroFramework.Controls.MetroTabPage tbHistoria;
         private MetroFramework.Controls.MetroTabPage tbStatistika;
@@ -557,6 +557,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private MetroFramework.Controls.MetroTabControl metroTab;
     }
 }
 
