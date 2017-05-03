@@ -243,7 +243,7 @@
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.logOutToolStripMenuItem.Text = "Mbylle";
+            this.logOutToolStripMenuItem.Text = "Log out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // metroTab
@@ -287,7 +287,7 @@
             this.pnlShpenzime.Controls.Add(this.btnShpenzime);
             this.pnlShpenzime.Controls.Add(this.txtShpenzime);
             this.pnlShpenzime.Controls.Add(this.metroLabel6);
-            this.pnlShpenzime.Location = new System.Drawing.Point(3, 334);
+            this.pnlShpenzime.Location = new System.Drawing.Point(2, 334);
             this.pnlShpenzime.Name = "pnlShpenzime";
             this.pnlShpenzime.Size = new System.Drawing.Size(446, 34);
             this.pnlShpenzime.TabIndex = 16;
@@ -491,7 +491,6 @@
             // 
             // Form
             // 
-            this.AcceptButton = this.btnShto;
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;

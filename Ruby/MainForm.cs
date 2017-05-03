@@ -16,7 +16,7 @@ namespace Ruby
 
         private void btnShto_Click(object sender, EventArgs e)
         {
-            //VETEM PUNO ,MBARO DATABASE E KRJET QA KI
+            //Main button
 
         }
 
@@ -27,14 +27,14 @@ namespace Ruby
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-              Application.Exit();
+              Application.Exit(); //Me ndru me login-form 
         }
 
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
             string theDate = dtpData.Value.ToShortDateString();
 
-            lblDataSot.Text = theDate.ToString();
+            lblDataSot.Text = theDate.ToString(); //Convert daten ne string
 
         }
 
@@ -55,7 +55,7 @@ namespace Ruby
         private void toolStripMenuItem2_Click_1(object sender, EventArgs e)
         {
             pnlShpenzime.Visible = false;
-            metroTab.SelectedIndex = 0; ; //Switch te tab shitja 
+            //metroTab.SelectedIndex = 0; ; //Switch te tab shitja 
         }
     }
 }
