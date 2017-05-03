@@ -16,10 +16,19 @@ namespace Ruby.Properties
             
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Login_MouseDoubleClick(object sender, MouseEventArgs e) //Double click to form mbasi e kom hek border(ma bukur)
+        {
+            this.Close(); 
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
             string password = txtPassword.Text;
 
             try
@@ -34,9 +43,9 @@ namespace Ruby.Properties
                 }
                 else
                 {
-                  //basic password wrong error
-                  //  MessageBox.Show("Passwordi gabim.",  "Password", MessageBoxButtons.OK,   MessageBoxIcon.Warning); +
-                    
+                    //basic password wrong error
+                    //  MessageBox.Show("Passwordi gabim.",  "Password", MessageBoxButtons.OK,   MessageBoxIcon.Warning); +
+
                     lblPasswordError.Text = "Passwordi gabim*"; //Ose kjo a annoying popups? I hate popups
                 }
             }
@@ -44,16 +53,6 @@ namespace Ruby.Properties
             {
                 //Qetu shto ti diqka Yll :)
             }
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Login_MouseDoubleClick(object sender, MouseEventArgs e) //Double click to form mbasi e kom hek border(ma bukur)
-        {
-            this.Close(); 
         }
     }
 }

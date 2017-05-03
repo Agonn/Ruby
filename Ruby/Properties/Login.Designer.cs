@@ -32,8 +32,8 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblError = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.lblPasswordError = new System.Windows.Forms.Label();
+            this.btnLogin = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // lblPassword
@@ -65,20 +65,6 @@
             this.lblError.Size = new System.Drawing.Size(138, 23);
             this.lblError.TabIndex = 2;
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(345, 261);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(140, 23);
-            this.btnLogin.TabIndex = 3;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
             // lblPasswordError
             // 
             this.lblPasswordError.BackColor = System.Drawing.Color.Transparent;
@@ -89,15 +75,26 @@
             this.lblPasswordError.Size = new System.Drawing.Size(142, 35);
             this.lblPasswordError.TabIndex = 4;
             // 
+            // btnLogin
+            // 
+            this.btnLogin.DisplayFocus = true;
+            this.btnLogin.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnLogin.Location = new System.Drawing.Point(345, 262);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(140, 23);
+            this.btnLogin.TabIndex = 12;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseSelectable = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
+            // 
             // Login
             // 
-            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(854, 331);
-            this.Controls.Add(this.lblPasswordError);
             this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.lblPasswordError);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
@@ -119,7 +116,7 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblError;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblPasswordError;
+        private MetroFramework.Controls.MetroButton btnLogin;
     }
 }
