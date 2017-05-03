@@ -287,7 +287,7 @@
             this.pnlShpenzime.Controls.Add(this.btnShpenzime);
             this.pnlShpenzime.Controls.Add(this.txtShpenzime);
             this.pnlShpenzime.Controls.Add(this.metroLabel6);
-            this.pnlShpenzime.Location = new System.Drawing.Point(2, 307);
+            this.pnlShpenzime.Location = new System.Drawing.Point(3, 334);
             this.pnlShpenzime.Name = "pnlShpenzime";
             this.pnlShpenzime.Size = new System.Drawing.Size(446, 34);
             this.pnlShpenzime.TabIndex = 16;
