@@ -133,6 +133,7 @@
             this.btnShto.TabIndex = 11;
             this.btnShto.Text = "Shto";
             this.btnShto.UseSelectable = true;
+            this.btnShto.Click += new System.EventHandler(this.btnShto_Click_1);
             // 
             // btnPdf
             // 

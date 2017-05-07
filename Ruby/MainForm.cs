@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Ruby
 {
@@ -56,6 +59,13 @@ namespace Ruby
         {
             pnlShpenzime.Visible = false;
             //metroTab.SelectedIndex = 0; ; //Switch te tab shitja 
+        }
+
+        private void btnShto_Click_1(object sender, EventArgs e)
+        {
+            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+
+            string Query=
         }
     }
 }
