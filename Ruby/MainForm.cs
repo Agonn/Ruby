@@ -71,8 +71,13 @@ namespace Ruby
              string Query = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('unaze','33.5','2017-05-02','eh')";
             string Query2 = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('" + cmbMalli.SelectedItem.ToString() + "','" + float.Parse(txtCmimi.Text) + "','" + dtpData.Value.ToString("yyyy-MM-dd") + "','" + txtbmPershkrimi.Text + "')";
             SqlCommand objKomanda = new SqlCommand(Query2, objKonektimi);                                         //Malli_Emri             Cmimi                                     Data             formati dates                  Pershkrimi   
+            string Query3 = "select *from TblMalli";
+            SqlCommand objKomanda2 = new SqlCommand(Query3, objKonektimi);
+            
             int numri = 0;
             //comboBox1.SelectedItem.ToString() 
+            SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
+            DataSet _Shenimet = new DataSet();
             try
             {
                 numri++;
@@ -80,7 +85,8 @@ namespace Ruby
                 int numri_reshtave = objKomanda.ExecuteNonQuery();
                 txtmShenimet.Text = "Numri i afektuar i rreshtave eshte : " + numri_reshtave.ToString();
                 lblmShenimet.Text= "Numri i afektuar i rreshtave eshte : " + numri_reshtave.ToString();
-
+                objAdapteri.Fill(_Shenimet);
+                dgvShitja.DataSource = _Shenimet.Tables[0];
 
 
             }
@@ -96,6 +102,10 @@ namespace Ruby
                 objKonektimi.Close();
 
             }
+
+
+
+         
 
         }
 
