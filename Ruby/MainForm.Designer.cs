@@ -69,6 +69,15 @@
             this.lblmShenimet = new MetroFramework.Controls.MetroLabel();
             this.txtbmPershkrimi = new MetroFramework.Controls.MetroTextBox();
             this.lblmPershkrimi = new MetroFramework.Controls.MetroLabel();
+            this.rubyDBDataSet = new Ruby.RubyDBDataSet();
+            this.rubyDBDataSet1 = new Ruby.RubyDBDataSet1();
+            this.tblMalliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
+            this.midDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliEmriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliCmimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataShitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -77,6 +86,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
             this.tbHistoria.SuspendLayout();
             this.tbStatistika.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMalliBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -358,8 +370,16 @@
             // dgvShitja
             // 
             this.dgvShitja.AllowUserToDeleteRows = false;
+            this.dgvShitja.AutoGenerateColumns = false;
             this.dgvShitja.BackgroundColor = System.Drawing.Color.Maroon;
             this.dgvShitja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShitja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.midDataGridViewTextBoxColumn,
+            this.malliEmriDataGridViewTextBoxColumn,
+            this.malliCmimiDataGridViewTextBoxColumn,
+            this.dataShitjesDataGridViewTextBoxColumn,
+            this.pershkrimiDataGridViewTextBoxColumn});
+            this.dgvShitja.DataSource = this.tblMalliBindingSource;
             this.dgvShitja.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvShitja.Location = new System.Drawing.Point(793, 0);
             this.dgvShitja.Name = "dgvShitja";
@@ -581,6 +601,60 @@
             this.lblmPershkrimi.TabIndex = 24;
             this.lblmPershkrimi.Text = "Pershk";
             // 
+            // rubyDBDataSet
+            // 
+            this.rubyDBDataSet.DataSetName = "RubyDBDataSet";
+            this.rubyDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rubyDBDataSet1
+            // 
+            this.rubyDBDataSet1.DataSetName = "RubyDBDataSet1";
+            this.rubyDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblMalliBindingSource
+            // 
+            this.tblMalliBindingSource.DataMember = "TblMalli";
+            this.tblMalliBindingSource.DataSource = this.rubyDBDataSet1;
+            // 
+            // tblMalliTableAdapter
+            // 
+            this.tblMalliTableAdapter.ClearBeforeFill = true;
+            // 
+            // midDataGridViewTextBoxColumn
+            // 
+            this.midDataGridViewTextBoxColumn.DataPropertyName = "Mid";
+            this.midDataGridViewTextBoxColumn.HeaderText = "Mid";
+            this.midDataGridViewTextBoxColumn.Name = "midDataGridViewTextBoxColumn";
+            this.midDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // malliEmriDataGridViewTextBoxColumn
+            // 
+            this.malliEmriDataGridViewTextBoxColumn.DataPropertyName = "Malli_Emri";
+            this.malliEmriDataGridViewTextBoxColumn.HeaderText = "Malli_Emri";
+            this.malliEmriDataGridViewTextBoxColumn.Name = "malliEmriDataGridViewTextBoxColumn";
+            this.malliEmriDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // malliCmimiDataGridViewTextBoxColumn
+            // 
+            this.malliCmimiDataGridViewTextBoxColumn.DataPropertyName = "Malli_Cmimi";
+            this.malliCmimiDataGridViewTextBoxColumn.HeaderText = "Malli_Cmimi";
+            this.malliCmimiDataGridViewTextBoxColumn.Name = "malliCmimiDataGridViewTextBoxColumn";
+            this.malliCmimiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataShitjesDataGridViewTextBoxColumn
+            // 
+            this.dataShitjesDataGridViewTextBoxColumn.DataPropertyName = "Data_Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn.HeaderText = "Data_Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn.Name = "dataShitjesDataGridViewTextBoxColumn";
+            this.dataShitjesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pershkrimiDataGridViewTextBoxColumn
+            // 
+            this.pershkrimiDataGridViewTextBoxColumn.DataPropertyName = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.HeaderText = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.Name = "pershkrimiDataGridViewTextBoxColumn";
+            this.pershkrimiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -609,6 +683,9 @@
             this.tbHistoria.PerformLayout();
             this.tbStatistika.ResumeLayout(false);
             this.tbStatistika.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMalliBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -653,6 +730,15 @@
         private MetroFramework.Controls.MetroLabel lblmShenimet;
         private MetroFramework.Controls.MetroTextBox txtbmPershkrimi;
         private MetroFramework.Controls.MetroLabel lblmPershkrimi;
+        private RubyDBDataSet rubyDBDataSet;
+        private RubyDBDataSet1 rubyDBDataSet1;
+        private System.Windows.Forms.BindingSource tblMalliBindingSource;
+        private RubyDBDataSet1TableAdapters.TblMalliTableAdapter tblMalliTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn midDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malliEmriDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malliCmimiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn;
     }
 }
 
