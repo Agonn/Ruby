@@ -47,10 +47,16 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
             this.tbShitja = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.txtbmPershkrimi = new MetroFramework.Controls.MetroTextBox();
             this.lblmShenimet = new MetroFramework.Controls.MetroLabel();
             this.txtmShenimet = new MetroFramework.Controls.MetroTextBox();
             this.dgvShitja = new System.Windows.Forms.DataGridView();
+            this.midDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliEmriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliCmimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataShitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblMalliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rubyDBDataSet1 = new Ruby.RubyDBDataSet1();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
@@ -66,12 +72,6 @@
             this.lblHyrje = new MetroFramework.Controls.MetroLabel();
             this.rubyDBDataSet = new Ruby.RubyDBDataSet();
             this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
-            this.midDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.malliEmriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.malliCmimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataShitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -158,7 +158,7 @@
             // 
             this.dtpData.Dock = System.Windows.Forms.DockStyle.Right;
             this.dtpData.Location = new System.Drawing.Point(1053, 60);
-            this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpData.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 29);
             this.dtpData.TabIndex = 1;
@@ -248,7 +248,7 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 1;
+            this.metroTab.SelectedIndex = 0;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -277,6 +277,16 @@
             this.tbShitja.VerticalScrollbarHighlightOnWheel = false;
             this.tbShitja.VerticalScrollbarSize = 10;
             this.tbShitja.Click += new System.EventHandler(this.tbShitja_Click);
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel6.Location = new System.Drawing.Point(3, 97);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(85, 19);
+            this.metroLabel6.TabIndex = 25;
+            this.metroLabel6.Text = "Pershkrimi:";
             // 
             // txtbmPershkrimi
             // 
@@ -372,6 +382,41 @@
             this.dgvShitja.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvShitja.Size = new System.Drawing.Size(527, 600);
             this.dgvShitja.TabIndex = 5;
+            // 
+            // midDataGridViewTextBoxColumn
+            // 
+            this.midDataGridViewTextBoxColumn.DataPropertyName = "Mid";
+            this.midDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.midDataGridViewTextBoxColumn.Name = "midDataGridViewTextBoxColumn";
+            this.midDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // malliEmriDataGridViewTextBoxColumn
+            // 
+            this.malliEmriDataGridViewTextBoxColumn.DataPropertyName = "Malli_Emri";
+            this.malliEmriDataGridViewTextBoxColumn.HeaderText = "Emri";
+            this.malliEmriDataGridViewTextBoxColumn.Name = "malliEmriDataGridViewTextBoxColumn";
+            this.malliEmriDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // malliCmimiDataGridViewTextBoxColumn
+            // 
+            this.malliCmimiDataGridViewTextBoxColumn.DataPropertyName = "Malli_Cmimi";
+            this.malliCmimiDataGridViewTextBoxColumn.HeaderText = "Çmimi";
+            this.malliCmimiDataGridViewTextBoxColumn.Name = "malliCmimiDataGridViewTextBoxColumn";
+            this.malliCmimiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataShitjesDataGridViewTextBoxColumn
+            // 
+            this.dataShitjesDataGridViewTextBoxColumn.DataPropertyName = "Data_Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn.HeaderText = "Data Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn.Name = "dataShitjesDataGridViewTextBoxColumn";
+            this.dataShitjesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pershkrimiDataGridViewTextBoxColumn
+            // 
+            this.pershkrimiDataGridViewTextBoxColumn.DataPropertyName = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.HeaderText = "Përshkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.Name = "pershkrimiDataGridViewTextBoxColumn";
+            this.pershkrimiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tblMalliBindingSource
             // 
@@ -522,51 +567,6 @@
             // tblMalliTableAdapter
             // 
             this.tblMalliTableAdapter.ClearBeforeFill = true;
-            // 
-            // midDataGridViewTextBoxColumn
-            // 
-            this.midDataGridViewTextBoxColumn.DataPropertyName = "Mid";
-            this.midDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.midDataGridViewTextBoxColumn.Name = "midDataGridViewTextBoxColumn";
-            this.midDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // malliEmriDataGridViewTextBoxColumn
-            // 
-            this.malliEmriDataGridViewTextBoxColumn.DataPropertyName = "Malli_Emri";
-            this.malliEmriDataGridViewTextBoxColumn.HeaderText = "Emri";
-            this.malliEmriDataGridViewTextBoxColumn.Name = "malliEmriDataGridViewTextBoxColumn";
-            this.malliEmriDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // malliCmimiDataGridViewTextBoxColumn
-            // 
-            this.malliCmimiDataGridViewTextBoxColumn.DataPropertyName = "Malli_Cmimi";
-            this.malliCmimiDataGridViewTextBoxColumn.HeaderText = "Çmimi";
-            this.malliCmimiDataGridViewTextBoxColumn.Name = "malliCmimiDataGridViewTextBoxColumn";
-            this.malliCmimiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataShitjesDataGridViewTextBoxColumn
-            // 
-            this.dataShitjesDataGridViewTextBoxColumn.DataPropertyName = "Data_Shitjes";
-            this.dataShitjesDataGridViewTextBoxColumn.HeaderText = "Data Shitjes";
-            this.dataShitjesDataGridViewTextBoxColumn.Name = "dataShitjesDataGridViewTextBoxColumn";
-            this.dataShitjesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pershkrimiDataGridViewTextBoxColumn
-            // 
-            this.pershkrimiDataGridViewTextBoxColumn.DataPropertyName = "Pershkrimi";
-            this.pershkrimiDataGridViewTextBoxColumn.HeaderText = "Përshkrimi";
-            this.pershkrimiDataGridViewTextBoxColumn.Name = "pershkrimiDataGridViewTextBoxColumn";
-            this.pershkrimiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(3, 97);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(85, 19);
-            this.metroLabel6.TabIndex = 25;
-            this.metroLabel6.Text = "Pershkrimi:";
             // 
             // Form
             // 
