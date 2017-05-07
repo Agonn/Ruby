@@ -65,7 +65,45 @@ namespace Ruby
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
-            string Query = "";
+            //Formati DataTime DATETIME values in 'YYYY-MM-DD HH:MM:SS' 
+             string Query = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('unaze','33.5','2017-05-02','eh')";
+            string Query2 = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('" + cmbMalli.SelectedItem.ToString() + "','" + float.Parse(txtCmimi.Text) + "','" + dtpData.Value.ToString("yyyy-MM-dd") + "','" + txtbmPershkrimi.Text + "')";
+            SqlCommand objKomanda = new SqlCommand(Query2, objKonektimi);                                         //Malli_Emri             Cmimi                                     Data             formati dates                  Pershkrimi   
+            int numri = 0;
+            //comboBox1.SelectedItem.ToString() 
+            try
+            {
+                numri++;
+                objKonektimi.Open();
+                int numri_reshtave = objKomanda.ExecuteNonQuery();
+                txtmShenimet.Text = "Numri i afektuar i rreshtave eshte : " + numri_reshtave.ToString();
+                lblmShenimet.Text= "Numri i afektuar i rreshtave eshte : " + numri_reshtave.ToString();
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                
+            }
+            finally
+            {
+
+                objKonektimi.Close();
+
+            }
+
+        }
+
+        private void txtbmPershkrimi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbShitja_Click(object sender, EventArgs e)
+        {
 
         }
     }
