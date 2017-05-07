@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using MetroFramework.Forms;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -14,12 +13,6 @@ namespace Ruby
         {
             InitializeComponent();
             cmbStatistika.SelectedIndex = 0; //Statistika data te jete SOT.
-
-        }
-
-        private void btnShto_Click(object sender, EventArgs e)
-        {
-            //Main button
 
         }
 
@@ -42,16 +35,6 @@ namespace Ruby
             lblDataSot.Text = theDate.ToString(); //Convert daten ne string
 
         }
-
-
-
-        private void btnShpenzime_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
 
         private void btnShto_Click_1(object sender, EventArgs e)
         {
@@ -77,26 +60,15 @@ namespace Ruby
                 lblmShenimet.Text= "Numri i afektuar i rreshtave eshte : " + numri_reshtave.ToString();
                 objAdapteri.Fill(_Shenimet);
                 dgvShitja.DataSource = _Shenimet.Tables[0];
-
-
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show(ex.Message);
-                
+                MessageBox.Show(ex.Message);      
             }
             finally
             {
-
                 objKonektimi.Close();
-
             }
-
-
-
-         
-
         }
 
         private void txtbmPershkrimi_Click(object sender, EventArgs e)
