@@ -366,7 +366,7 @@
             this.txtmShenimet.CustomButton.UseSelectable = true;
             this.txtmShenimet.CustomButton.Visible = false;
             this.txtmShenimet.Lines = new string[0];
-            this.txtmShenimet.Location = new System.Drawing.Point(-1, 257);
+            this.txtmShenimet.Location = new System.Drawing.Point(5, 228);
             this.txtmShenimet.MaxLength = 32767;
             this.txtmShenimet.Multiline = true;
             this.txtmShenimet.Name = "txtmShenimet";
