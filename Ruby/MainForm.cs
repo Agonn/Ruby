@@ -31,9 +31,15 @@ namespace Ruby
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
             string theDate = dtpData.Value.ToShortDateString();
+            lblDataSot.Text = theDate.ToString(); 
 
-            lblDataSot.Text = theDate.ToString(); //Convert daten ne string
+            //SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+            //string query3 = "SELECT SUM(Malli_Cmimi) from TblMalli WHERE Data_Shitjes='" + dtpData.Value + "'";
 
+            //SqlCommand objKomanda3 = new SqlCommand(query3, objKonektimi);
+            //objKonektimi.Open();
+            //lblHistoriaShitje.Text = objKomanda3.ExecuteScalar().ToString();
+            //objKonektimi.Close();
         }
 
         private void btnShto_Click_1(object sender, EventArgs e)
@@ -42,8 +48,10 @@ namespace Ruby
 
             //Formati DataTime DATETIME values in 'YYYY-MM-DD HH:MM:SS' 
             // string Query = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('unaze','33.5','2017-05-02','eh')";
+
             string Query2 = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('" + cmbMalli.SelectedItem.ToString() + "','" + float.Parse(txtCmimi.Text) + "','" + dtpData.Value.ToString("yyyy-MM-dd") + "','" + txtbmPershkrimi.Text + "')";
-            SqlCommand objKomanda = new SqlCommand(Query2, objKonektimi);                                         //Malli_Emri             Cmimi                                     Data             formati dates                  Pershkrimi   
+            SqlCommand objKomanda = new SqlCommand(Query2, objKonektimi);         
+            
             string Query3 = "select *from TblMalli";
             SqlCommand objKomanda2 = new SqlCommand(Query3, objKonektimi);
             
