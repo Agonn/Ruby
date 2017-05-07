@@ -279,6 +279,7 @@
             this.tbShitja.VerticalScrollbarBarColor = true;
             this.tbShitja.VerticalScrollbarHighlightOnWheel = false;
             this.tbShitja.VerticalScrollbarSize = 10;
+            this.tbShitja.Click += new System.EventHandler(this.tbShitja_Click);
             // 
             // pnlShpenzime
             // 

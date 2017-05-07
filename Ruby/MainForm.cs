@@ -57,5 +57,10 @@ namespace Ruby
             pnlShpenzime.Visible = false;
             //metroTab.SelectedIndex = 0; ; //Switch te tab shitja 
         }
+
+        private void tbShitja_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
