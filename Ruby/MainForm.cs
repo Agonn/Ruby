@@ -65,7 +65,8 @@ namespace Ruby
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
-            string Query=
+            string Query = "";
+
         }
     }
 }
