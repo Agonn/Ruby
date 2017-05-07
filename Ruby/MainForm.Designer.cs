@@ -65,7 +65,6 @@
             this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.lblHyrje = new MetroFramework.Controls.MetroLabel();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -262,7 +261,6 @@
             // 
             // tbShitja
             // 
-            this.tbShitja.Controls.Add(this.label1);
             this.tbShitja.Controls.Add(this.pnlShpenzime);
             this.tbShitja.Controls.Add(this.dgvShitja);
             this.tbShitja.Controls.Add(this.metroLabel2);
@@ -491,15 +489,6 @@
             this.lblHyrje.TabIndex = 14;
             this.lblHyrje.Text = "Hyrje:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "label1";
-            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -568,7 +557,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private MetroFramework.Controls.MetroTabControl metroTab;
-        private System.Windows.Forms.Label label1;
     }
 }
 
