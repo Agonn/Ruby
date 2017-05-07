@@ -182,7 +182,7 @@
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(56, 19);
             this.metroLabel2.TabIndex = 13;
-            this.metroLabel2.Text = "Cmimi:";
+            this.metroLabel2.Text = "Çmimi:";
             // 
             // metroStyle
             // 
@@ -286,7 +286,7 @@
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(85, 19);
             this.metroLabel6.TabIndex = 25;
-            this.metroLabel6.Text = "Pershkrimi:";
+            this.metroLabel6.Text = "Përshkrimi:";
             // 
             // txtbmPershkrimi
             // 
