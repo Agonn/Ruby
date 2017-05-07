@@ -47,7 +47,6 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
             this.tbShitja = new MetroFramework.Controls.MetroTabPage();
-            this.lblmPershkrimi = new MetroFramework.Controls.MetroLabel();
             this.txtbmPershkrimi = new MetroFramework.Controls.MetroTextBox();
             this.lblmShenimet = new MetroFramework.Controls.MetroLabel();
             this.txtmShenimet = new MetroFramework.Controls.MetroTextBox();
@@ -72,6 +71,7 @@
             this.malliCmimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataShitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -96,7 +96,7 @@
             "Gurrë",
             "Shërbim",
             "Tjetër"});
-            this.cmbMalli.Location = new System.Drawing.Point(64, 26);
+            this.cmbMalli.Location = new System.Drawing.Point(94, 26);
             this.cmbMalli.Name = "cmbMalli";
             this.cmbMalli.Size = new System.Drawing.Size(121, 29);
             this.cmbMalli.TabIndex = 0;
@@ -117,7 +117,7 @@
             this.txtCmimi.CustomButton.UseSelectable = true;
             this.txtCmimi.CustomButton.Visible = false;
             this.txtCmimi.Lines = new string[0];
-            this.txtCmimi.Location = new System.Drawing.Point(64, 68);
+            this.txtCmimi.Location = new System.Drawing.Point(94, 64);
             this.txtCmimi.MaxLength = 32767;
             this.txtCmimi.Name = "txtCmimi";
             this.txtCmimi.PasswordChar = '\0';
@@ -136,7 +136,7 @@
             // 
             this.btnShto.DisplayFocus = true;
             this.btnShto.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnShto.Location = new System.Drawing.Point(55, 164);
+            this.btnShto.Location = new System.Drawing.Point(94, 133);
             this.btnShto.Name = "btnShto";
             this.btnShto.Size = new System.Drawing.Size(121, 23);
             this.btnShto.TabIndex = 11;
@@ -168,7 +168,7 @@
             // 
             this.Malli.AutoSize = true;
             this.Malli.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.Malli.Location = new System.Drawing.Point(2, 26);
+            this.Malli.Location = new System.Drawing.Point(43, 26);
             this.Malli.Name = "Malli";
             this.Malli.Size = new System.Drawing.Size(38, 19);
             this.Malli.TabIndex = 13;
@@ -178,7 +178,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(2, 68);
+            this.metroLabel2.Location = new System.Drawing.Point(32, 64);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(56, 19);
             this.metroLabel2.TabIndex = 13;
@@ -248,14 +248,14 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 0;
+            this.metroTab.SelectedIndex = 1;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
             // 
             // tbShitja
             // 
-            this.tbShitja.Controls.Add(this.lblmPershkrimi);
+            this.tbShitja.Controls.Add(this.metroLabel6);
             this.tbShitja.Controls.Add(this.txtbmPershkrimi);
             this.tbShitja.Controls.Add(this.lblmShenimet);
             this.tbShitja.Controls.Add(this.txtmShenimet);
@@ -278,15 +278,6 @@
             this.tbShitja.VerticalScrollbarSize = 10;
             this.tbShitja.Click += new System.EventHandler(this.tbShitja_Click);
             // 
-            // lblmPershkrimi
-            // 
-            this.lblmPershkrimi.AutoSize = true;
-            this.lblmPershkrimi.Location = new System.Drawing.Point(5, 101);
-            this.lblmPershkrimi.Name = "lblmPershkrimi";
-            this.lblmPershkrimi.Size = new System.Drawing.Size(46, 19);
-            this.lblmPershkrimi.TabIndex = 24;
-            this.lblmPershkrimi.Text = "Pershk";
-            // 
             // txtbmPershkrimi
             // 
             // 
@@ -302,7 +293,7 @@
             this.txtbmPershkrimi.CustomButton.UseSelectable = true;
             this.txtbmPershkrimi.CustomButton.Visible = false;
             this.txtbmPershkrimi.Lines = new string[0];
-            this.txtbmPershkrimi.Location = new System.Drawing.Point(64, 97);
+            this.txtbmPershkrimi.Location = new System.Drawing.Point(94, 93);
             this.txtbmPershkrimi.MaxLength = 32767;
             this.txtbmPershkrimi.Name = "txtbmPershkrimi";
             this.txtbmPershkrimi.PasswordChar = '\0';
@@ -322,7 +313,7 @@
             // 
             this.lblmShenimet.Location = new System.Drawing.Point(234, 26);
             this.lblmShenimet.Name = "lblmShenimet";
-            this.lblmShenimet.Size = new System.Drawing.Size(336, 85);
+            this.lblmShenimet.Size = new System.Drawing.Size(336, 90);
             this.lblmShenimet.Style = MetroFramework.MetroColorStyle.Orange;
             this.lblmShenimet.TabIndex = 18;
             this.lblmShenimet.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -333,7 +324,7 @@
             // 
             // 
             this.txtmShenimet.CustomButton.Image = null;
-            this.txtmShenimet.CustomButton.Location = new System.Drawing.Point(202, 2);
+            this.txtmShenimet.CustomButton.Location = new System.Drawing.Point(269, 2);
             this.txtmShenimet.CustomButton.Name = "";
             this.txtmShenimet.CustomButton.Size = new System.Drawing.Size(295, 295);
             this.txtmShenimet.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -342,7 +333,7 @@
             this.txtmShenimet.CustomButton.UseSelectable = true;
             this.txtmShenimet.CustomButton.Visible = false;
             this.txtmShenimet.Lines = new string[0];
-            this.txtmShenimet.Location = new System.Drawing.Point(5, 228);
+            this.txtmShenimet.Location = new System.Drawing.Point(3, 175);
             this.txtmShenimet.MaxLength = 32767;
             this.txtmShenimet.Multiline = true;
             this.txtmShenimet.Name = "txtmShenimet";
@@ -353,7 +344,7 @@
             this.txtmShenimet.SelectionLength = 0;
             this.txtmShenimet.SelectionStart = 0;
             this.txtmShenimet.ShortcutsEnabled = true;
-            this.txtmShenimet.Size = new System.Drawing.Size(500, 300);
+            this.txtmShenimet.Size = new System.Drawing.Size(567, 300);
             this.txtmShenimet.Style = MetroFramework.MetroColorStyle.Teal;
             this.txtmShenimet.TabIndex = 17;
             this.txtmShenimet.UseSelectable = true;
@@ -411,6 +402,7 @@
             this.tbHistoria.VerticalScrollbarBarColor = true;
             this.tbHistoria.VerticalScrollbarHighlightOnWheel = false;
             this.tbHistoria.VerticalScrollbarSize = 10;
+            this.tbHistoria.Click += new System.EventHandler(this.tbHistoria_Click);
             // 
             // lblShpenzime
             // 
@@ -566,6 +558,16 @@
             this.pershkrimiDataGridViewTextBoxColumn.Name = "pershkrimiDataGridViewTextBoxColumn";
             this.pershkrimiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel6.Location = new System.Drawing.Point(3, 97);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(85, 19);
+            this.metroLabel6.TabIndex = 25;
+            this.metroLabel6.Text = "Pershkrimi:";
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -632,7 +634,6 @@
         private MetroFramework.Controls.MetroTextBox txtmShenimet;
         private MetroFramework.Controls.MetroLabel lblmShenimet;
         private MetroFramework.Controls.MetroTextBox txtbmPershkrimi;
-        private MetroFramework.Controls.MetroLabel lblmPershkrimi;
         private RubyDBDataSet rubyDBDataSet;
         private RubyDBDataSet1 rubyDBDataSet1;
         private System.Windows.Forms.BindingSource tblMalliBindingSource;
@@ -642,6 +643,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn malliCmimiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
     }
 }
 

@@ -108,5 +108,10 @@ namespace Ruby
         {
 
         }
+
+        private void tbHistoria_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
