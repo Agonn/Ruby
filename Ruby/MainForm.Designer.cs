@@ -49,11 +49,22 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
             this.tbShitja = new MetroFramework.Controls.MetroTabPage();
+            this.lblmPershkrimi = new MetroFramework.Controls.MetroLabel();
+            this.txtbmPershkrimi = new MetroFramework.Controls.MetroTextBox();
+            this.lblmShenimet = new MetroFramework.Controls.MetroLabel();
+            this.txtmShenimet = new MetroFramework.Controls.MetroTextBox();
             this.pnlShpenzime = new System.Windows.Forms.Panel();
             this.btnShpenzime = new MetroFramework.Controls.MetroButton();
             this.txtShpenzime = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.dgvShitja = new System.Windows.Forms.DataGridView();
+            this.midDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliEmriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliCmimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataShitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblMalliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rubyDBDataSet1 = new Ruby.RubyDBDataSet1();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
             this.lblShpenzime = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -65,18 +76,19 @@
             this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.lblHyrje = new MetroFramework.Controls.MetroLabel();
-            this.txtmShenimet = new MetroFramework.Controls.MetroTextBox();
-            this.lblmShenimet = new MetroFramework.Controls.MetroLabel();
-            this.txtbmPershkrimi = new MetroFramework.Controls.MetroTextBox();
-            this.lblmPershkrimi = new MetroFramework.Controls.MetroLabel();
+            this.rubyDBDataSet = new Ruby.RubyDBDataSet();
+            this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
             this.tbShitja.SuspendLayout();
             this.pnlShpenzime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMalliBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet1)).BeginInit();
             this.tbHistoria.SuspendLayout();
             this.tbStatistika.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -153,7 +165,7 @@
             // 
             this.dtpData.Dock = System.Windows.Forms.DockStyle.Right;
             this.dtpData.Location = new System.Drawing.Point(1053, 60);
-            this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpData.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 29);
             this.dtpData.TabIndex = 1;
@@ -290,6 +302,88 @@
             this.tbShitja.VerticalScrollbarSize = 10;
             this.tbShitja.Click += new System.EventHandler(this.tbShitja_Click);
             // 
+            // lblmPershkrimi
+            // 
+            this.lblmPershkrimi.AutoSize = true;
+            this.lblmPershkrimi.Location = new System.Drawing.Point(5, 101);
+            this.lblmPershkrimi.Name = "lblmPershkrimi";
+            this.lblmPershkrimi.Size = new System.Drawing.Size(46, 19);
+            this.lblmPershkrimi.TabIndex = 24;
+            this.lblmPershkrimi.Text = "Pershk";
+            // 
+            // txtbmPershkrimi
+            // 
+            // 
+            // 
+            // 
+            this.txtbmPershkrimi.CustomButton.Image = null;
+            this.txtbmPershkrimi.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.txtbmPershkrimi.CustomButton.Name = "";
+            this.txtbmPershkrimi.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtbmPershkrimi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtbmPershkrimi.CustomButton.TabIndex = 1;
+            this.txtbmPershkrimi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtbmPershkrimi.CustomButton.UseSelectable = true;
+            this.txtbmPershkrimi.CustomButton.Visible = false;
+            this.txtbmPershkrimi.Lines = new string[0];
+            this.txtbmPershkrimi.Location = new System.Drawing.Point(64, 97);
+            this.txtbmPershkrimi.MaxLength = 32767;
+            this.txtbmPershkrimi.Name = "txtbmPershkrimi";
+            this.txtbmPershkrimi.PasswordChar = '\0';
+            this.txtbmPershkrimi.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtbmPershkrimi.SelectedText = "";
+            this.txtbmPershkrimi.SelectionLength = 0;
+            this.txtbmPershkrimi.SelectionStart = 0;
+            this.txtbmPershkrimi.ShortcutsEnabled = true;
+            this.txtbmPershkrimi.Size = new System.Drawing.Size(121, 23);
+            this.txtbmPershkrimi.TabIndex = 21;
+            this.txtbmPershkrimi.UseSelectable = true;
+            this.txtbmPershkrimi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtbmPershkrimi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtbmPershkrimi.Click += new System.EventHandler(this.txtbmPershkrimi_Click);
+            // 
+            // lblmShenimet
+            // 
+            this.lblmShenimet.Location = new System.Drawing.Point(234, 26);
+            this.lblmShenimet.Name = "lblmShenimet";
+            this.lblmShenimet.Size = new System.Drawing.Size(336, 85);
+            this.lblmShenimet.Style = MetroFramework.MetroColorStyle.Orange;
+            this.lblmShenimet.TabIndex = 18;
+            this.lblmShenimet.Theme = MetroFramework.MetroThemeStyle.Dark;
+            // 
+            // txtmShenimet
+            // 
+            // 
+            // 
+            // 
+            this.txtmShenimet.CustomButton.Image = null;
+            this.txtmShenimet.CustomButton.Location = new System.Drawing.Point(202, 2);
+            this.txtmShenimet.CustomButton.Name = "";
+            this.txtmShenimet.CustomButton.Size = new System.Drawing.Size(295, 295);
+            this.txtmShenimet.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtmShenimet.CustomButton.TabIndex = 1;
+            this.txtmShenimet.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtmShenimet.CustomButton.UseSelectable = true;
+            this.txtmShenimet.CustomButton.Visible = false;
+            this.txtmShenimet.Lines = new string[0];
+            this.txtmShenimet.Location = new System.Drawing.Point(-1, 257);
+            this.txtmShenimet.MaxLength = 32767;
+            this.txtmShenimet.Multiline = true;
+            this.txtmShenimet.Name = "txtmShenimet";
+            this.txtmShenimet.PasswordChar = '\0';
+            this.txtmShenimet.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtmShenimet.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtmShenimet.SelectedText = "";
+            this.txtmShenimet.SelectionLength = 0;
+            this.txtmShenimet.SelectionStart = 0;
+            this.txtmShenimet.ShortcutsEnabled = true;
+            this.txtmShenimet.Size = new System.Drawing.Size(500, 300);
+            this.txtmShenimet.Style = MetroFramework.MetroColorStyle.Teal;
+            this.txtmShenimet.TabIndex = 17;
+            this.txtmShenimet.UseSelectable = true;
+            this.txtmShenimet.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtmShenimet.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // pnlShpenzime
             // 
             this.pnlShpenzime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -358,8 +452,16 @@
             // dgvShitja
             // 
             this.dgvShitja.AllowUserToDeleteRows = false;
+            this.dgvShitja.AutoGenerateColumns = false;
             this.dgvShitja.BackgroundColor = System.Drawing.Color.Maroon;
             this.dgvShitja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShitja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.midDataGridViewTextBoxColumn,
+            this.malliEmriDataGridViewTextBoxColumn,
+            this.malliCmimiDataGridViewTextBoxColumn,
+            this.dataShitjesDataGridViewTextBoxColumn,
+            this.pershkrimiDataGridViewTextBoxColumn});
+            this.dgvShitja.DataSource = this.tblMalliBindingSource;
             this.dgvShitja.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvShitja.Location = new System.Drawing.Point(793, 0);
             this.dgvShitja.Name = "dgvShitja";
@@ -368,6 +470,51 @@
             this.dgvShitja.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvShitja.Size = new System.Drawing.Size(432, 600);
             this.dgvShitja.TabIndex = 5;
+            // 
+            // midDataGridViewTextBoxColumn
+            // 
+            this.midDataGridViewTextBoxColumn.DataPropertyName = "Mid";
+            this.midDataGridViewTextBoxColumn.HeaderText = "Mid";
+            this.midDataGridViewTextBoxColumn.Name = "midDataGridViewTextBoxColumn";
+            this.midDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // malliEmriDataGridViewTextBoxColumn
+            // 
+            this.malliEmriDataGridViewTextBoxColumn.DataPropertyName = "Malli_Emri";
+            this.malliEmriDataGridViewTextBoxColumn.HeaderText = "Malli_Emri";
+            this.malliEmriDataGridViewTextBoxColumn.Name = "malliEmriDataGridViewTextBoxColumn";
+            this.malliEmriDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // malliCmimiDataGridViewTextBoxColumn
+            // 
+            this.malliCmimiDataGridViewTextBoxColumn.DataPropertyName = "Malli_Cmimi";
+            this.malliCmimiDataGridViewTextBoxColumn.HeaderText = "Malli_Cmimi";
+            this.malliCmimiDataGridViewTextBoxColumn.Name = "malliCmimiDataGridViewTextBoxColumn";
+            this.malliCmimiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataShitjesDataGridViewTextBoxColumn
+            // 
+            this.dataShitjesDataGridViewTextBoxColumn.DataPropertyName = "Data_Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn.HeaderText = "Data_Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn.Name = "dataShitjesDataGridViewTextBoxColumn";
+            this.dataShitjesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pershkrimiDataGridViewTextBoxColumn
+            // 
+            this.pershkrimiDataGridViewTextBoxColumn.DataPropertyName = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.HeaderText = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.Name = "pershkrimiDataGridViewTextBoxColumn";
+            this.pershkrimiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tblMalliBindingSource
+            // 
+            this.tblMalliBindingSource.DataMember = "TblMalli";
+            this.tblMalliBindingSource.DataSource = this.rubyDBDataSet1;
+            // 
+            // rubyDBDataSet1
+            // 
+            this.rubyDBDataSet1.DataSetName = "RubyDBDataSet1";
+            this.rubyDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbHistoria
             // 
@@ -382,7 +529,7 @@
             this.tbHistoria.HorizontalScrollbarSize = 10;
             this.tbHistoria.Location = new System.Drawing.Point(4, 38);
             this.tbHistoria.Name = "tbHistoria";
-            this.tbHistoria.Size = new System.Drawing.Size(884, 371);
+            this.tbHistoria.Size = new System.Drawing.Size(1225, 600);
             this.tbHistoria.TabIndex = 1;
             this.tbHistoria.Text = "Historia";
             this.tbHistoria.VerticalScrollbarBarColor = true;
@@ -456,7 +603,7 @@
             this.tbStatistika.HorizontalScrollbarSize = 10;
             this.tbStatistika.Location = new System.Drawing.Point(4, 38);
             this.tbStatistika.Name = "tbStatistika";
-            this.tbStatistika.Size = new System.Drawing.Size(884, 371);
+            this.tbStatistika.Size = new System.Drawing.Size(1225, 600);
             this.tbStatistika.TabIndex = 2;
             this.tbStatistika.Text = "Statistika";
             this.tbStatistika.VerticalScrollbarBarColor = true;
@@ -499,87 +646,14 @@
             this.lblHyrje.TabIndex = 14;
             this.lblHyrje.Text = "Hyrje:";
             // 
-            // txtmShenimet
+            // rubyDBDataSet
             // 
+            this.rubyDBDataSet.DataSetName = "RubyDBDataSet";
+            this.rubyDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // tblMalliTableAdapter
             // 
-            // 
-            this.txtmShenimet.CustomButton.Image = null;
-            this.txtmShenimet.CustomButton.Location = new System.Drawing.Point(202, 2);
-            this.txtmShenimet.CustomButton.Name = "";
-            this.txtmShenimet.CustomButton.Size = new System.Drawing.Size(295, 295);
-            this.txtmShenimet.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtmShenimet.CustomButton.TabIndex = 1;
-            this.txtmShenimet.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtmShenimet.CustomButton.UseSelectable = true;
-            this.txtmShenimet.CustomButton.Visible = false;
-            this.txtmShenimet.Lines = new string[0];
-            this.txtmShenimet.Location = new System.Drawing.Point(-1, 257);
-            this.txtmShenimet.MaxLength = 32767;
-            this.txtmShenimet.Multiline = true;
-            this.txtmShenimet.Name = "txtmShenimet";
-            this.txtmShenimet.PasswordChar = '\0';
-            this.txtmShenimet.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtmShenimet.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtmShenimet.SelectedText = "";
-            this.txtmShenimet.SelectionLength = 0;
-            this.txtmShenimet.SelectionStart = 0;
-            this.txtmShenimet.ShortcutsEnabled = true;
-            this.txtmShenimet.Size = new System.Drawing.Size(500, 300);
-            this.txtmShenimet.Style = MetroFramework.MetroColorStyle.Teal;
-            this.txtmShenimet.TabIndex = 17;
-            this.txtmShenimet.UseSelectable = true;
-            this.txtmShenimet.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtmShenimet.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // lblmShenimet
-            // 
-            this.lblmShenimet.Location = new System.Drawing.Point(234, 26);
-            this.lblmShenimet.Name = "lblmShenimet";
-            this.lblmShenimet.Size = new System.Drawing.Size(336, 85);
-            this.lblmShenimet.Style = MetroFramework.MetroColorStyle.Orange;
-            this.lblmShenimet.TabIndex = 18;
-            this.lblmShenimet.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtbmPershkrimi
-            // 
-            // 
-            // 
-            // 
-            this.txtbmPershkrimi.CustomButton.Image = null;
-            this.txtbmPershkrimi.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.txtbmPershkrimi.CustomButton.Name = "";
-            this.txtbmPershkrimi.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtbmPershkrimi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtbmPershkrimi.CustomButton.TabIndex = 1;
-            this.txtbmPershkrimi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtbmPershkrimi.CustomButton.UseSelectable = true;
-            this.txtbmPershkrimi.CustomButton.Visible = false;
-            this.txtbmPershkrimi.Lines = new string[0];
-            this.txtbmPershkrimi.Location = new System.Drawing.Point(64, 97);
-            this.txtbmPershkrimi.MaxLength = 32767;
-            this.txtbmPershkrimi.Name = "txtbmPershkrimi";
-            this.txtbmPershkrimi.PasswordChar = '\0';
-            this.txtbmPershkrimi.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtbmPershkrimi.SelectedText = "";
-            this.txtbmPershkrimi.SelectionLength = 0;
-            this.txtbmPershkrimi.SelectionStart = 0;
-            this.txtbmPershkrimi.ShortcutsEnabled = true;
-            this.txtbmPershkrimi.Size = new System.Drawing.Size(121, 23);
-            this.txtbmPershkrimi.TabIndex = 21;
-            this.txtbmPershkrimi.UseSelectable = true;
-            this.txtbmPershkrimi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtbmPershkrimi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtbmPershkrimi.Click += new System.EventHandler(this.txtbmPershkrimi_Click);
-            // 
-            // lblmPershkrimi
-            // 
-            this.lblmPershkrimi.AutoSize = true;
-            this.lblmPershkrimi.Location = new System.Drawing.Point(5, 101);
-            this.lblmPershkrimi.Name = "lblmPershkrimi";
-            this.lblmPershkrimi.Size = new System.Drawing.Size(46, 19);
-            this.lblmPershkrimi.TabIndex = 24;
-            this.lblmPershkrimi.Text = "Pershk";
+            this.tblMalliTableAdapter.ClearBeforeFill = true;
             // 
             // Form
             // 
@@ -605,10 +679,13 @@
             this.pnlShpenzime.ResumeLayout(false);
             this.pnlShpenzime.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMalliBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet1)).EndInit();
             this.tbHistoria.ResumeLayout(false);
             this.tbHistoria.PerformLayout();
             this.tbStatistika.ResumeLayout(false);
             this.tbStatistika.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -653,6 +730,15 @@
         private MetroFramework.Controls.MetroLabel lblmShenimet;
         private MetroFramework.Controls.MetroTextBox txtbmPershkrimi;
         private MetroFramework.Controls.MetroLabel lblmPershkrimi;
+        private RubyDBDataSet rubyDBDataSet;
+        private RubyDBDataSet1 rubyDBDataSet1;
+        private System.Windows.Forms.BindingSource tblMalliBindingSource;
+        private RubyDBDataSet1TableAdapters.TblMalliTableAdapter tblMalliTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn midDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malliEmriDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malliCmimiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn;
     }
 }
 
