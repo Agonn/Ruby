@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data;
 using System.Data.SqlClient;
-using Supremes;
 
 namespace Ruby
 {
