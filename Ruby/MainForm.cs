@@ -36,10 +36,10 @@ namespace Ruby
         {
             string theDate = dtpData.Value.ToShortDateString();
             lblDataSot.Text = theDate.ToString();
+            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
             try
             {
-                SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
                 string query3 = "select SUM(Malli_Cmimi) from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
                 SqlCommand objKomanda3 = new SqlCommand(query3, objKonektimi);
                 objKonektimi.Open();

@@ -74,6 +74,12 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.rubyDBDataSet = new Ruby.RubyDBDataSet();
             this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
+            this.dgvHistoria = new System.Windows.Forms.DataGridView();
+            this.midDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliEmriDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliCmimiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataShitjesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pershkrimiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -85,6 +91,7 @@
             this.tbStatistika.SuspendLayout();
             this.tbLive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistoria)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -161,7 +168,7 @@
             // 
             this.dtpData.Dock = System.Windows.Forms.DockStyle.Right;
             this.dtpData.Location = new System.Drawing.Point(1053, 60);
-            this.dtpData.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 29);
             this.dtpData.TabIndex = 1;
@@ -252,7 +259,7 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 0;
+            this.metroTab.SelectedIndex = 1;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -400,6 +407,7 @@
             // 
             // tbHistoria
             // 
+            this.tbHistoria.Controls.Add(this.dgvHistoria);
             this.tbHistoria.Controls.Add(this.lblShpenzime);
             this.tbHistoria.Controls.Add(this.metroLabel4);
             this.tbHistoria.Controls.Add(this.lblShitje);
@@ -572,6 +580,63 @@
             // 
             this.tblMalliTableAdapter.ClearBeforeFill = true;
             // 
+            // dgvHistoria
+            // 
+            this.dgvHistoria.AllowUserToDeleteRows = false;
+            this.dgvHistoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvHistoria.AutoGenerateColumns = false;
+            this.dgvHistoria.BackgroundColor = System.Drawing.Color.Maroon;
+            this.dgvHistoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.midDataGridViewTextBoxColumn1,
+            this.malliEmriDataGridViewTextBoxColumn1,
+            this.malliCmimiDataGridViewTextBoxColumn1,
+            this.dataShitjesDataGridViewTextBoxColumn1,
+            this.pershkrimiDataGridViewTextBoxColumn1});
+            this.dgvHistoria.DataSource = this.tblMalliBindingSource;
+            this.dgvHistoria.Location = new System.Drawing.Point(681, 26);
+            this.dgvHistoria.Name = "dgvHistoria";
+            this.dgvHistoria.ReadOnly = true;
+            this.dgvHistoria.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvHistoria.Size = new System.Drawing.Size(544, 597);
+            this.dgvHistoria.TabIndex = 3;
+            // 
+            // midDataGridViewTextBoxColumn1
+            // 
+            this.midDataGridViewTextBoxColumn1.DataPropertyName = "Mid";
+            this.midDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.midDataGridViewTextBoxColumn1.Name = "midDataGridViewTextBoxColumn1";
+            this.midDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // malliEmriDataGridViewTextBoxColumn1
+            // 
+            this.malliEmriDataGridViewTextBoxColumn1.DataPropertyName = "Malli_Emri";
+            this.malliEmriDataGridViewTextBoxColumn1.HeaderText = "Emri";
+            this.malliEmriDataGridViewTextBoxColumn1.Name = "malliEmriDataGridViewTextBoxColumn1";
+            this.malliEmriDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // malliCmimiDataGridViewTextBoxColumn1
+            // 
+            this.malliCmimiDataGridViewTextBoxColumn1.DataPropertyName = "Malli_Cmimi";
+            this.malliCmimiDataGridViewTextBoxColumn1.HeaderText = "Çmimi";
+            this.malliCmimiDataGridViewTextBoxColumn1.Name = "malliCmimiDataGridViewTextBoxColumn1";
+            this.malliCmimiDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataShitjesDataGridViewTextBoxColumn1
+            // 
+            this.dataShitjesDataGridViewTextBoxColumn1.DataPropertyName = "Data_Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn1.HeaderText = "Data Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn1.Name = "dataShitjesDataGridViewTextBoxColumn1";
+            this.dataShitjesDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // pershkrimiDataGridViewTextBoxColumn1
+            // 
+            this.pershkrimiDataGridViewTextBoxColumn1.DataPropertyName = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn1.HeaderText = "Përshkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn1.Name = "pershkrimiDataGridViewTextBoxColumn1";
+            this.pershkrimiDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -602,6 +667,7 @@
             this.tbStatistika.PerformLayout();
             this.tbLive.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistoria)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -651,6 +717,12 @@
         private MetroFramework.Controls.MetroLabel lblHistoriaShitje;
         private MetroFramework.Controls.MetroTabPage tbLive;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.DataGridView dgvHistoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn midDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malliEmriDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malliCmimiDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn1;
     }
 }
 
