@@ -14,6 +14,31 @@ namespace Ruby
         {
             InitializeComponent();
             cmbStatistika.SelectedIndex = 0; //Statistika data te jete SOT.
+            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+            try
+            {
+                //SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1
+
+                string query4 = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1";
+
+                SqlCommand objKomanda3 = new SqlCommand(query4, objKonektimi);
+                objKonektimi.Open();
+                int mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
+
+                SqlDataAdapter objAdapteri = new SqlDataAdapter(query4, objKonektimi);
+                DataSet Shenimet = new DataSet();
+                objAdapteri.Fill(Shenimet);
+                dgvHistoria.DataSource = Shenimet.Tables[0];
+
+                objKonektimi.Close();
+            }
+            catch (Exception)
+            {
+
+                // MessageBox.Show("Nuk ka shitje per kete date"); //placeholder!
+                lblHistoriaShitje.Text = "N/A";
+            }
+
         }
 
         private void Form_Load(object sender, EventArgs e)
@@ -38,12 +63,20 @@ namespace Ruby
             lblDataSot.Text = theDate.ToString();
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
+
+
             try
             {
+
                 string query3 = "select SUM(Malli_Cmimi) from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
+                string query4 = "select * from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
                 SqlCommand objKomanda3 = new SqlCommand(query3, objKonektimi);
                 objKonektimi.Open();
+                SqlDataAdapter objAdapteri = new SqlDataAdapter(query4, objKonektimi);
+                DataSet Shenimet = new DataSet();
                 int mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
+                objAdapteri.Fill(Shenimet);
+                dgvHistoria.DataSource = Shenimet.Tables[0];
                 lblHistoriaShitje.Text = mySum.ToString() + "€";
                 objKonektimi.Close();
             }
