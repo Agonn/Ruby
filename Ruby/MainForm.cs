@@ -31,15 +31,15 @@ namespace Ruby
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
             string theDate = dtpData.Value.ToShortDateString();
-            lblDataSot.Text = theDate.ToString(); 
+            lblDataSot.Text = theDate.ToString();
 
-            //SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
-            //string query3 = "SELECT SUM(Malli_Cmimi) from TblMalli WHERE Data_Shitjes='" + dtpData.Value + "'";
+            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+            string query3 = "SELECT SUM(Malli_Cmimi) from TblMalli";
 
-            //SqlCommand objKomanda3 = new SqlCommand(query3, objKonektimi);
-            //objKonektimi.Open();
-            //lblHistoriaShitje.Text = objKomanda3.ExecuteScalar().ToString();
-            //objKonektimi.Close();
+            SqlCommand objKomanda3 = new SqlCommand(query3, objKonektimi);
+            objKonektimi.Open();
+            lblHistoriaShitje.Text = objKomanda3.ToString();
+            objKonektimi.Close();
         }
 
         private void btnShto_Click_1(object sender, EventArgs e)
