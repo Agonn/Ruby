@@ -253,7 +253,7 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 3;
+            this.metroTab.SelectedIndex = 1;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -487,12 +487,12 @@
             // 
             // lblHistoriaShitje
             // 
-            this.lblHistoriaShitje.AutoSize = true;
-            this.lblHistoriaShitje.Location = new System.Drawing.Point(65, 68);
+            this.lblHistoriaShitje.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblHistoriaShitje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblHistoriaShitje.Location = new System.Drawing.Point(95, 63);
             this.lblHistoriaShitje.Name = "lblHistoriaShitje";
-            this.lblHistoriaShitje.Size = new System.Drawing.Size(43, 19);
+            this.lblHistoriaShitje.Size = new System.Drawing.Size(65, 36);
             this.lblHistoriaShitje.TabIndex = 2;
-            this.lblHistoriaShitje.Text = "Shitje:";
             // 
             // metroLabel3
             // 
