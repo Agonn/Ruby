@@ -62,9 +62,6 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
-    <Reference Include="Supremes, Version=0.2.0.18776, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\dcsoup.0.2.0\lib\net45\Supremes.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
