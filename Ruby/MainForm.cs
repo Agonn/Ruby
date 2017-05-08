@@ -46,7 +46,8 @@ namespace Ruby
             catch (Exception)
             {
 
-                MessageBox.Show("Nuk ka shitje per kete date"); //placeholder!
+               // MessageBox.Show("Nuk ka shitje per kete date"); //placeholder!
+                lblHistoriaShitje.Text = "N/A";
             }
         }
 
