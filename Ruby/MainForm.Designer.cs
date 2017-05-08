@@ -63,16 +63,17 @@
             this.lblShpenzime = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.lblShitje = new MetroFramework.Controls.MetroLabel();
+            this.lblHistoriaShitje = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblDataSot = new MetroFramework.Controls.MetroLabel();
             this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.lblHyrje = new MetroFramework.Controls.MetroLabel();
             this.rubyDBDataSet = new Ruby.RubyDBDataSet();
             this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
-            this.lblHistoriaShitje = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -159,7 +160,7 @@
             // 
             this.dtpData.Dock = System.Windows.Forms.DockStyle.Right;
             this.dtpData.Location = new System.Drawing.Point(1053, 60);
-            this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpData.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 29);
             this.dtpData.TabIndex = 1;
@@ -244,12 +245,12 @@
             // metroTab
             // 
             this.metroTab.Controls.Add(this.tbShitja);
-            this.metroTab.Controls.Add(this.tbHistoria);
             this.metroTab.Controls.Add(this.tbStatistika);
+            this.metroTab.Controls.Add(this.tbHistoria);
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 1;
+            this.metroTab.SelectedIndex = 2;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -481,6 +482,16 @@
             this.lblShitje.Size = new System.Drawing.Size(0, 0);
             this.lblShitje.TabIndex = 2;
             // 
+            // lblHistoriaShitje
+            // 
+            this.lblHistoriaShitje.AutoSize = true;
+            this.lblHistoriaShitje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblHistoriaShitje.Location = new System.Drawing.Point(65, 68);
+            this.lblHistoriaShitje.Name = "lblHistoriaShitje";
+            this.lblHistoriaShitje.Size = new System.Drawing.Size(50, 19);
+            this.lblHistoriaShitje.TabIndex = 2;
+            this.lblHistoriaShitje.Text = "Shitje:";
+            // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
@@ -512,6 +523,7 @@
             // 
             // tbStatistika
             // 
+            this.tbStatistika.Controls.Add(this.webBrowser1);
             this.tbStatistika.Controls.Add(this.cmbStatistika);
             this.tbStatistika.Controls.Add(this.metroLabel5);
             this.tbStatistika.Controls.Add(this.lblHyrje);
@@ -526,6 +538,16 @@
             this.tbStatistika.VerticalScrollbarBarColor = true;
             this.tbStatistika.VerticalScrollbarHighlightOnWheel = false;
             this.tbStatistika.VerticalScrollbarSize = 10;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(0, 112);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
+            this.webBrowser1.Size = new System.Drawing.Size(917, 377);
+            this.webBrowser1.TabIndex = 15;
+            this.webBrowser1.Url = new System.Uri("http://goldprice.org/live-gold-price.html", System.UriKind.Absolute);
             // 
             // cmbStatistika
             // 
@@ -571,16 +593,6 @@
             // tblMalliTableAdapter
             // 
             this.tblMalliTableAdapter.ClearBeforeFill = true;
-            // 
-            // lblHistoriaShitje
-            // 
-            this.lblHistoriaShitje.AutoSize = true;
-            this.lblHistoriaShitje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblHistoriaShitje.Location = new System.Drawing.Point(65, 68);
-            this.lblHistoriaShitje.Name = "lblHistoriaShitje";
-            this.lblHistoriaShitje.Size = new System.Drawing.Size(50, 19);
-            this.lblHistoriaShitje.TabIndex = 2;
-            this.lblHistoriaShitje.Text = "Shitje:";
             // 
             // Form
             // 
@@ -659,6 +671,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroLabel lblHistoriaShitje;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 

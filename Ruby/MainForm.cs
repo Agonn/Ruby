@@ -14,13 +14,13 @@ namespace Ruby
             InitializeComponent();
             cmbStatistika.SelectedIndex = 0; //Statistika data te jete SOT.
 
+
         }
 
         private void Form_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'rubyDBDataSet1.TblMalli' table. You can move, or remove it, as needed.
             this.tblMalliTableAdapter.Fill(this.rubyDBDataSet1.TblMalli);
-
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,5 +93,7 @@ namespace Ruby
         {
 
         }
+
+
     }
 }
