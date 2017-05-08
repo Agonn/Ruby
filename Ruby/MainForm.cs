@@ -24,10 +24,13 @@ namespace Ruby
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login objforma1 = new Login();
-            this.Hide();
-            objforma1.Show(); //Fix this to completly close app.
-        }
+            //Login objforma1 = new Login();
+            //this.Hide();
+            //objforma1.Show(); 
+            //Fix this to completly close app.
+
+            this.Close(); //temporarily use this
+        } 
 
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
