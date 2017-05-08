@@ -73,7 +73,6 @@ namespace Ruby
                 numri++;
                 objKonektimi.Open();
                 int numri_reshtave = objKomanda.ExecuteNonQuery();
-                txtmShenimet.Text = "Numri i afektuar i rreshtave eshte : " + numri_reshtave.ToString();
                 lblmShenimet.Text= "Numri i afektuar i rreshtave eshte : " + numri_reshtave.ToString();
                 objAdapteri.Fill(_Shenimet);
                 dgvShitja.DataSource = _Shenimet.Tables[0];

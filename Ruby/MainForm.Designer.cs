@@ -50,7 +50,6 @@
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.txtbmPershkrimi = new MetroFramework.Controls.MetroTextBox();
             this.lblmShenimet = new MetroFramework.Controls.MetroLabel();
-            this.txtmShenimet = new MetroFramework.Controls.MetroTextBox();
             this.dgvShitja = new System.Windows.Forms.DataGridView();
             this.midDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.malliEmriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,10 +70,10 @@
             this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.lblHyrje = new MetroFramework.Controls.MetroLabel();
-            this.rubyDBDataSet = new Ruby.RubyDBDataSet();
-            this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
             this.tbLive = new MetroFramework.Controls.MetroTabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.rubyDBDataSet = new Ruby.RubyDBDataSet();
+            this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -84,8 +83,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet1)).BeginInit();
             this.tbHistoria.SuspendLayout();
             this.tbStatistika.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).BeginInit();
             this.tbLive.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -253,7 +252,7 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 1;
+            this.metroTab.SelectedIndex = 0;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -263,7 +262,6 @@
             this.tbShitja.Controls.Add(this.metroLabel6);
             this.tbShitja.Controls.Add(this.txtbmPershkrimi);
             this.tbShitja.Controls.Add(this.lblmShenimet);
-            this.tbShitja.Controls.Add(this.txtmShenimet);
             this.tbShitja.Controls.Add(this.dgvShitja);
             this.tbShitja.Controls.Add(this.metroLabel2);
             this.tbShitja.Controls.Add(this.cmbMalli);
@@ -332,39 +330,6 @@
             this.lblmShenimet.Style = MetroFramework.MetroColorStyle.Orange;
             this.lblmShenimet.TabIndex = 18;
             this.lblmShenimet.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // txtmShenimet
-            // 
-            // 
-            // 
-            // 
-            this.txtmShenimet.CustomButton.Image = null;
-            this.txtmShenimet.CustomButton.Location = new System.Drawing.Point(269, 2);
-            this.txtmShenimet.CustomButton.Name = "";
-            this.txtmShenimet.CustomButton.Size = new System.Drawing.Size(295, 295);
-            this.txtmShenimet.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtmShenimet.CustomButton.TabIndex = 1;
-            this.txtmShenimet.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtmShenimet.CustomButton.UseSelectable = true;
-            this.txtmShenimet.CustomButton.Visible = false;
-            this.txtmShenimet.Lines = new string[0];
-            this.txtmShenimet.Location = new System.Drawing.Point(3, 175);
-            this.txtmShenimet.MaxLength = 32767;
-            this.txtmShenimet.Multiline = true;
-            this.txtmShenimet.Name = "txtmShenimet";
-            this.txtmShenimet.PasswordChar = '\0';
-            this.txtmShenimet.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtmShenimet.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtmShenimet.SelectedText = "";
-            this.txtmShenimet.SelectionLength = 0;
-            this.txtmShenimet.SelectionStart = 0;
-            this.txtmShenimet.ShortcutsEnabled = true;
-            this.txtmShenimet.Size = new System.Drawing.Size(567, 300);
-            this.txtmShenimet.Style = MetroFramework.MetroColorStyle.Teal;
-            this.txtmShenimet.TabIndex = 17;
-            this.txtmShenimet.UseSelectable = true;
-            this.txtmShenimet.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtmShenimet.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // dgvShitja
             // 
@@ -576,15 +541,6 @@
             this.lblHyrje.TabIndex = 14;
             this.lblHyrje.Text = "Hyrje:";
             // 
-            // rubyDBDataSet
-            // 
-            this.rubyDBDataSet.DataSetName = "RubyDBDataSet";
-            this.rubyDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblMalliTableAdapter
-            // 
-            this.tblMalliTableAdapter.ClearBeforeFill = true;
-            // 
             // tbLive
             // 
             this.tbLive.Controls.Add(this.webBrowser1);
@@ -609,6 +565,15 @@
             this.webBrowser1.Size = new System.Drawing.Size(1225, 600);
             this.webBrowser1.TabIndex = 2;
             this.webBrowser1.Url = new System.Uri(" https://www.bullionbypost.co.uk/gold-price/live-gold-price/", System.UriKind.Absolute);
+            // 
+            // rubyDBDataSet
+            // 
+            this.rubyDBDataSet.DataSetName = "RubyDBDataSet";
+            this.rubyDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblMalliTableAdapter
+            // 
+            this.tblMalliTableAdapter.ClearBeforeFill = true;
             // 
             // Form
             // 
@@ -638,8 +603,8 @@
             this.tbHistoria.PerformLayout();
             this.tbStatistika.ResumeLayout(false);
             this.tbStatistika.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).EndInit();
             this.tbLive.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -674,7 +639,6 @@
         private MetroFramework.Controls.MetroComboBox cmbStatistika;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private MetroFramework.Controls.MetroTabControl metroTab;
-        private MetroFramework.Controls.MetroTextBox txtmShenimet;
         private MetroFramework.Controls.MetroLabel lblmShenimet;
         private MetroFramework.Controls.MetroTextBox txtbmPershkrimi;
         private RubyDBDataSet rubyDBDataSet;
