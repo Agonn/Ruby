@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using Ruby.Properties;
 
 namespace Ruby
 {
@@ -13,8 +14,6 @@ namespace Ruby
         {
             InitializeComponent();
             cmbStatistika.SelectedIndex = 0; //Statistika data te jete SOT.
-
-
         }
 
         private void Form_Load(object sender, EventArgs e)
@@ -25,7 +24,9 @@ namespace Ruby
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-              Application.Exit(); //Me ndru me login-form 
+            Login objforma1 = new Login();
+            this.Hide();
+            objforma1.Show(); //Fix this to completly close app.
         }
 
         private void dtpData_ValueChanged(object sender, EventArgs e)
@@ -55,17 +56,14 @@ namespace Ruby
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
-           
             try
             {
                 //Formati DataTime DATETIME values in 'YYYY-MM-DD HH:MM:SS' 
 
                 string Query2 = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('" + cmbMalli.SelectedItem.ToString() + "','" + float.Parse(txtCmimi.Text) + "','" + dtpData.Value.ToString("yyyy-MM-dd") + "','" + txtbmPershkrimi.Text + "')";
                 SqlCommand objKomanda = new SqlCommand(Query2, objKonektimi);
-
                 string Query3 = "select *from TblMalli";
                 SqlCommand objKomanda2 = new SqlCommand(Query3, objKonektimi);
-
                 int numri = 0;
                 //comboBox1.SelectedItem.ToString() 
                 SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
@@ -87,26 +85,5 @@ namespace Ruby
             }
         }
 
-        private void txtbmPershkrimi_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbShitja_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbHistoria_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void webBrowser1_DocumentCompleted_1(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
-
-        }
     }
 }
