@@ -73,6 +73,8 @@
             this.lblHyrje = new MetroFramework.Controls.MetroLabel();
             this.rubyDBDataSet = new Ruby.RubyDBDataSet();
             this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
+            this.tbLive = new MetroFramework.Controls.MetroTabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -83,6 +85,7 @@
             this.tbHistoria.SuspendLayout();
             this.tbStatistika.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).BeginInit();
+            this.tbLive.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -244,12 +247,13 @@
             // metroTab
             // 
             this.metroTab.Controls.Add(this.tbShitja);
-            this.metroTab.Controls.Add(this.tbStatistika);
             this.metroTab.Controls.Add(this.tbHistoria);
+            this.metroTab.Controls.Add(this.tbStatistika);
+            this.metroTab.Controls.Add(this.tbLive);
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 1;
+            this.metroTab.SelectedIndex = 3;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -486,7 +490,7 @@
             this.lblHistoriaShitje.AutoSize = true;
             this.lblHistoriaShitje.Location = new System.Drawing.Point(65, 68);
             this.lblHistoriaShitje.Name = "lblHistoriaShitje";
-            this.lblHistoriaShitje.Size = new System.Drawing.Size(50, 19);
+            this.lblHistoriaShitje.Size = new System.Drawing.Size(43, 19);
             this.lblHistoriaShitje.TabIndex = 2;
             this.lblHistoriaShitje.Text = "Shitje:";
             // 
@@ -581,6 +585,31 @@
             // 
             this.tblMalliTableAdapter.ClearBeforeFill = true;
             // 
+            // tbLive
+            // 
+            this.tbLive.Controls.Add(this.webBrowser1);
+            this.tbLive.HorizontalScrollbarBarColor = true;
+            this.tbLive.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbLive.HorizontalScrollbarSize = 10;
+            this.tbLive.Location = new System.Drawing.Point(4, 38);
+            this.tbLive.Name = "tbLive";
+            this.tbLive.Size = new System.Drawing.Size(1225, 600);
+            this.tbLive.TabIndex = 3;
+            this.tbLive.Text = "Live";
+            this.tbLive.VerticalScrollbarBarColor = true;
+            this.tbLive.VerticalScrollbarHighlightOnWheel = false;
+            this.tbLive.VerticalScrollbarSize = 10;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(1225, 600);
+            this.webBrowser1.TabIndex = 2;
+            this.webBrowser1.Url = new System.Uri(" https://www.bullionbypost.co.uk/gold-price/live-gold-price/", System.UriKind.Absolute);
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -610,6 +639,7 @@
             this.tbStatistika.ResumeLayout(false);
             this.tbStatistika.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).EndInit();
+            this.tbLive.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -658,6 +688,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn;
         private MetroFramework.Controls.MetroLabel lblHistoriaShitje;
+        private MetroFramework.Controls.MetroTabPage tbLive;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 
