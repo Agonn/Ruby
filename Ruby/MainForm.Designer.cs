@@ -161,7 +161,7 @@
             // 
             this.dtpData.Dock = System.Windows.Forms.DockStyle.Right;
             this.dtpData.Location = new System.Drawing.Point(1053, 60);
-            this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpData.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(200, 29);
             this.dtpData.TabIndex = 1;
@@ -206,40 +206,40 @@
             this.CxtMenu.MouseState = MaterialSkin.MouseState.HOVER;
             this.CxtMenu.Name = "CxtMenu";
             this.CxtMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CxtMenu.Size = new System.Drawing.Size(153, 126);
+            this.CxtMenu.Size = new System.Drawing.Size(122, 104);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(118, 6);
             // 
             // historikuToolStripMenuItem
             // 
             this.historikuToolStripMenuItem.Name = "historikuToolStripMenuItem";
-            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.historikuToolStripMenuItem.Text = "Historia";
             // 
             // statistikaToolStripMenuItem
             // 
             this.statistikaToolStripMenuItem.Name = "statistikaToolStripMenuItem";
-            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.statistikaToolStripMenuItem.Text = "Statistika";
             // 
             // kameraToolStripMenuItem
             // 
             this.kameraToolStripMenuItem.Name = "kameraToolStripMenuItem";
-            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.kameraToolStripMenuItem.Text = "Kamera";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(118, 6);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.logOutToolStripMenuItem.Text = "Çkyqu";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
