@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using Supremes;
 
 namespace Ruby
 {
@@ -95,5 +96,10 @@ namespace Ruby
         }
 
 
+        private void webBrowser1_DocumentCompleted_1(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+
+        }
     }
 }
