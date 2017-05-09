@@ -39,8 +39,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroStyle = new MetroFramework.Components.MetroStyleManager(this.components);
             this.CxtMenu = new MaterialSkin.Controls.MaterialContextMenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.historikuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statistikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,15 +47,16 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
             this.tbShitja = new MetroFramework.Controls.MetroTabPage();
-            this.pnlShpenzime = new System.Windows.Forms.Panel();
-            this.btnShpenzime = new MetroFramework.Controls.MetroButton();
-            this.txtShpenzime = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.txtbmPershkrimi = new MetroFramework.Controls.MetroTextBox();
+            this.lblmShenimet = new MetroFramework.Controls.MetroLabel();
             this.dgvShitja = new System.Windows.Forms.DataGridView();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
+            this.dgvHistoria = new System.Windows.Forms.DataGridView();
             this.lblShpenzime = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.lblShitje = new MetroFramework.Controls.MetroLabel();
+            this.lblHistoriaShitje = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblDataSot = new MetroFramework.Controls.MetroLabel();
@@ -65,14 +64,35 @@
             this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.lblHyrje = new MetroFramework.Controls.MetroLabel();
+            this.tbLive = new MetroFramework.Controls.MetroTabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.rubyDBDataSet = new Ruby.RubyDBDataSet();
+            this.dtpShitje = new MetroFramework.Controls.MetroDateTime();
+            this.tblMalliBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rubyDBDataSet1 = new Ruby.RubyDBDataSet1();
+            this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
+            this.midDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliEmriDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliCmimiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataShitjesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pershkrimiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliEmriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.malliCmimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataShitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
             this.tbShitja.SuspendLayout();
-            this.pnlShpenzime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
             this.tbHistoria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistoria)).BeginInit();
             this.tbStatistika.SuspendLayout();
+            this.tbLive.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMalliBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -87,7 +107,7 @@
             "Gurrë",
             "Shërbim",
             "Tjetër"});
-            this.cmbMalli.Location = new System.Drawing.Point(64, 26);
+            this.cmbMalli.Location = new System.Drawing.Point(98, 35);
             this.cmbMalli.Name = "cmbMalli";
             this.cmbMalli.Size = new System.Drawing.Size(121, 29);
             this.cmbMalli.TabIndex = 0;
@@ -108,7 +128,7 @@
             this.txtCmimi.CustomButton.UseSelectable = true;
             this.txtCmimi.CustomButton.Visible = false;
             this.txtCmimi.Lines = new string[0];
-            this.txtCmimi.Location = new System.Drawing.Point(64, 68);
+            this.txtCmimi.Location = new System.Drawing.Point(98, 73);
             this.txtCmimi.MaxLength = 32767;
             this.txtCmimi.Name = "txtCmimi";
             this.txtCmimi.PasswordChar = '\0';
@@ -127,17 +147,18 @@
             // 
             this.btnShto.DisplayFocus = true;
             this.btnShto.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnShto.Location = new System.Drawing.Point(64, 112);
+            this.btnShto.Location = new System.Drawing.Point(98, 142);
             this.btnShto.Name = "btnShto";
             this.btnShto.Size = new System.Drawing.Size(121, 23);
-            this.btnShto.TabIndex = 11;
+            this.btnShto.TabIndex = 3;
             this.btnShto.Text = "Shto";
             this.btnShto.UseSelectable = true;
+            this.btnShto.Click += new System.EventHandler(this.btnShto_Click_1);
             // 
             // btnPdf
             // 
             this.btnPdf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPdf.Location = new System.Drawing.Point(835, 447);
+            this.btnPdf.Location = new System.Drawing.Point(1176, 676);
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(77, 23);
             this.btnPdf.TabIndex = 11;
@@ -146,11 +167,10 @@
             // 
             // dtpData
             // 
-            this.dtpData.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dtpData.Location = new System.Drawing.Point(712, 60);
+            this.dtpData.Location = new System.Drawing.Point(454, 3);
             this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(200, 29);
+            this.dtpData.Size = new System.Drawing.Size(224, 29);
             this.dtpData.TabIndex = 1;
             this.dtpData.ValueChanged += new System.EventHandler(this.dtpData_ValueChanged);
             // 
@@ -158,7 +178,7 @@
             // 
             this.Malli.AutoSize = true;
             this.Malli.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.Malli.Location = new System.Drawing.Point(2, 26);
+            this.Malli.Location = new System.Drawing.Point(47, 35);
             this.Malli.Name = "Malli";
             this.Malli.Size = new System.Drawing.Size(38, 19);
             this.Malli.TabIndex = 13;
@@ -168,11 +188,11 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(2, 68);
+            this.metroLabel2.Location = new System.Drawing.Point(36, 73);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(56, 19);
             this.metroLabel2.TabIndex = 13;
-            this.metroLabel2.Text = "Cmimi:";
+            this.metroLabel2.Text = "Çmimi:";
             // 
             // metroStyle
             // 
@@ -184,8 +204,6 @@
             this.CxtMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CxtMenu.Depth = 0;
             this.CxtMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
             this.toolStripSeparator2,
             this.historikuToolStripMenuItem,
             this.statistikaToolStripMenuItem,
@@ -195,55 +213,41 @@
             this.CxtMenu.MouseState = MaterialSkin.MouseState.HOVER;
             this.CxtMenu.Name = "CxtMenu";
             this.CxtMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CxtMenu.Size = new System.Drawing.Size(173, 148);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
-            this.toolStripMenuItem1.Text = "Shto Shpenzim";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(172, 22);
-            this.toolStripMenuItem2.Text = "Mshef Shpenzimet";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click_1);
+            this.CxtMenu.Size = new System.Drawing.Size(122, 104);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(118, 6);
             // 
             // historikuToolStripMenuItem
             // 
             this.historikuToolStripMenuItem.Name = "historikuToolStripMenuItem";
-            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.historikuToolStripMenuItem.Text = "Historia";
             // 
             // statistikaToolStripMenuItem
             // 
             this.statistikaToolStripMenuItem.Name = "statistikaToolStripMenuItem";
-            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.statistikaToolStripMenuItem.Text = "Statistika";
             // 
             // kameraToolStripMenuItem
             // 
             this.kameraToolStripMenuItem.Name = "kameraToolStripMenuItem";
-            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.kameraToolStripMenuItem.Text = "Kamera";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(118, 6);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.logOutToolStripMenuItem.Text = "Log out";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.logOutToolStripMenuItem.Text = "Çkyqu";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // metroTab
@@ -251,120 +255,123 @@
             this.metroTab.Controls.Add(this.tbShitja);
             this.metroTab.Controls.Add(this.tbHistoria);
             this.metroTab.Controls.Add(this.tbStatistika);
+            this.metroTab.Controls.Add(this.tbLive);
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
             this.metroTab.SelectedIndex = 0;
-            this.metroTab.Size = new System.Drawing.Size(892, 413);
+            this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
             // 
             // tbShitja
             // 
-            this.tbShitja.Controls.Add(this.pnlShpenzime);
+            this.tbShitja.Controls.Add(this.dtpShitje);
+            this.tbShitja.Controls.Add(this.metroLabel6);
+            this.tbShitja.Controls.Add(this.txtbmPershkrimi);
+            this.tbShitja.Controls.Add(this.lblmShenimet);
             this.tbShitja.Controls.Add(this.dgvShitja);
             this.tbShitja.Controls.Add(this.metroLabel2);
             this.tbShitja.Controls.Add(this.cmbMalli);
             this.tbShitja.Controls.Add(this.Malli);
             this.tbShitja.Controls.Add(this.txtCmimi);
             this.tbShitja.Controls.Add(this.btnShto);
+            this.tbShitja.HorizontalScrollbar = true;
             this.tbShitja.HorizontalScrollbarBarColor = true;
             this.tbShitja.HorizontalScrollbarHighlightOnWheel = false;
             this.tbShitja.HorizontalScrollbarSize = 10;
             this.tbShitja.Location = new System.Drawing.Point(4, 38);
             this.tbShitja.Name = "tbShitja";
-            this.tbShitja.Size = new System.Drawing.Size(884, 371);
+            this.tbShitja.Size = new System.Drawing.Size(1225, 600);
             this.tbShitja.TabIndex = 0;
             this.tbShitja.Text = "Shitje";
+            this.tbShitja.VerticalScrollbar = true;
             this.tbShitja.VerticalScrollbarBarColor = true;
             this.tbShitja.VerticalScrollbarHighlightOnWheel = false;
             this.tbShitja.VerticalScrollbarSize = 10;
             this.tbShitja.Click += new System.EventHandler(this.tbShitja_Click);
             // 
-            // pnlShpenzime
-            // 
-            this.pnlShpenzime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pnlShpenzime.BackColor = System.Drawing.Color.Transparent;
-            this.pnlShpenzime.Controls.Add(this.btnShpenzime);
-            this.pnlShpenzime.Controls.Add(this.txtShpenzime);
-            this.pnlShpenzime.Controls.Add(this.metroLabel6);
-            this.pnlShpenzime.Location = new System.Drawing.Point(2, 334);
-            this.pnlShpenzime.Name = "pnlShpenzime";
-            this.pnlShpenzime.Size = new System.Drawing.Size(446, 34);
-            this.pnlShpenzime.TabIndex = 16;
-            this.pnlShpenzime.Visible = false;
-            // 
-            // btnShpenzime
-            // 
-            this.btnShpenzime.DisplayFocus = true;
-            this.btnShpenzime.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnShpenzime.Location = new System.Drawing.Point(222, 8);
-            this.btnShpenzime.Name = "btnShpenzime";
-            this.btnShpenzime.Size = new System.Drawing.Size(122, 23);
-            this.btnShpenzime.TabIndex = 11;
-            this.btnShpenzime.Text = "Shto";
-            this.btnShpenzime.UseSelectable = true;
-            this.btnShpenzime.Click += new System.EventHandler(this.btnShpenzime_Click);
-            // 
-            // txtShpenzime
-            // 
-            // 
-            // 
-            // 
-            this.txtShpenzime.CustomButton.Image = null;
-            this.txtShpenzime.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.txtShpenzime.CustomButton.Name = "";
-            this.txtShpenzime.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtShpenzime.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtShpenzime.CustomButton.TabIndex = 1;
-            this.txtShpenzime.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtShpenzime.CustomButton.UseSelectable = true;
-            this.txtShpenzime.CustomButton.Visible = false;
-            this.txtShpenzime.Lines = new string[0];
-            this.txtShpenzime.Location = new System.Drawing.Point(95, 8);
-            this.txtShpenzime.MaxLength = 32767;
-            this.txtShpenzime.Name = "txtShpenzime";
-            this.txtShpenzime.PasswordChar = '\0';
-            this.txtShpenzime.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtShpenzime.SelectedText = "";
-            this.txtShpenzime.SelectionLength = 0;
-            this.txtShpenzime.SelectionStart = 0;
-            this.txtShpenzime.ShortcutsEnabled = true;
-            this.txtShpenzime.Size = new System.Drawing.Size(121, 23);
-            this.txtShpenzime.TabIndex = 0;
-            this.txtShpenzime.UseSelectable = true;
-            this.txtShpenzime.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtShpenzime.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(3, 8);
+            this.metroLabel6.Location = new System.Drawing.Point(7, 106);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(86, 19);
-            this.metroLabel6.TabIndex = 13;
-            this.metroLabel6.Text = "Shpenzime:";
+            this.metroLabel6.Size = new System.Drawing.Size(85, 19);
+            this.metroLabel6.TabIndex = 25;
+            this.metroLabel6.Text = "Përshkrimi:";
+            // 
+            // txtbmPershkrimi
+            // 
+            // 
+            // 
+            // 
+            this.txtbmPershkrimi.CustomButton.Image = null;
+            this.txtbmPershkrimi.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.txtbmPershkrimi.CustomButton.Name = "";
+            this.txtbmPershkrimi.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtbmPershkrimi.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtbmPershkrimi.CustomButton.TabIndex = 1;
+            this.txtbmPershkrimi.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtbmPershkrimi.CustomButton.UseSelectable = true;
+            this.txtbmPershkrimi.CustomButton.Visible = false;
+            this.txtbmPershkrimi.Lines = new string[0];
+            this.txtbmPershkrimi.Location = new System.Drawing.Point(98, 102);
+            this.txtbmPershkrimi.MaxLength = 32767;
+            this.txtbmPershkrimi.Name = "txtbmPershkrimi";
+            this.txtbmPershkrimi.PasswordChar = '\0';
+            this.txtbmPershkrimi.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtbmPershkrimi.SelectedText = "";
+            this.txtbmPershkrimi.SelectionLength = 0;
+            this.txtbmPershkrimi.SelectionStart = 0;
+            this.txtbmPershkrimi.ShortcutsEnabled = true;
+            this.txtbmPershkrimi.Size = new System.Drawing.Size(121, 23);
+            this.txtbmPershkrimi.TabIndex = 2;
+            this.txtbmPershkrimi.UseSelectable = true;
+            this.txtbmPershkrimi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtbmPershkrimi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // lblmShenimet
+            // 
+            this.lblmShenimet.Location = new System.Drawing.Point(7, 225);
+            this.lblmShenimet.Name = "lblmShenimet";
+            this.lblmShenimet.Size = new System.Drawing.Size(336, 90);
+            this.lblmShenimet.Style = MetroFramework.MetroColorStyle.Orange;
+            this.lblmShenimet.TabIndex = 18;
+            this.lblmShenimet.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // dgvShitja
             // 
             this.dgvShitja.AllowUserToDeleteRows = false;
+            this.dgvShitja.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvShitja.AutoGenerateColumns = false;
             this.dgvShitja.BackgroundColor = System.Drawing.Color.Maroon;
             this.dgvShitja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvShitja.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvShitja.Location = new System.Drawing.Point(452, 0);
+            this.dgvShitja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.midDataGridViewTextBoxColumn,
+            this.malliEmriDataGridViewTextBoxColumn,
+            this.malliCmimiDataGridViewTextBoxColumn,
+            this.dataShitjesDataGridViewTextBoxColumn,
+            this.pershkrimiDataGridViewTextBoxColumn});
+            this.dgvShitja.DataSource = this.tblMalliBindingSource;
+            this.dgvShitja.Location = new System.Drawing.Point(682, 3);
             this.dgvShitja.Name = "dgvShitja";
             this.dgvShitja.ReadOnly = true;
             this.dgvShitja.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvShitja.RowHeadersVisible = false;
             this.dgvShitja.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvShitja.Size = new System.Drawing.Size(432, 371);
+            this.dgvShitja.Size = new System.Drawing.Size(555, 620);
             this.dgvShitja.TabIndex = 5;
             // 
             // tbHistoria
             // 
+            this.tbHistoria.Controls.Add(this.dtpData);
+            this.tbHistoria.Controls.Add(this.dgvHistoria);
             this.tbHistoria.Controls.Add(this.lblShpenzime);
             this.tbHistoria.Controls.Add(this.metroLabel4);
             this.tbHistoria.Controls.Add(this.lblShitje);
+            this.tbHistoria.Controls.Add(this.lblHistoriaShitje);
             this.tbHistoria.Controls.Add(this.metroLabel3);
             this.tbHistoria.Controls.Add(this.metroLabel1);
             this.tbHistoria.Controls.Add(this.lblDataSot);
@@ -373,12 +380,35 @@
             this.tbHistoria.HorizontalScrollbarSize = 10;
             this.tbHistoria.Location = new System.Drawing.Point(4, 38);
             this.tbHistoria.Name = "tbHistoria";
-            this.tbHistoria.Size = new System.Drawing.Size(884, 371);
+            this.tbHistoria.Size = new System.Drawing.Size(1225, 600);
             this.tbHistoria.TabIndex = 1;
             this.tbHistoria.Text = "Historia";
             this.tbHistoria.VerticalScrollbarBarColor = true;
             this.tbHistoria.VerticalScrollbarHighlightOnWheel = false;
             this.tbHistoria.VerticalScrollbarSize = 10;
+            // 
+            // dgvHistoria
+            // 
+            this.dgvHistoria.AllowUserToDeleteRows = false;
+            this.dgvHistoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvHistoria.AutoGenerateColumns = false;
+            this.dgvHistoria.BackgroundColor = System.Drawing.Color.Maroon;
+            this.dgvHistoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.midDataGridViewTextBoxColumn1,
+            this.malliEmriDataGridViewTextBoxColumn1,
+            this.malliCmimiDataGridViewTextBoxColumn1,
+            this.dataShitjesDataGridViewTextBoxColumn1,
+            this.pershkrimiDataGridViewTextBoxColumn1});
+            this.dgvHistoria.DataSource = this.tblMalliBindingSource;
+            this.dgvHistoria.Location = new System.Drawing.Point(684, 3);
+            this.dgvHistoria.Name = "dgvHistoria";
+            this.dgvHistoria.ReadOnly = true;
+            this.dgvHistoria.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvHistoria.RowHeadersVisible = false;
+            this.dgvHistoria.Size = new System.Drawing.Size(541, 620);
+            this.dgvHistoria.TabIndex = 3;
             // 
             // lblShpenzime
             // 
@@ -407,6 +437,15 @@
             this.lblShitje.Name = "lblShitje";
             this.lblShitje.Size = new System.Drawing.Size(0, 0);
             this.lblShitje.TabIndex = 2;
+            // 
+            // lblHistoriaShitje
+            // 
+            this.lblHistoriaShitje.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblHistoriaShitje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblHistoriaShitje.Location = new System.Drawing.Point(95, 63);
+            this.lblHistoriaShitje.Name = "lblHistoriaShitje";
+            this.lblHistoriaShitje.Size = new System.Drawing.Size(65, 36);
+            this.lblHistoriaShitje.TabIndex = 2;
             // 
             // metroLabel3
             // 
@@ -447,7 +486,7 @@
             this.tbStatistika.HorizontalScrollbarSize = 10;
             this.tbStatistika.Location = new System.Drawing.Point(4, 38);
             this.tbStatistika.Name = "tbStatistika";
-            this.tbStatistika.Size = new System.Drawing.Size(884, 371);
+            this.tbStatistika.Size = new System.Drawing.Size(1225, 600);
             this.tbStatistika.TabIndex = 2;
             this.tbStatistika.Text = "Statistika";
             this.tbStatistika.VerticalScrollbarBarColor = true;
@@ -490,14 +529,140 @@
             this.lblHyrje.TabIndex = 14;
             this.lblHyrje.Text = "Hyrje:";
             // 
+            // tbLive
+            // 
+            this.tbLive.Controls.Add(this.webBrowser1);
+            this.tbLive.HorizontalScrollbarBarColor = true;
+            this.tbLive.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbLive.HorizontalScrollbarSize = 10;
+            this.tbLive.Location = new System.Drawing.Point(4, 38);
+            this.tbLive.Name = "tbLive";
+            this.tbLive.Size = new System.Drawing.Size(1225, 600);
+            this.tbLive.TabIndex = 3;
+            this.tbLive.Text = "Live";
+            this.tbLive.VerticalScrollbarBarColor = true;
+            this.tbLive.VerticalScrollbarHighlightOnWheel = false;
+            this.tbLive.VerticalScrollbarSize = 10;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(1225, 600);
+            this.webBrowser1.TabIndex = 2;
+            this.webBrowser1.Url = new System.Uri(" https://www.bullionbypost.co.uk/gold-price/live-gold-price/", System.UriKind.Absolute);
+            // 
+            // rubyDBDataSet
+            // 
+            this.rubyDBDataSet.DataSetName = "RubyDBDataSet";
+            this.rubyDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dtpShitje
+            // 
+            this.dtpShitje.Enabled = false;
+            this.dtpShitje.Location = new System.Drawing.Point(452, 3);
+            this.dtpShitje.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpShitje.Name = "dtpShitje";
+            this.dtpShitje.Size = new System.Drawing.Size(224, 29);
+            this.dtpShitje.TabIndex = 26;
+            // 
+            // tblMalliBindingSource
+            // 
+            this.tblMalliBindingSource.DataMember = "TblMalli";
+            this.tblMalliBindingSource.DataSource = this.rubyDBDataSet1;
+            // 
+            // rubyDBDataSet1
+            // 
+            this.rubyDBDataSet1.DataSetName = "RubyDBDataSet1";
+            this.rubyDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblMalliTableAdapter
+            // 
+            this.tblMalliTableAdapter.ClearBeforeFill = true;
+            // 
+            // midDataGridViewTextBoxColumn1
+            // 
+            this.midDataGridViewTextBoxColumn1.DataPropertyName = "Mid";
+            this.midDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.midDataGridViewTextBoxColumn1.Name = "midDataGridViewTextBoxColumn1";
+            this.midDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // malliEmriDataGridViewTextBoxColumn1
+            // 
+            this.malliEmriDataGridViewTextBoxColumn1.DataPropertyName = "Malli_Emri";
+            this.malliEmriDataGridViewTextBoxColumn1.HeaderText = "Emri";
+            this.malliEmriDataGridViewTextBoxColumn1.Name = "malliEmriDataGridViewTextBoxColumn1";
+            this.malliEmriDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // malliCmimiDataGridViewTextBoxColumn1
+            // 
+            this.malliCmimiDataGridViewTextBoxColumn1.DataPropertyName = "Malli_Cmimi";
+            this.malliCmimiDataGridViewTextBoxColumn1.HeaderText = "Çmimi";
+            this.malliCmimiDataGridViewTextBoxColumn1.Name = "malliCmimiDataGridViewTextBoxColumn1";
+            this.malliCmimiDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.malliCmimiDataGridViewTextBoxColumn1.ToolTipText = "€";
+            // 
+            // dataShitjesDataGridViewTextBoxColumn1
+            // 
+            this.dataShitjesDataGridViewTextBoxColumn1.DataPropertyName = "Data_Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn1.HeaderText = "Data Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn1.Name = "dataShitjesDataGridViewTextBoxColumn1";
+            this.dataShitjesDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // pershkrimiDataGridViewTextBoxColumn1
+            // 
+            this.pershkrimiDataGridViewTextBoxColumn1.DataPropertyName = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn1.HeaderText = "Përshkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn1.Name = "pershkrimiDataGridViewTextBoxColumn1";
+            this.pershkrimiDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.pershkrimiDataGridViewTextBoxColumn1.Width = 140;
+            // 
+            // midDataGridViewTextBoxColumn
+            // 
+            this.midDataGridViewTextBoxColumn.DataPropertyName = "Mid";
+            this.midDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.midDataGridViewTextBoxColumn.Name = "midDataGridViewTextBoxColumn";
+            this.midDataGridViewTextBoxColumn.ReadOnly = true;
+            this.midDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // malliEmriDataGridViewTextBoxColumn
+            // 
+            this.malliEmriDataGridViewTextBoxColumn.DataPropertyName = "Malli_Emri";
+            this.malliEmriDataGridViewTextBoxColumn.HeaderText = "Emri";
+            this.malliEmriDataGridViewTextBoxColumn.Name = "malliEmriDataGridViewTextBoxColumn";
+            this.malliEmriDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // malliCmimiDataGridViewTextBoxColumn
+            // 
+            this.malliCmimiDataGridViewTextBoxColumn.DataPropertyName = "Malli_Cmimi";
+            this.malliCmimiDataGridViewTextBoxColumn.HeaderText = "Çmimi";
+            this.malliCmimiDataGridViewTextBoxColumn.Name = "malliCmimiDataGridViewTextBoxColumn";
+            this.malliCmimiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataShitjesDataGridViewTextBoxColumn
+            // 
+            this.dataShitjesDataGridViewTextBoxColumn.DataPropertyName = "Data_Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn.HeaderText = "Data Shitjes";
+            this.dataShitjesDataGridViewTextBoxColumn.Name = "dataShitjesDataGridViewTextBoxColumn";
+            this.dataShitjesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pershkrimiDataGridViewTextBoxColumn
+            // 
+            this.pershkrimiDataGridViewTextBoxColumn.DataPropertyName = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.HeaderText = "Përshkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn.Name = "pershkrimiDataGridViewTextBoxColumn";
+            this.pershkrimiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pershkrimiDataGridViewTextBoxColumn.Width = 190;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(932, 493);
+            this.ClientSize = new System.Drawing.Size(1273, 722);
             this.ContextMenuStrip = this.CxtMenu;
-            this.Controls.Add(this.dtpData);
             this.Controls.Add(this.metroTab);
             this.Controls.Add(this.btnPdf);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -511,13 +676,16 @@
             this.metroTab.ResumeLayout(false);
             this.tbShitja.ResumeLayout(false);
             this.tbShitja.PerformLayout();
-            this.pnlShpenzime.ResumeLayout(false);
-            this.pnlShpenzime.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).EndInit();
             this.tbHistoria.ResumeLayout(false);
             this.tbHistoria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistoria)).EndInit();
             this.tbStatistika.ResumeLayout(false);
             this.tbStatistika.PerformLayout();
+            this.tbLive.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblMalliBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -550,14 +718,30 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel lblHyrje;
         private MetroFramework.Controls.MetroComboBox cmbStatistika;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroTextBox txtShpenzime;
-        private MetroFramework.Controls.MetroButton btnShpenzime;
-        private System.Windows.Forms.Panel pnlShpenzime;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private MetroFramework.Controls.MetroTabControl metroTab;
+        private MetroFramework.Controls.MetroLabel lblmShenimet;
+        private MetroFramework.Controls.MetroTextBox txtbmPershkrimi;
+        private RubyDBDataSet rubyDBDataSet;
+        private RubyDBDataSet1 rubyDBDataSet1;
+        private System.Windows.Forms.BindingSource tblMalliBindingSource;
+        private RubyDBDataSet1TableAdapters.TblMalliTableAdapter tblMalliTableAdapter;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroLabel lblHistoriaShitje;
+        private MetroFramework.Controls.MetroTabPage tbLive;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.DataGridView dgvHistoria;
+        private MetroFramework.Controls.MetroDateTime dtpShitje;
+        private System.Windows.Forms.DataGridViewTextBoxColumn midDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malliEmriDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malliCmimiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn midDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malliEmriDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn malliCmimiDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn1;
     }
 }
 
