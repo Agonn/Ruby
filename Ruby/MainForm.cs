@@ -78,13 +78,13 @@ namespace Ruby
             try
             {
 
-                string query3 = "select SUM(Malli_Cmimi) from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
+                string queryPerHistorialbl = "select SUM(Malli_Cmimi) from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
 
-                string query4 = "select * from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
+                string queryPerdgvHistoria = "select * from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
 
-                SqlCommand objKomanda3 = new SqlCommand(query3, objKonektimi);
+                SqlCommand objKomanda3 = new SqlCommand(queryPerHistorialbl, objKonektimi);
                 objKonektimi.Open();
-                SqlDataAdapter objAdapteri = new SqlDataAdapter(query4, objKonektimi);
+                SqlDataAdapter objAdapteri = new SqlDataAdapter(queryPerdgvHistoria, objKonektimi);
                 DataSet Shenimet = new DataSet();
                 int mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
                 objAdapteri.Fill(Shenimet);
@@ -155,6 +155,11 @@ namespace Ruby
         }
 
         private void tbShitja_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpShitje_ValueChanged(object sender, EventArgs e)
         {
 
         }
