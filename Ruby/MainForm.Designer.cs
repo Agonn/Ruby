@@ -364,7 +364,7 @@
             this.dataShitjesDataGridViewTextBoxColumn,
             this.pershkrimiDataGridViewTextBoxColumn});
             this.dgvShitja.DataSource = this.tblMalliBindingSource;
-            this.dgvShitja.Location = new System.Drawing.Point(682, 3);
+            this.dgvShitja.Location = new System.Drawing.Point(684, 3);
             this.dgvShitja.Name = "dgvShitja";
             this.dgvShitja.ReadOnly = true;
             this.dgvShitja.RightToLeft = System.Windows.Forms.RightToLeft.No;
