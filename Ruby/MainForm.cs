@@ -75,28 +75,17 @@ namespace Ruby
 
         string FunksioniPerDate(string data)
         {
-
-            //        string myString = "12,Apple,20";
-            //         string[] subStrings = myString.Split(',');
-
-            // 2017-05-08 00:00:00
-            //string[] DataSubString = data.Split('-');
-            //string Dita = DataSubString[2];
-            // string[]  ditaskat = Dita.Split(' ');
-
-            // string strings = "4,6,8\n9,4";
-            //string[] split = strings.Split(new Char[] { ',', '\n' });
-
-            // 0    1  2  3
+            //Funksioni i cili e ndan Stringun
             //2017-05-08 00:00:00
             string[] DataSakt = data.Split(new char[] { '-', ' ' });
 
+            //Qeto e kom perdor si Shembull String
             //string QueryTest = "Select * from TblMalli Where Data_Shitjes >= '2017-05-09 00:00:00' AND Data_Shitjes <= '2017-05-09 23:59:59' ";
 
-            lblmShenimet.Text = DataSakt[3];
-
+            //Stringu i Querit qe bohet si perfundim
             string Query = "Select * from TblMalli Where Data_Shitjes >= '"+DataSakt[0]+ "-" + DataSakt[3]+ "-" + DataSakt[6] +" 00:00:00' AND Data_Shitjes <= '"+ DataSakt[0]+"-" + DataSakt[3]+ "-" + DataSakt[6]+" 23:59:59'";
 
+            //Funksioni kthen qet string
             return Query;
         }
 
@@ -112,25 +101,10 @@ namespace Ruby
             try
             {
 
-
-                //Duhet me i paraqit te gjith historin e qasej dite qe po e zgjedhim nga dgv-ja
-                //SELECT  *
-                //   FROM Product_sales
-                //   WHERE From_date >= '2013-01-03' AND
-                //   To_date <= '2013-01-09'
-
-               
-
                 //Ta paraqet shumen ne Euro te labela
                 string query3 = "select SUM(Malli_Cmimi) from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
                 //Duhet me i paraqit te gjith historin e qasej dite qe po e zgjedhim nga dgv-ja
-                string query4 = "select * from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
-
-                string QueryTest = "Select * from TblMalli Where Data_Shitjes >= '2017-05-09 00:00:00' AND Data_Shitjes <= '2017-05-09 23:59:59' ";
-
                 string QueryMeFunksion = FunksioniPerDate(dtpData.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
-
-               // lblmShenimet.Text = FunksioniPerDate(dtpData.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
 
 
                 SqlDataAdapter objAdapteri = new SqlDataAdapter(QueryMeFunksion, objKonektimi);
