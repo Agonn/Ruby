@@ -18,9 +18,9 @@ namespace Ruby
 
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
-            string Query4 = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";
+            string queryPerdgvShitja = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";
 
-            SqlCommand objKomanda2 = new SqlCommand(Query4, objKonektimi);
+            SqlCommand objKomanda2 = new SqlCommand(queryPerdgvShitja, objKonektimi);
 
 
 
@@ -33,12 +33,12 @@ namespace Ruby
             {
                 //SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1
 
-                string query4 = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1";
-                SqlCommand objKomanda3 = new SqlCommand(query4, objKonektimi);
+                string QueryPerdgvHistoriaDje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1";
+                SqlCommand objKomanda3 = new SqlCommand(QueryPerdgvHistoriaDje, objKonektimi);
                 objKonektimi.Open();
                 int mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
 
-                SqlDataAdapter objAdapteri = new SqlDataAdapter(query4, objKonektimi);
+                SqlDataAdapter objAdapteri = new SqlDataAdapter(QueryPerdgvHistoriaDje, objKonektimi);
                 DataSet Historia = new DataSet();
                 objAdapteri.Fill(Historia);
                 dgvHistoria.DataSource = Historia.Tables[0];
@@ -47,7 +47,6 @@ namespace Ruby
             }
             catch (Exception)
             {
-
                 // MessageBox.Show("Nuk ka shitje per kete date"); //placeholder!
                 lblHistoriaShitje.Text = "N/A";
             }
