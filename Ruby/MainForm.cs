@@ -10,8 +10,10 @@ namespace Ruby
     public partial class Form : MetroForm
 
     {
+        #region Initialization
         public Form()
         {
+
             InitializeComponent();
             cmbStatistika.SelectedIndex = 0; //Statistika data te jete SOT.
             dtpData.Value = DateTime.Today.AddDays(-1); //Yesterday for Historia
@@ -52,7 +54,7 @@ namespace Ruby
             }
 
         }
-
+#endregion
         private void Form_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'rubyDBDataSet1.TblMalli' table. You can move, or remove it, as needed.
@@ -78,9 +80,6 @@ namespace Ruby
             //2017-05-08 00:00:00
             string[] DataSakt = data.Split(new char[] { '-', ' ' });
 
-            //Qeto e kom perdor si Shembull String
-            //string QueryTest = "Select * from TblMalli Where Data_Shitjes >= '2017-05-09 00:00:00' AND Data_Shitjes <= '2017-05-09 23:59:59' ";
-
             //Stringu i Querit qe bohet si perfundim
             string Query = "Select * from TblMalli Where Data_Shitjes >= '" + DataSakt[0] + "-" + DataSakt[3] + "-" + DataSakt[6] + " 00:00:00' AND Data_Shitjes <= '" + DataSakt[0] + "-" + DataSakt[3] + "-" + DataSakt[6] + " 23:59:59'";
 
@@ -93,9 +92,6 @@ namespace Ruby
             //Funksioni i cili e ndan Stringun
             //2017-05-08 00:00:00
             string[] DataSakt = data.Split(new char[] { '-', ' ' });
-
-            //Qeto e kom perdor si Shembull String
-            //string QueryTest = "Select * from TblMalli Where Data_Shitjes >= '2017-05-09 00:00:00' AND Data_Shitjes <= '2017-05-09 23:59:59' ";
 
             //Stringu i Querit qe bohet si perfundim
             string Query = "Select SUM(Malli_Cmimi) from TblMalli Where Data_Shitjes >= '" + DataSakt[0] + "-" + DataSakt[3] + "-" + DataSakt[6] + " 00:00:00' AND Data_Shitjes <= '" + DataSakt[0] + "-" + DataSakt[3] + "-" + DataSakt[6] + " 23:59:59'";
