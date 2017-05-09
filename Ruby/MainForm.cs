@@ -72,7 +72,6 @@ namespace Ruby
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
             string theDate = dtpData.Value.ToShortDateString();
-
             
             lblDataSot.Text = theDate.ToString();
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
@@ -81,7 +80,8 @@ namespace Ruby
 
                 string queryPerHistorialbl = "select SUM(Malli_Cmimi) from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
 
-                string queryPerdgvHistoria = "select * from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd HH:mm:ss") + "'";
+                string queryPerdgvHistoria = "select * from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'"; 
+
 
                 SqlCommand objKomanda3 = new SqlCommand(queryPerHistorialbl, objKonektimi);
                 objKonektimi.Open();
