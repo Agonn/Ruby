@@ -67,7 +67,44 @@ namespace Ruby
             //Fix this to completly close app.
 
             this.Close(); //temporarily use this
-        } 
+        }
+
+        #region Query function
+
+
+        string FunksioniPerDate(string data)
+        {
+            //Funksioni i cili e ndan Stringun
+            //2017-05-08 00:00:00
+            string[] DataSakt = data.Split(new char[] { '-', ' ' });
+
+            //Qeto e kom perdor si Shembull String
+            //string QueryTest = "Select * from TblMalli Where Data_Shitjes >= '2017-05-09 00:00:00' AND Data_Shitjes <= '2017-05-09 23:59:59' ";
+
+            //Stringu i Querit qe bohet si perfundim
+            string Query = "Select * from TblMalli Where Data_Shitjes >= '" + DataSakt[0] + "-" + DataSakt[3] + "-" + DataSakt[6] + " 00:00:00' AND Data_Shitjes <= '" + DataSakt[0] + "-" + DataSakt[3] + "-" + DataSakt[6] + " 23:59:59'";
+
+            //Funksioni kthen qet string
+            return Query;
+        }
+
+        string FunksioniPerShum(string data)
+        {
+            //Funksioni i cili e ndan Stringun
+            //2017-05-08 00:00:00
+            string[] DataSakt = data.Split(new char[] { '-', ' ' });
+
+            //Qeto e kom perdor si Shembull String
+            //string QueryTest = "Select * from TblMalli Where Data_Shitjes >= '2017-05-09 00:00:00' AND Data_Shitjes <= '2017-05-09 23:59:59' ";
+
+            //Stringu i Querit qe bohet si perfundim
+            string Query = "Select SUM(Malli_Cmimi) from TblMalli Where Data_Shitjes >= '" + DataSakt[0] + "-" + DataSakt[3] + "-" + DataSakt[6] + " 00:00:00' AND Data_Shitjes <= '" + DataSakt[0] + "-" + DataSakt[3] + "-" + DataSakt[6] + " 23:59:59'";
+
+            //Funksioni kthen qet string
+            return Query;
+        }
+        #endregion
+
 
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
@@ -78,9 +115,9 @@ namespace Ruby
             try
             {
 
-                string queryPerHistorialbl = "select SUM(Malli_Cmimi) from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
+                string queryPerHistorialbl = FunksioniPerShum(dtpData.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
 
-                string queryPerdgvHistoria = "select * from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'"; 
+                string queryPerdgvHistoria = FunksioniPerDate(dtpData.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
 
 
                 SqlCommand objKomanda3 = new SqlCommand(queryPerHistorialbl, objKonektimi);
@@ -100,6 +137,7 @@ namespace Ruby
                 lblHistoriaShitje.Text = "N/A";
             }
         }
+
 
 
         private void btnShto_Click_1(object sender, EventArgs e)
