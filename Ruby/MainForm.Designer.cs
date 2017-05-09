@@ -80,6 +80,7 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.rubyDBDataSet = new Ruby.RubyDBDataSet();
             this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
+            this.dtpShitje = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -258,13 +259,14 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 1;
+            this.metroTab.SelectedIndex = 0;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
             // 
             // tbShitja
             // 
+            this.tbShitja.Controls.Add(this.dtpShitje);
             this.tbShitja.Controls.Add(this.metroLabel6);
             this.tbShitja.Controls.Add(this.txtbmPershkrimi);
             this.tbShitja.Controls.Add(this.lblmShenimet);
@@ -639,6 +641,14 @@
             // 
             this.tblMalliTableAdapter.ClearBeforeFill = true;
             // 
+            // dtpShitje
+            // 
+            this.dtpShitje.Location = new System.Drawing.Point(476, 3);
+            this.dtpShitje.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpShitje.Name = "dtpShitje";
+            this.dtpShitje.Size = new System.Drawing.Size(200, 29);
+            this.dtpShitje.TabIndex = 26;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -724,6 +734,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn malliCmimiDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn1;
+        private MetroFramework.Controls.MetroDateTime dtpShitje;
     }
 }
 
