@@ -99,12 +99,14 @@
             this.cmbMalli.FormattingEnabled = true;
             this.cmbMalli.ItemHeight = 23;
             this.cmbMalli.Items.AddRange(new object[] {
-            "Unazë",
+            "Gurrë",
             "Hallhalle",
+            "Komplet",
             "Qafore",
             "Riparim",
-            "Gurrë",
             "Shërbim",
+            "Unazë",
+            "Vathë",
             "Tjetër"});
             this.cmbMalli.Location = new System.Drawing.Point(98, 35);
             this.cmbMalli.Name = "cmbMalli";
@@ -177,7 +179,7 @@
             // 
             this.Malli.AutoSize = true;
             this.Malli.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.Malli.Location = new System.Drawing.Point(47, 35);
+            this.Malli.Location = new System.Drawing.Point(3, 35);
             this.Malli.Name = "Malli";
             this.Malli.Size = new System.Drawing.Size(38, 19);
             this.Malli.TabIndex = 13;
@@ -187,7 +189,7 @@
             // 
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel2.Location = new System.Drawing.Point(36, 73);
+            this.metroLabel2.Location = new System.Drawing.Point(3, 73);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(56, 19);
             this.metroLabel2.TabIndex = 13;
@@ -292,7 +294,7 @@
             // dtpShitje
             // 
             this.dtpShitje.Enabled = false;
-            this.dtpShitje.Location = new System.Drawing.Point(452, 3);
+            this.dtpShitje.Location = new System.Drawing.Point(454, 3);
             this.dtpShitje.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpShitje.Name = "dtpShitje";
             this.dtpShitje.Size = new System.Drawing.Size(224, 29);
@@ -302,7 +304,7 @@
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel6.Location = new System.Drawing.Point(7, 106);
+            this.metroLabel6.Location = new System.Drawing.Point(3, 106);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(85, 19);
             this.metroLabel6.TabIndex = 25;
@@ -323,7 +325,7 @@
             this.txtbmPershkrimi.CustomButton.UseSelectable = true;
             this.txtbmPershkrimi.CustomButton.Visible = false;
             this.txtbmPershkrimi.Lines = new string[0];
-            this.txtbmPershkrimi.Location = new System.Drawing.Point(98, 102);
+            this.txtbmPershkrimi.Location = new System.Drawing.Point(98, 106);
             this.txtbmPershkrimi.MaxLength = 32767;
             this.txtbmPershkrimi.Name = "txtbmPershkrimi";
             this.txtbmPershkrimi.PasswordChar = '\0';
@@ -340,7 +342,7 @@
             // 
             // lblmShenimet
             // 
-            this.lblmShenimet.Location = new System.Drawing.Point(7, 225);
+            this.lblmShenimet.Location = new System.Drawing.Point(340, 510);
             this.lblmShenimet.Name = "lblmShenimet";
             this.lblmShenimet.Size = new System.Drawing.Size(336, 90);
             this.lblmShenimet.Style = MetroFramework.MetroColorStyle.Orange;
@@ -460,6 +462,7 @@
             this.dgvHistoria.ReadOnly = true;
             this.dgvHistoria.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvHistoria.RowHeadersVisible = false;
+            this.dgvHistoria.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvHistoria.Size = new System.Drawing.Size(541, 620);
             this.dgvHistoria.TabIndex = 3;
             // 
@@ -485,7 +488,7 @@
             // 
             this.lblHistoriaShitje.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblHistoriaShitje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblHistoriaShitje.Location = new System.Drawing.Point(97, 68);
+            this.lblHistoriaShitje.Location = new System.Drawing.Point(97, 69);
             this.lblHistoriaShitje.Name = "lblHistoriaShitje";
             this.lblHistoriaShitje.Size = new System.Drawing.Size(65, 36);
             this.lblHistoriaShitje.TabIndex = 2;
@@ -495,7 +498,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel3.Location = new System.Drawing.Point(36, 73);
+            this.metroLabel3.Location = new System.Drawing.Point(3, 73);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(50, 19);
             this.metroLabel3.TabIndex = 2;
@@ -505,7 +508,7 @@
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(47, 35);
+            this.metroLabel1.Location = new System.Drawing.Point(3, 35);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(44, 19);
             this.metroLabel1.TabIndex = 2;
@@ -515,10 +518,11 @@
             // 
             this.lblDataSot.AutoSize = true;
             this.lblDataSot.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblDataSot.Location = new System.Drawing.Point(97, 35);
+            this.lblDataSot.Location = new System.Drawing.Point(98, 35);
             this.lblDataSot.Name = "lblDataSot";
-            this.lblDataSot.Size = new System.Drawing.Size(0, 0);
+            this.lblDataSot.Size = new System.Drawing.Size(57, 19);
             this.lblDataSot.TabIndex = 2;
+            this.lblDataSot.Text = "Data_st";
             // 
             // tbStatistika
             // 
