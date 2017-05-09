@@ -342,7 +342,7 @@
             // 
             // lblmShenimet
             // 
-            this.lblmShenimet.Location = new System.Drawing.Point(7, 225);
+            this.lblmShenimet.Location = new System.Drawing.Point(7, 195);
             this.lblmShenimet.Name = "lblmShenimet";
             this.lblmShenimet.Size = new System.Drawing.Size(336, 90);
             this.lblmShenimet.Style = MetroFramework.MetroColorStyle.Orange;
