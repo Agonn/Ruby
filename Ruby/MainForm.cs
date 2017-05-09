@@ -70,22 +70,40 @@ namespace Ruby
             this.Close(); //temporarily use this
         } 
 
+
+        //QETU KOM ME PUNU PER ME BO FUNKSIONIN
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
             string theDate = dtpData.Value.ToShortDateString();
             lblDataSot.Text = theDate.ToString();
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+            //Ta paraqet shumen ne Euro te labela
+            string query3 = "select SUM(Malli_Cmimi) from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
+            //Duhet me i paraqit te gjith historin e qasej dite qe po e zgjedhim nga dgv-ja
+            string query4 = "select * from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
+
+            string QueryTest = "Select * from TblMalli Where Data_Shitjes >= '2017-05-09 00:00:00' AND Data_Shitjes <= '2017-05-09 23:59:59' ";
+
+            SqlDataAdapter objAdapteri = new SqlDataAdapter(query4, objKonektimi);
+            DataSet Shenimet = new DataSet();
+
+            SqlCommand objKomanda3 = new SqlCommand(query3, objKonektimi);
             try
             {
 
-                string query3 = "select SUM(Malli_Cmimi) from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
 
-                string query4 = "select * from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
+                //Duhet me i paraqit te gjith historin e qasej dite qe po e zgjedhim nga dgv-ja
+                //SELECT  *
+                //   FROM Product_sales
+                //   WHERE From_date >= '2013-01-03' AND
+                //   To_date <= '2013-01-09'
 
-                SqlCommand objKomanda3 = new SqlCommand(query3, objKonektimi);
+                string QueryTest1 = "Select * from TblMalli Where Data_Shitjes >= '2017-05-09 00:00:00' AND Data_Shitjes <= '2017-05-09 23:59:59' ";
+
+
+
                 objKonektimi.Open();
-                SqlDataAdapter objAdapteri = new SqlDataAdapter(query4, objKonektimi);
-                DataSet Shenimet = new DataSet();
+
                 int mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
                 objAdapteri.Fill(Shenimet);
                 dgvHistoria.DataSource = Shenimet.Tables[0];
@@ -155,6 +173,11 @@ namespace Ruby
         }
 
         private void tbShitja_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbStatistika_Click(object sender, EventArgs e)
         {
 
         }

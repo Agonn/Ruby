@@ -168,7 +168,7 @@
             // dtpData
             // 
             this.dtpData.Location = new System.Drawing.Point(454, 3);
-            this.dtpData.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(224, 29);
             this.dtpData.TabIndex = 1;
@@ -253,13 +253,13 @@
             // metroTab
             // 
             this.metroTab.Controls.Add(this.tbShitja);
-            this.metroTab.Controls.Add(this.tbHistoria);
             this.metroTab.Controls.Add(this.tbStatistika);
+            this.metroTab.Controls.Add(this.tbHistoria);
             this.metroTab.Controls.Add(this.tbLive);
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 0;
+            this.metroTab.SelectedIndex = 1;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -295,7 +295,7 @@
             // 
             this.dtpShitje.Enabled = false;
             this.dtpShitje.Location = new System.Drawing.Point(452, 3);
-            this.dtpShitje.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpShitje.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpShitje.Name = "dtpShitje";
             this.dtpShitje.Size = new System.Drawing.Size(224, 29);
             this.dtpShitje.TabIndex = 26;
@@ -585,6 +585,7 @@
             this.tbStatistika.VerticalScrollbarBarColor = true;
             this.tbStatistika.VerticalScrollbarHighlightOnWheel = false;
             this.tbStatistika.VerticalScrollbarSize = 10;
+            this.tbStatistika.Click += new System.EventHandler(this.tbStatistika_Click);
             // 
             // cmbStatistika
             // 
