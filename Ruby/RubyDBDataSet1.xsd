@@ -65,7 +65,16 @@ SELECT Mid, Malli_Emri, Malli_Cmimi, Data_Shitjes, Pershkrimi FROM TblMalli WHER
               <Mapping SourceColumn="Data_Shitjes" DataSetColumn="Data_Shitjes" />
               <Mapping SourceColumn="Pershkrimi" DataSetColumn="Pershkrimi" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="RubyDBConnectionString (Settings)" DbObjectName="dbo.TblMalli" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -75,7 +84,7 @@ SELECT Mid, Malli_Emri, Malli_Cmimi, Data_Shitjes, Pershkrimi FROM TblMalli WHER
   <xs:element name="RubyDBDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="RubyDBDataSet1" msprop:Generator_UserDSName="RubyDBDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="TblMalli" msprop:Generator_TableClassName="TblMalliDataTable" msprop:Generator_TableVarName="tableTblMalli" msprop:Generator_TablePropName="TblMalli" msprop:Generator_RowDeletingName="TblMalliRowDeleting" msprop:Generator_RowChangingName="TblMalliRowChanging" msprop:Generator_RowEvHandlerName="TblMalliRowChangeEventHandler" msprop:Generator_RowDeletedName="TblMalliRowDeleted" msprop:Generator_UserTableName="TblMalli" msprop:Generator_RowChangedName="TblMalliRowChanged" msprop:Generator_RowEvArgName="TblMalliRowChangeEvent" msprop:Generator_RowClassName="TblMalliRow">
+        <xs:element name="TblMalli" msprop:Generator_TableClassName="TblMalliDataTable" msprop:Generator_TableVarName="tableTblMalli" msprop:Generator_RowChangedName="TblMalliRowChanged" msprop:Generator_TablePropName="TblMalli" msprop:Generator_RowDeletingName="TblMalliRowDeleting" msprop:Generator_RowChangingName="TblMalliRowChanging" msprop:Generator_RowEvHandlerName="TblMalliRowChangeEventHandler" msprop:Generator_RowDeletedName="TblMalliRowDeleted" msprop:Generator_RowClassName="TblMalliRow" msprop:Generator_UserTableName="TblMalli" msprop:Generator_RowEvArgName="TblMalliRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Mid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnMid" msprop:Generator_ColumnPropNameInRow="Mid" msprop:Generator_ColumnPropNameInTable="MidColumn" msprop:Generator_UserColumnName="Mid" type="xs:int" />

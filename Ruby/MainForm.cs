@@ -106,8 +106,8 @@ namespace Ruby
                 string Query2 = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('" + cmbMalli.SelectedItem.ToString() + "','" + float.Parse(txtCmimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd") + "','" + txtbmPershkrimi.Text + "')";
                 SqlCommand objKomanda = new SqlCommand(Query2, objKonektimi);
 
-                string Query3 = "select * from TblMalli";
-
+                string Query3 = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";
+         
                 SqlCommand objKomanda2 = new SqlCommand(Query3, objKonektimi);
                 int numri = 0;
 
@@ -134,5 +134,17 @@ namespace Ruby
             }
         }
 
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.tblMalliTableAdapter.FillBy(this.rubyDBDataSet1.TblMalli);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
