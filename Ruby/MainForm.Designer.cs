@@ -72,6 +72,7 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblDataSot = new MetroFramework.Controls.MetroLabel();
+            this.lblSkaData = new MetroFramework.Controls.MetroLabel();
             this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
             this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
@@ -80,7 +81,7 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.rubyDBDataSet = new Ruby.RubyDBDataSet();
             this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
-            this.lblSkaData = new MetroFramework.Controls.MetroLabel();
+            this.tbFurde = new MetroFramework.Controls.MetroTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -257,11 +258,12 @@
             this.metroTab.Controls.Add(this.tbShitja);
             this.metroTab.Controls.Add(this.tbHistoria);
             this.metroTab.Controls.Add(this.tbStatistika);
+            this.metroTab.Controls.Add(this.tbFurde);
             this.metroTab.Controls.Add(this.tbLive);
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 1;
+            this.metroTab.SelectedIndex = 3;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -568,6 +570,19 @@
             this.lblDataSot.TabIndex = 2;
             this.lblDataSot.Text = "Data_st";
             // 
+            // lblSkaData
+            // 
+            this.lblSkaData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSkaData.AutoSize = true;
+            this.lblSkaData.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblSkaData.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblSkaData.Location = new System.Drawing.Point(876, 7);
+            this.lblSkaData.Name = "lblSkaData";
+            this.lblSkaData.Size = new System.Drawing.Size(152, 25);
+            this.lblSkaData.TabIndex = 2;
+            this.lblSkaData.Text = "Nuk ka të dhëna";
+            // 
             // tbStatistika
             // 
             this.tbStatistika.Controls.Add(this.cmbStatistika);
@@ -655,18 +670,19 @@
             // 
             this.tblMalliTableAdapter.ClearBeforeFill = true;
             // 
-            // lblSkaData
+            // tbFurde
             // 
-            this.lblSkaData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSkaData.AutoSize = true;
-            this.lblSkaData.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblSkaData.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblSkaData.Location = new System.Drawing.Point(876, 7);
-            this.lblSkaData.Name = "lblSkaData";
-            this.lblSkaData.Size = new System.Drawing.Size(152, 25);
-            this.lblSkaData.TabIndex = 2;
-            this.lblSkaData.Text = "Nuk ka të dhëna";
+            this.tbFurde.HorizontalScrollbarBarColor = true;
+            this.tbFurde.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbFurde.HorizontalScrollbarSize = 10;
+            this.tbFurde.Location = new System.Drawing.Point(4, 38);
+            this.tbFurde.Name = "tbFurde";
+            this.tbFurde.Size = new System.Drawing.Size(1225, 600);
+            this.tbFurde.TabIndex = 4;
+            this.tbFurde.Text = "Furde/Shpenzime";
+            this.tbFurde.VerticalScrollbarBarColor = true;
+            this.tbFurde.VerticalScrollbarHighlightOnWheel = false;
+            this.tbFurde.VerticalScrollbarSize = 10;
             // 
             // Form
             // 
@@ -754,6 +770,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn1;
         private MetroFramework.Controls.MetroLabel lblSkaData;
+        private MetroFramework.Controls.MetroTabPage tbFurde;
     }
 }
 

@@ -3,7 +3,6 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data;
 using System.Data.SqlClient;
-using Ruby.Properties;
 
 namespace Ruby
 {
@@ -122,7 +121,7 @@ namespace Ruby
                 objKonektimi.Open();
                 SqlDataAdapter objAdapteri = new SqlDataAdapter(queryPerdgvHistoria, objKonektimi);
                 DataSet Shenimet = new DataSet();
-                int mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
+                double mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
                 objAdapteri.Fill(Shenimet);
                 dgvHistoria.DataSource = Shenimet.Tables[0];
                 lblHistoriaShitje.Text = mySum.ToString() + "€";
