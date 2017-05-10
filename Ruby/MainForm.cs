@@ -110,7 +110,7 @@ namespace Ruby
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
             try
             {
-
+               
                 string queryPerHistorialbl = FunksioniPerShum(dtpData.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
 
                 string queryPerdgvHistoria = FunksioniPerDate(dtpData.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
@@ -131,6 +131,7 @@ namespace Ruby
 
                // MessageBox.Show("Nuk ka shitje per kete date"); //placeholder!
                 lblHistoriaShitje.Text = "N/A";
+                
             }
         }
 
