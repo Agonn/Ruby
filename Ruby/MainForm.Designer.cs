@@ -198,6 +198,7 @@
             // 
             // dtpData
             // 
+            this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpData.Location = new System.Drawing.Point(454, 3);
             this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpData.Name = "dtpData";
@@ -291,7 +292,7 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 3;
+            this.metroTab.SelectedIndex = 1;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -324,6 +325,7 @@
             // 
             // dtpShitje
             // 
+            this.dtpShitje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpShitje.Enabled = false;
             this.dtpShitje.Location = new System.Drawing.Point(454, 3);
             this.dtpShitje.MinimumSize = new System.Drawing.Size(0, 29);
@@ -720,7 +722,7 @@
             // dgvFurde
             // 
             this.dgvFurde.AllowUserToDeleteRows = false;
-            this.dgvFurde.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvFurde.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvFurde.AutoGenerateColumns = false;
             this.dgvFurde.BackgroundColor = System.Drawing.Color.Maroon;
             this.dgvFurde.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -756,9 +758,10 @@
             // 
             // materialDivider1
             // 
-            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialDivider1.BackColor = System.Drawing.Color.Gainsboro;
             this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(-68, 300);
+            this.materialDivider1.Location = new System.Drawing.Point(-68, 299);
             this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider1.Name = "materialDivider1";
             this.materialDivider1.Size = new System.Drawing.Size(1328, 11);
@@ -777,6 +780,7 @@
             // 
             // lblShpenzimet
             // 
+            this.lblShpenzimet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblShpenzimet.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblShpenzimet.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.lblShpenzimet.Location = new System.Drawing.Point(3, 317);
