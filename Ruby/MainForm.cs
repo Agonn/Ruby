@@ -56,6 +56,10 @@ namespace Ruby
 #endregion
         private void Form_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'rubyDBDataSet3.Table' table. You can move, or remove it, as needed.
+            this.tableTableAdapter.Fill(this.rubyDBDataSet3.Table);
+            // TODO: This line of code loads data into the 'rubyDBDataSet2.TblFurde' table. You can move, or remove it, as needed.
+            this.tblFurdeTableAdapter.Fill(this.rubyDBDataSet2.TblFurde);
             // TODO: This line of code loads data into the 'rubyDBDataSet1.TblMalli' table. You can move, or remove it, as needed.
             this.tblMalliTableAdapter.Fill(this.rubyDBDataSet1.TblMalli);
         }

@@ -82,6 +82,27 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.rubyDBDataSet = new Ruby.RubyDBDataSet();
             this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rubyDBDataSet2 = new Ruby.RubyDBDataSet2();
+            this.tblFurdeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblFurdeTableAdapter = new Ruby.RubyDBDataSet2TableAdapters.TblFurdeTableAdapter();
+            this.fidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sasiagrfurdeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmimipergrfurdeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmimitotalfurdeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pershkirmifurdeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
+            this.lblFurde = new MetroFramework.Controls.MetroLabel();
+            this.lblShpenzimet = new MetroFramework.Controls.MetroLabel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.rubyDBDataSet3 = new Ruby.RubyDBDataSet3();
+            this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableTableAdapter = new Ruby.RubyDBDataSet3TableAdapters.TableTableAdapter();
+            this.shiIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rrymafatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ujifatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tatimifatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pershkrimifatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -92,8 +113,15 @@
             this.tbHistoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoria)).BeginInit();
             this.tbStatistika.SuspendLayout();
+            this.tbFurde.SuspendLayout();
             this.tbLive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFurdeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -171,7 +199,7 @@
             // dtpData
             // 
             this.dtpData.Location = new System.Drawing.Point(454, 3);
-            this.dtpData.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(224, 29);
             this.dtpData.TabIndex = 1;
@@ -263,7 +291,7 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 0;
+            this.metroTab.SelectedIndex = 3;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -638,6 +666,11 @@
             // 
             // tbFurde
             // 
+            this.tbFurde.Controls.Add(this.dataGridView2);
+            this.tbFurde.Controls.Add(this.lblShpenzimet);
+            this.tbFurde.Controls.Add(this.lblFurde);
+            this.tbFurde.Controls.Add(this.materialDivider1);
+            this.tbFurde.Controls.Add(this.dataGridView1);
             this.tbFurde.HorizontalScrollbarBarColor = true;
             this.tbFurde.HorizontalScrollbarHighlightOnWheel = false;
             this.tbFurde.HorizontalScrollbarSize = 10;
@@ -684,6 +717,181 @@
             // 
             this.tblMalliTableAdapter.ClearBeforeFill = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Maroon;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fidDataGridViewTextBoxColumn,
+            this.sasiagrfurdeDataGridViewTextBoxColumn,
+            this.cmimipergrfurdeDataGridViewTextBoxColumn,
+            this.cmimitotalfurdeDataGridViewTextBoxColumn,
+            this.pershkirmifurdeDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tblFurdeBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(684, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.Size = new System.Drawing.Size(541, 291);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // rubyDBDataSet2
+            // 
+            this.rubyDBDataSet2.DataSetName = "RubyDBDataSet2";
+            this.rubyDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblFurdeBindingSource
+            // 
+            this.tblFurdeBindingSource.DataMember = "TblFurde";
+            this.tblFurdeBindingSource.DataSource = this.rubyDBDataSet2;
+            // 
+            // tblFurdeTableAdapter
+            // 
+            this.tblFurdeTableAdapter.ClearBeforeFill = true;
+            // 
+            // fidDataGridViewTextBoxColumn
+            // 
+            this.fidDataGridViewTextBoxColumn.DataPropertyName = "Fid";
+            this.fidDataGridViewTextBoxColumn.HeaderText = "Fid";
+            this.fidDataGridViewTextBoxColumn.Name = "fidDataGridViewTextBoxColumn";
+            this.fidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sasiagrfurdeDataGridViewTextBoxColumn
+            // 
+            this.sasiagrfurdeDataGridViewTextBoxColumn.DataPropertyName = "Sasia_gr_furde";
+            this.sasiagrfurdeDataGridViewTextBoxColumn.HeaderText = "Sasia_gr_furde";
+            this.sasiagrfurdeDataGridViewTextBoxColumn.Name = "sasiagrfurdeDataGridViewTextBoxColumn";
+            this.sasiagrfurdeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cmimipergrfurdeDataGridViewTextBoxColumn
+            // 
+            this.cmimipergrfurdeDataGridViewTextBoxColumn.DataPropertyName = "Cmimi_per_gr_furde";
+            this.cmimipergrfurdeDataGridViewTextBoxColumn.HeaderText = "Cmimi_per_gr_furde";
+            this.cmimipergrfurdeDataGridViewTextBoxColumn.Name = "cmimipergrfurdeDataGridViewTextBoxColumn";
+            this.cmimipergrfurdeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cmimitotalfurdeDataGridViewTextBoxColumn
+            // 
+            this.cmimitotalfurdeDataGridViewTextBoxColumn.DataPropertyName = "Cmimi_total_furde";
+            this.cmimitotalfurdeDataGridViewTextBoxColumn.HeaderText = "Cmimi_total_furde";
+            this.cmimitotalfurdeDataGridViewTextBoxColumn.Name = "cmimitotalfurdeDataGridViewTextBoxColumn";
+            this.cmimitotalfurdeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pershkirmifurdeDataGridViewTextBoxColumn
+            // 
+            this.pershkirmifurdeDataGridViewTextBoxColumn.DataPropertyName = "Pershkirmi_furde";
+            this.pershkirmifurdeDataGridViewTextBoxColumn.HeaderText = "Pershkirmi_furde";
+            this.pershkirmifurdeDataGridViewTextBoxColumn.Name = "pershkirmifurdeDataGridViewTextBoxColumn";
+            this.pershkirmifurdeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // materialDivider1
+            // 
+            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider1.Depth = 0;
+            this.materialDivider1.Location = new System.Drawing.Point(-69, 300);
+            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider1.Name = "materialDivider1";
+            this.materialDivider1.Size = new System.Drawing.Size(1328, 11);
+            this.materialDivider1.TabIndex = 3;
+            this.materialDivider1.Text = "materialDivider1";
+            // 
+            // lblFurde
+            // 
+            this.lblFurde.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblFurde.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblFurde.Location = new System.Drawing.Point(3, 3);
+            this.lblFurde.Name = "lblFurde";
+            this.lblFurde.Size = new System.Drawing.Size(65, 36);
+            this.lblFurde.TabIndex = 4;
+            this.lblFurde.Text = "Furde";
+            // 
+            // lblShpenzimet
+            // 
+            this.lblShpenzimet.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblShpenzimet.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblShpenzimet.Location = new System.Drawing.Point(3, 317);
+            this.lblShpenzimet.Name = "lblShpenzimet";
+            this.lblShpenzimet.Size = new System.Drawing.Size(114, 36);
+            this.lblShpenzimet.TabIndex = 5;
+            this.lblShpenzimet.Text = "Shpenzimet";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Maroon;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.shiIDDataGridViewTextBoxColumn,
+            this.rrymafatDataGridViewTextBoxColumn,
+            this.ujifatDataGridViewTextBoxColumn,
+            this.tatimifatDataGridViewTextBoxColumn,
+            this.pershkrimifatDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.tableBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(684, 317);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView2.Size = new System.Drawing.Size(541, 291);
+            this.dataGridView2.TabIndex = 6;
+            // 
+            // rubyDBDataSet3
+            // 
+            this.rubyDBDataSet3.DataSetName = "RubyDBDataSet3";
+            this.rubyDBDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tableBindingSource
+            // 
+            this.tableBindingSource.DataMember = "Table";
+            this.tableBindingSource.DataSource = this.rubyDBDataSet3;
+            // 
+            // tableTableAdapter
+            // 
+            this.tableTableAdapter.ClearBeforeFill = true;
+            // 
+            // shiIDDataGridViewTextBoxColumn
+            // 
+            this.shiIDDataGridViewTextBoxColumn.DataPropertyName = "ShiID";
+            this.shiIDDataGridViewTextBoxColumn.HeaderText = "ShiID";
+            this.shiIDDataGridViewTextBoxColumn.Name = "shiIDDataGridViewTextBoxColumn";
+            this.shiIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rrymafatDataGridViewTextBoxColumn
+            // 
+            this.rrymafatDataGridViewTextBoxColumn.DataPropertyName = "Rryma_fat";
+            this.rrymafatDataGridViewTextBoxColumn.HeaderText = "Rryma_fat";
+            this.rrymafatDataGridViewTextBoxColumn.Name = "rrymafatDataGridViewTextBoxColumn";
+            this.rrymafatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ujifatDataGridViewTextBoxColumn
+            // 
+            this.ujifatDataGridViewTextBoxColumn.DataPropertyName = "Uji_fat";
+            this.ujifatDataGridViewTextBoxColumn.HeaderText = "Uji_fat";
+            this.ujifatDataGridViewTextBoxColumn.Name = "ujifatDataGridViewTextBoxColumn";
+            this.ujifatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tatimifatDataGridViewTextBoxColumn
+            // 
+            this.tatimifatDataGridViewTextBoxColumn.DataPropertyName = "Tatimi_fat";
+            this.tatimifatDataGridViewTextBoxColumn.HeaderText = "Tatimi_fat";
+            this.tatimifatDataGridViewTextBoxColumn.Name = "tatimifatDataGridViewTextBoxColumn";
+            this.tatimifatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pershkrimifatDataGridViewTextBoxColumn
+            // 
+            this.pershkrimifatDataGridViewTextBoxColumn.DataPropertyName = "Pershkrimi_fat";
+            this.pershkrimifatDataGridViewTextBoxColumn.HeaderText = "Pershkrimi_fat";
+            this.pershkrimifatDataGridViewTextBoxColumn.Name = "pershkrimifatDataGridViewTextBoxColumn";
+            this.pershkrimifatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -712,8 +920,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoria)).EndInit();
             this.tbStatistika.ResumeLayout(false);
             this.tbStatistika.PerformLayout();
+            this.tbFurde.ResumeLayout(false);
             this.tbLive.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFurdeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -771,6 +986,27 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn1;
         private MetroFramework.Controls.MetroLabel lblSkaData;
         private MetroFramework.Controls.MetroTabPage tbFurde;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private RubyDBDataSet2 rubyDBDataSet2;
+        private System.Windows.Forms.BindingSource tblFurdeBindingSource;
+        private RubyDBDataSet2TableAdapters.TblFurdeTableAdapter tblFurdeTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sasiagrfurdeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmimipergrfurdeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cmimitotalfurdeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pershkirmifurdeDataGridViewTextBoxColumn;
+        private MetroFramework.Controls.MetroLabel lblFurde;
+        private MaterialSkin.Controls.MaterialDivider materialDivider1;
+        private MetroFramework.Controls.MetroLabel lblShpenzimet;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private RubyDBDataSet3 rubyDBDataSet3;
+        private System.Windows.Forms.BindingSource tableBindingSource;
+        private RubyDBDataSet3TableAdapters.TableTableAdapter tableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shiIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rrymafatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ujifatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tatimifatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimifatDataGridViewTextBoxColumn;
     }
 }
 
