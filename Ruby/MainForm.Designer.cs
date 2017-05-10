@@ -80,6 +80,7 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.rubyDBDataSet = new Ruby.RubyDBDataSet();
             this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
+            this.lblSkaData = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -260,7 +261,7 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 0;
+            this.metroTab.SelectedIndex = 1;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -433,6 +434,7 @@
             this.tbHistoria.Controls.Add(this.metroLabel3);
             this.tbHistoria.Controls.Add(this.metroLabel1);
             this.tbHistoria.Controls.Add(this.lblDataSot);
+            this.tbHistoria.Controls.Add(this.lblSkaData);
             this.tbHistoria.HorizontalScrollbarBarColor = true;
             this.tbHistoria.HorizontalScrollbarHighlightOnWheel = false;
             this.tbHistoria.HorizontalScrollbarSize = 10;
@@ -654,6 +656,17 @@
             // 
             this.tblMalliTableAdapter.ClearBeforeFill = true;
             // 
+            // lblSkaData
+            // 
+            this.lblSkaData.AutoSize = true;
+            this.lblSkaData.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblSkaData.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblSkaData.Location = new System.Drawing.Point(876, 7);
+            this.lblSkaData.Name = "lblSkaData";
+            this.lblSkaData.Size = new System.Drawing.Size(152, 25);
+            this.lblSkaData.TabIndex = 2;
+            this.lblSkaData.Text = "Nuk ka të dhëna";
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -739,6 +752,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn malliCmimiDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataShitjesDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn1;
+        private MetroFramework.Controls.MetroLabel lblSkaData;
     }
 }
 

@@ -104,6 +104,11 @@ namespace Ruby
 
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
+
+
+                dgvHistoria.Visible = true;
+          
+
             string theDate = dtpData.Value.ToShortDateString();
             
             lblDataSot.Text = theDate.ToString();
@@ -131,7 +136,10 @@ namespace Ruby
 
                // MessageBox.Show("Nuk ka shitje per kete date"); //placeholder!
                 lblHistoriaShitje.Text = "N/A";
-                
+                dgvHistoria.Visible = false;
+
+
+
             }
         }
 
