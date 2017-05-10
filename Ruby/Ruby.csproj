@@ -106,6 +106,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RubyDBDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RubyDBDataSet_Furde.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RubyDBDataSet_Furde.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RubyDBDataSet_furde1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RubyDBDataSet_furde1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RubyDBDataSet_Shpenz.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RubyDBDataSet_Shpenz.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RubyDBDataSet_shpenz1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RubyDBDataSet_shpenz1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RubyDBDataSet_Shpenzimet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RubyDBDataSet_Shpenzimet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +205,61 @@
     </None>
     <None Include="RubyDBDataSet3.xss">
       <DependentUpon>RubyDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_Furde.xsc">
+      <DependentUpon>RubyDBDataSet_Furde.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_Furde.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RubyDBDataSet_Furde.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RubyDBDataSet_Furde.xss">
+      <DependentUpon>RubyDBDataSet_Furde.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_furde1.xsc">
+      <DependentUpon>RubyDBDataSet_furde1.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_furde1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RubyDBDataSet_furde1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RubyDBDataSet_furde1.xss">
+      <DependentUpon>RubyDBDataSet_furde1.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_Shpenz.xsc">
+      <DependentUpon>RubyDBDataSet_Shpenz.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_Shpenz.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RubyDBDataSet_Shpenz.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RubyDBDataSet_Shpenz.xss">
+      <DependentUpon>RubyDBDataSet_Shpenz.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_shpenz1.xsc">
+      <DependentUpon>RubyDBDataSet_shpenz1.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_shpenz1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RubyDBDataSet_shpenz1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RubyDBDataSet_shpenz1.xss">
+      <DependentUpon>RubyDBDataSet_shpenz1.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_Shpenzimet.xsc">
+      <DependentUpon>RubyDBDataSet_Shpenzimet.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_Shpenzimet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RubyDBDataSet_Shpenzimet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RubyDBDataSet_Shpenzimet.xss">
+      <DependentUpon>RubyDBDataSet_Shpenzimet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
