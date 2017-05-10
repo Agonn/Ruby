@@ -263,7 +263,7 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 3;
+            this.metroTab.SelectedIndex = 1;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -438,6 +438,7 @@
             this.tbFurde.VerticalScrollbarBarColor = true;
             this.tbFurde.VerticalScrollbarHighlightOnWheel = false;
             this.tbFurde.VerticalScrollbarSize = 10;
+            this.tbFurde.Click += new System.EventHandler(this.tbFurde_Click);
             // 
             // tbHistoria
             // 

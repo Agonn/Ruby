@@ -44,12 +44,15 @@ namespace Ruby
                 objAdapteri.Fill(Historia);
                 dgvHistoria.DataSource = Historia.Tables[0];
             
-                objKonektimi.Close();
             }
             catch (Exception)
             {
                 // MessageBox.Show("Nuk ka shitje per kete date"); //placeholder!
                 lblHistoriaShitje.Text = "N/A";
+            }
+            finally
+            {
+                objKonektimi.Close();
             }
 
         }
@@ -125,31 +128,34 @@ namespace Ruby
                 objAdapteri.Fill(Shenimet);
                 dgvHistoria.DataSource = Shenimet.Tables[0];
                 lblHistoriaShitje.Text = mySum.ToString() + "€";
-                objKonektimi.Close();
             }
             catch (Exception)
             {
                 lblHistoriaShitje.Text = "N/A";
                 dgvHistoria.Visible = false; //Not visible i there is no data in gridview
             }
+            finally
+            {
+                objKonektimi.Close();
+            }
         }
 
         private void btnShto_Click_1(object sender, EventArgs e)
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
-            
+
+            //Formati DataTime DATETIME values in 'YYYY-MM-DD HH:MM:SS' 
+
+            string queryPerInsertim = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('" + cmbMalli.SelectedItem.ToString() + "','" + float.Parse(txtCmimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtbmPershkrimi.Text + "')";
+            SqlCommand objKomanda = new SqlCommand(queryPerInsertim, objKonektimi);
+
+            string queryPerShitje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";
+            SqlCommand objKomanda2 = new SqlCommand(queryPerShitje, objKonektimi);
+            SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
+            DataSet _Shenimet = new DataSet();
+
             try
             {
-                //Formati DataTime DATETIME values in 'YYYY-MM-DD HH:MM:SS' 
-
-                string queryPerInsertim = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('" + cmbMalli.SelectedItem.ToString() + "','" + float.Parse(txtCmimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtbmPershkrimi.Text + "')";
-                SqlCommand objKomanda = new SqlCommand(queryPerInsertim, objKonektimi);
-
-                string queryPerShitje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";   
-                SqlCommand objKomanda2 = new SqlCommand(queryPerShitje, objKonektimi);
-                SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
-                DataSet _Shenimet = new DataSet();
-                
                 objKonektimi.Open();
 
                 int numri = 0;
@@ -184,6 +190,11 @@ namespace Ruby
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void tbFurde_Click(object sender, EventArgs e)
+        {
 
         }
     }
