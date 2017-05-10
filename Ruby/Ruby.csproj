@@ -111,6 +111,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RubyDBDataSet_Malli.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RubyDBDataSet_MALLI1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RubyDBDataSet_MALLI1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RubyDBDataSet_malli_shitje.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RubyDBDataSet_malli_shitje.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RubyDBDataSet_Shpenz.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -211,6 +221,28 @@
     </None>
     <None Include="RubyDBDataSet_Malli.xss">
       <DependentUpon>RubyDBDataSet_Malli.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_MALLI1.xsc">
+      <DependentUpon>RubyDBDataSet_MALLI1.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_MALLI1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RubyDBDataSet_MALLI1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RubyDBDataSet_MALLI1.xss">
+      <DependentUpon>RubyDBDataSet_MALLI1.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_malli_shitje.xsc">
+      <DependentUpon>RubyDBDataSet_malli_shitje.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_malli_shitje.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RubyDBDataSet_malli_shitje.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RubyDBDataSet_malli_shitje.xss">
+      <DependentUpon>RubyDBDataSet_malli_shitje.xsd</DependentUpon>
     </None>
     <None Include="RubyDBDataSet_Shpenz.xsc">
       <DependentUpon>RubyDBDataSet_Shpenz.xsd</DependentUpon>
