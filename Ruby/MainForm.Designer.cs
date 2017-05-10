@@ -87,8 +87,6 @@
             this.tblFurdeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblFurdeTableAdapter = new Ruby.RubyDBDataSet2TableAdapters.TblFurdeTableAdapter();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
-            this.lblFurde = new MetroFramework.Controls.MetroLabel();
-            this.lblShpenzimet = new MetroFramework.Controls.MetroLabel();
             this.dgvShpenzimet = new System.Windows.Forms.DataGridView();
             this.rubyDBDataSet3 = new Ruby.RubyDBDataSet3();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -669,8 +667,6 @@
             // tbFurde
             // 
             this.tbFurde.Controls.Add(this.dgvShpenzimet);
-            this.tbFurde.Controls.Add(this.lblShpenzimet);
-            this.tbFurde.Controls.Add(this.lblFurde);
             this.tbFurde.Controls.Add(this.materialDivider1);
             this.tbFurde.Controls.Add(this.dgvFurde);
             this.tbFurde.HorizontalScrollbarBarColor = true;
@@ -761,33 +757,12 @@
             this.materialDivider1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.materialDivider1.BackColor = System.Drawing.Color.Gainsboro;
             this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(-68, 299);
+            this.materialDivider1.Location = new System.Drawing.Point(-68, 300);
             this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialDivider1.Name = "materialDivider1";
             this.materialDivider1.Size = new System.Drawing.Size(1328, 11);
             this.materialDivider1.TabIndex = 3;
             this.materialDivider1.Text = "materialDivider1";
-            // 
-            // lblFurde
-            // 
-            this.lblFurde.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblFurde.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblFurde.Location = new System.Drawing.Point(3, 3);
-            this.lblFurde.Name = "lblFurde";
-            this.lblFurde.Size = new System.Drawing.Size(65, 36);
-            this.lblFurde.TabIndex = 4;
-            this.lblFurde.Text = "Furde";
-            // 
-            // lblShpenzimet
-            // 
-            this.lblShpenzimet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblShpenzimet.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblShpenzimet.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblShpenzimet.Location = new System.Drawing.Point(3, 317);
-            this.lblShpenzimet.Name = "lblShpenzimet";
-            this.lblShpenzimet.Size = new System.Drawing.Size(114, 36);
-            this.lblShpenzimet.TabIndex = 5;
-            this.lblShpenzimet.Text = "Shpenzimet";
             // 
             // dgvShpenzimet
             // 
@@ -998,9 +973,7 @@
         private RubyDBDataSet2 rubyDBDataSet2;
         private System.Windows.Forms.BindingSource tblFurdeBindingSource;
         private RubyDBDataSet2TableAdapters.TblFurdeTableAdapter tblFurdeTableAdapter;
-        private MetroFramework.Controls.MetroLabel lblFurde;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
-        private MetroFramework.Controls.MetroLabel lblShpenzimet;
         private System.Windows.Forms.DataGridView dgvShpenzimet;
         private RubyDBDataSet3 rubyDBDataSet3;
         private System.Windows.Forms.BindingSource tableBindingSource;
