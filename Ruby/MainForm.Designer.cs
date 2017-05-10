@@ -59,6 +59,7 @@
             this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblMalliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rubyDBDataSet1 = new Ruby.RubyDBDataSet1();
+            this.tbFurde = new MetroFramework.Controls.MetroTabPage();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
             this.dgvHistoria = new System.Windows.Forms.DataGridView();
             this.midDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,7 +82,6 @@
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.rubyDBDataSet = new Ruby.RubyDBDataSet();
             this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
-            this.tbFurde = new MetroFramework.Controls.MetroTabPage();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -171,7 +171,7 @@
             // dtpData
             // 
             this.dtpData.Location = new System.Drawing.Point(454, 3);
-            this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpData.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(224, 29);
             this.dtpData.TabIndex = 1;
@@ -256,9 +256,9 @@
             // metroTab
             // 
             this.metroTab.Controls.Add(this.tbShitja);
-            this.metroTab.Controls.Add(this.tbHistoria);
             this.metroTab.Controls.Add(this.tbStatistika);
             this.metroTab.Controls.Add(this.tbFurde);
+            this.metroTab.Controls.Add(this.tbHistoria);
             this.metroTab.Controls.Add(this.tbLive);
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
@@ -298,7 +298,7 @@
             // 
             this.dtpShitje.Enabled = false;
             this.dtpShitje.Location = new System.Drawing.Point(454, 3);
-            this.dtpShitje.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpShitje.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpShitje.Name = "dtpShitje";
             this.dtpShitje.Size = new System.Drawing.Size(224, 29);
             this.dtpShitje.TabIndex = 26;
@@ -424,6 +424,20 @@
             // 
             this.rubyDBDataSet1.DataSetName = "RubyDBDataSet1";
             this.rubyDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbFurde
+            // 
+            this.tbFurde.HorizontalScrollbarBarColor = true;
+            this.tbFurde.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbFurde.HorizontalScrollbarSize = 10;
+            this.tbFurde.Location = new System.Drawing.Point(4, 38);
+            this.tbFurde.Name = "tbFurde";
+            this.tbFurde.Size = new System.Drawing.Size(1225, 600);
+            this.tbFurde.TabIndex = 4;
+            this.tbFurde.Text = "Furde/Shpenzime";
+            this.tbFurde.VerticalScrollbarBarColor = true;
+            this.tbFurde.VerticalScrollbarHighlightOnWheel = false;
+            this.tbFurde.VerticalScrollbarSize = 10;
             // 
             // tbHistoria
             // 
@@ -669,20 +683,6 @@
             // tblMalliTableAdapter
             // 
             this.tblMalliTableAdapter.ClearBeforeFill = true;
-            // 
-            // tbFurde
-            // 
-            this.tbFurde.HorizontalScrollbarBarColor = true;
-            this.tbFurde.HorizontalScrollbarHighlightOnWheel = false;
-            this.tbFurde.HorizontalScrollbarSize = 10;
-            this.tbFurde.Location = new System.Drawing.Point(4, 38);
-            this.tbFurde.Name = "tbFurde";
-            this.tbFurde.Size = new System.Drawing.Size(1225, 600);
-            this.tbFurde.TabIndex = 4;
-            this.tbFurde.Text = "Furde/Shpenzime";
-            this.tbFurde.VerticalScrollbarBarColor = true;
-            this.tbFurde.VerticalScrollbarHighlightOnWheel = false;
-            this.tbFurde.VerticalScrollbarSize = 10;
             // 
             // Form
             // 
