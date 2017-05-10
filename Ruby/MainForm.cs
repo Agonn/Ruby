@@ -22,9 +22,6 @@ namespace Ruby
 
             SqlCommand objKomanda2 = new SqlCommand(Query4, objKonektimi);
 
-            //Veq deshta me pa formatin e dates
-           // lblmShenimet.Text = dtpData.Value.ToString("yyyy - MM - dd  HH: mm:ss");
-
 
 
             SqlDataAdapter objAdapteri2 = new SqlDataAdapter(objKomanda2);
@@ -71,65 +68,35 @@ namespace Ruby
             //Fix this to completly close app.
 
             this.Close(); //temporarily use this
-        }
+        } 
 
-        string FunksioniPerDate(string data)
-        {
-            //Funksioni i cili e ndan Stringun
-            //2017-05-08 00:00:00
-            string[] DataSakt = data.Split(new char[] { '-', ' ' });
-
-            //Qeto e kom perdor si Shembull String
-            //string QueryTest = "Select * from TblMalli Where Data_Shitjes >= '2017-05-09 00:00:00' AND Data_Shitjes <= '2017-05-09 23:59:59' ";
-
-            //Stringu i Querit qe bohet si perfundim
-            string Query = "Select * from TblMalli Where Data_Shitjes >= '"+DataSakt[0]+ "-" + DataSakt[3]+ "-" + DataSakt[6] +" 00:00:00' AND Data_Shitjes <= '"+ DataSakt[0]+"-" + DataSakt[3]+ "-" + DataSakt[6]+" 23:59:59'";
-
-            //Funksioni kthen qet string
-            return Query;
-        }
-
-
-        //QETU KOM ME PUNU PER ME BO FUNKSIONIN
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
             string theDate = dtpData.Value.ToShortDateString();
             lblDataSot.Text = theDate.ToString();
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
-     
-
             try
             {
 
-                //Ta paraqet shumen ne Euro te labela
                 string query3 = "select SUM(Malli_Cmimi) from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
-                //Duhet me i paraqit te gjith historin e qasej dite qe po e zgjedhim nga dgv-ja
-                string QueryMeFunksion = FunksioniPerDate(dtpData.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
 
-
-                SqlDataAdapter objAdapteri = new SqlDataAdapter(QueryMeFunksion, objKonektimi);
-                DataSet Shenimet = new DataSet();
+                string query4 = "select * from TblMalli where Data_Shitjes='" + dtpData.Value.ToString("yyyy-MM-dd") + "'";
 
                 SqlCommand objKomanda3 = new SqlCommand(query3, objKonektimi);
-
                 objKonektimi.Open();
-
-                
+                SqlDataAdapter objAdapteri = new SqlDataAdapter(query4, objKonektimi);
+                DataSet Shenimet = new DataSet();
+                int mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
                 objAdapteri.Fill(Shenimet);
                 dgvHistoria.DataSource = Shenimet.Tables[0];
-                int mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
                 lblHistoriaShitje.Text = mySum.ToString() + "€";
-                
+                objKonektimi.Close();
             }
             catch (Exception)
             {
 
                // MessageBox.Show("Nuk ka shitje per kete date"); //placeholder!
                 lblHistoriaShitje.Text = "N/A";
-            }
-            finally
-            {
-                objKonektimi.Close();
             }
         }
 
@@ -184,16 +151,6 @@ namespace Ruby
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void tbShitja_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbStatistika_Click(object sender, EventArgs e)
-        {
 
         }
     }

@@ -59,10 +59,6 @@
             this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblMalliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rubyDBDataSet1 = new Ruby.RubyDBDataSet1();
-            this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
-            this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.lblHyrje = new MetroFramework.Controls.MetroLabel();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
             this.dgvHistoria = new System.Windows.Forms.DataGridView();
             this.midDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +73,10 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblDataSot = new MetroFramework.Controls.MetroLabel();
+            this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
+            this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.lblHyrje = new MetroFramework.Controls.MetroLabel();
             this.tbLive = new MetroFramework.Controls.MetroTabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.rubyDBDataSet = new Ruby.RubyDBDataSet();
@@ -88,9 +88,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblMalliBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet1)).BeginInit();
-            this.tbStatistika.SuspendLayout();
             this.tbHistoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoria)).BeginInit();
+            this.tbStatistika.SuspendLayout();
             this.tbLive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).BeginInit();
             this.SuspendLayout();
@@ -253,8 +253,8 @@
             // metroTab
             // 
             this.metroTab.Controls.Add(this.tbShitja);
-            this.metroTab.Controls.Add(this.tbStatistika);
             this.metroTab.Controls.Add(this.tbHistoria);
+            this.metroTab.Controls.Add(this.tbStatistika);
             this.metroTab.Controls.Add(this.tbLive);
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
@@ -289,7 +289,6 @@
             this.tbShitja.VerticalScrollbarBarColor = true;
             this.tbShitja.VerticalScrollbarHighlightOnWheel = false;
             this.tbShitja.VerticalScrollbarSize = 10;
-            this.tbShitja.Click += new System.EventHandler(this.tbShitja_Click);
             // 
             // dtpShitje
             // 
@@ -342,9 +341,9 @@
             // 
             // lblmShenimet
             // 
-            this.lblmShenimet.Location = new System.Drawing.Point(7, 195);
+            this.lblmShenimet.Location = new System.Drawing.Point(7, 225);
             this.lblmShenimet.Name = "lblmShenimet";
-            this.lblmShenimet.Size = new System.Drawing.Size(669, 90);
+            this.lblmShenimet.Size = new System.Drawing.Size(336, 90);
             this.lblmShenimet.Style = MetroFramework.MetroColorStyle.Orange;
             this.lblmShenimet.TabIndex = 18;
             this.lblmShenimet.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -419,60 +418,6 @@
             // 
             this.rubyDBDataSet1.DataSetName = "RubyDBDataSet1";
             this.rubyDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbStatistika
-            // 
-            this.tbStatistika.Controls.Add(this.cmbStatistika);
-            this.tbStatistika.Controls.Add(this.metroLabel5);
-            this.tbStatistika.Controls.Add(this.lblHyrje);
-            this.tbStatistika.HorizontalScrollbarBarColor = true;
-            this.tbStatistika.HorizontalScrollbarHighlightOnWheel = false;
-            this.tbStatistika.HorizontalScrollbarSize = 10;
-            this.tbStatistika.Location = new System.Drawing.Point(4, 38);
-            this.tbStatistika.Name = "tbStatistika";
-            this.tbStatistika.Size = new System.Drawing.Size(1225, 600);
-            this.tbStatistika.TabIndex = 2;
-            this.tbStatistika.Text = "Statistika";
-            this.tbStatistika.VerticalScrollbarBarColor = true;
-            this.tbStatistika.VerticalScrollbarHighlightOnWheel = false;
-            this.tbStatistika.VerticalScrollbarSize = 10;
-            this.tbStatistika.Click += new System.EventHandler(this.tbStatistika_Click);
-            // 
-            // cmbStatistika
-            // 
-            this.cmbStatistika.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbStatistika.FormattingEnabled = true;
-            this.cmbStatistika.ItemHeight = 23;
-            this.cmbStatistika.Items.AddRange(new object[] {
-            "Sot",
-            "Java ",
-            "Muaji",
-            "Viti"});
-            this.cmbStatistika.Location = new System.Drawing.Point(688, 26);
-            this.cmbStatistika.Name = "cmbStatistika";
-            this.cmbStatistika.Size = new System.Drawing.Size(73, 29);
-            this.cmbStatistika.TabIndex = 10;
-            this.cmbStatistika.UseSelectable = true;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(2, 68);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(86, 19);
-            this.metroLabel5.TabIndex = 14;
-            this.metroLabel5.Text = "Shpenzime:";
-            // 
-            // lblHyrje
-            // 
-            this.lblHyrje.AutoSize = true;
-            this.lblHyrje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblHyrje.Location = new System.Drawing.Point(2, 26);
-            this.lblHyrje.Name = "lblHyrje";
-            this.lblHyrje.Size = new System.Drawing.Size(50, 19);
-            this.lblHyrje.TabIndex = 14;
-            this.lblHyrje.Text = "Hyrje:";
             // 
             // tbHistoria
             // 
@@ -623,6 +568,59 @@
             this.lblDataSot.Size = new System.Drawing.Size(0, 0);
             this.lblDataSot.TabIndex = 2;
             // 
+            // tbStatistika
+            // 
+            this.tbStatistika.Controls.Add(this.cmbStatistika);
+            this.tbStatistika.Controls.Add(this.metroLabel5);
+            this.tbStatistika.Controls.Add(this.lblHyrje);
+            this.tbStatistika.HorizontalScrollbarBarColor = true;
+            this.tbStatistika.HorizontalScrollbarHighlightOnWheel = false;
+            this.tbStatistika.HorizontalScrollbarSize = 10;
+            this.tbStatistika.Location = new System.Drawing.Point(4, 38);
+            this.tbStatistika.Name = "tbStatistika";
+            this.tbStatistika.Size = new System.Drawing.Size(1225, 600);
+            this.tbStatistika.TabIndex = 2;
+            this.tbStatistika.Text = "Statistika";
+            this.tbStatistika.VerticalScrollbarBarColor = true;
+            this.tbStatistika.VerticalScrollbarHighlightOnWheel = false;
+            this.tbStatistika.VerticalScrollbarSize = 10;
+            // 
+            // cmbStatistika
+            // 
+            this.cmbStatistika.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbStatistika.FormattingEnabled = true;
+            this.cmbStatistika.ItemHeight = 23;
+            this.cmbStatistika.Items.AddRange(new object[] {
+            "Sot",
+            "Java ",
+            "Muaji",
+            "Viti"});
+            this.cmbStatistika.Location = new System.Drawing.Point(688, 26);
+            this.cmbStatistika.Name = "cmbStatistika";
+            this.cmbStatistika.Size = new System.Drawing.Size(73, 29);
+            this.cmbStatistika.TabIndex = 10;
+            this.cmbStatistika.UseSelectable = true;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel5.Location = new System.Drawing.Point(2, 68);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(86, 19);
+            this.metroLabel5.TabIndex = 14;
+            this.metroLabel5.Text = "Shpenzime:";
+            // 
+            // lblHyrje
+            // 
+            this.lblHyrje.AutoSize = true;
+            this.lblHyrje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lblHyrje.Location = new System.Drawing.Point(2, 26);
+            this.lblHyrje.Name = "lblHyrje";
+            this.lblHyrje.Size = new System.Drawing.Size(50, 19);
+            this.lblHyrje.TabIndex = 14;
+            this.lblHyrje.Text = "Hyrje:";
+            // 
             // tbLive
             // 
             this.tbLive.Controls.Add(this.webBrowser1);
@@ -680,11 +678,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvShitja)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblMalliBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet1)).EndInit();
-            this.tbStatistika.ResumeLayout(false);
-            this.tbStatistika.PerformLayout();
             this.tbHistoria.ResumeLayout(false);
             this.tbHistoria.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoria)).EndInit();
+            this.tbStatistika.ResumeLayout(false);
+            this.tbStatistika.PerformLayout();
             this.tbLive.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).EndInit();
             this.ResumeLayout(false);
