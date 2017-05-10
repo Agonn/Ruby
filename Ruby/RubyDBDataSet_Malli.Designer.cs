@@ -20,17 +20,17 @@ namespace Ruby {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("RubyDBDataSet3")]
+    [global::System.Xml.Serialization.XmlRootAttribute("RubyDBDataSet_Malli")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class RubyDBDataSet3 : global::System.Data.DataSet {
+    public partial class RubyDBDataSet_Malli : global::System.Data.DataSet {
         
-        private TableDataTable tableTable;
+        private TblMalliDataTable tableTblMalli;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public RubyDBDataSet3() {
+        public RubyDBDataSet_Malli() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Ruby {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected RubyDBDataSet3(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected RubyDBDataSet_Malli(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Ruby {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Table"] != null)) {
-                    base.Tables.Add(new TableDataTable(ds.Tables["Table"]));
+                if ((ds.Tables["TblMalli"] != null)) {
+                    base.Tables.Add(new TblMalliDataTable(ds.Tables["TblMalli"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Ruby {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TableDataTable Table {
+        public TblMalliDataTable TblMalli {
             get {
-                return this.tableTable;
+                return this.tableTblMalli;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Ruby {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            RubyDBDataSet3 cln = ((RubyDBDataSet3)(base.Clone()));
+            RubyDBDataSet_Malli cln = ((RubyDBDataSet_Malli)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Ruby {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Table"] != null)) {
-                    base.Tables.Add(new TableDataTable(ds.Tables["Table"]));
+                if ((ds.Tables["TblMalli"] != null)) {
+                    base.Tables.Add(new TblMalliDataTable(ds.Tables["TblMalli"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Ruby {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTable = ((TableDataTable)(base.Tables["Table"]));
+            this.tableTblMalli = ((TblMalliDataTable)(base.Tables["TblMalli"]));
             if ((initTable == true)) {
-                if ((this.tableTable != null)) {
-                    this.tableTable.InitVars();
+                if ((this.tableTblMalli != null)) {
+                    this.tableTblMalli.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Ruby {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "RubyDBDataSet3";
+            this.DataSetName = "RubyDBDataSet_Malli";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/RubyDBDataSet3.xsd";
+            this.Namespace = "http://tempuri.org/RubyDBDataSet_Malli.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTable = new TableDataTable();
-            base.Tables.Add(this.tableTable);
+            this.tableTblMalli = new TblMalliDataTable();
+            base.Tables.Add(this.tableTblMalli);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeTable() {
+        private bool ShouldSerializeTblMalli() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Ruby {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            RubyDBDataSet3 ds = new RubyDBDataSet3();
+            RubyDBDataSet_Malli ds = new RubyDBDataSet_Malli();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,29 +270,29 @@ namespace Ruby {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void TableRowChangeEventHandler(object sender, TableRowChangeEvent e);
+        public delegate void TblMalliRowChangeEventHandler(object sender, TblMalliRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TableDataTable : global::System.Data.TypedTableBase<TableRow> {
+        public partial class TblMalliDataTable : global::System.Data.TypedTableBase<TblMalliRow> {
             
-            private global::System.Data.DataColumn columnShiID;
+            private global::System.Data.DataColumn columnMid;
             
-            private global::System.Data.DataColumn columnRryma_fat;
+            private global::System.Data.DataColumn columnMalli_Emri;
             
-            private global::System.Data.DataColumn columnUji_fat;
+            private global::System.Data.DataColumn columnMalli_Cmimi;
             
-            private global::System.Data.DataColumn columnTatimi_fat;
+            private global::System.Data.DataColumn columnData_Shitjes;
             
-            private global::System.Data.DataColumn columnPershkrimi_fat;
+            private global::System.Data.DataColumn columnPershkrimi;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableDataTable() {
-                this.TableName = "Table";
+            public TblMalliDataTable() {
+                this.TableName = "TblMalli";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +300,7 @@ namespace Ruby {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TableDataTable(global::System.Data.DataTable table) {
+            internal TblMalliDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,48 +317,48 @@ namespace Ruby {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected TableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TblMalliDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ShiIDColumn {
+            public global::System.Data.DataColumn MidColumn {
                 get {
-                    return this.columnShiID;
+                    return this.columnMid;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Rryma_fatColumn {
+            public global::System.Data.DataColumn Malli_EmriColumn {
                 get {
-                    return this.columnRryma_fat;
+                    return this.columnMalli_Emri;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Uji_fatColumn {
+            public global::System.Data.DataColumn Malli_CmimiColumn {
                 get {
-                    return this.columnUji_fat;
+                    return this.columnMalli_Cmimi;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Tatimi_fatColumn {
+            public global::System.Data.DataColumn Data_ShitjesColumn {
                 get {
-                    return this.columnTatimi_fat;
+                    return this.columnData_Shitjes;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Pershkrimi_fatColumn {
+            public global::System.Data.DataColumn PershkrimiColumn {
                 get {
-                    return this.columnPershkrimi_fat;
+                    return this.columnPershkrimi;
                 }
             }
             
@@ -373,56 +373,56 @@ namespace Ruby {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow this[int index] {
+            public TblMalliRow this[int index] {
                 get {
-                    return ((TableRow)(this.Rows[index]));
+                    return ((TblMalliRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TableRowChangeEventHandler TableRowChanging;
+            public event TblMalliRowChangeEventHandler TblMalliRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TableRowChangeEventHandler TableRowChanged;
+            public event TblMalliRowChangeEventHandler TblMalliRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TableRowChangeEventHandler TableRowDeleting;
+            public event TblMalliRowChangeEventHandler TblMalliRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event TableRowChangeEventHandler TableRowDeleted;
+            public event TblMalliRowChangeEventHandler TblMalliRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddTableRow(TableRow row) {
+            public void AddTblMalliRow(TblMalliRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow AddTableRow(double Rryma_fat, double Uji_fat, double Tatimi_fat, string Pershkrimi_fat) {
-                TableRow rowTableRow = ((TableRow)(this.NewRow()));
+            public TblMalliRow AddTblMalliRow(string Malli_Emri, double Malli_Cmimi, System.DateTime Data_Shitjes, string Pershkrimi) {
+                TblMalliRow rowTblMalliRow = ((TblMalliRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Rryma_fat,
-                        Uji_fat,
-                        Tatimi_fat,
-                        Pershkrimi_fat};
-                rowTableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTableRow);
-                return rowTableRow;
+                        Malli_Emri,
+                        Malli_Cmimi,
+                        Data_Shitjes,
+                        Pershkrimi};
+                rowTblMalliRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTblMalliRow);
+                return rowTblMalliRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow FindByShiID(int ShiID) {
-                return ((TableRow)(this.Rows.Find(new object[] {
-                            ShiID})));
+            public TblMalliRow FindByMid(int Mid) {
+                return ((TblMalliRow)(this.Rows.Find(new object[] {
+                            Mid})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TableDataTable cln = ((TableDataTable)(base.Clone()));
+                TblMalliDataTable cln = ((TblMalliDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -430,74 +430,71 @@ namespace Ruby {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TableDataTable();
+                return new TblMalliDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnShiID = base.Columns["ShiID"];
-                this.columnRryma_fat = base.Columns["Rryma_fat"];
-                this.columnUji_fat = base.Columns["Uji_fat"];
-                this.columnTatimi_fat = base.Columns["Tatimi_fat"];
-                this.columnPershkrimi_fat = base.Columns["Pershkrimi_fat"];
+                this.columnMid = base.Columns["Mid"];
+                this.columnMalli_Emri = base.Columns["Malli_Emri"];
+                this.columnMalli_Cmimi = base.Columns["Malli_Cmimi"];
+                this.columnData_Shitjes = base.Columns["Data_Shitjes"];
+                this.columnPershkrimi = base.Columns["Pershkrimi"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnShiID = new global::System.Data.DataColumn("ShiID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnShiID);
-                this.columnRryma_fat = new global::System.Data.DataColumn("Rryma_fat", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRryma_fat);
-                this.columnUji_fat = new global::System.Data.DataColumn("Uji_fat", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUji_fat);
-                this.columnTatimi_fat = new global::System.Data.DataColumn("Tatimi_fat", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTatimi_fat);
-                this.columnPershkrimi_fat = new global::System.Data.DataColumn("Pershkrimi_fat", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPershkrimi_fat);
+                this.columnMid = new global::System.Data.DataColumn("Mid", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMid);
+                this.columnMalli_Emri = new global::System.Data.DataColumn("Malli_Emri", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMalli_Emri);
+                this.columnMalli_Cmimi = new global::System.Data.DataColumn("Malli_Cmimi", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMalli_Cmimi);
+                this.columnData_Shitjes = new global::System.Data.DataColumn("Data_Shitjes", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnData_Shitjes);
+                this.columnPershkrimi = new global::System.Data.DataColumn("Pershkrimi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPershkrimi);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnShiID}, true));
-                this.columnShiID.AutoIncrement = true;
-                this.columnShiID.AutoIncrementSeed = -1;
-                this.columnShiID.AutoIncrementStep = -1;
-                this.columnShiID.AllowDBNull = false;
-                this.columnShiID.ReadOnly = true;
-                this.columnShiID.Unique = true;
-                this.columnPershkrimi_fat.MaxLength = 2147483647;
-                this.ExtendedProperties.Add("Generator_RowClassName", "TableRow");
-                this.ExtendedProperties.Add("Generator_RowEvArgName", "TableRowChangeEvent");
-                this.ExtendedProperties.Add("Generator_RowEvHandlerName", "TableRowChangeEventHandler");
-                this.ExtendedProperties.Add("Generator_TableClassName", "TableDataTable");
-                this.ExtendedProperties.Add("Generator_TablePropName", "Table");
-                this.ExtendedProperties.Add("Generator_TableVarName", "tableTable");
-                this.ExtendedProperties.Add("Generator_UserTableName", "Table");
+                                this.columnMid}, true));
+                this.columnMid.AutoIncrement = true;
+                this.columnMid.AutoIncrementSeed = -1;
+                this.columnMid.AutoIncrementStep = -1;
+                this.columnMid.AllowDBNull = false;
+                this.columnMid.ReadOnly = true;
+                this.columnMid.Unique = true;
+                this.columnMalli_Emri.AllowDBNull = false;
+                this.columnMalli_Emri.MaxLength = 50;
+                this.columnMalli_Cmimi.AllowDBNull = false;
+                this.columnData_Shitjes.AllowDBNull = false;
+                this.columnPershkrimi.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow NewTableRow() {
-                return ((TableRow)(this.NewRow()));
+            public TblMalliRow NewTblMalliRow() {
+                return ((TblMalliRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TableRow(builder);
+                return new TblMalliRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TableRow);
+                return typeof(TblMalliRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TableRowChanged != null)) {
-                    this.TableRowChanged(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.TblMalliRowChanged != null)) {
+                    this.TblMalliRowChanged(this, new TblMalliRowChangeEvent(((TblMalliRow)(e.Row)), e.Action));
                 }
             }
             
@@ -505,8 +502,8 @@ namespace Ruby {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TableRowChanging != null)) {
-                    this.TableRowChanging(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.TblMalliRowChanging != null)) {
+                    this.TblMalliRowChanging(this, new TblMalliRowChangeEvent(((TblMalliRow)(e.Row)), e.Action));
                 }
             }
             
@@ -514,8 +511,8 @@ namespace Ruby {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TableRowDeleted != null)) {
-                    this.TableRowDeleted(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.TblMalliRowDeleted != null)) {
+                    this.TblMalliRowDeleted(this, new TblMalliRowChangeEvent(((TblMalliRow)(e.Row)), e.Action));
                 }
             }
             
@@ -523,14 +520,14 @@ namespace Ruby {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TableRowDeleting != null)) {
-                    this.TableRowDeleting(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.TblMalliRowDeleting != null)) {
+                    this.TblMalliRowDeleting(this, new TblMalliRowChangeEvent(((TblMalliRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveTableRow(TableRow row) {
+            public void RemoveTblMalliRow(TblMalliRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -539,7 +536,7 @@ namespace Ruby {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                RubyDBDataSet3 ds = new RubyDBDataSet3();
+                RubyDBDataSet_Malli ds = new RubyDBDataSet_Malli();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -557,7 +554,7 @@ namespace Ruby {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TableDataTable";
+                attribute2.FixedValue = "TblMalliDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -601,138 +598,87 @@ namespace Ruby {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TableRow : global::System.Data.DataRow {
+        public partial class TblMalliRow : global::System.Data.DataRow {
             
-            private TableDataTable tableTable;
+            private TblMalliDataTable tableTblMalli;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal TableRow(global::System.Data.DataRowBuilder rb) : 
+            internal TblMalliRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTable = ((TableDataTable)(this.Table));
+                this.tableTblMalli = ((TblMalliDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ShiID {
+            public int Mid {
                 get {
-                    return ((int)(this[this.tableTable.ShiIDColumn]));
+                    return ((int)(this[this.tableTblMalli.MidColumn]));
                 }
                 set {
-                    this[this.tableTable.ShiIDColumn] = value;
+                    this[this.tableTblMalli.MidColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double Rryma_fat {
+            public string Malli_Emri {
                 get {
-                    try {
-                        return ((double)(this[this.tableTable.Rryma_fatColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Rryma_fat\' in table \'Table\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableTblMalli.Malli_EmriColumn]));
                 }
                 set {
-                    this[this.tableTable.Rryma_fatColumn] = value;
+                    this[this.tableTblMalli.Malli_EmriColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double Uji_fat {
+            public double Malli_Cmimi {
                 get {
-                    try {
-                        return ((double)(this[this.tableTable.Uji_fatColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Uji_fat\' in table \'Table\' is DBNull.", e);
-                    }
+                    return ((double)(this[this.tableTblMalli.Malli_CmimiColumn]));
                 }
                 set {
-                    this[this.tableTable.Uji_fatColumn] = value;
+                    this[this.tableTblMalli.Malli_CmimiColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double Tatimi_fat {
+            public System.DateTime Data_Shitjes {
                 get {
-                    try {
-                        return ((double)(this[this.tableTable.Tatimi_fatColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Tatimi_fat\' in table \'Table\' is DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tableTblMalli.Data_ShitjesColumn]));
                 }
                 set {
-                    this[this.tableTable.Tatimi_fatColumn] = value;
+                    this[this.tableTblMalli.Data_ShitjesColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Pershkrimi_fat {
+            public string Pershkrimi {
                 get {
                     try {
-                        return ((string)(this[this.tableTable.Pershkrimi_fatColumn]));
+                        return ((string)(this[this.tableTblMalli.PershkrimiColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Pershkrimi_fat\' in table \'Table\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Pershkrimi\' in table \'TblMalli\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTable.Pershkrimi_fatColumn] = value;
+                    this[this.tableTblMalli.PershkrimiColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsRryma_fatNull() {
-                return this.IsNull(this.tableTable.Rryma_fatColumn);
+            public bool IsPershkrimiNull() {
+                return this.IsNull(this.tableTblMalli.PershkrimiColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetRryma_fatNull() {
-                this[this.tableTable.Rryma_fatColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsUji_fatNull() {
-                return this.IsNull(this.tableTable.Uji_fatColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetUji_fatNull() {
-                this[this.tableTable.Uji_fatColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTatimi_fatNull() {
-                return this.IsNull(this.tableTable.Tatimi_fatColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTatimi_fatNull() {
-                this[this.tableTable.Tatimi_fatColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPershkrimi_fatNull() {
-                return this.IsNull(this.tableTable.Pershkrimi_fatColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPershkrimi_fatNull() {
-                this[this.tableTable.Pershkrimi_fatColumn] = global::System.Convert.DBNull;
+            public void SetPershkrimiNull() {
+                this[this.tableTblMalli.PershkrimiColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -740,22 +686,22 @@ namespace Ruby {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class TableRowChangeEvent : global::System.EventArgs {
+        public class TblMalliRowChangeEvent : global::System.EventArgs {
             
-            private TableRow eventRow;
+            private TblMalliRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRowChangeEvent(TableRow row, global::System.Data.DataRowAction action) {
+            public TblMalliRowChangeEvent(TblMalliRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public TableRow Row {
+            public TblMalliRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -771,7 +717,7 @@ namespace Ruby {
         }
     }
 }
-namespace Ruby.RubyDBDataSet3TableAdapters {
+namespace Ruby.RubyDBDataSet_MalliTableAdapters {
     
     
     /// <summary>
@@ -783,7 +729,7 @@ namespace Ruby.RubyDBDataSet3TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TableTableAdapter : global::System.ComponentModel.Component {
+    public partial class TblMalliTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -797,7 +743,7 @@ namespace Ruby.RubyDBDataSet3TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public TableTableAdapter() {
+        public TblMalliTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -894,52 +840,46 @@ namespace Ruby.RubyDBDataSet3TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Table";
-            tableMapping.ColumnMappings.Add("ShiID", "ShiID");
-            tableMapping.ColumnMappings.Add("Rryma_fat", "Rryma_fat");
-            tableMapping.ColumnMappings.Add("Uji_fat", "Uji_fat");
-            tableMapping.ColumnMappings.Add("Tatimi_fat", "Tatimi_fat");
-            tableMapping.ColumnMappings.Add("Pershkrimi_fat", "Pershkrimi_fat");
+            tableMapping.DataSetTable = "TblMalli";
+            tableMapping.ColumnMappings.Add("Mid", "Mid");
+            tableMapping.ColumnMappings.Add("Malli_Emri", "Malli_Emri");
+            tableMapping.ColumnMappings.Add("Malli_Cmimi", "Malli_Cmimi");
+            tableMapping.ColumnMappings.Add("Data_Shitjes", "Data_Shitjes");
+            tableMapping.ColumnMappings.Add("Pershkrimi", "Pershkrimi");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Table] WHERE (([ShiID] = @Original_ShiID) AND ((@IsNull_Rryma_fat = 1 AND [Rryma_fat] IS NULL) OR ([Rryma_fat] = @Original_Rryma_fat)) AND ((@IsNull_Uji_fat = 1 AND [Uji_fat] IS NULL) OR ([Uji_fat] = @Original_Uji_fat)) AND ((@IsNull_Tatimi_fat = 1 AND [Tatimi_fat] IS NULL) OR ([Tatimi_fat] = @Original_Tatimi_fat)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[TblMalli] WHERE (([Mid] = @Original_Mid) AND ([Malli_Emri] = @" +
+                "Original_Malli_Emri) AND ([Malli_Cmimi] = @Original_Malli_Cmimi) AND ([Data_Shit" +
+                "jes] = @Original_Data_Shitjes))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ShiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShiID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Rryma_fat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rryma_fat", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rryma_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rryma_fat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Uji_fat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Uji_fat", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Uji_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Uji_fat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tatimi_fat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tatimi_fat", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tatimi_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tatimi_fat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Mid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Mid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Malli_Emri", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Malli_Emri", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Malli_Cmimi", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Malli_Cmimi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Shitjes", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Shitjes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Table] ([Rryma_fat], [Uji_fat], [Tatimi_fat], [Pershkrimi_fat]" +
-                ") VALUES (@Rryma_fat, @Uji_fat, @Tatimi_fat, @Pershkrimi_fat);\r\nSELECT ShiID, Rr" +
-                "yma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE (ShiID = SCOPE_I" +
-                "DENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[TblMalli] ([Malli_Emri], [Malli_Cmimi], [Data_Shitjes], [Pershkrimi]) VALUES (@Malli_Emri, @Malli_Cmimi, @Data_Shitjes, @Pershkrimi);
+SELECT Mid, Malli_Emri, Malli_Cmimi, Data_Shitjes, Pershkrimi FROM TblMalli WHERE (Mid = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rryma_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rryma_fat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Uji_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Uji_fat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tatimi_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tatimi_fat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pershkrimi_fat", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pershkrimi_fat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Malli_Emri", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Malli_Emri", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Malli_Cmimi", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Malli_Cmimi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Shitjes", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Shitjes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pershkrimi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pershkrimi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Table] SET [Rryma_fat] = @Rryma_fat, [Uji_fat] = @Uji_fat, [Tatimi_fat] = @Tatimi_fat, [Pershkrimi_fat] = @Pershkrimi_fat WHERE (([ShiID] = @Original_ShiID) AND ((@IsNull_Rryma_fat = 1 AND [Rryma_fat] IS NULL) OR ([Rryma_fat] = @Original_Rryma_fat)) AND ((@IsNull_Uji_fat = 1 AND [Uji_fat] IS NULL) OR ([Uji_fat] = @Original_Uji_fat)) AND ((@IsNull_Tatimi_fat = 1 AND [Tatimi_fat] IS NULL) OR ([Tatimi_fat] = @Original_Tatimi_fat)));
-SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE (ShiID = @ShiID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[TblMalli] SET [Malli_Emri] = @Malli_Emri, [Malli_Cmimi] = @Malli_Cmimi, [Data_Shitjes] = @Data_Shitjes, [Pershkrimi] = @Pershkrimi WHERE (([Mid] = @Original_Mid) AND ([Malli_Emri] = @Original_Malli_Emri) AND ([Malli_Cmimi] = @Original_Malli_Cmimi) AND ([Data_Shitjes] = @Original_Data_Shitjes));
+SELECT Mid, Malli_Emri, Malli_Cmimi, Data_Shitjes, Pershkrimi FROM TblMalli WHERE (Mid = @Mid)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rryma_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rryma_fat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Uji_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Uji_fat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tatimi_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tatimi_fat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pershkrimi_fat", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pershkrimi_fat", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ShiID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ShiID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Rryma_fat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rryma_fat", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Rryma_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rryma_fat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Uji_fat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Uji_fat", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Uji_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Uji_fat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Tatimi_fat", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tatimi_fat", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tatimi_fat", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tatimi_fat", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ShiID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ShiID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Malli_Emri", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Malli_Emri", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Malli_Cmimi", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Malli_Cmimi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Data_Shitjes", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Shitjes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pershkrimi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pershkrimi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Mid", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Mid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Malli_Emri", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Malli_Emri", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Malli_Cmimi", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Malli_Cmimi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Data_Shitjes", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Data_Shitjes", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Mid", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Mid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -955,7 +895,7 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM dbo.[Table]";
+            this._commandCollection[0].CommandText = "SELECT Mid, Malli_Emri, Malli_Cmimi, Data_Shitjes, Pershkrimi FROM dbo.TblMalli";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -963,7 +903,7 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(RubyDBDataSet3.TableDataTable dataTable) {
+        public virtual int Fill(RubyDBDataSet_Malli.TblMalliDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -976,9 +916,9 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual RubyDBDataSet3.TableDataTable GetData() {
+        public virtual RubyDBDataSet_Malli.TblMalliDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            RubyDBDataSet3.TableDataTable dataTable = new RubyDBDataSet3.TableDataTable();
+            RubyDBDataSet_Malli.TblMalliDataTable dataTable = new RubyDBDataSet_Malli.TblMalliDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -986,15 +926,15 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RubyDBDataSet3.TableDataTable dataTable) {
+        public virtual int Update(RubyDBDataSet_Malli.TblMalliDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RubyDBDataSet3 dataSet) {
-            return this.Adapter.Update(dataSet, "Table");
+        public virtual int Update(RubyDBDataSet_Malli dataSet) {
+            return this.Adapter.Update(dataSet, "TblMalli");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1016,32 +956,16 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ShiID, global::System.Nullable<double> Original_Rryma_fat, global::System.Nullable<double> Original_Uji_fat, global::System.Nullable<double> Original_Tatimi_fat) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ShiID));
-            if ((Original_Rryma_fat.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Rryma_fat.Value));
+        public virtual int Delete(int Original_Mid, string Original_Malli_Emri, double Original_Malli_Cmimi, System.DateTime Original_Data_Shitjes) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Mid));
+            if ((Original_Malli_Emri == null)) {
+                throw new global::System.ArgumentNullException("Original_Malli_Emri");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Malli_Emri));
             }
-            if ((Original_Uji_fat.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_Uji_fat.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Tatimi_fat.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((double)(Original_Tatimi_fat.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Malli_Cmimi));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_Data_Shitjes));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1062,30 +986,20 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<double> Rryma_fat, global::System.Nullable<double> Uji_fat, global::System.Nullable<double> Tatimi_fat, string Pershkrimi_fat) {
-            if ((Rryma_fat.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((double)(Rryma_fat.Value));
+        public virtual int Insert(string Malli_Emri, double Malli_Cmimi, System.DateTime Data_Shitjes, string Pershkrimi) {
+            if ((Malli_Emri == null)) {
+                throw new global::System.ArgumentNullException("Malli_Emri");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Malli_Emri));
             }
-            if ((Uji_fat.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((double)(Uji_fat.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Tatimi_fat.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Tatimi_fat.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Pershkrimi_fat == null)) {
+            this.Adapter.InsertCommand.Parameters[1].Value = ((double)(Malli_Cmimi));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(Data_Shitjes));
+            if ((Pershkrimi == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Pershkrimi_fat));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Pershkrimi));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1107,57 +1021,31 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<double> Rryma_fat, global::System.Nullable<double> Uji_fat, global::System.Nullable<double> Tatimi_fat, string Pershkrimi_fat, int Original_ShiID, global::System.Nullable<double> Original_Rryma_fat, global::System.Nullable<double> Original_Uji_fat, global::System.Nullable<double> Original_Tatimi_fat, int ShiID) {
-            if ((Rryma_fat.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((double)(Rryma_fat.Value));
+        public virtual int Update(string Malli_Emri, double Malli_Cmimi, System.DateTime Data_Shitjes, string Pershkrimi, int Original_Mid, string Original_Malli_Emri, double Original_Malli_Cmimi, System.DateTime Original_Data_Shitjes, int Mid) {
+            if ((Malli_Emri == null)) {
+                throw new global::System.ArgumentNullException("Malli_Emri");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Malli_Emri));
             }
-            if ((Uji_fat.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(Uji_fat.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((Tatimi_fat.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Tatimi_fat.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Pershkrimi_fat == null)) {
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((double)(Malli_Cmimi));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(Data_Shitjes));
+            if ((Pershkrimi == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Pershkrimi_fat));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Pershkrimi));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_ShiID));
-            if ((Original_Rryma_fat.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(Original_Rryma_fat.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Uji_fat.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Original_Uji_fat.Value));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Mid));
+            if ((Original_Malli_Emri == null)) {
+                throw new global::System.ArgumentNullException("Original_Malli_Emri");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Malli_Emri));
             }
-            if ((Original_Tatimi_fat.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_Tatimi_fat.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(ShiID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((double)(Original_Malli_Cmimi));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_Data_Shitjes));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Mid));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1178,8 +1066,8 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<double> Rryma_fat, global::System.Nullable<double> Uji_fat, global::System.Nullable<double> Tatimi_fat, string Pershkrimi_fat, int Original_ShiID, global::System.Nullable<double> Original_Rryma_fat, global::System.Nullable<double> Original_Uji_fat, global::System.Nullable<double> Original_Tatimi_fat) {
-            return this.Update(Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat, Original_ShiID, Original_Rryma_fat, Original_Uji_fat, Original_Tatimi_fat, Original_ShiID);
+        public virtual int Update(string Malli_Emri, double Malli_Cmimi, System.DateTime Data_Shitjes, string Pershkrimi, int Original_Mid, string Original_Malli_Emri, double Original_Malli_Cmimi, System.DateTime Original_Data_Shitjes) {
+            return this.Update(Malli_Emri, Malli_Cmimi, Data_Shitjes, Pershkrimi, Original_Mid, Original_Malli_Emri, Original_Malli_Cmimi, Original_Data_Shitjes, Original_Mid);
         }
     }
     
@@ -1195,7 +1083,7 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         
         private UpdateOrderOption _updateOrder;
         
-        private TableTableAdapter _tableTableAdapter;
+        private TblMalliTableAdapter _tblMalliTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1217,12 +1105,12 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public TableTableAdapter TableTableAdapter {
+        public TblMalliTableAdapter TblMalliTableAdapter {
             get {
-                return this._tableTableAdapter;
+                return this._tblMalliTableAdapter;
             }
             set {
-                this._tableTableAdapter = value;
+                this._tblMalliTableAdapter = value;
             }
         }
         
@@ -1245,9 +1133,9 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._tableTableAdapter != null) 
-                            && (this._tableTableAdapter.Connection != null))) {
-                    return this._tableTableAdapter.Connection;
+                if (((this._tblMalliTableAdapter != null) 
+                            && (this._tblMalliTableAdapter.Connection != null))) {
+                    return this._tblMalliTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1262,7 +1150,7 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._tableTableAdapter != null)) {
+                if ((this._tblMalliTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1274,14 +1162,14 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(RubyDBDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(RubyDBDataSet_Malli dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tableTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tblMalliTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TblMalli.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tableTableAdapter.Update(updatedRows));
+                    result = (result + this._tblMalliTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1293,13 +1181,13 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(RubyDBDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(RubyDBDataSet_Malli dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tableTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tblMalliTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TblMalli.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tableTableAdapter.Update(addedRows));
+                    result = (result + this._tblMalliTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1311,13 +1199,13 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(RubyDBDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(RubyDBDataSet_Malli dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tableTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tblMalliTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TblMalli.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tableTableAdapter.Update(deletedRows));
+                    result = (result + this._tblMalliTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1353,15 +1241,15 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(RubyDBDataSet3 dataSet) {
+        public virtual int UpdateAll(RubyDBDataSet_Malli dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._tableTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tableTableAdapter.Connection) == false))) {
+            if (((this._tblMalliTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tblMalliTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1397,13 +1285,13 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._tableTableAdapter != null)) {
-                    revertConnections.Add(this._tableTableAdapter, this._tableTableAdapter.Connection);
-                    this._tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tableTableAdapter.Adapter);
+                if ((this._tblMalliTableAdapter != null)) {
+                    revertConnections.Add(this._tblMalliTableAdapter, this._tblMalliTableAdapter.Connection);
+                    this._tblMalliTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tblMalliTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tblMalliTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tblMalliTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tblMalliTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1464,9 +1352,9 @@ SELECT ShiID, Rryma_fat, Uji_fat, Tatimi_fat, Pershkrimi_fat FROM [Table] WHERE 
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._tableTableAdapter != null)) {
-                    this._tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tableTableAdapter]));
-                    this._tableTableAdapter.Transaction = null;
+                if ((this._tblMalliTableAdapter != null)) {
+                    this._tblMalliTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tblMalliTableAdapter]));
+                    this._tblMalliTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

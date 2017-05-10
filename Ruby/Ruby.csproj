@@ -96,16 +96,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RubyDBDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RubyDBDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RubyDBDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="RubyDBDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RubyDBDataSet3.xsd</DependentUpon>
-    </Compile>
     <Compile Include="RubyDBDataSet_Furde.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -115,6 +105,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RubyDBDataSet_furde1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RubyDBDataSet_Malli.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RubyDBDataSet_Malli.xsd</DependentUpon>
     </Compile>
     <Compile Include="RubyDBDataSet_Shpenz.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -184,28 +179,6 @@
     <None Include="RubyDBDataSet1.xss">
       <DependentUpon>RubyDBDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="RubyDBDataSet2.xsc">
-      <DependentUpon>RubyDBDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="RubyDBDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RubyDBDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RubyDBDataSet2.xss">
-      <DependentUpon>RubyDBDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="RubyDBDataSet3.xsc">
-      <DependentUpon>RubyDBDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="RubyDBDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RubyDBDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RubyDBDataSet3.xss">
-      <DependentUpon>RubyDBDataSet3.xsd</DependentUpon>
-    </None>
     <None Include="RubyDBDataSet_Furde.xsc">
       <DependentUpon>RubyDBDataSet_Furde.xsd</DependentUpon>
     </None>
@@ -227,6 +200,17 @@
     </None>
     <None Include="RubyDBDataSet_furde1.xss">
       <DependentUpon>RubyDBDataSet_furde1.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_Malli.xsc">
+      <DependentUpon>RubyDBDataSet_Malli.xsd</DependentUpon>
+    </None>
+    <None Include="RubyDBDataSet_Malli.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RubyDBDataSet_Malli.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RubyDBDataSet_Malli.xss">
+      <DependentUpon>RubyDBDataSet_Malli.xsd</DependentUpon>
     </None>
     <None Include="RubyDBDataSet_Shpenz.xsc">
       <DependentUpon>RubyDBDataSet_Shpenz.xsd</DependentUpon>
