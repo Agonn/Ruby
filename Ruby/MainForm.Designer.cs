@@ -285,9 +285,9 @@
             // metroTab
             // 
             this.metroTab.Controls.Add(this.tbShitja);
+            this.metroTab.Controls.Add(this.tbFurde);
             this.metroTab.Controls.Add(this.tbHistoria);
             this.metroTab.Controls.Add(this.tbStatistika);
-            this.metroTab.Controls.Add(this.tbFurde);
             this.metroTab.Controls.Add(this.tbLive);
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
