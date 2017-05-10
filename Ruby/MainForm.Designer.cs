@@ -658,6 +658,8 @@
             // 
             // lblSkaData
             // 
+            this.lblSkaData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSkaData.AutoSize = true;
             this.lblSkaData.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.lblSkaData.FontWeight = MetroFramework.MetroLabelWeight.Bold;
