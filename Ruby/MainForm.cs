@@ -105,10 +105,7 @@ namespace Ruby
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
 
-
-                dgvHistoria.Visible = true;
-          
-
+            dgvHistoria.Visible = true; //Grid visible if there's data
             string theDate = dtpData.Value.ToShortDateString();
             
             lblDataSot.Text = theDate.ToString();
@@ -133,17 +130,10 @@ namespace Ruby
             }
             catch (Exception)
             {
-
-               // MessageBox.Show("Nuk ka shitje per kete date"); //placeholder!
                 lblHistoriaShitje.Text = "N/A";
-                dgvHistoria.Visible = false;
-
-
-
+                dgvHistoria.Visible = false; //Not visible i there is no data in gridview
             }
         }
-
-
 
         private void btnShto_Click_1(object sender, EventArgs e)
         {
@@ -195,16 +185,6 @@ namespace Ruby
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void tbShitja_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpShitje_ValueChanged(object sender, EventArgs e)
-        {
 
         }
     }

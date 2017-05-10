@@ -300,7 +300,6 @@
             this.dtpShitje.Name = "dtpShitje";
             this.dtpShitje.Size = new System.Drawing.Size(224, 29);
             this.dtpShitje.TabIndex = 26;
-            this.dtpShitje.ValueChanged += new System.EventHandler(this.dtpShitje_ValueChanged);
             // 
             // metroLabel6
             // 
