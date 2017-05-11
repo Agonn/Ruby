@@ -60,7 +60,6 @@ namespace Ruby
             this.tblShpenzimetTableAdapter.Fill(this.rubyDBDataSet3.TblShpenzimet);
             this.tblMalliTableAdapter1.Fill(this.rubyDBDataSet_Malli.TblMalli);
             this.tblFurdeTableAdapter.Fill(this.rubyDBDataSet_furde.TblFurde);
-
             this.tblMalliTableAdapter.Fill(this.rubyDBDataSet1.TblMalli);
         }
 
@@ -292,18 +291,18 @@ namespace Ruby
 
         private void dtpFurde_ValueChanged(object sender, EventArgs e)
         {
-            dgvHistoria.Visible = true; //Grid visible if there's data
+            dgvFurde.Visible = true; //Grid visible if there's data
 
 
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
             try
             {
 
-                string queryPerHistorialbl = FunksioniPerFurde(dtpFurde.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
+                string QueryPerFurde = FunksioniPerFurde(dtpFurde.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
 
-                SqlCommand objKomanda3 = new SqlCommand(queryPerHistorialbl, objKonektimi);
+                SqlCommand objKomanda3 = new SqlCommand(QueryPerFurde, objKonektimi);
                 objKonektimi.Open();
-                SqlDataAdapter objAdapteri = new SqlDataAdapter(queryPerHistorialbl, objKonektimi);
+                SqlDataAdapter objAdapteri = new SqlDataAdapter(QueryPerFurde, objKonektimi);
                 DataSet Shenimet = new DataSet();
                 double mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
                 objAdapteri.Fill(Shenimet);
@@ -313,7 +312,7 @@ namespace Ruby
             }
             catch (Exception)
             {
-                dgvFurde.Visible = false; //Not visible i there is no data in gridview
+                dgvFurde.Visible = false;
             }
 
         }
