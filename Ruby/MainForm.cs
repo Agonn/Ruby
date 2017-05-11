@@ -228,6 +228,9 @@ namespace Ruby
             finally
             {
                 objKonektimi.Close();
+                txtSasiaFurde.Clear();
+                txtGramFurde.Clear();
+                txtPershkrimiFurde.Clear();
             }
 
          
@@ -263,6 +266,10 @@ namespace Ruby
             finally
             {
                 objKonektimi.Close();
+                txtShpenzimeRryma.Clear();
+                txtShpenzimeUji.Clear();
+                txtShpenzimeTatimi.Clear();
+                txtShpenzimePershkrimi.Clear();
             }
         }
     }
