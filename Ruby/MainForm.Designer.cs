@@ -271,6 +271,7 @@
             this.CxtMenu.Name = "CxtMenu";
             this.CxtMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CxtMenu.Size = new System.Drawing.Size(122, 104);
+            this.CxtMenu.Opening += new System.ComponentModel.CancelEventHandler(this.CxtMenu_Opening);
             // 
             // toolStripSeparator2
             // 
@@ -558,9 +559,9 @@
             this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel7.Location = new System.Drawing.Point(3, 73);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(50, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(56, 19);
             this.metroLabel7.TabIndex = 15;
-            this.metroLabel7.Text = "Gram:";
+            this.metroLabel7.Text = "Çmimi:";
             // 
             // metroLabel4
             // 
@@ -1077,6 +1078,7 @@
             this.btShtoFurde.TabIndex = 3;
             this.btShtoFurde.Text = "Shto";
             this.btShtoFurde.UseSelectable = true;
+            this.btShtoFurde.Click += new System.EventHandler(this.btShtoFurde_Click);
             // 
             // btShtoShpenzime
             // 
@@ -1087,6 +1089,7 @@
             this.btShtoShpenzime.TabIndex = 8;
             this.btShtoShpenzime.Text = "Shto";
             this.btShtoShpenzime.UseSelectable = true;
+            this.btShtoShpenzime.Click += new System.EventHandler(this.btShtoShpenzime_Click);
             // 
             // txtShpenzimeRryma
             // 

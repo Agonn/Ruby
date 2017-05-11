@@ -189,6 +189,52 @@ namespace Ruby
 
         }
 
+        private void CxtMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
 
+        }
+
+        private void btShtoFurde_Click(object sender, EventArgs e) //Shto Furde buttoni per query 
+        {
+
+            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+            try
+            {
+                double total = double.Parse(txtSasiaFurde.Text) * double.Parse(txtGramFurde.Text);
+
+                string queryPerInsertimFurde = "insert into dbo.tblFurde(Sasia_gr_furde,Cmimi_per_gr_furde,Cmimi_total_furde,Data_blerjes,Pershkrimi) values('" + float.Parse(txtSasiaFurde.Text) + "','" + float.Parse(txtGramFurde.Text) + "','" + total.ToString() + "','" + dtpFurde.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtPershkrimiFurde.Text + "')";
+
+                string queryPerShfaqjeFurde = "SELECT * FROM TblFurde WHERE DATEDIFF(day, TblFurde.Data_blerjes , GETDATE()) = 0";
+
+
+                SqlCommand objKomanda = new SqlCommand(queryPerInsertimFurde, objKonektimi);
+                SqlCommand objKomanda2 = new SqlCommand(queryPerShfaqjeFurde, objKonektimi);
+
+                SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
+                DataSet _Shenimet = new DataSet();
+                objKonektimi.Open();
+                int numri = 0;
+                numri++;
+                int numri_reshtave = objKomanda.ExecuteNonQuery();
+                objAdapteri.Fill(_Shenimet);
+                dgvFurde.DataSource = _Shenimet.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                objKonektimi.Close();
+            }
+
+         
+
+        }
+
+        private void btShtoShpenzime_Click(object sender, EventArgs e)
+        {
+            //Query per shpenzime
+        }
     }
 }
