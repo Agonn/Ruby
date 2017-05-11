@@ -545,7 +545,7 @@
             this.txtPershkrimiFurde.SelectionStart = 0;
             this.txtPershkrimiFurde.ShortcutsEnabled = true;
             this.txtPershkrimiFurde.Size = new System.Drawing.Size(121, 23);
-            this.txtPershkrimiFurde.TabIndex = 26;
+            this.txtPershkrimiFurde.TabIndex = 2;
             this.txtPershkrimiFurde.UseSelectable = true;
             this.txtPershkrimiFurde.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtPershkrimiFurde.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -595,7 +595,7 @@
             this.txtGramFurde.SelectionStart = 0;
             this.txtGramFurde.ShortcutsEnabled = true;
             this.txtGramFurde.Size = new System.Drawing.Size(121, 23);
-            this.txtGramFurde.TabIndex = 14;
+            this.txtGramFurde.TabIndex = 1;
             this.txtGramFurde.UseSelectable = true;
             this.txtGramFurde.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtGramFurde.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -625,7 +625,7 @@
             this.txtSasiaFurde.SelectionStart = 0;
             this.txtSasiaFurde.ShortcutsEnabled = true;
             this.txtSasiaFurde.Size = new System.Drawing.Size(121, 23);
-            this.txtSasiaFurde.TabIndex = 14;
+            this.txtSasiaFurde.TabIndex = 0;
             this.txtSasiaFurde.UseSelectable = true;
             this.txtSasiaFurde.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtSasiaFurde.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1072,7 +1072,7 @@
             this.btShtoFurde.Location = new System.Drawing.Point(98, 142);
             this.btShtoFurde.Name = "btShtoFurde";
             this.btShtoFurde.Size = new System.Drawing.Size(121, 23);
-            this.btShtoFurde.TabIndex = 28;
+            this.btShtoFurde.TabIndex = 3;
             this.btShtoFurde.Text = "Shto";
             this.btShtoFurde.UseSelectable = true;
             // 
@@ -1081,7 +1081,7 @@
             this.btShtoShpenzime.Location = new System.Drawing.Point(98, 467);
             this.btShtoShpenzime.Name = "btShtoShpenzime";
             this.btShtoShpenzime.Size = new System.Drawing.Size(121, 23);
-            this.btShtoShpenzime.TabIndex = 29;
+            this.btShtoShpenzime.TabIndex = 8;
             this.btShtoShpenzime.Text = "Shto";
             this.btShtoShpenzime.UseSelectable = true;
             // 
@@ -1110,7 +1110,7 @@
             this.txtShpenzimeRryma.SelectionStart = 0;
             this.txtShpenzimeRryma.ShortcutsEnabled = true;
             this.txtShpenzimeRryma.Size = new System.Drawing.Size(121, 23);
-            this.txtShpenzimeRryma.TabIndex = 30;
+            this.txtShpenzimeRryma.TabIndex = 4;
             this.txtShpenzimeRryma.UseSelectable = true;
             this.txtShpenzimeRryma.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtShpenzimeRryma.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1140,7 +1140,7 @@
             this.txtShpenzimeUji.SelectionStart = 0;
             this.txtShpenzimeUji.ShortcutsEnabled = true;
             this.txtShpenzimeUji.Size = new System.Drawing.Size(121, 23);
-            this.txtShpenzimeUji.TabIndex = 30;
+            this.txtShpenzimeUji.TabIndex = 5;
             this.txtShpenzimeUji.UseSelectable = true;
             this.txtShpenzimeUji.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtShpenzimeUji.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1170,7 +1170,7 @@
             this.txtShpenzimeTatimi.SelectionStart = 0;
             this.txtShpenzimeTatimi.ShortcutsEnabled = true;
             this.txtShpenzimeTatimi.Size = new System.Drawing.Size(121, 23);
-            this.txtShpenzimeTatimi.TabIndex = 30;
+            this.txtShpenzimeTatimi.TabIndex = 6;
             this.txtShpenzimeTatimi.UseSelectable = true;
             this.txtShpenzimeTatimi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtShpenzimeTatimi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -1240,7 +1240,7 @@
             this.txtShpenzimePershkrimi.SelectionStart = 0;
             this.txtShpenzimePershkrimi.ShortcutsEnabled = true;
             this.txtShpenzimePershkrimi.Size = new System.Drawing.Size(121, 23);
-            this.txtShpenzimePershkrimi.TabIndex = 31;
+            this.txtShpenzimePershkrimi.TabIndex = 7;
             this.txtShpenzimePershkrimi.UseSelectable = true;
             this.txtShpenzimePershkrimi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtShpenzimePershkrimi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
