@@ -103,6 +103,19 @@ namespace Ruby
             return Query;
         }
 
+        string FunksioniPerFurde(string data)
+        {
+            //Funksioni i cili e ndan Stringun
+            //2017-05-08 00:00:00
+            string[] DataSakt = data.Split(new char[] { '-', ' ' });
+
+            //Stringu i Querit qe bohet si perfundim
+            string Query = "Select * from TblFurde Where Data_blerjes >= '" + DataSakt[0] + "-" + DataSakt[3] + "-" + DataSakt[6] + " 00:00:00' AND Data_blerjes <= '" + DataSakt[0] + "-" + DataSakt[3] + "-" + DataSakt[6] + " 23:59:59'";
+
+            //Funksioni kthen qet string
+            return Query;
+        }
+
 
         #endregion
 
@@ -279,8 +292,35 @@ namespace Ruby
 
         private void dtpFurde_ValueChanged(object sender, EventArgs e)
         {
+            dgvHistoria.Visible = true; //Grid visible if there's data
 
-           
+
+            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+            try
+            {
+
+                string queryPerHistorialbl = FunksioniPerFurde(dtpFurde.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
+
+                SqlCommand objKomanda3 = new SqlCommand(queryPerHistorialbl, objKonektimi);
+                objKonektimi.Open();
+                SqlDataAdapter objAdapteri = new SqlDataAdapter(queryPerHistorialbl, objKonektimi);
+                DataSet Shenimet = new DataSet();
+                double mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
+                objAdapteri.Fill(Shenimet);
+                dgvFurde.DataSource = Shenimet.Tables[0];
+                lblHistoriaShitje.Text = mySum.ToString() + "€";
+                objKonektimi.Close();
+            }
+            catch (Exception)
+            {
+                dgvFurde.Visible = false; //Not visible i there is no data in gridview
+            }
+
+        }
+
+        private void dtpShitje_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
