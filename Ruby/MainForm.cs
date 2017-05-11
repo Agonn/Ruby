@@ -232,9 +232,36 @@ namespace Ruby
 
         }
 
-        private void btShtoShpenzime_Click(object sender, EventArgs e)
+        private void btShtoShpenzime_Click(object sender, EventArgs e) //Query per shpenzime
         {
-            //Query per shpenzime
+            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+            try
+            {
+
+                string queryPerInsertimShpenzime = "insert into TblShpenzimet(Rryma_fat,Uji_fat,Tatimi_fat,Data_fatures,Pershkrimi) values ('" + float.Parse(txtShpenzimeRryma.Text) + "','" + float.Parse(txtShpenzimeUji.Text) + "','" + float.Parse(txtShpenzimeTatimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtShpenzimePershkrimi.Text + "')";
+
+                string queryPerShfaqjeShpenzime = "SELECT * FROM TblShpenzimet WHERE DATEDIFF(day, Data_fatures , GETDATE()) = 0";
+
+                SqlCommand objKomanda = new SqlCommand(queryPerInsertimShpenzime, objKonektimi);
+                SqlCommand objKomanda2 = new SqlCommand(queryPerShfaqjeShpenzime, objKonektimi);
+
+                SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
+                DataSet _Shenimet = new DataSet();
+                objKonektimi.Open();
+                int numri = 0;
+                numri++;
+                int numri_reshtave = objKomanda.ExecuteNonQuery();
+                objAdapteri.Fill(_Shenimet);
+                dgvShpenzimet.DataSource = _Shenimet.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                objKonektimi.Close();
+            }
         }
     }
 }

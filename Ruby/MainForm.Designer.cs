@@ -124,6 +124,8 @@
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.txtShpenzimePershkrimi = new MetroFramework.Controls.MetroTextBox();
             this.dtpFurde = new MetroFramework.Controls.MetroDateTime();
+            this.rubyDBDataSet2 = new Ruby.RubyDBDataSet2();
+            this.tblShpenzimetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -147,6 +149,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet_malli_shitje)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShpenzimetBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -1267,6 +1271,16 @@
             this.dtpFurde.Size = new System.Drawing.Size(224, 29);
             this.dtpFurde.TabIndex = 28;
             // 
+            // rubyDBDataSet2
+            // 
+            this.rubyDBDataSet2.DataSetName = "RubyDBDataSet2";
+            this.rubyDBDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblShpenzimetBindingSource1
+            // 
+            this.tblShpenzimetBindingSource1.DataMember = "Tbl.Shpenzimet";
+            this.tblShpenzimetBindingSource1.DataSource = this.rubyDBDataSet2;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1309,6 +1323,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet_malli_shitje)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShpenzimetBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1408,6 +1424,8 @@
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroDateTime dtpFurde;
+        private System.Windows.Forms.BindingSource tblShpenzimetBindingSource1;
+        private RubyDBDataSet2 rubyDBDataSet2;
     }
 }
 
