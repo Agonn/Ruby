@@ -123,6 +123,7 @@
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.txtShpenzimePershkrimi = new MetroFramework.Controls.MetroTextBox();
+            this.dtpFurde = new MetroFramework.Controls.MetroDateTime();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -479,6 +480,7 @@
             // 
             // tbFurde
             // 
+            this.tbFurde.Controls.Add(this.dtpFurde);
             this.tbFurde.Controls.Add(this.txtShpenzimePershkrimi);
             this.tbFurde.Controls.Add(this.txtShpenzimeTatimi);
             this.tbFurde.Controls.Add(this.txtShpenzimeUji);
@@ -1079,7 +1081,7 @@
             // btShtoShpenzime
             // 
             this.btShtoShpenzime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btShtoShpenzime.Location = new System.Drawing.Point(98, 467);
+            this.btShtoShpenzime.Location = new System.Drawing.Point(98, 463);
             this.btShtoShpenzime.Name = "btShtoShpenzime";
             this.btShtoShpenzime.Size = new System.Drawing.Size(121, 23);
             this.btShtoShpenzime.TabIndex = 8;
@@ -1254,6 +1256,14 @@
             this.txtShpenzimePershkrimi.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtShpenzimePershkrimi.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // dtpFurde
+            // 
+            this.dtpFurde.Location = new System.Drawing.Point(454, 3);
+            this.dtpFurde.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpFurde.Name = "dtpFurde";
+            this.dtpFurde.Size = new System.Drawing.Size(224, 29);
+            this.dtpFurde.TabIndex = 28;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1394,6 +1404,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroDateTime dtpFurde;
     }
 }
 
