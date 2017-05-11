@@ -67,12 +67,6 @@
             this.txtGramFurde = new MetroFramework.Controls.MetroTextBox();
             this.txtSasiaFurde = new MetroFramework.Controls.MetroTextBox();
             this.dgvShpenzimet = new System.Windows.Forms.DataGridView();
-            this.shiIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rrymafatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ujifatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tatimifatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datafaturesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pershkrimiDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblShpenzimetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rubyDBDataSet_shpenz = new Ruby.RubyDBDataSet_shpenz();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
@@ -126,6 +120,15 @@
             this.dtpFurde = new MetroFramework.Controls.MetroDateTime();
             this.rubyDBDataSet2 = new Ruby.RubyDBDataSet2();
             this.tblShpenzimetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pershkrimiDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datafaturesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tatimifatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ujifatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rrymafatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shiIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rubyDBDataSet3 = new Ruby.RubyDBDataSet3();
+            this.tblShpenzimetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblShpenzimetTableAdapter = new Ruby.RubyDBDataSet3TableAdapters.TblShpenzimetTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -151,6 +154,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet_malli_shitje)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblShpenzimetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShpenzimetBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbMalli
@@ -651,7 +656,7 @@
             this.tatimifatDataGridViewTextBoxColumn,
             this.datafaturesDataGridViewTextBoxColumn,
             this.pershkrimiDataGridViewTextBoxColumn3});
-            this.dgvShpenzimet.DataSource = this.tblShpenzimetBindingSource;
+            this.dgvShpenzimet.DataSource = this.tblShpenzimetBindingSource2;
             this.dgvShpenzimet.Location = new System.Drawing.Point(684, 317);
             this.dgvShpenzimet.Name = "dgvShpenzimet";
             this.dgvShpenzimet.ReadOnly = true;
@@ -660,50 +665,6 @@
             this.dgvShpenzimet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvShpenzimet.Size = new System.Drawing.Size(541, 291);
             this.dgvShpenzimet.TabIndex = 9;
-            // 
-            // shiIDDataGridViewTextBoxColumn
-            // 
-            this.shiIDDataGridViewTextBoxColumn.DataPropertyName = "ShiID";
-            this.shiIDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.shiIDDataGridViewTextBoxColumn.Name = "shiIDDataGridViewTextBoxColumn";
-            this.shiIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.shiIDDataGridViewTextBoxColumn.Width = 30;
-            // 
-            // rrymafatDataGridViewTextBoxColumn
-            // 
-            this.rrymafatDataGridViewTextBoxColumn.DataPropertyName = "Rryma_fat";
-            this.rrymafatDataGridViewTextBoxColumn.HeaderText = "Rryma";
-            this.rrymafatDataGridViewTextBoxColumn.Name = "rrymafatDataGridViewTextBoxColumn";
-            this.rrymafatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // ujifatDataGridViewTextBoxColumn
-            // 
-            this.ujifatDataGridViewTextBoxColumn.DataPropertyName = "Uji_fat";
-            this.ujifatDataGridViewTextBoxColumn.HeaderText = "Uji";
-            this.ujifatDataGridViewTextBoxColumn.Name = "ujifatDataGridViewTextBoxColumn";
-            this.ujifatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tatimifatDataGridViewTextBoxColumn
-            // 
-            this.tatimifatDataGridViewTextBoxColumn.DataPropertyName = "Tatimi_fat";
-            this.tatimifatDataGridViewTextBoxColumn.HeaderText = "Tatimi";
-            this.tatimifatDataGridViewTextBoxColumn.Name = "tatimifatDataGridViewTextBoxColumn";
-            this.tatimifatDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // datafaturesDataGridViewTextBoxColumn
-            // 
-            this.datafaturesDataGridViewTextBoxColumn.DataPropertyName = "Data_fatures";
-            this.datafaturesDataGridViewTextBoxColumn.HeaderText = "Data";
-            this.datafaturesDataGridViewTextBoxColumn.Name = "datafaturesDataGridViewTextBoxColumn";
-            this.datafaturesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pershkrimiDataGridViewTextBoxColumn3
-            // 
-            this.pershkrimiDataGridViewTextBoxColumn3.DataPropertyName = "Pershkrimi";
-            this.pershkrimiDataGridViewTextBoxColumn3.HeaderText = "Përshkrimi";
-            this.pershkrimiDataGridViewTextBoxColumn3.Name = "pershkrimiDataGridViewTextBoxColumn3";
-            this.pershkrimiDataGridViewTextBoxColumn3.ReadOnly = true;
-            this.pershkrimiDataGridViewTextBoxColumn3.Width = 130;
             // 
             // tblShpenzimetBindingSource
             // 
@@ -1281,6 +1242,64 @@
             this.tblShpenzimetBindingSource1.DataMember = "Tbl.Shpenzimet";
             this.tblShpenzimetBindingSource1.DataSource = this.rubyDBDataSet2;
             // 
+            // pershkrimiDataGridViewTextBoxColumn3
+            // 
+            this.pershkrimiDataGridViewTextBoxColumn3.DataPropertyName = "Pershkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn3.HeaderText = "Përshkrimi";
+            this.pershkrimiDataGridViewTextBoxColumn3.Name = "pershkrimiDataGridViewTextBoxColumn3";
+            this.pershkrimiDataGridViewTextBoxColumn3.ReadOnly = true;
+            this.pershkrimiDataGridViewTextBoxColumn3.Width = 130;
+            // 
+            // datafaturesDataGridViewTextBoxColumn
+            // 
+            this.datafaturesDataGridViewTextBoxColumn.DataPropertyName = "Data_fatures";
+            this.datafaturesDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.datafaturesDataGridViewTextBoxColumn.Name = "datafaturesDataGridViewTextBoxColumn";
+            this.datafaturesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tatimifatDataGridViewTextBoxColumn
+            // 
+            this.tatimifatDataGridViewTextBoxColumn.DataPropertyName = "Tatimi_fat";
+            this.tatimifatDataGridViewTextBoxColumn.HeaderText = "Tatimi";
+            this.tatimifatDataGridViewTextBoxColumn.Name = "tatimifatDataGridViewTextBoxColumn";
+            this.tatimifatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ujifatDataGridViewTextBoxColumn
+            // 
+            this.ujifatDataGridViewTextBoxColumn.DataPropertyName = "Uji_fat";
+            this.ujifatDataGridViewTextBoxColumn.HeaderText = "Uji";
+            this.ujifatDataGridViewTextBoxColumn.Name = "ujifatDataGridViewTextBoxColumn";
+            this.ujifatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rrymafatDataGridViewTextBoxColumn
+            // 
+            this.rrymafatDataGridViewTextBoxColumn.DataPropertyName = "Rryma_fat";
+            this.rrymafatDataGridViewTextBoxColumn.HeaderText = "Rryma";
+            this.rrymafatDataGridViewTextBoxColumn.Name = "rrymafatDataGridViewTextBoxColumn";
+            this.rrymafatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // shiIDDataGridViewTextBoxColumn
+            // 
+            this.shiIDDataGridViewTextBoxColumn.DataPropertyName = "ShiID";
+            this.shiIDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.shiIDDataGridViewTextBoxColumn.Name = "shiIDDataGridViewTextBoxColumn";
+            this.shiIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.shiIDDataGridViewTextBoxColumn.Width = 30;
+            // 
+            // rubyDBDataSet3
+            // 
+            this.rubyDBDataSet3.DataSetName = "RubyDBDataSet3";
+            this.rubyDBDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblShpenzimetBindingSource2
+            // 
+            this.tblShpenzimetBindingSource2.DataMember = "TblShpenzimet";
+            this.tblShpenzimetBindingSource2.DataSource = this.rubyDBDataSet3;
+            // 
+            // tblShpenzimetTableAdapter
+            // 
+            this.tblShpenzimetTableAdapter.ClearBeforeFill = true;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1325,6 +1344,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet_malli_shitje)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblShpenzimetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblShpenzimetBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1386,12 +1407,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datablerjesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn2;
         private RubyDBDataSet1 rubyDBDataSet1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shiIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rrymafatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ujifatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tatimifatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datafaturesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn3;
         private RubyDBDataSet_Malli rubyDBDataSet_Malli;
         private System.Windows.Forms.BindingSource tblMalliBindingSource1;
         private RubyDBDataSet_MalliTableAdapters.TblMalliTableAdapter tblMalliTableAdapter1;
@@ -1426,6 +1441,15 @@
         private MetroFramework.Controls.MetroDateTime dtpFurde;
         private System.Windows.Forms.BindingSource tblShpenzimetBindingSource1;
         private RubyDBDataSet2 rubyDBDataSet2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shiIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rrymafatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ujifatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tatimifatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datafaturesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn3;
+        private RubyDBDataSet3 rubyDBDataSet3;
+        private System.Windows.Forms.BindingSource tblShpenzimetBindingSource2;
+        private RubyDBDataSet3TableAdapters.TblShpenzimetTableAdapter tblShpenzimetTableAdapter;
     }
 }
 

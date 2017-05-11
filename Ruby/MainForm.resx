@@ -132,11 +132,11 @@
   <metadata name="rubyDBDataSet_Malli.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>574, 59</value>
   </metadata>
-  <metadata name="tblShpenzimetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>365, 59</value>
+  <metadata name="tblShpenzimetBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 137</value>
   </metadata>
-  <metadata name="rubyDBDataSet_shpenz.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>187, 59</value>
+  <metadata name="rubyDBDataSet3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>751, 98</value>
   </metadata>
   <metadata name="tblFurdeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>997, 20</value>
@@ -6320,6 +6320,12 @@
         AAD8PwAA/b8AAP//AAD9vwAA//8AANvbAADZmwAA//8AAPZvAAD6XwAA//8AAP//AAA=
 </value>
   </data>
+  <metadata name="tblShpenzimetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>365, 59</value>
+  </metadata>
+  <metadata name="rubyDBDataSet_shpenz.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>187, 59</value>
+  </metadata>
   <metadata name="tblMalliBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>492, 20</value>
   </metadata>
@@ -6346,5 +6352,8 @@
   </metadata>
   <metadata name="tblShpenzimetBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>535, 98</value>
+  </metadata>
+  <metadata name="tblShpenzimetTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>233, 137</value>
   </metadata>
 </root>
