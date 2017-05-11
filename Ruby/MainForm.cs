@@ -102,6 +102,8 @@ namespace Ruby
             //Funksioni kthen qet string
             return Query;
         }
+
+
         #endregion
 
 
@@ -271,6 +273,14 @@ namespace Ruby
                 txtShpenzimeTatimi.Clear();
                 txtShpenzimePershkrimi.Clear();
             }
+        }
+
+
+
+        private void dtpFurde_ValueChanged(object sender, EventArgs e)
+        {
+
+           
         }
     }
 }
