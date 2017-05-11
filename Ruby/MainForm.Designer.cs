@@ -652,7 +652,7 @@
             this.dgvShpenzimet.RowHeadersVisible = false;
             this.dgvShpenzimet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvShpenzimet.Size = new System.Drawing.Size(541, 291);
-            this.dgvShpenzimet.TabIndex = 6;
+            this.dgvShpenzimet.TabIndex = 9;
             // 
             // shiIDDataGridViewTextBoxColumn
             // 
@@ -1078,6 +1078,7 @@
             // 
             // btShtoShpenzime
             // 
+            this.btShtoShpenzime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btShtoShpenzime.Location = new System.Drawing.Point(98, 467);
             this.btShtoShpenzime.Name = "btShtoShpenzime";
             this.btShtoShpenzime.Size = new System.Drawing.Size(121, 23);
@@ -1087,6 +1088,7 @@
             // 
             // txtShpenzimeRryma
             // 
+            this.txtShpenzimeRryma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             // 
             // 
             // 
@@ -1117,6 +1119,7 @@
             // 
             // txtShpenzimeUji
             // 
+            this.txtShpenzimeUji.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             // 
             // 
             // 
@@ -1147,6 +1150,7 @@
             // 
             // txtShpenzimeTatimi
             // 
+            this.txtShpenzimeTatimi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             // 
             // 
             // 
@@ -1177,6 +1181,7 @@
             // 
             // metroLabel9
             // 
+            this.metroLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel9.Location = new System.Drawing.Point(3, 339);
@@ -1187,6 +1192,7 @@
             // 
             // metroLabel10
             // 
+            this.metroLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel10.Location = new System.Drawing.Point(2, 368);
@@ -1197,6 +1203,7 @@
             // 
             // metroLabel11
             // 
+            this.metroLabel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.metroLabel11.AutoSize = true;
             this.metroLabel11.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel11.Location = new System.Drawing.Point(0, 397);
@@ -1207,6 +1214,7 @@
             // 
             // metroLabel12
             // 
+            this.metroLabel12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.metroLabel12.AutoSize = true;
             this.metroLabel12.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel12.Location = new System.Drawing.Point(-1, 427);
@@ -1217,6 +1225,7 @@
             // 
             // txtShpenzimePershkrimi
             // 
+            this.txtShpenzimePershkrimi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             // 
             // 
             // 
