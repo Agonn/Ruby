@@ -309,7 +309,7 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 0;
+            this.metroTab.SelectedIndex = 1;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -882,7 +882,7 @@
             this.txtPershkrimiFurde.CustomButton.UseSelectable = true;
             this.txtPershkrimiFurde.CustomButton.Visible = false;
             this.txtPershkrimiFurde.Lines = new string[0];
-            this.txtPershkrimiFurde.Location = new System.Drawing.Point(98, 104);
+            this.txtPershkrimiFurde.Location = new System.Drawing.Point(98, 106);
             this.txtPershkrimiFurde.MaxLength = 32767;
             this.txtPershkrimiFurde.Name = "txtPershkrimiFurde";
             this.txtPershkrimiFurde.PasswordChar = '\0';
@@ -943,7 +943,7 @@
             this.txtGramFurde.CustomButton.UseSelectable = true;
             this.txtGramFurde.CustomButton.Visible = false;
             this.txtGramFurde.Lines = new string[0];
-            this.txtGramFurde.Location = new System.Drawing.Point(98, 69);
+            this.txtGramFurde.Location = new System.Drawing.Point(98, 73);
             this.txtGramFurde.MaxLength = 32767;
             this.txtGramFurde.Name = "txtGramFurde";
             this.txtGramFurde.PasswordChar = '\0';
