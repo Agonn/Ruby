@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.cmbMalli = new MetroFramework.Controls.MetroComboBox();
             this.txtCmimi = new MetroFramework.Controls.MetroTextBox();
@@ -36,12 +41,10 @@
             this.dtpData = new MetroFramework.Controls.MetroDateTime();
             this.Malli = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroStyle = new MetroFramework.Components.MetroStyleManager();
+            this.metroStyle = new MetroFramework.Components.MetroStyleManager(this.components);
             this.CxtMenu = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.historikuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statistikaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kameraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
@@ -56,7 +59,7 @@
             this.malliCmimiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataShitjesDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pershkrimiDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblMalliBindingSource2 = new System.Windows.Forms.BindingSource();
+            this.tblMalliBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.rubyDBDataSet_Malli = new Ruby.RubyDBDataSet_Malli();
             this.tbHistoria = new MetroFramework.Controls.MetroTabPage();
             this.dgvHistoria = new System.Windows.Forms.DataGridView();
@@ -65,7 +68,7 @@
             this.malliCmimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataShitjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pershkrimiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblMalliBindingSource1 = new System.Windows.Forms.BindingSource();
+            this.tblMalliBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.lblShpenzime = new MetroFramework.Controls.MetroLabel();
             this.lblShitje = new MetroFramework.Controls.MetroLabel();
             this.lblHistoriaShitje = new MetroFramework.Controls.MetroLabel();
@@ -98,7 +101,7 @@
             this.tatimifatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datafaturesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pershkrimiDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblShpenzimetBindingSource2 = new System.Windows.Forms.BindingSource();
+            this.tblShpenzimetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.rubyDBDataSet3 = new Ruby.RubyDBDataSet3();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.dgvFurde = new System.Windows.Forms.DataGridView();
@@ -108,15 +111,13 @@
             this.cmimitotalfurdeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datablerjesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pershkrimiDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblFurdeBindingSource = new System.Windows.Forms.BindingSource();
+            this.tblFurdeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rubyDBDataSet_furde = new Ruby.RubyDBDataSet_furde();
-            this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
-            this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
             this.tbLive = new MetroFramework.Controls.MetroTabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.tblShpenzimetBindingSource = new System.Windows.Forms.BindingSource();
+            this.tblShpenzimetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rubyDBDataSet_shpenz = new Ruby.RubyDBDataSet_shpenz();
-            this.tblMalliBindingSource = new System.Windows.Forms.BindingSource();
+            this.tblMalliBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rubyDBDataSet = new Ruby.RubyDBDataSet();
             this.tblMalliTableAdapter = new Ruby.RubyDBDataSet1TableAdapters.TblMalliTableAdapter();
             this.tblFurdeTableAdapter = new Ruby.RubyDBDataSet_furdeTableAdapters.TblFurdeTableAdapter();
@@ -124,7 +125,7 @@
             this.tblMalliTableAdapter1 = new Ruby.RubyDBDataSet_MalliTableAdapters.TblMalliTableAdapter();
             this.rubyDBDataSet_malli_shitje = new Ruby.RubyDBDataSet_malli_shitje();
             this.rubyDBDataSet2 = new Ruby.RubyDBDataSet2();
-            this.tblShpenzimetBindingSource1 = new System.Windows.Forms.BindingSource();
+            this.tblShpenzimetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblShpenzimetTableAdapter = new Ruby.RubyDBDataSet3TableAdapters.TblShpenzimetTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
@@ -143,7 +144,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFurde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFurdeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet_furde)).BeginInit();
-            this.tbStatistika.SuspendLayout();
             this.tbLive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblShpenzimetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet_shpenz)).BeginInit();
@@ -231,7 +231,7 @@
             // 
             this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpData.Location = new System.Drawing.Point(454, 3);
-            this.dtpData.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(224, 29);
             this.dtpData.TabIndex = 1;
@@ -269,48 +269,34 @@
             this.CxtMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripSeparator2,
             this.historikuToolStripMenuItem,
-            this.statistikaToolStripMenuItem,
-            this.kameraToolStripMenuItem,
             this.toolStripSeparator1,
             this.logOutToolStripMenuItem});
             this.CxtMenu.MouseState = MaterialSkin.MouseState.HOVER;
             this.CxtMenu.Name = "CxtMenu";
             this.CxtMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CxtMenu.Size = new System.Drawing.Size(122, 104);
+            this.CxtMenu.Size = new System.Drawing.Size(116, 60);
             this.CxtMenu.Opening += new System.ComponentModel.CancelEventHandler(this.CxtMenu_Opening);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(118, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(112, 6);
             // 
             // historikuToolStripMenuItem
             // 
             this.historikuToolStripMenuItem.Name = "historikuToolStripMenuItem";
-            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.historikuToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.historikuToolStripMenuItem.Text = "Historia";
-            // 
-            // statistikaToolStripMenuItem
-            // 
-            this.statistikaToolStripMenuItem.Name = "statistikaToolStripMenuItem";
-            this.statistikaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.statistikaToolStripMenuItem.Text = "Statistika";
-            // 
-            // kameraToolStripMenuItem
-            // 
-            this.kameraToolStripMenuItem.Name = "kameraToolStripMenuItem";
-            this.kameraToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.kameraToolStripMenuItem.Text = "Kamera";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(118, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(112, 6);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.logOutToolStripMenuItem.Text = "Çkyqu";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
@@ -319,12 +305,11 @@
             this.metroTab.Controls.Add(this.tbShitja);
             this.metroTab.Controls.Add(this.tbFurde);
             this.metroTab.Controls.Add(this.tbHistoria);
-            this.metroTab.Controls.Add(this.tbStatistika);
             this.metroTab.Controls.Add(this.tbLive);
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 2;
+            this.metroTab.SelectedIndex = 1;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -360,7 +345,7 @@
             this.dtpShitje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpShitje.Enabled = false;
             this.dtpShitje.Location = new System.Drawing.Point(454, 3);
-            this.dtpShitje.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpShitje.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpShitje.Name = "dtpShitje";
             this.dtpShitje.Size = new System.Drawing.Size(224, 29);
             this.dtpShitje.TabIndex = 26;
@@ -434,6 +419,9 @@
             this.dgvShitja.ReadOnly = true;
             this.dgvShitja.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvShitja.RowHeadersVisible = false;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvShitja.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvShitja.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvShitja.Size = new System.Drawing.Size(541, 620);
             this.dgvShitja.TabIndex = 5;
@@ -528,6 +516,8 @@
             this.dgvHistoria.ReadOnly = true;
             this.dgvHistoria.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvHistoria.RowHeadersVisible = false;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            this.dgvHistoria.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHistoria.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvHistoria.Size = new System.Drawing.Size(541, 620);
             this.dgvHistoria.TabIndex = 3;
@@ -682,7 +672,7 @@
             // dtpFurde
             // 
             this.dtpFurde.Location = new System.Drawing.Point(454, 3);
-            this.dtpFurde.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpFurde.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpFurde.Name = "dtpFurde";
             this.dtpFurde.Size = new System.Drawing.Size(224, 29);
             this.dtpFurde.TabIndex = 28;
@@ -829,7 +819,7 @@
             this.btShtoFurde.Name = "btShtoFurde";
             this.btShtoFurde.Size = new System.Drawing.Size(121, 23);
             this.btShtoFurde.TabIndex = 3;
-            this.btShtoFurde.Text = "Shto";
+            this.btShtoFurde.Text = "Shto furde";
             this.btShtoFurde.UseSelectable = true;
             this.btShtoFurde.Click += new System.EventHandler(this.btShtoFurde_Click);
             // 
@@ -1017,6 +1007,8 @@
             this.dgvShpenzimet.ReadOnly = true;
             this.dgvShpenzimet.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvShpenzimet.RowHeadersVisible = false;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            this.dgvShpenzimet.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvShpenzimet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvShpenzimet.Size = new System.Drawing.Size(541, 291);
             this.dgvShpenzimet.TabIndex = 9;
@@ -1107,6 +1099,8 @@
             this.dgvFurde.ReadOnly = true;
             this.dgvFurde.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvFurde.RowHeadersVisible = false;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            this.dgvFurde.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFurde.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvFurde.Size = new System.Drawing.Size(541, 291);
             this.dgvFurde.TabIndex = 2;
@@ -1164,37 +1158,6 @@
             // 
             this.rubyDBDataSet_furde.DataSetName = "RubyDBDataSet_furde";
             this.rubyDBDataSet_furde.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbStatistika
-            // 
-            this.tbStatistika.Controls.Add(this.cmbStatistika);
-            this.tbStatistika.HorizontalScrollbarBarColor = true;
-            this.tbStatistika.HorizontalScrollbarHighlightOnWheel = false;
-            this.tbStatistika.HorizontalScrollbarSize = 10;
-            this.tbStatistika.Location = new System.Drawing.Point(4, 38);
-            this.tbStatistika.Name = "tbStatistika";
-            this.tbStatistika.Size = new System.Drawing.Size(1225, 600);
-            this.tbStatistika.TabIndex = 2;
-            this.tbStatistika.Text = "Statistika";
-            this.tbStatistika.VerticalScrollbarBarColor = true;
-            this.tbStatistika.VerticalScrollbarHighlightOnWheel = false;
-            this.tbStatistika.VerticalScrollbarSize = 10;
-            // 
-            // cmbStatistika
-            // 
-            this.cmbStatistika.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cmbStatistika.FormattingEnabled = true;
-            this.cmbStatistika.ItemHeight = 23;
-            this.cmbStatistika.Items.AddRange(new object[] {
-            "Sot",
-            "Java ",
-            "Muaji",
-            "Viti"});
-            this.cmbStatistika.Location = new System.Drawing.Point(1149, 3);
-            this.cmbStatistika.Name = "cmbStatistika";
-            this.cmbStatistika.Size = new System.Drawing.Size(73, 29);
-            this.cmbStatistika.TabIndex = 10;
-            this.cmbStatistika.UseSelectable = true;
             // 
             // tbLive
             // 
@@ -1313,7 +1276,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFurde)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFurdeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet_furde)).EndInit();
-            this.tbStatistika.ResumeLayout(false);
             this.tbLive.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblShpenzimetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet_shpenz)).EndInit();
@@ -1338,20 +1300,16 @@
         private MetroFramework.Components.MetroStyleManager metroStyle;
         private MaterialSkin.Controls.MaterialContextMenuStrip CxtMenu;
         private System.Windows.Forms.ToolStripMenuItem historikuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem statistikaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kameraToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private MetroFramework.Controls.MetroTabPage tbShitja;
         private MetroFramework.Controls.MetroTabPage tbHistoria;
-        private MetroFramework.Controls.MetroTabPage tbStatistika;
         private System.Windows.Forms.DataGridView dgvShitja;
         private MetroFramework.Controls.MetroLabel lblDataSot;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lblShpenzime;
         private MetroFramework.Controls.MetroLabel lblShitje;
-        private MetroFramework.Controls.MetroComboBox cmbStatistika;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private MetroFramework.Controls.MetroTabControl metroTab;
         private MetroFramework.Controls.MetroLabel lblmShenimet;

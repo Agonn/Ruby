@@ -15,7 +15,6 @@ namespace Ruby
         {
 
             InitializeComponent();
-            cmbStatistika.SelectedIndex = 0; //Statistika data te jete SOT.
             dtpData.Value = DateTime.Today.AddDays(-1); //Yesterday for Historia
 
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
