@@ -119,7 +119,6 @@ namespace Ruby
 
         #endregion
 
-
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
 
@@ -288,8 +287,6 @@ namespace Ruby
             }
         }
 
-
-
         private void dtpFurde_ValueChanged(object sender, EventArgs e)
         {
             dgvFurde.Visible = true; //Grid visible if there's data
@@ -323,9 +320,5 @@ namespace Ruby
 
         }
 
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-            //www.bullionvault.com/gold-price-chart.do
-        }
     }
 }
