@@ -3,7 +3,9 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data;
 using System.Data.SqlClient;
-
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System.IO;
 
 namespace Ruby
 {
