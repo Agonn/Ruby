@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Ruby")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("rg-adguard")]
+[assembly: AssemblyCompany("Ruby")]
 [assembly: AssemblyProduct("Ruby")]
-[assembly: AssemblyCopyright("Copyright © rg-adguard 2017")]
+[assembly: AssemblyCopyright("Copyright © Ruby 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
