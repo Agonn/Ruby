@@ -113,8 +113,6 @@
             this.lblSkaData = new MetroFramework.Controls.MetroLabel();
             this.tbStatistika = new MetroFramework.Controls.MetroTabPage();
             this.cmbStatistika = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.lblHyrje = new MetroFramework.Controls.MetroLabel();
             this.tbLive = new MetroFramework.Controls.MetroTabPage();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tblShpenzimetBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -363,7 +361,7 @@
             this.dtpShitje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpShitje.Enabled = false;
             this.dtpShitje.Location = new System.Drawing.Point(454, 3);
-            this.dtpShitje.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpShitje.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpShitje.Name = "dtpShitje";
             this.dtpShitje.Size = new System.Drawing.Size(224, 29);
             this.dtpShitje.TabIndex = 26;
@@ -1171,8 +1169,6 @@
             // tbStatistika
             // 
             this.tbStatistika.Controls.Add(this.cmbStatistika);
-            this.tbStatistika.Controls.Add(this.metroLabel5);
-            this.tbStatistika.Controls.Add(this.lblHyrje);
             this.tbStatistika.HorizontalScrollbarBarColor = true;
             this.tbStatistika.HorizontalScrollbarHighlightOnWheel = false;
             this.tbStatistika.HorizontalScrollbarSize = 10;
@@ -1200,26 +1196,6 @@
             this.cmbStatistika.Size = new System.Drawing.Size(73, 29);
             this.cmbStatistika.TabIndex = 10;
             this.cmbStatistika.UseSelectable = true;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel5.Location = new System.Drawing.Point(2, 68);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(86, 19);
-            this.metroLabel5.TabIndex = 14;
-            this.metroLabel5.Text = "Shpenzime:";
-            // 
-            // lblHyrje
-            // 
-            this.lblHyrje.AutoSize = true;
-            this.lblHyrje.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblHyrje.Location = new System.Drawing.Point(2, 26);
-            this.lblHyrje.Name = "lblHyrje";
-            this.lblHyrje.Size = new System.Drawing.Size(50, 19);
-            this.lblHyrje.TabIndex = 14;
-            this.lblHyrje.Text = "Hyrje:";
             // 
             // tbLive
             // 
@@ -1339,7 +1315,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblMalliBindingSource1)).EndInit();
             this.tbStatistika.ResumeLayout(false);
-            this.tbStatistika.PerformLayout();
             this.tbLive.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tblShpenzimetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyDBDataSet_shpenz)).EndInit();
@@ -1377,8 +1352,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel lblShpenzime;
         private MetroFramework.Controls.MetroLabel lblShitje;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel lblHyrje;
         private MetroFramework.Controls.MetroComboBox cmbStatistika;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private MetroFramework.Controls.MetroTabControl metroTab;
