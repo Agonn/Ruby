@@ -3,9 +3,6 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data;
 using System.Data.SqlClient;
-using iTextSharp.text.pdf;
-using iTextSharp.text;
-using System.IO;
 
 namespace Ruby
 {
@@ -23,14 +20,19 @@ namespace Ruby
 
             string queryPerdgvShitja = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";
 
+            string queryPerdgvFurdeSot = "SELECT * FROM TblFurde WHERE DATEDIFF(day, TblFurde.Data_blerjes , GETDATE()) = 0";
+
             SqlCommand objKomanda2 = new SqlCommand(queryPerdgvShitja, objKonektimi);
-
-
-
             SqlDataAdapter objAdapteri2 = new SqlDataAdapter(objKomanda2);
             DataSet _Shenimet = new DataSet();
             objAdapteri2.Fill(_Shenimet);
             dgvShitja.DataSource = _Shenimet.Tables[0];
+
+            SqlCommand objKomandaFurde = new SqlCommand(queryPerdgvFurdeSot, objKonektimi);
+            SqlDataAdapter objAdapteriFurde = new SqlDataAdapter(objKomandaFurde);
+            DataSet Furde = new DataSet();
+            objAdapteriFurde.Fill(Furde);
+            dgvFurde.DataSource = Furde.Tables[0];
 
             try
             {
@@ -116,6 +118,8 @@ namespace Ruby
             //Funksioni kthen qet string
             return Query;
         }
+
+
 
 
         #endregion
@@ -296,7 +300,6 @@ namespace Ruby
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
             try
             {
-
                 string QueryPerFurde = FunksioniPerFurde(dtpFurde.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
 
                 SqlCommand objKomanda3 = new SqlCommand(QueryPerFurde, objKonektimi);
@@ -313,11 +316,6 @@ namespace Ruby
             {
                 dgvFurde.Visible = false;
             }
-
-        }
-
-        private void dtpShitje_ValueChanged(object sender, EventArgs e)
-        {
 
         }
 
