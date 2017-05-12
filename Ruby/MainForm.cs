@@ -259,7 +259,7 @@ namespace Ruby
 
                 string queryPerInsertimShpenzime = "insert into TblShpenzimet(Rryma_fat,Uji_fat,Tatimi_fat,Data_fatures,Pershkrimi) values ('" + float.Parse(txtShpenzimeRryma.Text) + "','" + float.Parse(txtShpenzimeUji.Text) + "','" + float.Parse(txtShpenzimeTatimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtShpenzimePershkrimi.Text + "')";
 
-                string queryPerShfaqjeShpenzime = "SELECT * FROM TblShpenzimet WHERE DATEDIFF(day, Data_fatures , GETDATE()) = 0";
+                string queryPerShfaqjeShpenzime = "SELECT * FROM TblShpenzimet";
 
                 SqlCommand objKomanda = new SqlCommand(queryPerInsertimShpenzime, objKonektimi);
                 SqlCommand objKomanda2 = new SqlCommand(queryPerShfaqjeShpenzime, objKonektimi);
