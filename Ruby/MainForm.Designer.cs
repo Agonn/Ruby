@@ -398,6 +398,7 @@
             this.lblmShenimet.Style = MetroFramework.MetroColorStyle.Orange;
             this.lblmShenimet.TabIndex = 18;
             this.lblmShenimet.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.lblmShenimet.Visible = false;
             // 
             // dgvShitja
             // 
