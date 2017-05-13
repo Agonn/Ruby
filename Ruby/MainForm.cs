@@ -320,7 +320,7 @@ namespace Ruby
 
         }
 
-        private void historikuToolStripMenuItem_Click(object sender, EventArgs e)
+        private void historikuToolStripMenuItem_Click(object sender, EventArgs e) //Backup database to .bak
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
@@ -329,12 +329,12 @@ namespace Ruby
 
                 string DatabaseName = Application.StartupPath + @"\RubyDB.mdf";
 
-                SqlCommand cmd = new SqlCommand("BACKUP DATABASE [" + DatabaseName + "] to DISK='Desktop\\RubyDatabase.bak' ", objKonektimi);
+                SqlCommand BackupDB = new SqlCommand("BACKUP DATABASE [" + DatabaseName + "] to DISK='Desktop\\RubyDatabase.bak' ", objKonektimi);
 
 
                 try
                 {
-                    cmd.ExecuteNonQuery();
+                    BackupDB.ExecuteNonQuery();
                     MessageBox.Show("Databaza u ruajt me sukses.");
                 }
                 catch (Exception Ex)
