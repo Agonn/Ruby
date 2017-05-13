@@ -6,5 +6,6 @@ namespace Ruby
     {
 
         public static string _KonektimiDB = ConfigurationManager.ConnectionStrings["KonektimiDB"].ToString();
+
     }
 }

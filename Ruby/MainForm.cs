@@ -16,6 +16,7 @@ namespace Ruby
             InitializeComponent();
             dtpData.Value = DateTime.Today.AddDays(-1); //Yesterday for Historia
 
+
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
             string queryPerdgvShitja = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";
@@ -319,5 +320,30 @@ namespace Ruby
 
         }
 
+        private void historikuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+
+            {
+                objKonektimi.Open();
+
+                string DatabaseName = Application.StartupPath + @"\RubyDB.mdf";
+
+                SqlCommand cmd = new SqlCommand("BACKUP DATABASE [" + DatabaseName + "] to DISK='Desktop\\RubyDatabase.bak' ", objKonektimi);
+
+
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Databaza u ruajt me sukses.");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("'" + Ex.ToString() + "'");
+                }
+                objKonektimi.Close();
+
+            }
+        }
     }
 }
