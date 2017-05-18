@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.cmbMalli = new MetroFramework.Controls.MetroComboBox();
             this.txtCmimi = new MetroFramework.Controls.MetroTextBox();
@@ -232,7 +232,7 @@
             this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpData.CalendarTitleBackColor = System.Drawing.Color.DarkRed;
             this.dtpData.Location = new System.Drawing.Point(454, 3);
-            this.dtpData.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(224, 29);
             this.dtpData.TabIndex = 1;
@@ -275,8 +275,7 @@
             this.CxtMenu.MouseState = MaterialSkin.MouseState.HOVER;
             this.CxtMenu.Name = "CxtMenu";
             this.CxtMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CxtMenu.Size = new System.Drawing.Size(165, 82);
-            this.CxtMenu.Opening += new System.ComponentModel.CancelEventHandler(this.CxtMenu_Opening);
+            this.CxtMenu.Size = new System.Drawing.Size(165, 60);
             // 
             // toolStripSeparator2
             // 
@@ -305,13 +304,13 @@
             // metroTab
             // 
             this.metroTab.Controls.Add(this.tbShitja);
-            this.metroTab.Controls.Add(this.tbFurde);
             this.metroTab.Controls.Add(this.tbHistoria);
+            this.metroTab.Controls.Add(this.tbFurde);
             this.metroTab.Controls.Add(this.tbLive);
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 2;
+            this.metroTab.SelectedIndex = 0;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -347,7 +346,7 @@
             this.dtpShitje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpShitje.Enabled = false;
             this.dtpShitje.Location = new System.Drawing.Point(454, 3);
-            this.dtpShitje.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpShitje.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpShitje.Name = "dtpShitje";
             this.dtpShitje.Size = new System.Drawing.Size(224, 29);
             this.dtpShitje.TabIndex = 26;
@@ -519,8 +518,8 @@
             this.dgvHistoria.ReadOnly = true;
             this.dgvHistoria.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvHistoria.RowHeadersVisible = false;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            this.dgvHistoria.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            this.dgvHistoria.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHistoria.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvHistoria.Size = new System.Drawing.Size(541, 620);
             this.dgvHistoria.TabIndex = 3;
@@ -677,7 +676,7 @@
             this.dtpFurde.CalendarMonthBackground = System.Drawing.Color.DarkRed;
             this.dtpFurde.CalendarTitleBackColor = System.Drawing.Color.Black;
             this.dtpFurde.Location = new System.Drawing.Point(454, 3);
-            this.dtpFurde.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpFurde.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpFurde.Name = "dtpFurde";
             this.dtpFurde.Size = new System.Drawing.Size(224, 29);
             this.dtpFurde.TabIndex = 28;
@@ -1012,8 +1011,8 @@
             this.dgvShpenzimet.ReadOnly = true;
             this.dgvShpenzimet.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvShpenzimet.RowHeadersVisible = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            this.dgvShpenzimet.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            this.dgvShpenzimet.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvShpenzimet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvShpenzimet.Size = new System.Drawing.Size(541, 291);
             this.dgvShpenzimet.TabIndex = 9;
@@ -1104,8 +1103,8 @@
             this.dgvFurde.ReadOnly = true;
             this.dgvFurde.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvFurde.RowHeadersVisible = false;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
-            this.dgvFurde.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            this.dgvFurde.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvFurde.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvFurde.Size = new System.Drawing.Size(541, 291);
             this.dgvFurde.TabIndex = 2;

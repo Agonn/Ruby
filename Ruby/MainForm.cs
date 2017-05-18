@@ -38,7 +38,7 @@ namespace Ruby
             try
             {
                 //SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1
-
+                //test AAB
                 string QueryPerdgvHistoriaDje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1";
                 SqlCommand objKomanda3 = new SqlCommand(QueryPerdgvHistoriaDje, objKonektimi);
                 objKonektimi.Open();
@@ -208,11 +208,6 @@ namespace Ruby
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void CxtMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
-        {
 
         }
 
