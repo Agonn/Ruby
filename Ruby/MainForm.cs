@@ -14,6 +14,8 @@ namespace Ruby
 
 
         #region Initialization
+
+        //----------Qekjo osht e ndreqme MIRE
         public Form()
         {
 
@@ -21,26 +23,44 @@ namespace Ruby
             dtpData.Value = DateTime.Today.AddDays(-1); //Yesterday for Historia
 
 
-            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+           // SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
             string queryPerdgvShitja = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";
 
             string queryPerdgvFurdeSot = "SELECT * FROM TblFurde WHERE DATEDIFF(day, TblFurde.Data_blerjes , GETDATE()) = 0";
 
-            SqlCommand objKomanda2 = new SqlCommand(queryPerdgvShitja, objKonektimi);
-            SqlDataAdapter objAdapteri2 = new SqlDataAdapter(objKomanda2);
-            DataSet _Shenimet = new DataSet();
-            objAdapteri2.Fill(_Shenimet);
-            dgvShitja.DataSource = _Shenimet.Tables[0];
+            //  SqlCommand objKomanda2 = new SqlCommand(queryPerdgvShitja, objKonektimi);
+            //  SqlDataAdapter objAdapteri2 = new SqlDataAdapter(objKomanda2);
+            //  DataSet _Shenimet = new DataSet();
+            //  objAdapteri2.Fill(_Shenimet);
+            //  dgvShitja.DataSource = _Shenimet.Tables[0];
 
-            SqlCommand objKomandaFurde = new SqlCommand(queryPerdgvFurdeSot, objKonektimi);
-            SqlDataAdapter objAdapteriFurde = new SqlDataAdapter(objKomandaFurde);
-            DataSet Furde = new DataSet();
-            objAdapteriFurde.Fill(Furde);
-            dgvFurde.DataSource = Furde.Tables[0];
+            //Query per insertim ne vend te TRY qe osht qetash
+            // ObjPunaDB.InsUpdDel(queryPerInsertim);
+            //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
+            dgvShitja.DataSource = ObjPunaDB.LexoShenimet(queryPerdgvShitja).Tables[0];
 
+            dgvFurde.DataSource = ObjPunaDB.LexoShenimet(queryPerdgvFurdeSot).Tables[0];
+
+            //  SqlCommand objKomandaFurde = new SqlCommand(queryPerdgvFurdeSot, objKonektimi);
+            //  SqlDataAdapter objAdapteriFurde = new SqlDataAdapter(objKomandaFurde);
+            //  DataSet Furde = new DataSet();
+            //  objAdapteriFurde.Fill(Furde);
+            //  dgvFurde.DataSource = Furde.Tables[0];
+
+
+
+
+            string QueryPerdgvHistoriaDje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1";
+
+            //Query per insertim ne vend te TRY qe osht qetash
+            ObjPunaDB.InsUpdDel(QueryPerdgvHistoriaDje);
+            //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
+            dgvHistoria.DataSource = ObjPunaDB.LexoShenimet(QueryPerdgvHistoriaDje).Tables[0];
 
             //QUERY NE FILLIM TE INICIALIZIMIT (ME PROVU ME HEK NESE NUK OST I NEVOJSHEM)
+
+            /*
             try
             {
                 //SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1
@@ -66,8 +86,9 @@ namespace Ruby
             {
                 objKonektimi.Close();
             }
-
+            */
         }
+
 #endregion
 
 
@@ -86,7 +107,7 @@ namespace Ruby
           //  this.tblMalliTableAdapter.Fill(this.rubyDBDataSet1.TblMalli);
         }
 
-        //Ta Mshel formen
+        //Ta Mshel formen----------Qekjo osht e ndreqme MIRE
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Login objforma1 = new Login();
@@ -142,7 +163,8 @@ namespace Ruby
         #endregion
 
 
-        //Funksioni qe e mer daten edhe bon query per me qit qat dat ne DGV
+        //Funksioni qe e mer daten edhe bon query per me qit qat dat ne DGV----------Qekjo osht e ndreqme MIRE
+        //Nuk po e preki qeto se osht pak e modifikume ne veti e nxjer pune pak me shti ne qat klass
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
 
@@ -404,7 +426,7 @@ namespace Ruby
         }
 
 
-        //BACKUP DATABAZA 
+        //BACKUP DATABAZA----------Qekjo osht e ndreqme MIRE
         private void historikuToolStripMenuItem_Click(object sender, EventArgs e) //Backup database to .bak
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
