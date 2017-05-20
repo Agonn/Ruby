@@ -9,6 +9,10 @@ namespace Ruby
     public partial class Form : MetroForm
 
     {
+
+        PunaMeDB ObjPunaDB = new PunaMeDB();
+
+
         #region Initialization
         public Form()
         {
@@ -173,27 +177,38 @@ namespace Ruby
             }
         }
 
-        //Funksioni qe shton te dhanat te Pjesa e Shitjeve(kryesore)
+        //Funksioni qe shton te dhanat te Pjesa e Shitjeve(kryesore)----------Qekjo osht e ndreqme MIRE
         private void btnShto_Click_1(object sender, EventArgs e)
         {
-            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
             //Formati DataTime DATETIME values in 'YYYY-MM-DD HH:MM:SS' 
             string queryPerInsertim = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('" + cmbMalli.SelectedItem.ToString() + "','" + float.Parse(txtCmimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtbmPershkrimi.Text + "')";
 
             string queryPerShitje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";
 
-            SqlCommand objKomanda = new SqlCommand(queryPerInsertim, objKonektimi);
 
-            SqlCommand objKomanda2 = new SqlCommand(queryPerShitje, objKonektimi);
-            SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
+            //Query per insertim ne vend te TRY qe osht qetash
+            ObjPunaDB.InsUpdDel(queryPerInsertim);
+            //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
+            dgvShitja.DataSource = ObjPunaDB.LexoShenimet(queryPerShitje).Tables[0];
+
+
+
+            /*
+            SqlCommand objKomandaInsertim = new SqlCommand(queryPerInsertim, objKonektimi);
+            SqlCommand objKomandaPerSHitje = new SqlCommand(queryPerShitje, objKonektimi);
+            SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomandaPerSHitje);
             DataSet _Shenimet = new DataSet();
+            */
 
+
+
+            /*
             try
             {
                 objKonektimi.Open();
 
-                int numri_reshtave = objKomanda.ExecuteNonQuery();     
+                int numri_reshtave = objKomandaInsertim.ExecuteNonQuery();     
                 lblmShenimet.Text= "Numri i afektuar i rreshtave eshte : " + numri_reshtave.ToString();
 
                 objAdapteri.Fill(_Shenimet);
@@ -211,9 +226,10 @@ namespace Ruby
             {
                 objKonektimi.Close();
             }
+            */
         }
 
-        //E mbush me te dhana DGV Malli
+        //E mbush me te dhana DGV Malli----------Qekjo osht e ndreqme MIRE
         private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
             try
@@ -228,11 +244,11 @@ namespace Ruby
         }
 
 
-        //Shton Furde te tabela e furdeve
+        //Shton Furde te tabela e furdeve----------Qekjo osht e ndreqme MIRE
         private void btShtoFurde_Click(object sender, EventArgs e) //Shto Furde buttoni per query 
         {
 
-            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+           // SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
             double total = double.Parse(txtSasiaFurde.Text) * double.Parse(txtGramFurde.Text);
 
@@ -240,12 +256,24 @@ namespace Ruby
 
             string queryPerShfaqjeFurde = "SELECT * FROM TblFurde WHERE DATEDIFF(day, TblFurde.Data_blerjes , GETDATE()) = 0";
 
+            //Funksioni per insertim
+            ObjPunaDB.InsUpdDel(queryPerInsertimFurde);
+            //Funksioni per Shfaqjen e shenimeve
+            dgvFurde.DataSource = ObjPunaDB.LexoShenimet(queryPerShfaqjeFurde);
 
+            txtSasiaFurde.Clear();
+            txtGramFurde.Clear();
+            txtPershkrimiFurde.Clear();
+
+
+
+            /*
             SqlCommand objKomanda = new SqlCommand(queryPerInsertimFurde, objKonektimi);
             SqlCommand objKomanda2 = new SqlCommand(queryPerShfaqjeFurde, objKonektimi);
 
             SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
             DataSet _Shenimet = new DataSet();
+            
 
             try
             {
@@ -268,8 +296,8 @@ namespace Ruby
                 txtGramFurde.Clear();
                 txtPershkrimiFurde.Clear();
             }
+            */
 
-         
 
         }
 
@@ -277,11 +305,23 @@ namespace Ruby
         //I shton Shpenzimet ne Databaze edhe i paraqet ne tabele
         private void btShtoShpenzime_Click(object sender, EventArgs e) //Query per shpenzime
         {
-            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+           // SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
             string queryPerInsertimShpenzime = "insert into TblShpenzimet(Rryma_fat,Uji_fat,Tatimi_fat,Data_fatures,Pershkrimi) values ('" + float.Parse(txtShpenzimeRryma.Text) + "','" + float.Parse(txtShpenzimeUji.Text) + "','" + float.Parse(txtShpenzimeTatimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtShpenzimePershkrimi.Text + "')";
 
             string queryPerShfaqjeShpenzime = "SELECT * FROM TblShpenzimet";
+
+            //Funksioni per insertim
+            ObjPunaDB.InsUpdDel(queryPerInsertimShpenzime);
+            //Funksioni per Shfaqjen e shenimeve
+            dgvShpenzimet.DataSource = ObjPunaDB.LexoShenimet(queryPerShfaqjeShpenzime);
+
+            txtShpenzimeRryma.Clear();
+            txtShpenzimeUji.Clear();
+            txtShpenzimeTatimi.Clear();
+            txtShpenzimePershkrimi.Clear();
+
+            /*
 
             SqlCommand objKomanda = new SqlCommand(queryPerInsertimShpenzime, objKonektimi);
             SqlCommand objKomanda2 = new SqlCommand(queryPerShfaqjeShpenzime, objKonektimi);
@@ -310,6 +350,7 @@ namespace Ruby
                 txtShpenzimeTatimi.Clear();
                 txtShpenzimePershkrimi.Clear();
             }
+            */
         }
 
 
