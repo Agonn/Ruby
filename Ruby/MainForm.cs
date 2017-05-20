@@ -35,6 +35,8 @@ namespace Ruby
             objAdapteriFurde.Fill(Furde);
             dgvFurde.DataSource = Furde.Tables[0];
 
+
+            //QUERY NE FILLIM TE INICIALIZIMIT (ME PROVU ME HEK NESE NUK OST I NEVOJSHEM)
             try
             {
                 //SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1
@@ -49,16 +51,25 @@ namespace Ruby
                 objAdapteri.Fill(Historia);
                 dgvHistoria.DataSource = Historia.Tables[0];
             
-                objKonektimi.Close();
+                
             }
             catch (Exception)
             {
                 // MessageBox.Show("Nuk ka shitje per kete date"); //placeholder!
                 lblHistoriaShitje.Text = "N/A";
             }
+            finally
+            {
+                objKonektimi.Close();
+            }
 
         }
 #endregion
+
+
+
+
+
         private void Form_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'rubyDBDataSet3.TblShpenzimet' table. You can move, or remove it, as needed.
@@ -68,6 +79,7 @@ namespace Ruby
             this.tblMalliTableAdapter.Fill(this.rubyDBDataSet1.TblMalli);
         }
 
+        //Ta Mshel formen
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Login objforma1 = new Login();
@@ -125,6 +137,8 @@ namespace Ruby
 
         #endregion
 
+
+        //Funksioni qe e mer daten edhe bon query per me qit qat dat ne DGV
         private void dtpData_ValueChanged(object sender, EventArgs e)
         {
 
@@ -149,35 +163,39 @@ namespace Ruby
                 objAdapteri.Fill(Shenimet);
                 dgvHistoria.DataSource = Shenimet.Tables[0];
                 lblHistoriaShitje.Text = mySum.ToString() + "€";
-                objKonektimi.Close();
+                
             }
             catch (Exception)
             {
                 lblHistoriaShitje.Text = "N/A";
                 dgvHistoria.Visible = false; //Not visible i there is no data in gridview
             }
+            finally
+            {
+                objKonektimi.Close();
+            }
         }
 
+        //Funksioni qe shton te dhanat te Pjesa e Shitjeve(kryesore)
         private void btnShto_Click_1(object sender, EventArgs e)
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
-            
+
+            //Formati DataTime DATETIME values in 'YYYY-MM-DD HH:MM:SS' 
+            string queryPerInsertim = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('" + cmbMalli.SelectedItem.ToString() + "','" + float.Parse(txtCmimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtbmPershkrimi.Text + "')";
+
+            string queryPerShitje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";
+
+            SqlCommand objKomanda = new SqlCommand(queryPerInsertim, objKonektimi);
+
+            SqlCommand objKomanda2 = new SqlCommand(queryPerShitje, objKonektimi);
+            SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
+            DataSet _Shenimet = new DataSet();
+
             try
             {
-                //Formati DataTime DATETIME values in 'YYYY-MM-DD HH:MM:SS' 
-
-                string queryPerInsertim = "insert into dbo.tblMalli(Malli_Emri,Malli_Cmimi,Data_Shitjes,Pershkrimi) values('" + cmbMalli.SelectedItem.ToString() + "','" + float.Parse(txtCmimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtbmPershkrimi.Text + "')";
-                SqlCommand objKomanda = new SqlCommand(queryPerInsertim, objKonektimi);
-
-                string queryPerShitje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";   
-                SqlCommand objKomanda2 = new SqlCommand(queryPerShitje, objKonektimi);
-                SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
-                DataSet _Shenimet = new DataSet();
-                
                 objKonektimi.Open();
 
-                int numri = 0;
-                numri++;
                 int numri_reshtave = objKomanda.ExecuteNonQuery();     
                 lblmShenimet.Text= "Numri i afektuar i rreshtave eshte : " + numri_reshtave.ToString();
 
@@ -198,41 +216,47 @@ namespace Ruby
             }
         }
 
+        //E mbush me te dhana DGV Malli
         private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
             try
             {
                 this.tblMalliTableAdapter.FillBy(this.rubyDBDataSet1.TblMalli);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
         }
 
+
+        //Shton Furde te tabela e furdeve
         private void btShtoFurde_Click(object sender, EventArgs e) //Shto Furde buttoni per query 
         {
 
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+
+            double total = double.Parse(txtSasiaFurde.Text) * double.Parse(txtGramFurde.Text);
+
+            string queryPerInsertimFurde = "insert into dbo.tblFurde(Sasia_gr_furde,Cmimi_per_gr_furde,Cmimi_total_furde,Data_blerjes,Pershkrimi) values('" + float.Parse(txtSasiaFurde.Text) + "','" + float.Parse(txtGramFurde.Text) + "','" + total.ToString() + "','" + dtpFurde.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtPershkrimiFurde.Text + "')";
+
+            string queryPerShfaqjeFurde = "SELECT * FROM TblFurde WHERE DATEDIFF(day, TblFurde.Data_blerjes , GETDATE()) = 0";
+
+
+            SqlCommand objKomanda = new SqlCommand(queryPerInsertimFurde, objKonektimi);
+            SqlCommand objKomanda2 = new SqlCommand(queryPerShfaqjeFurde, objKonektimi);
+
+            SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
+            DataSet _Shenimet = new DataSet();
+
             try
             {
-                double total = double.Parse(txtSasiaFurde.Text) * double.Parse(txtGramFurde.Text);
-
-                string queryPerInsertimFurde = "insert into dbo.tblFurde(Sasia_gr_furde,Cmimi_per_gr_furde,Cmimi_total_furde,Data_blerjes,Pershkrimi) values('" + float.Parse(txtSasiaFurde.Text) + "','" + float.Parse(txtGramFurde.Text) + "','" + total.ToString() + "','" + dtpFurde.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtPershkrimiFurde.Text + "')";
-
-                string queryPerShfaqjeFurde = "SELECT * FROM TblFurde WHERE DATEDIFF(day, TblFurde.Data_blerjes , GETDATE()) = 0";
-
-
-                SqlCommand objKomanda = new SqlCommand(queryPerInsertimFurde, objKonektimi);
-                SqlCommand objKomanda2 = new SqlCommand(queryPerShfaqjeFurde, objKonektimi);
-
-                SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
-                DataSet _Shenimet = new DataSet();
                 objKonektimi.Open();
-                int numri = 0;
-                numri++;
+
+
                 int numri_reshtave = objKomanda.ExecuteNonQuery();
+
                 objAdapteri.Fill(_Shenimet);
                 dgvFurde.DataSource = _Shenimet.Tables[0];
             }
@@ -252,24 +276,27 @@ namespace Ruby
 
         }
 
+
+        //I shton Shpenzimet ne Databaze edhe i paraqet ne tabele
         private void btShtoShpenzime_Click(object sender, EventArgs e) //Query per shpenzime
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+
+            string queryPerInsertimShpenzime = "insert into TblShpenzimet(Rryma_fat,Uji_fat,Tatimi_fat,Data_fatures,Pershkrimi) values ('" + float.Parse(txtShpenzimeRryma.Text) + "','" + float.Parse(txtShpenzimeUji.Text) + "','" + float.Parse(txtShpenzimeTatimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtShpenzimePershkrimi.Text + "')";
+
+            string queryPerShfaqjeShpenzime = "SELECT * FROM TblShpenzimet";
+
+            SqlCommand objKomanda = new SqlCommand(queryPerInsertimShpenzime, objKonektimi);
+            SqlCommand objKomanda2 = new SqlCommand(queryPerShfaqjeShpenzime, objKonektimi);
+
+            SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
+            DataSet _Shenimet = new DataSet();
+
             try
             {
-
-                string queryPerInsertimShpenzime = "insert into TblShpenzimet(Rryma_fat,Uji_fat,Tatimi_fat,Data_fatures,Pershkrimi) values ('" + float.Parse(txtShpenzimeRryma.Text) + "','" + float.Parse(txtShpenzimeUji.Text) + "','" + float.Parse(txtShpenzimeTatimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtShpenzimePershkrimi.Text + "')";
-
-                string queryPerShfaqjeShpenzime = "SELECT * FROM TblShpenzimet";
-
-                SqlCommand objKomanda = new SqlCommand(queryPerInsertimShpenzime, objKonektimi);
-                SqlCommand objKomanda2 = new SqlCommand(queryPerShfaqjeShpenzime, objKonektimi);
-
-                SqlDataAdapter objAdapteri = new SqlDataAdapter(objKomanda2);
-                DataSet _Shenimet = new DataSet();
                 objKonektimi.Open();
-                int numri = 0;
-                numri++;
+
+
                 int numri_reshtave = objKomanda.ExecuteNonQuery();
                 objAdapteri.Fill(_Shenimet);
                 dgvShpenzimet.DataSource = _Shenimet.Tables[0];
@@ -288,57 +315,68 @@ namespace Ruby
             }
         }
 
+
+        //Me mar daten per furde edhe me e paraqit ne tabele si histori
         private void dtpFurde_ValueChanged(object sender, EventArgs e)
         {
             dgvFurde.Visible = true; //Grid visible if there's data
 
-
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+
+            string QueryPerFurde = FunksioniPerFurde(dtpFurde.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
+
+            SqlCommand objKomanda3 = new SqlCommand(QueryPerFurde, objKonektimi);
+            objKonektimi.Open();
+            SqlDataAdapter objAdapteri = new SqlDataAdapter(QueryPerFurde, objKonektimi);
+            DataSet Shenimet = new DataSet();
+
             try
             {
-                string QueryPerFurde = FunksioniPerFurde(dtpFurde.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
-
-                SqlCommand objKomanda3 = new SqlCommand(QueryPerFurde, objKonektimi);
-                objKonektimi.Open();
-                SqlDataAdapter objAdapteri = new SqlDataAdapter(QueryPerFurde, objKonektimi);
-                DataSet Shenimet = new DataSet();
                 double mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
                 objAdapteri.Fill(Shenimet);
                 dgvFurde.DataSource = Shenimet.Tables[0];
                 lblHistoriaShitje.Text = mySum.ToString() + "€";
-                objKonektimi.Close();
+                
             }
             catch (Exception)
             {
                 dgvFurde.Visible = false;
             }
+            finally
+            {
+                objKonektimi.Close();
+            }
 
         }
+
+
 
         private void historikuToolStripMenuItem_Click(object sender, EventArgs e) //Backup database to .bak
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
+            
+            objKonektimi.Open();
+
+            string DatabaseName = Application.StartupPath + @"\RubyDB.mdf";
+
+            SqlCommand BackupDB = new SqlCommand("BACKUP DATABASE [" + DatabaseName + "] to DISK='Desktop\\RubyDatabase.bak' ", objKonektimi);
+
+
+            try
             {
-                objKonektimi.Open();
-
-                string DatabaseName = Application.StartupPath + @"\RubyDB.mdf";
-
-                SqlCommand BackupDB = new SqlCommand("BACKUP DATABASE [" + DatabaseName + "] to DISK='Desktop\\RubyDatabase.bak' ", objKonektimi);
-
-
-                try
-                {
-                    BackupDB.ExecuteNonQuery();
-                    MessageBox.Show("Databaza u ruajt me sukses.");
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show("'" + Ex.ToString() + "'");
-                }
-                objKonektimi.Close();
-
+                BackupDB.ExecuteNonQuery();
+                MessageBox.Show("Databaza u ruajt me sukses.");
             }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("'" + Ex.ToString() + "'");
+            }
+            finally
+            {
+                objKonektimi.Close();
+            }
+                
         }
     }
 }
