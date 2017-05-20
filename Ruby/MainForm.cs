@@ -90,7 +90,7 @@ namespace Ruby
             this.Close(); //temporarily use this
         }
 
-        #region Query function
+        #region Funksionet per Date Query
 
 
         string FunksioniPerDate(string data)
@@ -131,9 +131,6 @@ namespace Ruby
             //Funksioni kthen qet string
             return Query;
         }
-
-
-
 
         #endregion
 
@@ -350,7 +347,7 @@ namespace Ruby
         }
 
 
-
+        //Nuk ja ndova menden qka po bon hala qesej
         private void historikuToolStripMenuItem_Click(object sender, EventArgs e) //Backup database to .bak
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
