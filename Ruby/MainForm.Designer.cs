@@ -310,7 +310,7 @@
             this.metroTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTab.Location = new System.Drawing.Point(20, 60);
             this.metroTab.Name = "metroTab";
-            this.metroTab.SelectedIndex = 1;
+            this.metroTab.SelectedIndex = 0;
             this.metroTab.Size = new System.Drawing.Size(1233, 642);
             this.metroTab.TabIndex = 14;
             this.metroTab.UseSelectable = true;
@@ -676,7 +676,7 @@
             this.dtpFurde.CalendarMonthBackground = System.Drawing.Color.DarkRed;
             this.dtpFurde.CalendarTitleBackColor = System.Drawing.Color.Black;
             this.dtpFurde.Location = new System.Drawing.Point(454, 3);
-            this.dtpFurde.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpFurde.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpFurde.Name = "dtpFurde";
             this.dtpFurde.Size = new System.Drawing.Size(224, 29);
             this.dtpFurde.TabIndex = 28;
