@@ -77,10 +77,13 @@ namespace Ruby
         private void Form_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'rubyDBDataSet3.TblShpenzimet' table. You can move, or remove it, as needed.
-            this.tblShpenzimetTableAdapter.Fill(this.rubyDBDataSet3.TblShpenzimet);
-            this.tblMalliTableAdapter1.Fill(this.rubyDBDataSet_Malli.TblMalli);
-            this.tblFurdeTableAdapter.Fill(this.rubyDBDataSet_furde.TblFurde);
-            this.tblMalliTableAdapter.Fill(this.rubyDBDataSet1.TblMalli);
+
+
+            // 1 here nuk po me vyn te inicializume meniher muj me bo kur te hi ne pjesen e vet me u inicializu
+          //  this.tblShpenzimetTableAdapter.Fill(this.rubyDBDataSet3.TblShpenzimet);
+          //  this.tblMalliTableAdapter1.Fill(this.rubyDBDataSet_Malli.TblMalli);
+          //  this.tblFurdeTableAdapter.Fill(this.rubyDBDataSet_furde.TblFurde);
+          //  this.tblMalliTableAdapter.Fill(this.rubyDBDataSet1.TblMalli);
         }
 
         //Ta Mshel formen
@@ -259,7 +262,7 @@ namespace Ruby
             //Funksioni per insertim
             ObjPunaDB.InsUpdDel(queryPerInsertimFurde);
             //Funksioni per Shfaqjen e shenimeve
-            dgvFurde.DataSource = ObjPunaDB.LexoShenimet(queryPerShfaqjeFurde);
+            dgvFurde.DataSource = ObjPunaDB.LexoShenimet(queryPerShfaqjeFurde).Tables[0];
 
             txtSasiaFurde.Clear();
             txtGramFurde.Clear();
@@ -302,19 +305,24 @@ namespace Ruby
         }
 
 
-        //I shton Shpenzimet ne Databaze edhe i paraqet ne tabele
+        //I shton Shpenzimet ne Databaze edhe i paraqet ne tabele----------Qekjo osht e ndreqme MIRE
         private void btShtoShpenzime_Click(object sender, EventArgs e) //Query per shpenzime
         {
-           // SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+            // SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
-            string queryPerInsertimShpenzime = "insert into TblShpenzimet(Rryma_fat,Uji_fat,Tatimi_fat,Data_fatures,Pershkrimi) values ('" + float.Parse(txtShpenzimeRryma.Text) + "','" + float.Parse(txtShpenzimeUji.Text) + "','" + float.Parse(txtShpenzimeTatimi.Text) + "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtShpenzimePershkrimi.Text + "')";
+
+            string queryPerInsertimShpenzime = "Insert into TblShpenzimet(Rryma_fat,Uji_fat,Tatimi_fat,Data_fatures,Pershkrimi) values ('" +
+                txtShpenzimeRryma.Text +
+                "','" + txtShpenzimeUji.Text +
+                "','" + txtShpenzimeTatimi.Text + 
+                "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtShpenzimePershkrimi.Text + "')";
 
             string queryPerShfaqjeShpenzime = "SELECT * FROM TblShpenzimet";
 
             //Funksioni per insertim
             ObjPunaDB.InsUpdDel(queryPerInsertimShpenzime);
             //Funksioni per Shfaqjen e shenimeve
-            dgvShpenzimet.DataSource = ObjPunaDB.LexoShenimet(queryPerShfaqjeShpenzime);
+            dgvShpenzimet.DataSource = ObjPunaDB.LexoShenimet(queryPerShfaqjeShpenzime).Tables[0];
 
             txtShpenzimeRryma.Clear();
             txtShpenzimeUji.Clear();
@@ -354,26 +362,34 @@ namespace Ruby
         }
 
 
-        //Me mar daten per furde edhe me e paraqit ne tabele si histori
+        //Me mar daten per furde edhe me e paraqit ne tabele si histori----------Qekjo osht e ndreqme MIRE
         private void dtpFurde_ValueChanged(object sender, EventArgs e)
         {
             dgvFurde.Visible = true; //Grid visible if there's data
 
-            SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
+          //  SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
             string QueryPerFurde = FunksioniPerFurde(dtpFurde.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
 
+            /*
             SqlCommand objKomanda3 = new SqlCommand(QueryPerFurde, objKonektimi);
             objKonektimi.Open();
             SqlDataAdapter objAdapteri = new SqlDataAdapter(QueryPerFurde, objKonektimi);
             DataSet Shenimet = new DataSet();
+            */
 
+            //Funksioni per Shfaqjen e shenimeve
+            dgvFurde.DataSource = ObjPunaDB.LexoShenimet(QueryPerFurde).Tables[0];
+
+    
+
+            /*
             try
             {
                 double mySum = Convert.ToInt32(objKomanda3.ExecuteScalar());
                 objAdapteri.Fill(Shenimet);
                 dgvFurde.DataSource = Shenimet.Tables[0];
-                lblHistoriaShitje.Text = mySum.ToString() + "€";
+                lblHistoriaShitje.Text = mySum.ToString() + "€ Total";
                 
             }
             catch (Exception)
@@ -384,11 +400,11 @@ namespace Ruby
             {
                 objKonektimi.Close();
             }
-
+            */
         }
 
 
-        //Nuk ja ndova menden qka po bon hala qesej
+        //BACKUP DATABAZA 
         private void historikuToolStripMenuItem_Click(object sender, EventArgs e) //Backup database to .bak
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
