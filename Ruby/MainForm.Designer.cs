@@ -592,7 +592,6 @@
             this.lblHistoriaShitje.Name = "lblHistoriaShitje";
             this.lblHistoriaShitje.Size = new System.Drawing.Size(110, 36);
             this.lblHistoriaShitje.TabIndex = 2;
-            this.lblHistoriaShitje.Text = "5000";
             // 
             // metroLabel3
             // 
