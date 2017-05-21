@@ -675,7 +675,7 @@
             this.dtpFurde.CalendarMonthBackground = System.Drawing.Color.DarkRed;
             this.dtpFurde.CalendarTitleBackColor = System.Drawing.Color.Black;
             this.dtpFurde.Location = new System.Drawing.Point(454, 3);
-            this.dtpFurde.MinimumSize = new System.Drawing.Size(4, 29);
+            this.dtpFurde.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtpFurde.Name = "dtpFurde";
             this.dtpFurde.Size = new System.Drawing.Size(224, 29);
             this.dtpFurde.TabIndex = 28;

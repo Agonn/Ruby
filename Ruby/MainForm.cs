@@ -39,7 +39,7 @@ namespace Ruby
             //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
             dgvHistoria.DataSource = ObjPunaDB.LexoShenimet(QueryPerdgvHistoriaDje).Tables[0];
 
-            //QUERY NE FILLIM TE INICIALIZIMIT (ME PROVU ME HEK NESE NUK OST I NEVOJSHEM)
+            //QUERY NE FILLIM TE INICIALIZIMIT (ME PROVU ME HEK NESE NUK OSHT I NEVOJSHEM)
 
         }
 
@@ -275,7 +275,7 @@ namespace Ruby
 
             string DatabaseName = Application.StartupPath + @"\RubyDB.mdf";
 
-            SqlCommand BackupDB = new SqlCommand("BACKUP DATABASE [" + DatabaseName + "] to DISK='Desktop\\RubyDatabase.bak' ", objKonektimi);
+            SqlCommand BackupDB = new SqlCommand("BACKUP DATABASE [" + DatabaseName + "] to DISK='Desktop\\RubyDatabase.mdf' ", objKonektimi);
 
 
             try
