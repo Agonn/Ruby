@@ -170,6 +170,10 @@ namespace Ruby
                 ObjPunaDB.InsUpdDel(queryPerInsertim);
                 //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
                 dgvShitja.DataSource = ObjPunaDB.LexoShenimet(queryPerShitje).Tables[0];
+                //Clear textbox-at kur e prek 'Shto'
+                txtCmimi.Clear();
+                txtbmPershkrimi.Clear();
+
             }
             catch (Exception ex)
             {
