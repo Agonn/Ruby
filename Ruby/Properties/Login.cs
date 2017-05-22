@@ -51,7 +51,7 @@ namespace Ruby.Properties
             }
             catch (Exception)
             {
-                //Qetu shto ti diqka Yll :)
+                //Error catch
             }
         }
     }
