@@ -45,6 +45,7 @@
             this.CxtMenu = new MaterialSkin.Controls.MaterialContextMenuStrip();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.historikuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
@@ -127,7 +128,6 @@
             this.rubyDBDataSet2 = new Ruby.RubyDBDataSet2();
             this.tblShpenzimetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblShpenzimetTableAdapter = new Ruby.RubyDBDataSet3TableAdapters.TblShpenzimetTableAdapter();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -233,7 +233,7 @@
             this.dtpData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpData.CalendarTitleBackColor = System.Drawing.Color.DarkRed;
             this.dtpData.Location = new System.Drawing.Point(454, 3);
-            this.dtpData.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpData.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(224, 29);
             this.dtpData.TabIndex = 1;
@@ -277,7 +277,7 @@
             this.CxtMenu.MouseState = MaterialSkin.MouseState.HOVER;
             this.CxtMenu.Name = "CxtMenu";
             this.CxtMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CxtMenu.Size = new System.Drawing.Size(165, 104);
+            this.CxtMenu.Size = new System.Drawing.Size(165, 82);
             // 
             // toolStripSeparator2
             // 
@@ -290,6 +290,12 @@
             this.historikuToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.historikuToolStripMenuItem.Text = "Backup Database";
             this.historikuToolStripMenuItem.Click += new System.EventHandler(this.historikuToolStripMenuItem_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // toolStripSeparator1
             // 
@@ -677,7 +683,7 @@
             this.dtpFurde.CalendarMonthBackground = System.Drawing.Color.DarkRed;
             this.dtpFurde.CalendarTitleBackColor = System.Drawing.Color.Black;
             this.dtpFurde.Location = new System.Drawing.Point(454, 3);
-            this.dtpFurde.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpFurde.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpFurde.Name = "dtpFurde";
             this.dtpFurde.Size = new System.Drawing.Size(224, 29);
             this.dtpFurde.TabIndex = 28;
@@ -1245,12 +1251,6 @@
             // tblShpenzimetTableAdapter
             // 
             this.tblShpenzimetTableAdapter.ClearBeforeFill = true;
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // Form
             // 

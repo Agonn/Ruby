@@ -175,7 +175,7 @@ namespace Ruby
                 txtbmPershkrimi.Clear();
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 MessageBox.Show("Ka nje Gabim ju lutem Korrigjoni!!!");
             }
