@@ -295,7 +295,7 @@ namespace Ruby
 
         }
 
-         Bitmap bmp;
+        Bitmap bmp;
 
         private void Btn_pdf_Click(object sender, EventArgs e)
         {
