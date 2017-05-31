@@ -50,6 +50,7 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroTab = new MetroFramework.Controls.MetroTabControl();
             this.tbShitja = new MetroFramework.Controls.MetroTabPage();
+            this.btn_pdf = new MetroFramework.Controls.MetroButton();
             this.dtpShitje = new MetroFramework.Controls.MetroDateTime();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.txtbmPershkrimi = new MetroFramework.Controls.MetroTextBox();
@@ -128,6 +129,8 @@
             this.rubyDBDataSet2 = new Ruby.RubyDBDataSet2();
             this.tblShpenzimetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblShpenzimetTableAdapter = new Ruby.RubyDBDataSet3TableAdapters.TblShpenzimetTableAdapter();
+            this.PrintPreview = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyle)).BeginInit();
             this.CxtMenu.SuspendLayout();
             this.metroTab.SuspendLayout();
@@ -325,6 +328,7 @@
             // 
             // tbShitja
             // 
+            this.tbShitja.Controls.Add(this.btn_pdf);
             this.tbShitja.Controls.Add(this.dtpShitje);
             this.tbShitja.Controls.Add(this.metroLabel6);
             this.tbShitja.Controls.Add(this.txtbmPershkrimi);
@@ -348,6 +352,16 @@
             this.tbShitja.VerticalScrollbarBarColor = true;
             this.tbShitja.VerticalScrollbarHighlightOnWheel = false;
             this.tbShitja.VerticalScrollbarSize = 10;
+            // 
+            // btn_pdf
+            // 
+            this.btn_pdf.Location = new System.Drawing.Point(611, 574);
+            this.btn_pdf.Name = "btn_pdf";
+            this.btn_pdf.Size = new System.Drawing.Size(67, 23);
+            this.btn_pdf.TabIndex = 27;
+            this.btn_pdf.Text = "PDF";
+            this.btn_pdf.UseSelectable = true;
+            this.btn_pdf.Click += new System.EventHandler(this.Btn_pdf_Click);
             // 
             // dtpShitje
             // 
@@ -1252,6 +1266,20 @@
             // 
             this.tblShpenzimetTableAdapter.ClearBeforeFill = true;
             // 
+            // PrintPreview
+            // 
+            this.PrintPreview.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.PrintPreview.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.PrintPreview.ClientSize = new System.Drawing.Size(400, 300);
+            this.PrintPreview.Enabled = true;
+            this.PrintPreview.Icon = ((System.Drawing.Icon)(resources.GetObject("PrintPreview.Icon")));
+            this.PrintPreview.Name = "PrintPreview";
+            this.PrintPreview.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1395,6 +1423,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datablerjesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pershkrimiDataGridViewTextBoxColumn2;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private MetroFramework.Controls.MetroButton btn_pdf;
+        private System.Windows.Forms.PrintPreviewDialog PrintPreview;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
 

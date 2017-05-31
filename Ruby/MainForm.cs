@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 
 namespace Ruby
 {
@@ -43,7 +44,7 @@ namespace Ruby
 
         }
 
-#endregion
+        #endregion
 
 
         private void Form_Load(object sender, EventArgs e)
@@ -52,10 +53,10 @@ namespace Ruby
 
 
             // 1 here nuk po me vyn te inicializume meniher muj me bo kur te hi ne pjesen e vet me u inicializu
-          //  this.tblShpenzimetTableAdapter.Fill(this.rubyDBDataSet3.TblShpenzimet);
-          //  this.tblMalliTableAdapter1.Fill(this.rubyDBDataSet_Malli.TblMalli);
-          //  this.tblFurdeTableAdapter.Fill(this.rubyDBDataSet_furde.TblFurde);
-          //  this.tblMalliTableAdapter.Fill(this.rubyDBDataSet1.TblMalli);
+            //  this.tblShpenzimetTableAdapter.Fill(this.rubyDBDataSet3.TblShpenzimet);
+            //  this.tblMalliTableAdapter1.Fill(this.rubyDBDataSet_Malli.TblMalli);
+            //  this.tblFurdeTableAdapter.Fill(this.rubyDBDataSet_furde.TblFurde);
+            //  this.tblMalliTableAdapter.Fill(this.rubyDBDataSet1.TblMalli);
         }
 
         //Ta Mshel formen----------Qekjo osht e ndreqme MIRE
@@ -121,12 +122,12 @@ namespace Ruby
 
             dgvHistoria.Visible = true; //Grid visible if there's data
             string theDate = dtpData.Value.ToShortDateString();
-            
+
             lblDataSot.Text = theDate.ToString();
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
             try
             {
-               
+
                 string queryPerHistorialbl = FunksioniPerShum(dtpData.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
 
                 string queryPerdgvHistoria = FunksioniPerDate(dtpData.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
@@ -140,7 +141,7 @@ namespace Ruby
                 objAdapteri.Fill(Shenimet);
                 dgvHistoria.DataSource = Shenimet.Tables[0];
                 lblHistoriaShitje.Text = mySum.ToString() + "€";
-                
+
             }
             catch (Exception)
             {
@@ -175,7 +176,7 @@ namespace Ruby
                 txtbmPershkrimi.Clear();
 
             }
-            catch (Exception )
+            catch (Exception)
             {
                 MessageBox.Show("Ka nje Gabim ju lutem Korrigjoni!!!");
             }
@@ -235,7 +236,7 @@ namespace Ruby
             string queryPerInsertimShpenzime = "Insert into TblShpenzimet(Rryma_fat,Uji_fat,Tatimi_fat,Data_fatures,Pershkrimi) values ('" +
                 txtShpenzimeRryma.Text +
                 "','" + txtShpenzimeUji.Text +
-                "','" + txtShpenzimeTatimi.Text + 
+                "','" + txtShpenzimeTatimi.Text +
                 "','" + dtpShitje.Value.ToString("yyyy-MM-dd  HH:mm:ss") + "','" + txtShpenzimePershkrimi.Text + "')";
 
             string queryPerShfaqjeShpenzime = "SELECT * FROM TblShpenzimet";
@@ -270,7 +271,7 @@ namespace Ruby
         {
             SqlConnection objKonektimi = new SqlConnection(Parametrat._KonektimiDB);
 
-            
+
             objKonektimi.Open();
 
             string DatabaseName = Application.StartupPath + @"\RubyDB.mdf";
@@ -291,7 +292,26 @@ namespace Ruby
             {
                 objKonektimi.Close();
             }
-                
+
+        }
+
+         Bitmap bmp;
+
+        private void Btn_pdf_Click(object sender, EventArgs e)
+        {
+            
+            int height = dgvShitja.Height;
+            dgvShitja.Height = dgvShitja.RowCount * dgvShitja.RowTemplate.Height;
+            bmp = new Bitmap(dgvShitja.Width, dgvShitja.Height);
+            dgvShitja.DrawToBitmap(bmp, new Rectangle(0, 0, dgvShitja.Width, dgvShitja.Height));
+            dgvShitja.Height = height;
+            PrintPreview.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(bmp, 0, 0);
+
         }
     }
 }
