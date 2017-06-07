@@ -24,8 +24,8 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>Ruby</ProductName>
-    <PublisherName>Agon&amp;Ylli</PublisherName>
-    <ApplicationRevision>1</ApplicationRevision>
+    <PublisherName>Ruby</PublisherName>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -389,5 +389,6 @@
     </Content>
     <Content Include="Ruby_ico_red.png.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

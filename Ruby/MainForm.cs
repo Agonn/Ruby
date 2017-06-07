@@ -12,12 +12,28 @@ namespace Ruby
 
         PunaMeDB ObjPunaDB = new PunaMeDB();
 
+        string folder = Application.StartupPath;
+
+
+
+
+
+
+
+
 
         #region Initialization
 
         //----------Qekjo osht e ndreqme MIRE
         public Form()
         {
+             string[] data = folder.Split('\\');
+
+            string strPerKonektim = data[0] + "\\" + data[1] + "\\" + data[2] + "\\" + data[3] + "\\" + data[4] + "\\" + data[5] + "\\" + data[6] + "\\RubyDB.mdf";
+
+            //string[] DataSakt = data.Split(new char[] { '-', ' ' });
+
+
 
             InitializeComponent();
             dtpData.Value = DateTime.Today.AddDays(-1); //Yesterday for Historia
@@ -52,11 +68,19 @@ namespace Ruby
 
 
             // 1 here nuk po me vyn te inicializume meniher muj me bo kur te hi ne pjesen e vet me u inicializu
-          //  this.tblShpenzimetTableAdapter.Fill(this.rubyDBDataSet3.TblShpenzimet);
-          //  this.tblMalliTableAdapter1.Fill(this.rubyDBDataSet_Malli.TblMalli);
-          //  this.tblFurdeTableAdapter.Fill(this.rubyDBDataSet_furde.TblFurde);
-          //  this.tblMalliTableAdapter.Fill(this.rubyDBDataSet1.TblMalli);
+            //  this.tblShpenzimetTableAdapter.Fill(this.rubyDBDataSet3.TblShpenzimet);
+            //  this.tblMalliTableAdapter1.Fill(this.rubyDBDataSet_Malli.TblMalli);
+            //  this.tblFurdeTableAdapter.Fill(this.rubyDBDataSet_furde.TblFurde);
+            //  this.tblMalliTableAdapter.Fill(this.rubyDBDataSet1.TblMalli);
+
+
+
+
+
         }
+
+
+
 
         //Ta Mshel formen----------Qekjo osht e ndreqme MIRE
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
