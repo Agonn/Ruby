@@ -20,6 +20,7 @@ namespace Ruby
         {
 
             InitializeComponent();
+            AppDomain.CurrentDomain.SetData("DataDirectory", Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData));
             dtpData.Value = DateTime.Today.AddDays(-1); //Yesterday for Historia
 
 
