@@ -8,13 +8,18 @@ namespace Ruby
 
 
 
-       static  string folder = Application.StartupPath;
+        static string folder = Application.ExecutablePath;
 
-       static string[] data = folder.Split('\\');
+
+        static string[] Potestoj = folder.Split('.');
+
+        static string test2 = Potestoj[0] + "DB.mdf";
+
 
         //E bon stringun per konektim te gatshem per secilen Pc qe instalohet
-       static string strPerKonektim = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + data[0] + "\\" + data[1] + "\\" + data[2] + "\\" + data[3] + "\\" + data[4] + "\\" + data[5] + "\\" + data[6] + "\\RubyDB.mdf" + ";Integrated Security=True;";
+        static string strPerKonektimNew= "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + test2+ ";Integrated Security=True;";
 
-        public static string _KonektimiDB = strPerKonektim; 
+       
+        public static string _KonektimiDB = strPerKonektimNew; 
     }
 }
