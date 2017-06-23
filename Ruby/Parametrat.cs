@@ -24,5 +24,6 @@ namespace Ruby
 
 
         public static string _KonektimiDB = OldStrPerConn; 
+
     }
 }
