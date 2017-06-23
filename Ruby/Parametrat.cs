@@ -21,6 +21,8 @@ namespace Ruby
 
        
          static string OldStrPerConn= ConfigurationManager.ConnectionStrings["KonektimiDB"].ToString();
+
+
         public static string _KonektimiDB = OldStrPerConn; 
     }
 }
