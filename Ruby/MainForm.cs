@@ -199,7 +199,7 @@ namespace Ruby
             }
             catch (Exception )
             {
-                MessageBox.Show("Ka nje Gabim ju lutem Korrigjoni!!!");
+                MessageBox.Show("Gabim ne insertim 1");
             }
 
         }
@@ -242,7 +242,7 @@ namespace Ruby
             }
             catch (Exception)
             {
-                MessageBox.Show("Ka nje Gabim ju lutem permirsoni!");
+                MessageBox.Show("Gabim ne insertim!");
             }
 
 
