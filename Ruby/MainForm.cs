@@ -37,21 +37,21 @@ namespace Ruby
             dtpData.Value = DateTime.Today.AddDays(-1); //Yesterday for Historia
 
 
-            string queryPerdgvShitja = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";
+            //string queryPerdgvShitja = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 0";
 
-            string queryPerdgvFurdeSot = "SELECT * FROM TblFurde WHERE DATEDIFF(day, TblFurde.Data_blerjes , GETDATE()) = 0";
+            //string queryPerdgvFurdeSot = "SELECT * FROM TblFurde WHERE DATEDIFF(day, TblFurde.Data_blerjes , GETDATE()) = 0";
 
-            //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
-            dgvShitja.DataSource = ObjPunaDB.LexoShenimet(queryPerdgvShitja).Tables[0];
+            ////qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
+            //dgvShitja.DataSource = ObjPunaDB.LexoShenimet(queryPerdgvShitja).Tables[0];
 
-            dgvFurde.DataSource = ObjPunaDB.LexoShenimet(queryPerdgvFurdeSot).Tables[0];
+            //dgvFurde.DataSource = ObjPunaDB.LexoShenimet(queryPerdgvFurdeSot).Tables[0];
 
-            string QueryPerdgvHistoriaDje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1";
+            //string QueryPerdgvHistoriaDje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1";
 
-            //Query per insertim ne vend te TRY qe osht qetash
-            ObjPunaDB.InsUpdDel(QueryPerdgvHistoriaDje);
-            //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
-            dgvHistoria.DataSource = ObjPunaDB.LexoShenimet(QueryPerdgvHistoriaDje).Tables[0];
+            ////Query per insertim ne vend te TRY qe osht qetash
+            //ObjPunaDB.InsUpdDel(QueryPerdgvHistoriaDje);
+            ////qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
+            //dgvHistoria.DataSource = ObjPunaDB.LexoShenimet(QueryPerdgvHistoriaDje).Tables[0];
 
             //QUERY NE FILLIM TE INICIALIZIMIT (ME PROVU ME HEK NESE NUK OSHT I NEVOJSHEM)
 
