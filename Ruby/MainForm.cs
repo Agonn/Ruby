@@ -28,19 +28,31 @@ namespace Ruby
 
             string queryPerdgvFurdeSot = "SELECT * FROM TblFurde WHERE DATEDIFF(day, TblFurde.Data_blerjes , GETDATE()) = 0";
 
-            //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
-            dgvShitja.DataSource = ObjPunaDB.LexoShenimet(queryPerdgvShitja).Tables[0];
+            //Try Catch Nr. 1 qe e kom shtu
+            try
+            {
+                //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
+                dgvShitja.DataSource = ObjPunaDB.LexoShenimet(queryPerdgvShitja).Tables[0];
 
-            dgvFurde.DataSource = ObjPunaDB.LexoShenimet(queryPerdgvFurdeSot).Tables[0];
+                dgvFurde.DataSource = ObjPunaDB.LexoShenimet(queryPerdgvFurdeSot).Tables[0];
 
-            string QueryPerdgvHistoriaDje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1";
+                string QueryPerdgvHistoriaDje = "SELECT * FROM TblMalli WHERE DATEDIFF(day, TblMalli.Data_Shitjes , GETDATE()) = 1";
 
-            //Query per insertim ne vend te TRY qe osht qetash
-            ObjPunaDB.InsUpdDel(QueryPerdgvHistoriaDje);
-            //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
-            dgvHistoria.DataSource = ObjPunaDB.LexoShenimet(QueryPerdgvHistoriaDje).Tables[0];
+                //Query per insertim ne vend te TRY qe osht qetash
+                ObjPunaDB.InsUpdDel(QueryPerdgvHistoriaDje);
+                //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
+                dgvHistoria.DataSource = ObjPunaDB.LexoShenimet(QueryPerdgvHistoriaDje).Tables[0];
 
-            //QUERY NE FILLIM TE INICIALIZIMIT (ME PROVU ME HEK NESE NUK OST I NEVOJSHEM)
+                //QUERY NE FILLIM TE INICIALIZIMIT (ME PROVU ME HEK NESE NUK OST I NEVOJSHEM)
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
+            }
+
+
 
         }
 
@@ -175,6 +187,9 @@ namespace Ruby
             catch (Exception ex)
             {
                 MessageBox.Show("Ka nje Gabim ju lutem Korrigjoni!!!");
+                //Sa per test
+                MessageBox.Show(ex.Message);
+
             }
 
         }
