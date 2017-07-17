@@ -354,7 +354,7 @@
             this.dtpShitje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpShitje.Enabled = false;
             this.dtpShitje.Location = new System.Drawing.Point(454, 3);
-            this.dtpShitje.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtpShitje.MinimumSize = new System.Drawing.Size(4, 29);
             this.dtpShitje.Name = "dtpShitje";
             this.dtpShitje.Size = new System.Drawing.Size(224, 29);
             this.dtpShitje.TabIndex = 26;

@@ -6,6 +6,7 @@ namespace Ruby
     class Parametrat
     {
 
+        static string OldStrPerConn = ConfigurationManager.ConnectionStrings["KonektimiDB"].ToString();
 
 
         static string folder = Application.ExecutablePath;
@@ -20,6 +21,7 @@ namespace Ruby
         static string strPerKonektimNew= "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + test2+ ";Integrated Security=True;";
 
        
-        public static string _KonektimiDB = strPerKonektimNew; 
+
+        public static string _KonektimiDB = OldStrPerConn; 
     }
 }

@@ -41,6 +41,10 @@ namespace Ruby
 
             string queryPerdgvFurdeSot = "SELECT * FROM TblFurde WHERE DATEDIFF(day, TblFurde.Data_blerjes , GETDATE()) = 0";
 
+            //Qeto e kom shtu
+            try
+            {
+
             //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
             dgvShitja.DataSource = ObjPunaDB.LexoShenimet(queryPerdgvShitja).Tables[0];
 
@@ -53,7 +57,15 @@ namespace Ruby
             //qeky osht rreshti i kodit qe e kom shkru qe me vyn me bo
             dgvHistoria.DataSource = ObjPunaDB.LexoShenimet(QueryPerdgvHistoriaDje).Tables[0];
 
+
             //QUERY NE FILLIM TE INICIALIZIMIT (ME PROVU ME HEK NESE NUK OSHT I NEVOJSHEM)
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                
+            }
+
 
         }
 
@@ -262,10 +274,21 @@ namespace Ruby
 
             string queryPerShfaqjeShpenzime = "SELECT * FROM TblShpenzimet";
 
+            try
+            {
+
             //Funksioni per insertim
             ObjPunaDB.InsUpdDel(queryPerInsertimShpenzime);
             //Funksioni per Shfaqjen e shenimeve
             dgvShpenzimet.DataSource = ObjPunaDB.LexoShenimet(queryPerShfaqjeShpenzime).Tables[0];
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                
+            }
+
 
             txtShpenzimeRryma.Clear();
             txtShpenzimeUji.Clear();
@@ -278,12 +301,22 @@ namespace Ruby
         //Me mar daten per furde edhe me e paraqit ne tabele si histori----------Qekjo osht e ndreqme MIRE
         private void dtpFurde_ValueChanged(object sender, EventArgs e)
         {
-            dgvFurde.Visible = true; //Grid visible if there's data
+            try
+            {
+                dgvFurde.Visible = true; //Grid visible if there's data
 
-            string QueryPerFurde = FunksioniPerFurde(dtpFurde.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
+                string QueryPerFurde = FunksioniPerFurde(dtpFurde.Value.ToString("yyyy - MM - dd  HH: mm:ss"));
 
-            //Funksioni per Shfaqjen e shenimeve
-            dgvFurde.DataSource = ObjPunaDB.LexoShenimet(QueryPerFurde).Tables[0];
+                //Funksioni per Shfaqjen e shenimeve
+                dgvFurde.DataSource = ObjPunaDB.LexoShenimet(QueryPerFurde).Tables[0];
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                
+            }
+
         }
 
 
