@@ -1,7 +1,7 @@
 # Ruby
 Sales managing application
 
-Application that has databse and accepts user input for daily sales and expenses.
+Application that has database and accepts user input for daily sales and expenses.
 
 http://i.imgur.com/bCyhHiE.png
 
